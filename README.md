@@ -518,9 +518,61 @@ Las entrevistas con los gerentes revelaron que la principal preocupación está 
 ## 2.3. Needfinding
 
 ### 2.3.1. User Personas
+
+<h2>User Persona Conductor profesional</h2>
+<div style="text-align: center;">
+  <img src="./assets/user-persona/Pablo Lozada.png" alt="User persona Owner" width="100%" />
+</div>
+<br>
+
+El segmento de conductores profesionales de buses interprovinciales y camiones de carga está compuesto por personas de entre 25 y 55 años que realizan jornadas prolongadas, a menudo en horarios nocturnos o de madrugada, incrementando la probabilidad de somnolencia y distracción al volante. Su labor requiere mantener un nivel constante de concentración durante viajes largos e interprovinciales, y son directamente afectados por la fatiga, lo que hace necesario un sistema que les emita alertas oportunas para prevenir accidentes y mejorar su seguridad durante la conducción.
+
+<br>
+<h2>User Persona Gerente de flota</h2>
+<div style="text-align: center;">
+  <img src="./assets/user-persona/Carlos Gutierrez.png" alt="User persona Owner" width="100%" />
+</div>
+<br>
+
+El segmento de gerentes o supervisores de flotas de transporte incluye personas de entre 30 y 55 años responsables de la seguridad y operación de los conductores en viajes interprovinciales o de larga distancia. Su rol implica monitorear el estado de alerta de los conductores mediante reportes en tiempo real, tomar decisiones preventivas para reducir riesgos y garantizar el cumplimiento de normas de seguridad, con el objetivo de disminuir accidentes, mejorar la gestión de riesgos y optimizar la operación diaria de la flota.
+
 ### 2.3.2. User Task Matrix
+
+En esta parte se expone la User Task Matrix, la cual detalla las tareas que los usuarios deben realizar para alcanzar sus objetivos al interactuar con el sistema SafeVision. La matriz está organizada por segmentos de usuarios, objetivos y tareas específicas, proporcionando una visión clara de las funcionalidades necesarias para satisfacer las necesidades de los conductores profesionales y los gerentes de flotas.
+
+| Task                                                   | Conductor profesional (Frecuencia / Importancia) | Gerente de flota (Frecuencia / Importancia) |
+| ------------------------------------------------------ | ------------------------------------------------ | ---------------------- |
+| Mantenerse alerta durante el viaje                     | Alta / Alta                                      | Baja / Alta            |
+| Recibir alertas de somnolencia en tiempo real          | Alta / Alta                                      | Baja / Alta            |
+| Revisar su propio historial de alertas                 | Media / Alta                                     | Baja / Media           |
+| Tomar descansos cuando el sistema lo recomienda        | Media / Alta                                     | Baja / Media           |
+| Monitorear en tiempo real el estado de los conductores | –                                                | Alta / Alta            |
+| Recibir reportes automáticos de desempeño y fatiga     | Baja / Media                                     | Alta / Alta            |
+| Analizar tendencias de fatiga para planificar turnos   | –                                                | Media / Alta           |
+| Justificar decisiones de cambio de turnos o descansos  | –                                                | Media / Alta           |
+| Garantizar la seguridad de los pasajeros               | Alta / Alta                                      | Alta / Alta            |
+| Reducir accidentes por somnolencia                     | Alta / Alta                                      | Alta / Alta            |
+
+
 ### 2.3.3. Empathy Mapping
+
+A continuación se presenta el Empathy Map que detalla las percepciones, pensamientos, sentimientos y comportamientos de los dos segmentos de usuarios principales: conductores profesionales y gerentes de flotas. Este mapa ayuda a comprender mejor sus necesidades y motivaciones al interactuar con el sistema SafeVision.
+
+<h2>Empathy Map Conductor profesional</h2>
+<div style="text-align: center;">
+  <img src="./assets/empathy-mapping/Conductor profesional.png" alt="Empathy Map Conductor profesional" width="100%" />
+</div>
+<br></br>
+<h2>Empathy Map Gerente de flota</h2>
+<div style="text-align: center;">
+  <img src="./assets/empathy-mapping/gerente-de-flota.png" alt="Empathy Map Gerente de flota" width="100%" />
+</div>
+
+
+
 ### 2.3.4. As-is Scenario Mapping
+
+
 
 ## 2.4. Ubiquitous Language
 
