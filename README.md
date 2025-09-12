@@ -560,7 +560,7 @@ A continuación se presenta el Empathy Map que detalla las percepciones, pensami
 
 <h2>Empathy Map Conductor profesional</h2>
 <div style="text-align: center;">
-  <img src="./assets/empathy-mapping/Conductor profesional.png" alt="Empathy Map Conductor profesional" width="100%" />
+  <img src="./assets/empathy-mapping/conductor-profesional.png" alt="Empathy Map Conductor profesional" width="100%" />
 </div>
 <br></br>
 <h2>Empathy Map Gerente de flota</h2>
@@ -568,9 +568,8 @@ A continuación se presenta el Empathy Map que detalla las percepciones, pensami
   <img src="./assets/empathy-mapping/gerente-de-flota.png" alt="Empathy Map Gerente de flota" width="100%" />
 </div>
 
-
-
 ### 2.3.4. As-is Scenario Mapping
+
 
 
 
