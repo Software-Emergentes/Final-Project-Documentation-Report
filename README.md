@@ -471,7 +471,7 @@ Las colaboraciones serán clave para aumentar la credibilidad y la adopción del
 |--------------|--------------|
 | Edad         | 21           |
 | Distrito     | Lima         |
-| **Imagen**   | <img src="assets/juan-entrevista.jpg" width="80"> Juan, gerente de transporte, comentó que administra unos 50 buses y que la fatiga de los conductores es el principal riesgo. Actualmente usan protocolos de descanso, pero no siempre resultan efectivos. Valora contar con reportes en la nube y prioriza efectividad y facilidad de uso por encima del precio. Estaría dispuesto a implementar SafeVision si es confiable, ya que le permitiría reducir accidentes, mejorar la seguridad y optimizar la gestión de su flota. |
+| <img src="assets/juan-entrevista.jpg" width="80">  | Juan, gerente de transporte, comentó que administra unos 50 buses y que la fatiga de los conductores es el principal riesgo. Actualmente usan protocolos de descanso, pero no siempre resultan efectivos. Valora contar con reportes en la nube y prioriza efectividad y facilidad de uso por encima del precio. Estaría dispuesto a implementar SafeVision si es confiable, ya que le permitiría reducir accidentes, mejorar la seguridad y optimizar la gestión de su flota. |
 | Timing:     |              |
 | **Entrevista 2** |              |
 | Edad         |              |
@@ -514,8 +514,6 @@ Las entrevistas con los gerentes revelaron que la principal preocupación está 
 ## 3.2. User Stories
 
 En este apartado se presentan las historias de usuario.
-
-# User Stories SafeVision
 
 | User Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
 |---------------|--------|-------------|--------------------------|----------------------------|
