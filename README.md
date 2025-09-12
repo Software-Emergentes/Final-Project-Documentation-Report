@@ -119,13 +119,11 @@ Convertirnos en una startup líder en el Perú en soluciones inteligentes para l
 
 | Miembros del equipo                  | Código Estudiante | Carrera                | Acerca de | Foto |
 |-------------------------------------|------------------|-----------------------|---------------------------------------------------------------|------|
-| Herrera Aguirre Fabia Alejandra     | u2022xxxxx       | Ingeniería de Software |  | <img src="" width="80"> |
-| Linares Tejada Leonardo Félix Jesús | u2022xxxxx       | Ingeniería de Software |  | <img src="" width="80"> |
-| Oneglio De Paz Beth Shantal         | u2022xxxxx       | Ingeniería de Software |  | <img src="" width="80"> |
-| Salgado Luna, Fernando Brian        | u202212023        | Ingeniería de Software | Soy Fernando Salgado, tengo 20 años y me apasiona la tecnología. Tengo experiencia en desarrollo frontend y backend, trabajando con lenguajes como C#, Java y otros. Disfruto resolviendo problemas y buscando soluciones prácticas que contribuyan a los proyectos en los que participo. | <img src="https://i.imgur.com/ZMT41YU.jpeg" width="80"> |
-| Sosa Colca Angello Rodolfo          | u2022xxxxx       | Ingeniería de Software |  | <img src="" width="80"> |
-
-
+| Herrera Aguirre, Fabia Alejandra     | U2022xxxxx       | Ingeniería de Software |  | <img src="" width="80"> |
+| Linares Tejada, Leonardo Félix Jesús | U2022xxxxx       | Ingeniería de Software |  | <img src="" width="80"> |
+| Oneglio De Paz, Beth Shantal         | U202213423       | Ingeniería de Software | Mi nombre es Beth Shantal Oneglio De Paz - u202213423, tengo 20 años y estudio Ingeniería de Software en la UPC. Disfruto trabajar en equipo y resolver problemas digitales. Estoy capacitada para enfrentar situaciones estresantes con responsabilidad y liderazgo. Poseo conocimientos avanzados en gestión y programación, adquiridos en ciclos anteriores. Manejo lenguajes y tecnologías como Python, C++, HTML5, CSS3, .NET, Vue.js, C#, JavaScript, PHP, MongoDB, MySQL, entre otras. | <img src="assets/beth-oneglio.jpg" width="80"> |
+| Salgado Luna, Fernando Brian        | U202212023        | Ingeniería de Software | Soy Fernando Salgado, tengo 20 años y me apasiona la tecnología. Tengo experiencia en desarrollo frontend y backend, trabajando con lenguajes como C#, Java y otros. Disfruto resolviendo problemas y buscando soluciones prácticas que contribuyan a los proyectos en los que participo. | <img src="https://i.imgur.com/ZMT41YU.jpeg" width="80"> |
+| Sosa Colca Angello Rodolfo          | U2022xxxxx       | Ingeniería de Software |  | <img src="" width="80"> |
 
 ## 1.2. Solution Profile
 ### 1.2.1. Antecedentes y problemática
@@ -445,7 +443,60 @@ Las colaboraciones serán clave para aumentar la credibilidad y la adopción del
 ---
 
 ### 2.2.2. Registro de entrevistas
+
+**Segmento Objetivo 1: Conductores interprovinciales y de larga distancia**
+
+| **Entrevista 1** |              |
+|--------------|--------------|
+| Edad         |              |
+| Distrito     |              |
+| **Imagen**   |              |
+| Timing:      |              |
+| **Entrevista 2** |              |
+| Edad         |              |
+| Distrito     |              |
+| **Imagen**   |              |
+| Timing:      |              |
+| **Entrevista 3** |              |
+| Edad         |              |
+| Distrito     |              |
+| **Imagen**   |              |
+| Timing:      |              |
+
+<br>
+
+**Segmento 2: Gerenciales de empresas de transporte**
+
+| **Entrevista 1** | **Juan Jesús Calisaya Sánchez** |
+|--------------|--------------|
+| Edad         | 21           |
+| Distrito     | Lima         |
+| **Imagen**   | <img src="assets/juan-entrevista.jpg" width="80"> Juan, gerente de transporte, comentó que administra unos 50 buses y que la fatiga de los conductores es el principal riesgo. Actualmente usan protocolos de descanso, pero no siempre resultan efectivos. Valora contar con reportes en la nube y prioriza efectividad y facilidad de uso por encima del precio. Estaría dispuesto a implementar SafeVision si es confiable, ya que le permitiría reducir accidentes, mejorar la seguridad y optimizar la gestión de su flota. |
+| Timing:     |              |
+| **Entrevista 2** |              |
+| Edad         |              |
+| Distrito     |              |
+| **Imagen**   |              |
+| Timing:      |              |
+| Entrevista 3 |              |
+| Edad         |              |
+| Distrito     |              |
+| **Imagen**   |              |
+| Timing:      |              |
+
+Enlace de las Entrevistas:
+
 ### 2.2.3. Análisis de entrevistas
+
+Según las entrevistas realizadas y los resúmenes, hemos llevado a cabo un análisis de las entrevistas en el que destacamos las similitudes y hallazgos:
+
+**Segmento Objetivo 1: Conductores interprovinciales y de larga distancia**
+
+Durante las entrevistas con los conductores se identificó que la fatiga y la somnolencia son problemas frecuentes debido a las largas jornadas y a la presión por cumplir horarios. Ellos mencionaron que, aunque existen descansos programados, no siempre son respetados por la dinámica del trabajo. Coincidieron en que contar con alertas en tiempo real sería de gran ayuda para prevenir accidentes y mejorar su seguridad personal. Asimismo, valoran que la herramienta sea sencilla de usar y no interfiera en la conducción.
+
+**Segmento 2: Gerenciales de empresas de transporte**
+
+Las entrevistas con los gerentes revelaron que la principal preocupación está en la seguridad de los pasajeros y la reducción de accidentes. Señalaron que actualmente aplican protocolos de descanso y métricas de desempeño como accidentes y multas, aunque reconocen limitaciones en su efectividad. Consideran que un sistema como SafeVision tendría un alto valor si ofrece reportes en la nube y monitoreo en tiempo real, ya que permitiría tomar decisiones rápidas y optimizar la gestión de la flota. Además, priorizan la efectividad y la facilidad de uso por encima del precio, y estarían dispuestos a implementar la solución siempre que garantice confiabilidad y buena integración.
 
 ## 2.3. Needfinding
 
@@ -459,7 +510,26 @@ Las colaboraciones serán clave para aumentar la credibilidad y la adopción del
 # Capítulo III: Requirements Specification
 
 ## 3.1. To-Be Scenario Mapping
+
 ## 3.2. User Stories
+
+En este apartado se presentan las historias de usuario.
+
+# User Stories SafeVision
+
+| User Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+|---------------|--------|-------------|--------------------------|----------------------------|
+| US01 | Detección de somnolencia en tiempo real | Como **conductor**, quiero que el sistema identifique cuando presento signos de fatiga para recibir alertas inmediatas y evitar accidentes. | **Dado que** el conductor muestra parpadeos o cabeceos, **cuando** la cámara lo detecte, **entonces** se generará una alerta sonora y visual en cabina. | Epic 1 |
+| US02 | Notificación inmediata al conductor | Como **conductor**, quiero recibir alertas preventivas en el momento adecuado para reaccionar y mantenerme seguro. | **Dado que** el sistema detecta señales de somnolencia, **cuando** supere el umbral definido, **entonces** me notificará con vibración o sonido. | Epic 1 |
+| US03 | Acceso a reportes de seguridad | Como **gerente**, quiero visualizar reportes sobre el estado de los conductores para tomar decisiones preventivas. | **Dado que** los datos se guardan en la nube, **cuando** el gerente acceda a la plataforma, **entonces** podrá consultar reportes históricos de alertas y desempeño. | Epic 2 |
+| US04 | Notificación crítica al gerente | Como **gerente**, quiero recibir alertas en tiempo real de conductores en riesgo para intervenir rápidamente. | **Dado que** un conductor está en nivel crítico de fatiga, **cuando** el sistema lo detecte, **entonces** enviará un aviso inmediato al gerente. | Epic 2 |
+| US05 | Registro de conductores | Como **gerente**, quiero registrar a los conductores en la plataforma para tener un control organizado de la flota. | **Dado que** el gerente ingresa a la sección de administración, **cuando** complete los datos de un conductor, **entonces** el sistema guardará la información. | Epic 3 |
+| US06 | Configuración de parámetros de seguridad | Como **gerente**, quiero ajustar los umbrales de detección de fatiga según políticas internas para adaptar la solución a la empresa. | **Dado que** el gerente accede a configuración, **cuando** modifique valores de umbral, **entonces** el sistema actualizará la detección en tiempo real. | Epic 3 |
+| US07 | Historial personal de alertas | Como **conductor**, quiero consultar mi historial de alertas para conocer mis patrones de fatiga y mejorar mis hábitos de descanso. | **Dado que** el conductor inicia sesión en la app, **cuando** seleccione “Historial”, **entonces** verá la lista de alertas pasadas con fecha y hora. | Epic 1 |
+| US08 | Dashboard general de flota | Como **gerente**, quiero un panel centralizado para ver el estado actual de todos los conductores en carretera y priorizar acciones. | **Dado que** hay varios conductores conectados, **cuando** el gerente ingrese al dashboard, **entonces** visualizará un mapa o lista con su estado en tiempo real. | Epic 2 |
+| US09 | Alerta de pérdida de conexión | Como **gerente**, quiero recibir una notificación si el sistema pierde conexión con un conductor para evaluar la situación. | **Dado que** la cámara o aplicación pierde señal, **cuando** ocurra la desconexión, **entonces** el sistema notificará automáticamente al gerente. | Epic 3 |
+| US10 | Feedback del sistema | Como **conductor**, quiero poder enviar comentarios o marcar falsas alarmas para mejorar la precisión del sistema. | **Dado que** el conductor recibe una alerta, **cuando** considere que fue incorrecta, **entonces** podrá marcarla como “falsa alarma” y enviar feedback. | Epic 1 |
+
 ## 3.3. Impact Mapping
 ## 3.4. Product Backlog
 
@@ -468,7 +538,24 @@ Las colaboraciones serán clave para aumentar la credibilidad y la adopción del
 ## 4.1. Strategic-Level Attribute-Driven Design
 
 ### 4.1.1. Design Purpose
+
+El objetivo de diseño de SafeVision es aumentar la seguridad vial de los conductores mediante un sistema de inteligencia artificial capaz de identificar en tiempo real señales de fatiga o somnolencia. Con el apoyo de una cámara instalada en la cabina y una aplicación móvil, se generan alertas inmediatas para reducir el riesgo de accidentes. Asimismo, la información se procesa en la nube, brindando a las empresas de transporte la posibilidad de acceder a reportes y supervisar de manera constante el estado de sus choferes.
+
 ### 4.1.2. Attribute-Driven Design Inputs
+
+En esta sección se presentarán las Epics y User Stories clave, enfocadas en los requisitos funcionales que influyen directamente en la arquitectura de la solución propuesta para garantizar su correcto diseño, implementación y escalabilidad. Estas historias de usuario permitirán definir las capacidades esenciales del sistema, alineando las necesidades de los usuarios finales con los objetivos del proyecto.
+
+| User Story ID | Título                               | Descripción                                                                                   | Criterios de Aceptación                                                                                                    | Relacionado con (Epic ID) |
+|---------------|--------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|---------------------------|
+| EP01/US01     | Detección de signos de somnolencia   | Como **conductor**, quiero que el sistema detecte signos de somnolencia para recibir alertas y prevenir accidentes. | **Dado que** el conductor está siendo monitoreado, **cuando** se detecten ojos cerrados, bostezos o movimientos de cabeza, **entonces** el sistema debe generar una alerta visual y auditiva en la cabina. | EP01 |
+| EP01/US02     | Envío de alertas a la app móvil      | Como **conductor**, quiero recibir notificaciones inmediatas en mi aplicación móvil para reaccionar a tiempo. | **Dado que** el sistema detecta somnolencia, **cuando** se genere la alerta, **entonces** la app debe mostrar una notificación con sonido y vibración en menos de 2 segundos. | EP01 |
+| EP01/US03     | Reportes en la nube                  | Como **gerente**, quiero acceder a reportes con historial de alertas de cada conductor para supervisar su estado. | **Dado que** el sistema registra eventos de somnolencia, **cuando** el gerente consulte el portal, **entonces** podrá ver reportes con fecha, hora, tipo de evento y estadísticas por conductor/vehículo. | EP01 |
+| EP02/US04     | Registro de conductores              | Como **gerente**, quiero registrar la información de los conductores para tener control de su desempeño. | **Dado que** el gerente tiene acceso al sistema, **cuando** registre a un nuevo conductor, **entonces** deberá completar los campos obligatorios (nombre, licencia, horarios) y recibir confirmación del registro exitoso. | EP02 |
+| EP02/US05     | Registro de vehículos                | Como **gerente**, quiero registrar los vehículos de la empresa para asociarlos a los conductores. | **Dado que** el gerente ingresa un vehículo, **cuando** complete los campos requeridos (placa, modelo, año), **entonces** el sistema debe validar duplicados y confirmar el registro. | EP02 |
+| EP02/US06     | Asociación conductor-vehículo        | Como **gerente**, quiero asociar conductores a vehículos específicos para llevar control de la flota. | **Dado que** existen conductores y vehículos registrados, **cuando** el gerente los vincule, **entonces** el sistema debe guardar la asociación con fecha y mostrarla en los reportes. | EP02 |
+| EP03/US07     | Ajuste de sensibilidad de alertas    | Como **gerente**, quiero definir la sensibilidad del sistema para reducir falsos positivos o negativos. | **Dado que** el gerente accede a la configuración, **cuando** seleccione un nivel de sensibilidad (baja, media, alta), **entonces** el sistema debe aplicar el cambio en tiempo real y registrarlo. | EP03 |
+| EP03/US08     | Configuración de notificaciones      | Como **conductor**, quiero configurar el tipo de notificación (sonido, vibración, visual) para adaptarlas a mis preferencias. | **Dado que** el conductor ingresa a la configuración, **cuando** active o desactive un tipo de notificación, **entonces** el sistema debe guardar los cambios y aplicarlos de inmediato. | EP03 |
+| EP03/US09     | Idioma de la aplicación              | Como **conductor**, quiero cambiar el idioma de la app para usarla en mi lengua preferida. | **Dado que** el conductor accede a la configuración, **cuando** seleccione un idioma, **entonces** la aplicación debe actualizarse automáticamente y guardar la preferencia en su perfil. | EP03 |
 
 #### 4.1.2.1. Primary Functionality (Primary User Stories)
 #### 4.1.2.2. Quality attribute Scenarios
