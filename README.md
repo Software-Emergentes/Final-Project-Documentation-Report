@@ -571,7 +571,11 @@ A continuación se presenta el Empathy Map que detalla las percepciones, pensami
 ### 2.3.4. As-is Scenario Mapping
 
 
+**As-is Scenario Mapping Conductor Profesional:**
 
+<div style="text-align: center;">
+  <img src="./assets/as-is/as-is-conductor.jpg" alt="As-Is Gerente de flota" width="100%" />
+</div>
 
 ## 2.4. Ubiquitous Language
 
