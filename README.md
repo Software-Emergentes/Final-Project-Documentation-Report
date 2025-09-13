@@ -558,12 +558,15 @@ En esta parte se expone la User Task Matrix, la cual detalla las tareas que los 
 
 A continuación se presenta el Empathy Map que detalla las percepciones, pensamientos, sentimientos y comportamientos de los dos segmentos de usuarios principales: conductores profesionales y gerentes de flotas. Este mapa ayuda a comprender mejor sus necesidades y motivaciones al interactuar con el sistema SafeVision.
 
-<h2>Empathy Map Conductor profesional</h2>
+**Empathy Map Conductor profesional:**
 <div style="text-align: center;">
   <img src="./assets/empathy-mapping/conductor-profesional.png" alt="Empathy Map Conductor profesional" width="100%" />
 </div>
+
+
 <br></br>
-<h2>Empathy Map Gerente de flota</h2>
+
+**Empathy Map Gerente de flota:**
 <div style="text-align: center;">
   <img src="./assets/empathy-mapping/gerente-de-flota.png" alt="Empathy Map Gerente de flota" width="100%" />
 </div>
@@ -573,15 +576,56 @@ A continuación se presenta el Empathy Map que detalla las percepciones, pensami
 
 **As-is Scenario Mapping Conductor Profesional:**
 
+
 <div style="text-align: center;">
-  <img src="./assets/as-is/as-is-conductor.jpg" alt="As-Is Gerente de flota" width="100%" />
-</div>
+  <img src="./assets/as-is/as-is-conductor.jpg" alt="As-Is Conductor profesional" width="100%" />
+</div>  
+
+<br></br>
+
+**As-Is Scenario Mapping Gerente de flota**
+
+<div style="text-align: center;">
+  <img src="./assets/as-is/as-is-gerente.jpg" alt="As-Is Gerente de flota" width="100%" />
+</div>  
 
 ## 2.4. Ubiquitous Language
+
+| **Término (Inglés)**  | **Término (Español)**                  | **Definición**                                                                                                                        |
+| ------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Professional Driver | Conductor profesional                  | Persona que opera vehículos de transporte interprovincial de pasajeros, cumpliendo con normas de seguridad y tiempos de ruta establecidos.      |
+| Fleet Manager       | Jefe de operaciones / Gerente de flota | Responsable de coordinar, supervisar y evaluar el rendimiento de los conductores y vehículos dentro de una empresa de transporte.               |
+| Passenger Safety    | Seguridad del pasajero                 | Condición de protección y cuidado de los pasajeros durante el viaje, evitando riesgos de accidentes por fatiga o negligencia.                   |
+| Fatigue Detection   | Detección de fatiga                    | Proceso de identificar señales físicas o comportamentales que indican cansancio del conductor, como parpadeo excesivo o bostezos.               |
+| Alert System        | Sistema de alertas                     | Mecanismo que notifica al conductor y/o al gerente de flota sobre riesgos inmediatos de fatiga o somnolencia para tomar acción preventiva.      |
+| Driving Shift       | Turno de conducción                    | Período de tiempo en el que un conductor se encuentra asignado a manejar un vehículo dentro de una ruta o itinerario programado.                |
+| Rest Stop           | Parada de descanso                     | Intervalo planificado o no planificado durante un viaje en el que el conductor puede recuperarse de la fatiga antes de continuar.               |
+| Route Monitoring    | Monitoreo de ruta                      | Seguimiento en tiempo real del estado del viaje, incluyendo ubicación del vehículo, condiciones del conductor y cumplimiento de tiempos.        |
+| Incident Prevention | Prevención de incidentes               | Acciones y medidas adoptadas para evitar accidentes en carretera, especialmente aquellos relacionados con somnolencia.                          |
+| Compliance          | Cumplimiento normativo                 | Adherencia a las regulaciones legales y protocolos internos que garantizan la seguridad de los pasajeros y la salud del conductor.              |
+| Performance Report  | Informe de desempeño                   | Documento generado que contiene métricas sobre la conducción, incidentes de fatiga y cumplimiento de rutas, utilizado para evaluación y mejora. |
+| Safety Culture      | Cultura de seguridad                   | Conjunto de valores y prácticas dentro de la empresa de transporte que priorizan la seguridad del conductor y del pasajero en la operación.     |
+
 
 # Capítulo III: Requirements Specification
 
 ## 3.1. To-Be Scenario Mapping
+
+**To-Be Scenario Mapping Conductor Profesional:**
+
+
+<div style="text-align: center;">
+  <img src="./assets/to-be/to-be-conductor.jpg" alt="To-Be Conductor profesional" width="100%" />
+</div>  
+
+<br></br>
+
+**To-Ee Scenario Mapping Gerente de flota**
+
+<div style="text-align: center;">
+  <img src="./assets/to-be/to-be-gerente.jpg" alt="To-Be Gerente de flota" width="100%" />
+</div>  
+
 
 ## 3.2. User Stories
 
