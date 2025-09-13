@@ -591,6 +591,8 @@ A continuación se presenta el Empathy Map que detalla las percepciones, pensami
 
 ## 2.4. Ubiquitous Language
 
+En esta sección se presenta el Ubiquitous Language, que define los términos clave utilizados en el contexto del sistema SafeVision. Este lenguaje común facilita la comunicación entre los diferentes actores involucrados, asegurando que todos comprendan claramente los conceptos y funcionalidades del producto.
+
 | **Término (Inglés)**  | **Término (Español)**                  | **Definición**                                                                                                                        |
 | ------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Professional Driver | Conductor profesional                  | Persona que opera vehículos de transporte interprovincial de pasajeros, cumpliendo con normas de seguridad y tiempos de ruta establecidos.      |
@@ -645,6 +647,32 @@ En este apartado se presentan las historias de usuario.
 | US10 | Feedback del sistema | Como **conductor**, quiero poder enviar comentarios o marcar falsas alarmas para mejorar la precisión del sistema. | **Dado que** el conductor recibe una alerta, **cuando** considere que fue incorrecta, **entonces** podrá marcarla como “falsa alarma” y enviar feedback. | Epic 1 |
 
 ## 3.3. Impact Mapping
+
+Para el desarrollo de SafeVision, se ha elaborado un Impact Mapping que detalla los objetivos del negocio, los actores involucrados, los impactos esperados y las funcionalidades clave del sistema. Este mapa estratégico ayuda a alinear las acciones del equipo con los resultados deseados, asegurando que cada característica desarrollada contribuya directamente a los objetivos de seguridad vial y satisfacción del cliente.
+
+**Business goals:**
+- Reducir en un 30% los incidentes de somnolencia en conductores en un periodo de 12 meses.
+- Aumentar en 50% el cumplimiento de descansos programados en turnos nocturnos en 8 meses.
+- Lograr que el 80% de los conductores adopten el sistema en sus primeros 6 meses de implementación.
+
+<div style="text-align: center;">
+  <img src="./assets/impact-mapping/conductor-impact.png" alt="Impact Mapping Conductor profesional" width="100%" />
+</div>
+
+
+<br></br>
+
+**Business goals:**
+- Disminuir en 40% la tasa de accidentes relacionados con la fatiga en la empresa en un año.
+- Garantizar que el 90% de los conductores cumpla con las políticas de descanso en un periodo de 6 meses.
+- Reducir en 25% los costos asociados a incidentes por fatiga en 10 meses.
+
+<div style="text-align: center;">
+  <img src="./assets/impact-mapping/gerente-impact.png" alt="Impact Mapping Conductor profesional" width="100%" />
+</div>
+
+
+
 ## 3.4. Product Backlog
 
 # Capítulo IV: Strategic-Level Software Design
