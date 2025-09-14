@@ -136,7 +136,7 @@ Convertirnos en una startup líder en el Perú en soluciones inteligentes para l
 
 | Miembros del equipo                  | Código Estudiante | Carrera                | Acerca de | Foto |
 |-------------------------------------|------------------|-----------------------|---------------------------------------------------------------|------|
-| Herrera Aguirre, Fabia Alejandra     | U202219422       | Ingeniería de Software | Soy Fabia Herrera, estudiante de 7mo ciclo, me considero una persona creativa y responsable, valores que considero serán útiles para garantizar entregas óptimas para este proyecto. Entre mis habilidades técnicas están los lenguajes de programación C#, Java, C++, Python y JavaScript principalmente, y el uso de los frameworks Angular y Vue. | <img src="assets/team-members/fabia-herrera.png" width="80"> |
+| Herrera Aguirre, Fabia Alejandra     | U202219422       | Ingeniería de Software | Soy Fabia Herrera, estudiante de 8vo ciclo, me considero una persona creativa y responsable, valores que considero serán útiles para garantizar entregas óptimas para este proyecto. Entre mis habilidades técnicas están los lenguajes de programación C#, Java, C++, Python y JavaScript principalmente, y el uso de los frameworks Angular y Vue. | <img src="assets/team-members/fabia-herrera.png" width="80"> |
 | Linares Tejada, Leonardo Félix Jesús | U2022xxxxx       | Ingeniería de Software |  | <img src="" width="80"> |
 | Oneglio De Paz, Beth Shantal         | U202213423       | Ingeniería de Software | Mi nombre es Beth Shantal Oneglio De Paz - u202213423, tengo 20 años y estudio Ingeniería de Software en la UPC. Disfruto trabajar en equipo y resolver problemas digitales. Estoy capacitada para enfrentar situaciones estresantes con responsabilidad y liderazgo. Poseo conocimientos avanzados en gestión y programación, adquiridos en ciclos anteriores. Manejo lenguajes y tecnologías como Python, C++, HTML5, CSS3, .NET, Vue.js, C#, JavaScript, PHP, MongoDB, MySQL, entre otras. | <img src="assets/team-members/beth-oneglio.jpg" width="80"> |
 | Salgado Luna, Fernando Brian        | U202212023        | Ingeniería de Software | Soy Fernando Salgado, tengo 20 años y me apasiona la tecnología. Tengo experiencia en desarrollo frontend y backend, trabajando con lenguajes como C#, Java y otros. Disfruto resolviendo problemas y buscando soluciones prácticas que contribuyan a los proyectos en los que participo. | <img src="https://i.imgur.com/ZMT41YU.jpeg" width="80"> |
@@ -581,13 +581,14 @@ A continuación se presenta el Empathy Map que detalla las percepciones, pensami
   <img src="./assets/as-is/as-is-conductor.jpg" alt="As-Is Conductor profesional" width="100%" />
 </div>  
 
-<br></br>
-
 **As-Is Scenario Mapping Gerente de flota**
 
 <div style="text-align: center;">
   <img src="./assets/as-is/as-is-gerente.jpg" alt="As-Is Gerente de flota" width="100%" />
 </div>  
+<br>
+Enlace al tablero en Miro en donde fueron realizados los As-Is Scenario Mapping: <a href="https://miro.com/app/board/uXjVJI4Pgq0=/?share_link_id=121411571054">https://miro.com/app/board/uXjVJI4Pgq0=/?share_link_id=121411571054</a>
+<br>
 
 ## 2.4. Ubiquitous Language
 
@@ -628,6 +629,9 @@ En esta sección se presenta el Ubiquitous Language, que define los términos cl
   <img src="./assets/to-be/to-be-gerente.jpg" alt="To-Be Gerente de flota" width="100%" />
 </div>  
 
+<br>
+Enlace al tablero en Miro en donde fueron realizados los To-Be Scenario Mapping: <a href="https://miro.com/app/board/uXjVJI4Pgq0=/?share_link_id=121411571054">https://miro.com/app/board/uXjVJI4Pgq0=/?share_link_id=121411571054</a>
+<br>
 
 ## 3.2. User Stories
 
