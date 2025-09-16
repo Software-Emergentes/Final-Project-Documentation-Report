@@ -731,7 +731,40 @@ En esta sección se presentarán las Epics y User Stories clave, enfocadas en lo
 #### 4.1.2.3. Constraints
 
 ### 4.1.3. Architectural Drivers Backlog
+En esta sección se vera el backlog de los drivers:
+FR: Functional Requirements
+QA: Quality Attributes
+CT: Constraints 
+
+| Driver ID | Título de Driver | Descripción | Importancia para Stakeholders | Impacto en Arquitectura | Technical Complexity |
+|-----------|------------------|-------------|-------------------------------|--------------------------|-----------------------|
+| FR1 | Detección de somnolencia en tiempo real | El sistema debe identificar parpadeos, bostezos y cabeceos en menos de 200 ms. | High | Alto – requiere IA en edge computing | High |
+| FR2 | Alertas inmediatas al conductor | Generación de notificaciones visuales y sonoras cuando se detecta fatiga. | High | Medio – integración de cámara, app y hardware | Medium |
+| FR3 | Registro automático de incidentes | Cada alerta debe guardarse con fecha, hora y duración en la base de datos. | High | Alto – almacenamiento confiable en nube/local | Medium |
+| FR4 | Reporte resumido por viaje | Al terminar el recorrido, el conductor recibe un resumen de alertas y riesgos. | Medium | Medio – requiere generación de reportes automáticos | Medium |
+| FR5 | Acceso multi-dispositivo | Los gerentes deben acceder a la información desde web y móvil. | High | Alto – compatibilidad multiplataforma | Medium |
+| FR6 | Gestión de roles de usuario | El sistema debe asignar roles (conductor, supervisor, gerente) con permisos. | High | Alto – seguridad y control de accesos | Medium |
+| FR7 | Exportación de reportes | Posibilidad de descargar datos en PDF y Excel para auditoría. | Medium | Bajo – generación de archivos en distintos formatos | Low |
+| QA1 | Disponibilidad 24/7 | El sistema debe funcionar en todo momento para evitar fallos en carretera. | High | Alto – diseño tolerante a fallos, redundancia | High |
+| QA2 | Rendimiento en alertas | Las alertas deben generarse en menos de 200 ms. | High | Alto – procesamiento local en dispositivos | High |
+| QA3 | Escalabilidad | Soporte inicial para 500 conductores concurrentes, escalable a miles. | High | Alto – arquitectura distribuida y balanceo de carga | High |
+| QA4 | Seguridad de datos | Información encriptada en tránsito y reposo para proteger privacidad. | High | Alto – cifrado, autenticación y políticas de acceso | High |
+| QA5 | Usabilidad | Interfaz intuitiva con alertas claras y no invasivas. | Medium | Medio – diseño UX/UI centrado en el usuario | Medium |
+| QA6 | Mantenibilidad | La solución debe permitir actualizaciones sin detener el servicio. | Medium | Medio – modularidad y microservicios | Medium |
+| CT1 | Conectividad a internet | Se requiere internet para sincronización con la nube. | High | Alto – fallback offline y reintentos de envío | Medium |
+| CT2 | Cámara de bajo costo | El hardware debe ser accesible y fácil de instalar en flotas. | Medium | Medio – integración con dispositivos económicos | Low |
+| CT3 | Procesamiento en dispositivo | Las alertas críticas deben calcularse en edge computing. | High | Alto – IA optimizada en hardware limitado | High |
+| CT4 | Cloud Deployment | El sistema debe desplegarse en nube pública con contenedores. | High | Alto – requiere orquestación (Docker/K8s) | Medium |
+
 ### 4.1.4. Architectural Design Decisions
+
+| Driver ID | Título de Driver | **Pattern 1: Microservices** | **Pattern 2: Monolithic Layered** | **Pattern 3: Event-Driven** |
+|-----------|------------------|------------------------------|-----------------------------------|-----------------------------|
+| QA3 | Escalabilidad | **Pro:** Escalable horizontalmente, fácil despliegue en nube.<br>**Con:** Complejidad en orquestación y monitoreo. | **Pro:** Simplicidad inicial, menor curva de aprendizaje.<br>**Con:** Escalabilidad limitada, riesgo de cuellos de botella. | **Pro:** Alta desacoplación y flexibilidad para integrar nuevos servicios.<br>**Con:** Requiere infraestructura robusta de mensajería. |
+| QA2 | Rendimiento en alertas | **Pro:** Procesamiento distribuido en servicios optimizados.<br>**Con:** Sobrecarga de comunicación entre microservicios. | **Pro:** Procesamiento local más directo.<br>**Con:** Escalabilidad y mantenibilidad reducida. | **Pro:** Procesa eventos en tiempo real con baja latencia.<br>**Con:** Complejidad en diseño de flujos y consistencia eventual. |
+| CT3 | Procesamiento en dispositivo | **Pro:** Edge computing reduce latencia, mantiene alertas sin internet.<br>**Con:** Requiere optimizar IA para hardware limitado. | **Pro:** Simplicidad al centralizar lógica en backend.<br>**Con:** Dependencia total de conectividad, mayor latencia. | **Pro:** Permite notificaciones asincrónicas rápidas.<br>**Con:** Aún depende de la nube para analítica agregada. |
+| QA4 | Seguridad de datos | **Pro:** Microservicios permiten aplicar seguridad por servicio (defensa en profundidad).<br>**Con:** Configuración de seguridad más compleja. | **Pro:** Centralización facilita control de seguridad.<br>**Con:** Un único punto de fallo expone todo el sistema. | **Pro:** Puede encriptar mensajes en tránsito con brokers seguros.<br>**Con:** Complejidad en la gestión de claves y canales seguros. |
+
 ### 4.1.5. Quality Attribute Scenario Refinements
 
 ## 4.2. Strategic-Level Domain-Driven Design
