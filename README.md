@@ -767,6 +767,285 @@ CT: Constraints
 
 ### 4.1.5. Quality Attribute Scenario Refinements
 
+<table border="0" cellspacing="0" cellpadding="8">
+  <tbody>
+    <tr>
+      <th colspan = "4">Scenario Refinement for Scenario 1</th>
+    </tr>
+    <tr>
+      <th colspan = "2">Scenario</th>
+      <td>Disponibilidad</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Business Goals</th>
+      <td>Garantizar que el sistema esté operativo durante los viajes de los conductores sin interrupciones, incluso si la conexión a internet se pierde temporalmente.</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Relevant Quality Attributes</th>
+      <td>Disponibilidad</td>
+    </tr>
+    <tr>
+      <th rowspan = "6">Scenario Components</th>
+      <th>Stimulus</th>
+      <td>Pérdida de conexión a internet durante un viaje.</td>
+    </tr>
+    <tr>
+      <th>Stimulus Source</th>
+      <td>Conductor / Red de telecomunicaciones</td>
+    </tr>
+    <tr>
+      <th>Environment</th>
+      <td>Carretera interprovincial en condiciones de baja cobertura</td>
+    </tr>
+    <tr>
+      <th>Artifact</th>
+      <td>Aplicación móvil y cámara con IA integrada</td>
+    </tr>
+    <tr>
+      <th>Response</th>
+      <td>El sistema continúa detectando somnolencia localmente y almacena incidentes para sincronizarlos cuando se restablezca la conexión.</td>
+    </tr>
+    <tr>
+      <th>Response Measure</th>
+      <td>El conductor recibe la alerta crítica en menos de 200 ms, sin depender de la nube.</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Questions</th>
+      <td>¿Cómo garantizar que el almacenamiento local de eventos no se pierda durante la desconexión?</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Issues</th>
+      <td>Riesgo de pérdida de datos si el dispositivo falla antes de sincronizar con la nube.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+
+<table border="0" cellspacing="0" cellpadding="8">
+  <tbody>
+    <tr>
+      <th colspan = "4">Scenario Refinement for Scenario 2</th>
+    </tr>
+    <tr>
+      <th colspan = "2">Scenario</th>
+      <td>Rendimiento en alertas</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Business Goals</th>
+      <td>Emitir alertas inmediatas al conductor ante signos críticos de somnolencia, minimizando el tiempo de reacción.</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Relevant Quality Attributes</th>
+      <td>Rendimiento</td>
+    </tr>
+    <tr>
+      <th rowspan = "6">Scenario Components</th>
+      <th>Stimulus</th>
+      <td>Cierre de ojos superior a 2 segundos.</td>
+    </tr>
+    <tr>
+      <th>Stimulus Source</th>
+      <td>Cámara instalada en la cabina</td>
+    </tr>
+    <tr>
+      <th>Environment</th>
+      <td>Conductor en carretera nocturna</td>
+    </tr>
+    <tr>
+      <th>Artifact</th>
+      <td>Sistema de detección IA en el dispositivo</td>
+    </tr>
+    <tr>
+      <th>Response</th>
+      <td>Se activa una alerta sonora y visual.</td>
+    </tr>
+    <tr>
+      <th>Response Measure</th>
+      <td>El tiempo máximo entre la detección y la alerta no debe superar los 200 ms.</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Questions</th>
+      <td>¿Qué tan precisos son los modelos de IA en condiciones de poca luz?</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Issues</th>
+      <td>Necesidad de optimizar los algoritmos de visión artificial para hardware de bajo costo.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+
+<table border="0" cellspacing="0" cellpadding="8">
+  <tbody>
+    <tr>
+      <th colspan = "4">Scenario Refinement for Scenario 3</th>
+    </tr>
+    <tr>
+      <th colspan = "2">Scenario</th>
+      <td>Seguridad de datos</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Business Goals</th>
+      <td>Proteger la privacidad de la información de los conductores y garantizar la integridad de los reportes enviados a la nube.</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Relevant Quality Attributes</th>
+      <td>Seguridad</td>
+    </tr>
+    <tr>
+      <th rowspan = "6">Scenario Components</th>
+      <th>Stimulus</th>
+      <td>Intento de interceptar datos de viaje.</td>
+    </tr>
+    <tr>
+      <th>Stimulus Source</th>
+      <td>Atacante externo</td>
+    </tr>
+    <tr>
+      <th>Environment</th>
+      <td>Transmisión de datos entre aplicación móvil y servidor en la nube</td>
+    </tr>
+    <tr>
+      <th>Artifact</th>
+      <td>Canal de comunicación (API REST/HTTP)</td>
+    </tr>
+    <tr>
+      <th>Response</th>
+      <td>Los datos se transmiten encriptados mediante TLS/HTTPS y almacenados con cifrado AES en la nube.</td>
+    </tr>
+    <tr>
+      <th>Response Measure</th>
+      <td>La probabilidad de acceso no autorizado debe ser prácticamente nula bajo auditoría estándar (ISO/IEC 27001).</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Questions</th>
+      <td>¿Cómo se gestionarán las claves de cifrado a nivel de microservicios?</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Issues</th>
+      <td>Complejidad en la implementación de políticas de rotación de claves.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+
+<table border="0" cellspacing="0" cellpadding="8">
+  <tbody>
+    <tr>
+      <th colspan = "4">Scenario Refinement for Scenario 4</th>
+    </tr>
+    <tr>
+      <th colspan = "2">Scenario</th>
+      <td>Escalabilidad</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Business Goals</th>
+      <td>Soportar de manera eficiente el crecimiento de usuarios concurrentes (conductores y gerentes).</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Relevant Quality Attributes</th>
+      <td>Escalabilidad</td>
+    </tr>
+    <tr>
+      <th rowspan = "6">Scenario Components</th>
+      <th>Stimulus</th>
+      <td>Conexión simultánea de 500 conductores.</td>
+    </tr>
+    <tr>
+      <th>Stimulus Source</th>
+      <td>Aplicaciones móviles de conductores</td>
+    </tr>
+    <tr>
+      <th>Environment</th>
+      <td>Plataforma en la nube</td>
+    </tr>
+    <tr>
+      <th>Artifact</th>
+      <td>Microservicios desplegados en contenedores</td>
+    </tr>
+    <tr>
+      <th>Response</th>
+      <td>El sistema balancea la carga y asegura la disponibilidad de todos los servicios.</td>
+    </tr>
+    <tr>
+      <th>Response Measure</th>
+      <td>El tiempo de respuesta por petición no debe superar los 2 segundos en picos de uso.</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Questions</th>
+      <td>¿Qué proveedor cloud garantiza mejor escalabilidad con costo razonable?</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Issues</th>
+      <td>Posibles cuellos de botella en el broker de mensajería si no se configura correctamente.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+
+<table border="0" cellspacing="0" cellpadding="8">
+  <tbody>
+    <tr>
+      <th colspan = "4">Scenario Refinement for Scenario 5</th>
+    </tr>
+    <tr>
+      <th colspan = "2">Scenario</th>
+      <td>Usabilidad</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Business Goals</th>
+      <td>Facilitar que los conductores reciban alertas claras y no invasivas, evitando distracciones durante la conducción.</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Relevant Quality Attributes</th>
+      <td>Usabilidad</td>
+    </tr>
+    <tr>
+      <th rowspan = "6">Scenario Components</th>
+      <th>Stimulus</th>
+      <td>Generación de una alerta crítica.</td>
+    </tr>
+    <tr>
+      <th>Stimulus Source</th>
+      <td>Algoritmo de detección de fatiga</td>
+    </tr>
+    <tr>
+      <th>Environment</th>
+      <td>Conductor en plena carretera con alta concentración requerida</td>
+    </tr>
+    <tr>
+      <th>Artifact</th>
+      <td>Interfaz de la aplicación móvil</td>
+    </tr>
+    <tr>
+      <th>Response</th>
+      <td>Se muestra un mensaje visual corto acompañado de una alerta sonora configurable en volumen.</td>
+    </tr>
+    <tr>
+      <th>Response Measure</th>
+      <td>El conductor debe comprender la alerta en menos de 3 segundos sin desviar excesivamente la atención del camino.</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Questions</th>
+      <td>¿Cómo validar que las alertas son entendibles y no generan estrés adicional al conductor?</td>
+    </tr>
+    <tr>
+      <th colspan = "2">Issues</th>
+      <td>Balance entre efectividad de la alerta y posible distracción.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
 ## 4.2. Strategic-Level Domain-Driven Design
 
 ### 4.2.1. EventStorming
