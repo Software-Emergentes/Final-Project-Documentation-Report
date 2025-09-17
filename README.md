@@ -1092,7 +1092,35 @@ Para este EventStorming, el equipo se organizó para crear una primera versión 
 <img src="./assets/eventstorming/step10.jpg"> 
 
 ### 4.2.2. Candidate Context Discovery
+En esta sección, evidenciamos el proceso que hemos usado a partir del dominio modelado como EventStorm, para identificar los bounded contexts.
+
+**Proceso de identificación**
+
+Comenzamos revisando el modelo completo que habíamos construido, específicamente, en la parte de los eventos pivote y agregados identificados.
+
+<img src="./assets/eventstorming/step4.jpg">
+
+Después, identificamos los patrones y agrupaciones naturales de comandos, eventos y políticas que trabajaban sobre las mismas entidades o procesos.
+
+<img src="./assets/eventstorming/step9.jpg"> 
+
+Nos enfocamos en eventos clave como las configuraciones de notificaciones y monitoreo, que marcan claramente transiciones entre diferentes contextos. Para que finalmente nombremos cada bounded context identificado según su responsabilidad principal y validamos que tuvieran coherencia interna y límites claros.
+
+<img src="./assets/eventstorming/step10.jpg">
+
+Como resultado de este proceso, identificamos los siguientes bounded contexts para nuestra solución:
+
+- **Driver:** Responsable de la gestión del perfil único de cada conductor, incluyendo la creación de cuentas, registro de licencias, actualización de información personal y la administración del estado del perfil. Garantiza que cada conductor tenga un identificador único asociado a sus viajes e historial de alertas.
+- **IAM (Identity & Access Management):** Encargado del registro, autenticación y autorización de usuarios en el sistema. Administra la creación de cuentas, validación de roles (conductor, gerente, supervisor) y el inicio/cierre de sesión seguro, asegurando que cada usuario acceda únicamente a las funcionalidades correspondientes a su rol.
+- **Trip:** Gestiona los viajes realizados por los conductores. Inicia y finaliza recorridos, administra datos del viaje (fecha, duración, alertas generadas) y se encarga de enviar esta información a la nube para generar reportes. Permite también el control de cancelaciones y el manejo de estados asociados a los recorridos.
+- **Monitoring:** Responsable de la detección en tiempo real de signos de somnolencia o fatiga (parpadeos, micro-sueños, cabeceos). Genera alertas críticas, las registra en el sistema y maneja los flujos cuando el conductor ignora una advertencia. También garantiza la política de recolección de datos para análisis posterior.
+- **Notification:** Administra la generación y envío de alertas a conductores y reportes a gerentes. Incluye el historial de alertas, la actualización de patrones de riesgo y el envío de notificaciones tanto en la aplicación móvil del conductor como en la plataforma web de supervisores. Gestiona también los errores en el envío de reportes.
+- **Management:** Permite a los gerentes supervisar la seguridad de los conductores y reaccionar ante incidentes críticos. Incluye la gestión de emergencias, notificación a aseguradoras, despacho de servicios de emergencia y control de riesgos. Asegura que las empresas de transporte tengan visibilidad en tiempo real de la seguridad de sus flotas.
+
+Esta identificación nos proporcionó una base sólida para continuar con el modelado más detallado de cada contexto y sus interacciones.
+
 ### 4.2.3. Domain Message Flows Modeling
+
 ### 4.2.4. Bounded Context Canvases
 ### 4.2.5. Context Mapping
 
