@@ -1047,8 +1047,50 @@ CT: Constraints
 <br>
 
 ## 4.2. Strategic-Level Domain-Driven Design
-
+En esta sección evidenciamos el proceso que usamos para descomponer nuestro software en bounded contexts. Utilizando las herramientas de EventStorming y Bounded Context Canvas.
 ### 4.2.1. EventStorming
+Para este EventStorming, el equipo se organizó para crear una primera versión del modelado del prouyecto. Durante este proceso seguimos una serie de 10 pasos.
+
+**Paso 1: Unstructured Explorationa:** En este primer paso, identificamos todos los eventos relevantes del dominio que ocurren en nuestro sistema. Los post-its anaranjados son eventos que representan hechos importantes que suceden durante el proceso. Por ahora, el orden de estos aun no esta definido.
+
+<img src="./assets/eventstorming/step1.jpg"> 
+
+**Paso 2: Timelines:** Organizamos todos los eventos identificados en una línea temporal, colocándolos en orden cronológico para visualizar mejor el flujo del proceso y entender la secuencia natural de acciones en el sistema.
+
+<img src="./assets/eventstorming/step2.jpg"> 
+
+**Paso 3: Pain Points:** Identificamos los puntos problemáticos (pain points) en nuestro proceso. Ya que representan áreas que requieren atención especial para el funcionamiento del sistema.
+
+<img src="./assets/eventstorming/step3.jpg"> 
+
+**Paso 4: Pivotal Points:** Identificamos los momentos clave (pivotal points) en nuestro proceso. Ya que representan momentos críticos en el funcionamiento.
+
+<img src="./assets/eventstorming/step4.jpg"> 
+
+**Paso 5: Commands:** Agregamos los comandos (representados con post-its azules) que desencadenan los eventos. Estos son las acciones que los usuarios o sistemas externos realizan para el funcionamiento del sistema.
+
+<img src="./assets/eventstorming/step5.jpg"> 
+
+**Paso 6: Policies:** Definimos las políticas o reglas de negocio (con post-its violetas) que reaccionan a ciertos eventos y generan nuevos eventos como resultados.
+
+<img src="./assets/eventstorming/step6.jpg"> 
+
+**Paso 7: Read Models:** Identificamos los modelos de lectura o vistas que los usuarios necesitan para poder usar el programa. Estos representan la información que debe de mostrarse en esos puntos en específicos.
+
+<img src="./assets/eventstorming/step7.jpg"> 
+
+**Paso 8: External Systems:** Marcamos los sistemas externos (con post-its rojos) que interactúan con nuestra solución. Son los componentes que estan fuera de nuestro control directo pero que igualmente influyen en el proceso.
+
+<img src="./assets/eventstorming/step8.jpg"> 
+
+**Paso 9: Aggregates:** Agrupamos los comandos y eventos relacionados en unidades lógicas llamadas agregados (representados con post-its amarillos). Cada agregado encapsula un conjunto de funciones para un aspecto en específico del sistema.
+
+<img src="./assets/eventstorming/step9.jpg"> 
+
+**Paso 10: Bounded Contexts:** Finalmente, identificamos los bounded contexts, que son las áreas de responsabilidad dentro del sistema.
+
+<img src="./assets/eventstorming/step10.jpg"> 
+
 ### 4.2.2. Candidate Context Discovery
 ### 4.2.3. Domain Message Flows Modeling
 ### 4.2.4. Bounded Context Canvases
