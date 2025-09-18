@@ -463,11 +463,11 @@ Las colaboraciones serán clave para aumentar la credibilidad y la adopción del
 
 **Segmento Objetivo 1: Conductores interprovinciales y de larga distancia**
 
-| **Entrevista 1** |              |
+| **Entrevista 1** | Omar Morales MOntalvo Andrew             |
 |--------------|--------------|
-| Edad         |              |
-| Distrito     |              |
-| **Imagen**   |              |
+| Edad         |      25        |
+| Distrito     |       San Juan de Lurigancho       |
+| <img src="assets/interviews/omar-entrevista.jpeg" width="80">     |   Omar es un conductor de una famosa empresa de transportes, el nos habla de su experiencia conduciendo. Además de ello, habla de como se gestiona cuando tiene fatiga, tambien menciona que una combinacion de ciertos patrones puede oncasionarle fatiga, el apreciaria la implementacion de una aplicacion que permita alertarle constantemente en caso empiece a tener signos de somnolencia.   |
 | Timing:      |              |
 | **Entrevista 2** |              |
 | Edad         |              |
