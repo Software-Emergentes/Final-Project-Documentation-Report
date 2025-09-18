@@ -488,12 +488,12 @@ Las colaboraciones serán clave para aumentar la credibilidad y la adopción del
 |--------------|--------------|
 | Edad         | 21           |
 | Distrito     | Lima         |
-| <img src="assets/juan-entrevista.jpg" width="80">  | Juan, gerente de transporte, comentó que administra unos 50 buses y que la fatiga de los conductores es el principal riesgo. Actualmente usan protocolos de descanso, pero no siempre resultan efectivos. Valora contar con reportes en la nube y prioriza efectividad y facilidad de uso por encima del precio. Estaría dispuesto a implementar SafeVision si es confiable, ya que le permitiría reducir accidentes, mejorar la seguridad y optimizar la gestión de su flota. |
+| <img src="assets/interviews/juan-entrevista.jpg" width="80">  | Juan, gerente de transporte, comentó que administra unos 50 buses y que la fatiga de los conductores es el principal riesgo. Actualmente usan protocolos de descanso, pero no siempre resultan efectivos. Valora contar con reportes en la nube y prioriza efectividad y facilidad de uso por encima del precio. Estaría dispuesto a implementar SafeVision si es confiable, ya que le permitiría reducir accidentes, mejorar la seguridad y optimizar la gestión de su flota. |
 | Timing:     |              |
-| **Entrevista 2** |              |
-| Edad         |              |
-| Distrito     |              |
-| **Imagen**   |              |
+| **Entrevista 2** | <center>**Ernesto Miguel Vilca López**</center>             |
+| Edad         |  29            |
+| Distrito     |  Lince            |
+| <img src="assets/interviews/gerente-miguel-vilca.jpeg" width="80">   |  Miguel es un jefe de flota en la empresa MORCOR, una empresa de transporte de herramientas interprovincial. Nos comenta que tiene bajo supervición a 70 empleados y 30 camiones, a quienes monitorea por medios de comunicación tradicionales (véase, llamadas periódicas, mensajes de texto, entre otros). Por ello, le interesó la propuesta que ofrece el equipo con SafeVision, pues supone una gran mejora en la gestión del personal. Asimismo, mencionó que es muy importante para él que la herramienta tenga un precio módico dada la gran cantidad de buses con los que cuenta la empresa. |
 | Timing:      |              |
 | Entrevista 3 |              |
 | Edad         |              |
