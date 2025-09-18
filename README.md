@@ -1111,7 +1111,7 @@ En esta sección evidenciamos el proceso que usamos para descomponer nuestro sof
 ### 4.2.1. EventStorming
 Para este EventStorming, el equipo se organizó para crear una primera versión del modelado del prouyecto. Durante este proceso seguimos una serie de 10 pasos.
 
-**Paso 1: Unstructured Explorationa:** En este primer paso, identificamos todos los eventos relevantes del dominio que ocurren en nuestro sistema. Los post-its anaranjados son eventos que representan hechos importantes que suceden durante el proceso. Por ahora, el orden de estos aun no esta definido.
+**Paso 1: Unstructured Exploration:** En este primer paso, identificamos todos los eventos relevantes del dominio que ocurren en nuestro sistema. Los post-its anaranjados son eventos que representan hechos importantes que suceden durante el proceso. Por ahora, el orden de estos aun no esta definido.
 
 <img src="./assets/eventstorming/step1.jpg"> 
 
