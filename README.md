@@ -672,6 +672,19 @@ En este apartado se presentan las historias de usuario.
 | US29 | Validación de rol de usuario | Como sistema, quiero validar el rol del usuario para mostrar funcionalidades apropiadas. | Dado que un usuario inicia sesión, cuando se valide su rol, entonces será redirigido al dashboard correspondiente. | Epic 3 |
 | US30 | Configuración de parámetros de seguridad | Como gerente, quiero ajustar umbrales de detección de fatiga según políticas internas. | Dado que accede a configuración, cuando modifique valores de umbral, entonces el sistema actualizará la detección. | Epic 3 |
 | US31 | Gestión de roles de usuario | Como empresa, quiero asignar diferentes roles (gerente, supervisor, conductor) para controlar accesos. | Dado que se crea un nuevo usuario, cuando se asigne un rol, entonces se mostrarán permisos adecuados. | Epic 3 |
+| US32 | Sección Hero con CTA           | Como visitante, quiero ver un mensaje claro con un botón de acción principal para entender el valor de SafeVision y registrarme fácilmente. | Dado que accedo a la landing, cuando se cargue la página, entonces visualizaré un titular, descripción breve y un botón “Empieza ahora”.             | Epic 4 |
+| US33 | Sección About Us               | Como visitante, quiero conocer qué hace SafeVision y cómo funciona para comprender su propuesta de valor.                                   | Dado que entro a la landing, cuando navegue a “About Us”, entonces visualizaré una explicación clara y breve con imágenes ilustrativas.              | Epic 4 |
+| US34 | Sección Beneficios             | Como visitante, quiero ver los beneficios clave de SafeVision para decidir si se ajusta a mis necesidades.                                  | Dado que accedo a la landing, cuando navegue a “Beneficios”, entonces visualizaré una lista de ventajas claras y visuales.                           | Epic 4 |
+| US35 | Sección Para Conductores       | Como conductor, quiero ver cómo SafeVision me protege para sentir confianza en la herramienta.                                              | Dado que accedo a la landing, cuando llegue a la sección de “Conductores”, entonces visualizaré beneficios enfocados en mi seguridad.                | Epic 4 |
+| US36 | Sección Para Empresas          | Como gerente, quiero conocer cómo SafeVision me ayuda a supervisar a mis conductores para tomar decisiones de inversión.                    | Dado que accedo a la landing, cuando llegue a la sección de “Empresas”, entonces visualizaré beneficios enfocados en gestión y reducción de riesgos. | Epic 4 |
+| US37 | Testimonios                    | Como visitante, quiero leer testimonios de otros usuarios para confiar más en SafeVision.                                                   | Dado que accedo a la landing, cuando llegue a “Testimonios”, entonces visualizaré citas y valoraciones de conductores y gerentes.                    | Epic 4 |
+| US38 | Sección Organizaciones Aliadas | Como visitante, quiero ver qué empresas u organizaciones respaldan SafeVision para validar su credibilidad.                                 | Dado que accedo a la landing, cuando llegue a “Organizaciones”, entonces visualizaré logos de aliados estratégicos.                                  | Epic 4 |
+| US39 | Sección About-the-product             | Como visitante, quiero ver un video demostrativo para entender cómo funciona SafeVision de manera visual y rápida.                          | Dado que accedo a la landing, cuando llegue a “Demo”, entonces visualizaré un video explicativo accesible desde la página.                           | Epic 4 |
+| US40 | Botón para iniciar sesión         | Como visitante interesado, quiero tener un botón para dirigirme directamente a la aplicación y empezar a usar SafeVision.                                 | Dado que accedo a la landing, cuando dé click al botón de comenzar, se me redirigirá a un formulario de registro, entonces se creará mi cuenta en la plataforma.                              | Epic 4 |
+| US41 | Preguntas Frecuentes (FAQ)     | Como visitante, quiero acceder a respuestas rápidas de dudas comunes para aclarar inquietudes sin contactar al soporte.                     | Dado que accedo a la landing, cuando abra la sección FAQ, entonces visualizaré una lista de preguntas frecuentes con sus respuestas.                 | Epic 4 |
+| US42 | Sección de Pricing/Planes      | Como empresa, quiero ver los diferentes planes de suscripción para elegir el que más se adapte a mis necesidades.                           | Dado que accedo a la landing, cuando llegue a “Planes”, entonces visualizaré una tabla clara con precios y características.                          | Epic 4 |
+| US43 | Footer con enlaces     | Como visitante, quiero acceder a políticas de privacidad y términos de uso para asegurarme del manejo correcto de datos.                    | Dado que accedo a la landing, cuando baje al footer, entonces visualizaré enlaces a documentos legales.                                         | Epic 4 |
+
 
 ## 3.3. Impact Mapping
 
@@ -701,6 +714,8 @@ Para el desarrollo de SafeVision, se ha elaborado un Impact Mapping que detalla 
 
 
 ## 3.4. Product Backlog
+
+
 
 # Capítulo IV: Strategic-Level Software Design
 
