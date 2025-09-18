@@ -715,6 +715,51 @@ Para el desarrollo de SafeVision, se ha elaborado un Impact Mapping que detalla 
 
 ## 3.4. Product Backlog
 
+| Orden | User Story ID | Título                                   | Descripción                                                                                                                                 | Story Points |
+| ----- | ------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| 1     | US32          | Sección Hero con CTA                     | Como visitante, quiero ver un mensaje claro con un botón de acción principal para entender el valor de SafeVision y registrarme fácilmente. | 2            |
+| 2     | US33          | Sección About Us                         | Como visitante, quiero conocer qué hace SafeVision y cómo funciona para comprender su propuesta de valor.                                   | 2            |
+| 3     | US34          | Sección Beneficios                       | Como visitante, quiero ver los beneficios clave de SafeVision para decidir si se ajusta a mis necesidades.                                  | 2            |
+| 4     | US35          | Sección Para Conductores                 | Como conductor, quiero ver cómo SafeVision me protege para sentir confianza en la herramienta.                                              | 2            |
+| 5     | US36          | Sección Para Empresas                    | Como gerente, quiero conocer cómo SafeVision me ayuda a supervisar a mis conductores para tomar decisiones de inversión.                    | 2            |
+| 6     | US37          | Testimonios                              | Como visitante, quiero leer testimonios de otros usuarios para confiar más en SafeVision.                                                   | 2            |
+| 7     | US38          | Sección Organizaciones Aliadas           | Como visitante, quiero ver qué empresas u organizaciones respaldan SafeVision para validar su credibilidad.                                 | 2            |
+| 8     | US39          | Sección About-the-product                | Como visitante, quiero ver un video demostrativo para entender cómo funciona SafeVision de manera visual y rápida.                          | 3            |
+| 9     | US40          | Botón para iniciar sesión                | Como visitante interesado, quiero tener un botón para dirigirme directamente a la aplicación y empezar a usar SafeVision.                   | 1            |
+| 10    | US41          | Preguntas Frecuentes (FAQ)               | Como visitante, quiero acceder a respuestas rápidas de dudas comunes para aclarar inquietudes sin contactar al soporte.                     | 2            |
+| 11    | US42          | Sección de Pricing/Planes                | Como empresa, quiero ver los diferentes planes de suscripción para elegir el que más se adapte a mis necesidades.                           | 3            |
+| 12    | US43          | Footer con enlaces                       | Como visitante, quiero acceder a políticas de privacidad y términos de uso.                                                                 | 1            |
+| 13    | US01          | Detección de somnolencia en tiempo real  | Como conductor, quiero que el sistema identifique signos de fatiga para recibir alertas inmediatas y evitar accidentes.                     | 5            |
+| 14    | US02          | Notificación inmediata al conductor      | Como conductor, quiero recibir alertas preventivas en el momento adecuado para reaccionar y mantenerme seguro.                              | 3            |
+| 15    | US03          | Alerta por micro-sueños                  | Como conductor, quiero que el sistema detecte cierres prolongados de ojos para evitar quedarme dormido al volante.                          | 5            |
+| 16    | US04          | Alerta sonora y visual configurable      | Como conductor, quiero que las alertas tengan volumen y modo visual configurables.                                                          | 3            |
+| 17    | US05          | Guía post-alerta                         | Como conductor, quiero que la app me dé instrucciones simples tras una alerta.                                                              | 2            |
+| 18    | US06          | Recordatorio de descanso obligatorio     | Como conductor, quiero recibir notificaciones cuando supere cierto tiempo de conducción continua.                                           | 3            |
+| 19    | US07          | Historial personal de alertas y viajes   | Como conductor, quiero consultar mi historial de alertas y viajes.                                                                          | 3            |
+| 20    | US08          | Reporte resumido por viaje               | Como conductor, quiero recibir un resumen al finalizar mi recorrido.                                                                        | 3            |
+| 21    | US09          | Reporte de viaje saludable               | Como conductor, quiero visualizar recomendaciones personalizadas después de mi viaje.                                                       | 2            |
+| 22    | US10          | Feedback del sistema                     | Como conductor, quiero poder enviar comentarios o marcar falsas alarmas.                                                                    | 2            |
+| 23    | US11          | Integración cámara–app automática        | Como conductor, quiero que la cámara se conecte automáticamente al iniciar el viaje.                                                        | 3            |
+| 24    | US12          | Modo de prueba de alertas                | Como conductor, quiero probar el sistema antes de iniciar el viaje.                                                                         | 2            |
+| 25    | US13          | Acceso a reportes de seguridad           | Como gerente, quiero visualizar reportes sobre el estado de los conductores.                                                                | 3            |
+| 26    | US14          | Notificación crítica al gerente          | Como gerente, quiero recibir alertas en tiempo real de conductores en riesgo.                                                               | 3            |
+| 27    | US15          | Dashboard general de flota               | Como gerente, quiero un panel centralizado para ver el estado actual de todos los conductores.                                              | 5            |
+| 28    | US16          | Detección de patrones de riesgo          | Como gerente, quiero que el sistema identifique patrones recurrentes de somnolencia.                                                        | 3            |
+| 29    | US17          | Alertas agregadas por horas de viaje     | Como gerente, quiero ver en qué franjas horarias se presentan más alertas.                                                                  | 2            |
+| 30    | US18          | Notificación de viaje seguro completado  | Como gerente, quiero recibir un aviso cuando un conductor finaliza un recorrido sin alertas críticas.                                       | 2            |
+| 31    | US19          | Exportación de métricas                  | Como gerente, quiero exportar reportes en distintos formatos (PDF, Excel).                                                                  | 3            |
+| 32    | US20          | Geolocalización en tiempo real           | Como gerente, quiero ver en un mapa la ubicación de cada conductor en tiempo real.                                                          | 5            |
+| 33    | US21          | Comparación entre conductores            | Como gerente, quiero comparar métricas de somnolencia entre conductores.                                                                    | 3            |
+| 34    | US22          | Panel de estadísticas generales de flota | Como gerente, quiero ver estadísticas globales de la flota.                                                                                 | 3            |
+| 35    | US23          | Notificación de pérdida de conexión      | Como gerente, quiero recibir notificación si el sistema pierde conexión con un conductor.                                                   | 2            |
+| 36    | US24          | Registro de mantenimiento del sistema    | Como empresa, quiero registrar las fechas de mantenimiento de cámaras y dispositivos.                                                       | 2            |
+| 37    | US25          | Privacidad de datos personales           | Como empresa, quiero que los datos de los conductores estén encriptados.                                                                    | 3            |
+| 38    | US26          | Registro de conductores                  | Como gerente, quiero registrar a los conductores en la plataforma.                                                                          | 2            |
+| 39    | US27          | Registro de usuario                      | Como nuevo usuario, quiero registrarme en la plataforma para acceder al sistema.                                                            | 2            |
+| 40    | US28          | Login de usuario                         | Como usuario registrado, quiero iniciar sesión para acceder a las funcionalidades de mi rol.                                                | 2            |
+| 41    | US29          | Validación de rol de usuario             | Como sistema, quiero validar el rol del usuario para mostrar funcionalidades apropiadas.                                                    | 3            |
+| 42    | US30          | Configuración de parámetros de seguridad | Como gerente, quiero ajustar umbrales de detección de fatiga según políticas internas.                                                      | 3            |
+| 43    | US31          | Gestión de roles de usuario              | Como empresa, quiero asignar diferentes roles (gerente, supervisor, conductor).                                                             | 3            |
 
 
 # Capítulo IV: Strategic-Level Software Design
