@@ -1180,6 +1180,31 @@ Como resultado de este proceso, identificamos los siguientes bounded contexts pa
 Esta identificación nos proporcionó una base sólida para continuar con el modelado más detallado de cada contexto y sus interacciones.
 
 ### 4.2.3. Domain Message Flows Modeling
+Los Domain Message Flows modelan las interacciones entre los diferentes bounded contexts, mostrando cómo se comunican entre sí mediante comandos, eventos y consultas. A continuación, presentamos los flujos de mensaje para tres escenarios clave de nuestra aplicación:
+
+**Scenario 1: Access platform as a new user**
+
+Este flujo de mensajes modela cómo un usuario nuevo accede a la plataforma SafeVision, ilustrando las interacciones entre el usuario, la aplicación móvil y el bounded context de IAM. Además, se muestra cómo IAM se comunica con el sistema de autenticación externo para validar credenciales.
+
+<img src="./assets/eventstorming/messageFlow1.jpg"> 
+
+Este flujo demuestra la relación Customer-Supplier entre IAM y el servicio de autenticación (Auth API), donde IAM actúa como consumidor de validación y proveedor de credenciales para el resto de la plataforma.
+
+**Scenario 2: Monitoring driver fatigue and sending alerts**
+
+Este flujo modela cómo el bounded context de Monitoring detecta signos de fatiga en el conductor, generando una alerta crítica que se transmite al bounded context de Notification. Posteriormente, Notification se encarga de notificar tanto al conductor en la cabina como al gerente mediante reportes en la nube.
+
+<img src="./assets/eventstorming/messageFlow2.jpg"> 
+
+Este flujo ilustra cómo la interacción del Monitoring con Notification sigue un patrón event-driven, garantizando que las alertas críticas se propaguen de manera inmediata y confiable.Este flujo ilustra cómo la interacción del Monitoring con Notification sigue un patrón event-driven, garantizando que las alertas críticas se propaguen de manera inmediata y confiable.
+
+**Scenario 3: Generating route simulation**
+
+Este flujo muestra cómo un conductor inicia un viaje y cómo los bounded contexts de Trip, Monitoring y Management colaboran para supervisar y gestionar incidentes críticos, como la detección de micro-sueños. Finalmente, Management coordina con sistemas externos (seguros y emergencias) para dar una respuesta adecuada.
+
+<img src="./assets/eventstorming/messageFlow3.jpg"> 
+
+Este flujo demuestra una relación de Partnership entre Trip y Monitoring, mientras que Management asume un rol de Orchestrator, comunicándose con servicios externos y notificando a los gerentes para garantizar la seguridad del conductor.
 
 ### 4.2.4. Bounded Context Canvases
 ### 4.2.5. Context Mapping
