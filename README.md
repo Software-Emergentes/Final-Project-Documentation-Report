@@ -1480,6 +1480,8 @@ Después de identificar nuestros bounded contexts (Access, Monitoring, Simulatio
   - Trip ⭤ Notifications  
   - Management ⭤ Notifications  
 
+<img src="./assets/eventstorming/context-mapping.png">
+
 ## 4.3. Software Architecture
 
 En esta sección se presentan los diagramas de arquitectura de la solución, que ilustran la estructura y los componentes clave. Estos diagramas son fundamentales para comprender cómo se organizan y comunican los diferentes components del sistema.
