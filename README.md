@@ -820,10 +820,7 @@ Los Quality Attribute Scenarios son descripciones estructuradas que permiten esp
 
 #### 4.1.2.3. Constraints
 
-
-Los constraints son restricciones o limitaciones que se deben cumplir en un proyecto. Pueden ser técnicas, legales, de tiempo o de recursos, y sirven como guía para asegurar que la solución cumpla con los requisitos indispensables del cliente o del negocio.
-
-En esta sección se especifican las restricciones técnicas y de negocio.
+Los constraints son restricciones o limitaciones que se deben cumplir en un proyecto. Pueden ser técnicas, legales, de tiempo o de recursos, y sirven como guía para asegurar que la solución cumpla con los requisitos indispensables del cliente.
 
 | Technical Story ID | Título | Descripción | Criterios de Aceptación |
 |--------------------|--------|-------------|-------------------------|
