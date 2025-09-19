@@ -1402,6 +1402,84 @@ Estos canvas fueron herramientas fundamentales para definir la arquitectura de n
 
 Después de identificar nuestros bounded contexts (Access, Monitoring, Simulation e IoT Device), procedimos a definir las relaciones entre ellos mediante la técnica de Context Mapping. Este proceso nos permitió visualizar cómo estos contextos se comunican y colaboran entre sí en nuestro sistema Safe Vision.
 
+
+## 1. Pasos para Crear el Context Mapping  
+
+### 1.1. Identificación de los Bounded Contexts  
+- **IAM (Identity & Access Management)**  
+- **Driver Management**  
+- **Trip**  
+- **Management**  
+- **Monitoring**  
+- **Notifications**  
+
+---
+
+### 1.2. Identificación de Relaciones Iniciales  
+
+- **IAM ⭤ Trip** → *Customer/Supplier*  
+  IAM valida identidad y roles antes de que un viaje pueda iniciarse.  
+
+- **IAM ⭤ Management** → *Customer/Supplier*  
+  Management consume identidad para asegurar que solo usuarios autorizados gestionen reportes, asignaciones y accesos.  
+
+- **Driver Management ⭤ Trip** → *Customer/Supplier*  
+  Trip requiere la disponibilidad y estado de los conductores para iniciar o finalizar viajes.  
+
+- **Trip ⭤ Monitoring** → *Customer/Supplier*  
+  Monitoring empieza a detectar fatiga cuando un viaje está en curso.  
+
+- **Monitoring ⭤ Notifications** → *Conformist*  
+  Notifications se adapta a los eventos de fatiga generados por Monitoring y los convierte en alertas.  
+
+- **Trip ⭤ Notifications** → *Conformist*  
+  Trip puede generar eventos como fin de viaje o accidente, que Notifications convierte en mensajes.  
+
+- **Management ⭤ Notifications** → *Conformist*  
+  Management puede enviar reportes (ej. riesgo recurrente) que Notifications traduce a notificaciones.  
+
+---
+
+### 2. Análisis de Alternativas y Preguntas Clave  
+
+**2.1. ¿Qué pasaría si unificamos Trip y Management en un solo contexto?**  
+- **Impacto**: Se perdería la separación entre ejecución del viaje (Trip) y gestión de reportes/operaciones (Management).  
+- **Discusión**: No recomendable, ya que Management maneja políticas y reportes, mientras Trip controla el ciclo de vida del viaje.  
+
+**2.2. ¿Qué ocurre si movemos la reasignación de conductor de Management a Driver Management?**  
+- **Impacto**: Driver Management se sobrecargaría con lógica operacional de viajes.  
+- **Discusión**: Mejor mantener reasignación en **Management**, con dependencia de datos de **Driver Management**.  
+
+**2.3. ¿Debería Monitoring enviar reportes directamente al Management en lugar de pasar por Notifications?**  
+- **Impacto**: Se integraría más fuerte, pero Management perdería independencia y flexibilidad.  
+- **Discusión**: Mejor mantener notificaciones desacopladas.  
+
+**2.4. ¿Conviene que IAM controle también la validez de licencias de conductores?**  
+- **Impacto**: IAM saldría de su propósito (identidad), invadiendo dominio de Driver Management.  
+- **Discusión**: No recomendable.  
+
+---
+
+### 3. Alternativas Recomendadas  
+- Mantener **Trip** y **Management** separados.  
+- No mezclar autenticación (IAM) con gestión operacional.  
+- **Monitoring** debe publicar eventos y no mezclarse con **Management**.  
+- **Notifications** debe ser conformista, siempre adaptándose a otros contexts.  
+
+---
+
+### 4. Patrones de Relaciones Sugeridos  
+- **Customer/Supplier**:  
+  - IAM ⭤ Trip  
+  - IAM ⭤ Management  
+  - Driver Management ⭤ Trip  
+  - Trip ⭤ Monitoring  
+
+- **Conformist**:  
+  - Monitoring ⭤ Notifications  
+  - Trip ⭤ Notifications  
+  - Management ⭤ Notifications  
+
 ## 4.3. Software Architecture
 
 En esta sección se presentan los diagramas de arquitectura de la solución, que ilustran la estructura y los componentes clave. Estos diagramas son fundamentales para comprender cómo se organizan y comunican los diferentes components del sistema.
