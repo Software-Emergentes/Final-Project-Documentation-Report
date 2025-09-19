@@ -463,16 +463,16 @@ Las colaboraciones serán clave para aumentar la credibilidad y la adopción del
 
 **Segmento Objetivo 1: Conductores interprovinciales y de larga distancia**
 
-| **Entrevista 1** | Omar Morales MOntalvo Andrew             |
+| **Entrevista 1** | Omar Morales Montalvo Andrew             |
 |--------------|--------------|
 | Edad         |      25        |
 | Distrito     |       San Juan de Lurigancho       |
 | <img src="assets/interviews/omar-entrevista.jpeg" width="80">     |   Omar es un conductor de una famosa empresa de transportes, el nos habla de su experiencia conduciendo. Además de ello, habla de como se gestiona cuando tiene fatiga, tambien menciona que una combinacion de ciertos patrones puede oncasionarle fatiga, el apreciaria la implementacion de una aplicacion que permita alertarle constantemente en caso empiece a tener signos de somnolencia.   |
 | Timing:      |              |
-| **Entrevista 2** |              |
-| Edad         |              |
-| Distrito     |              |
-| **Imagen**   |              |
+| **Entrevista 2** | Maria del Carmen Tejada Miranda          |
+| Edad         |     60         |
+| Distrito     |     Bellavista        |
+| <img src="assets/interviews/mari-entrevista.jpg" width="80">   |   Maricarmen Tejada es una conductora de transporte interprovincial que vive en Bellavista, Callao. Ella comparte su experiencia al enfrentar la somnolencia en viajes largos, especialmente en la madrugada o después de comer. Reconoce síntomas como párpados pesados, bostezos y pérdida de concentración, además de que el cansancio acumulado empeora su estado de alerta. Señala que la fatiga retrasa sus tiempos de reacción y que los tramos largos y rectos generan mayor riesgo. Considera que las alertas sonoras combinadas con mensajes visuales serían las más efectivas, aunque expresa preocupación por la privacidad de un sistema que monitoree su rostro. Aun así, ve útil una herramienta que la alerte en tiempo real y que registre datos de conducción siempre que haya transparencia en su uso. Concluye que un sistema de monitoreo podría ayudarla a tomar descansos a tiempo y dar mayor seguridad a pasajeros y empresa.        |
 | Timing:      |              |
 | **Entrevista 3** |              |
 | Edad         |              |
@@ -1156,7 +1156,7 @@ En esta sección evidenciamos el proceso que usamos para descomponer nuestro sof
 ### 4.2.1. EventStorming
 Para este EventStorming, el equipo se organizó para crear una primera versión del modelado del prouyecto. Durante este proceso seguimos una serie de 10 pasos.
 
-**Paso 1: Unstructured Explorationa:** En este primer paso, identificamos todos los eventos relevantes del dominio que ocurren en nuestro sistema. Los post-its anaranjados son eventos que representan hechos importantes que suceden durante el proceso. Por ahora, el orden de estos aun no esta definido.
+**Paso 1: Unstructured Exploration:** En este primer paso, identificamos todos los eventos relevantes del dominio que ocurren en nuestro sistema. Los post-its anaranjados son eventos que representan hechos importantes que suceden durante el proceso. Por ahora, el orden de estos aun no esta definido.
 
 <img src="./assets/eventstorming/step1.jpg"> 
 
@@ -1225,17 +1225,9 @@ Como resultado de este proceso, identificamos los siguientes bounded contexts pa
 Esta identificación nos proporcionó una base sólida para continuar con el modelado más detallado de cada contexto y sus interacciones.
 
 ### 4.2.3. Domain Message Flows Modeling
-Los Domain Message Flows modelan las interacciones entre los diferentes bounded contexts, mostrando cómo se comunican entre sí mediante comandos, eventos y consultas. A continuación, presentamos los flujos de mensaje para tres escenarios clave de nuestra aplicación:
+Los Domain Message Flows modelan las interacciones entre los diferentes bounded contexts, mostrando cómo se comunican entre sí mediante comandos, eventos y consultas. A continuación, presentamos los flujos de mensaje para dos escenarios clave de nuestra aplicación:
 
-**Scenario 1: Access platform as a new user**
-
-Este flujo de mensajes modela cómo un usuario nuevo accede a la plataforma SafeVision, ilustrando las interacciones entre el usuario, la aplicación móvil y el bounded context de IAM. Además, se muestra cómo IAM se comunica con el sistema de autenticación externo para validar credenciales.
-
-<img src="./assets/eventstorming/messageFlow1.jpg"> 
-
-Este flujo demuestra la relación Customer-Supplier entre IAM y el servicio de autenticación (Auth API), donde IAM actúa como consumidor de validación y proveedor de credenciales para el resto de la plataforma.
-
-**Scenario 2: Monitoring driver fatigue and sending alerts**
+**Scenario 1: Monitoring driver fatigue and sending alerts**
 
 Este flujo modela cómo el bounded context de Monitoring detecta signos de fatiga en el conductor, generando una alerta crítica que se transmite al bounded context de Notification. Posteriormente, Notification se encarga de notificar tanto al conductor en la cabina como al gerente mediante reportes en la nube.
 
@@ -1243,7 +1235,7 @@ Este flujo modela cómo el bounded context de Monitoring detecta signos de fatig
 
 Este flujo ilustra cómo la interacción del Monitoring con Notification sigue un patrón event-driven, garantizando que las alertas críticas se propaguen de manera inmediata y confiable.Este flujo ilustra cómo la interacción del Monitoring con Notification sigue un patrón event-driven, garantizando que las alertas críticas se propaguen de manera inmediata y confiable.
 
-**Scenario 3: Generating route simulation**
+**Scenario 2: Generating route simulation**
 
 Este flujo muestra cómo un conductor inicia un viaje y cómo los bounded contexts de Trip, Monitoring y Management colaboran para supervisar y gestionar incidentes críticos, como la detección de micro-sueños. Finalmente, Management coordina con sistemas externos (seguros y emergencias) para dar una respuesta adecuada.
 
@@ -1252,6 +1244,40 @@ Este flujo muestra cómo un conductor inicia un viaje y cómo los bounded contex
 Este flujo demuestra una relación de Partnership entre Trip y Monitoring, mientras que Management asume un rol de Orchestrator, comunicándose con servicios externos y notificando a los gerentes para garantizar la seguridad del conductor.
 
 ### 4.2.4. Bounded Context Canvases
+Los Bounded Context Canvases son herramientas visuales que nos permiten documentar las características fundamentales de cada contexto delimitado, capturando su propósito estratégico, modelo de dominio, lenguaje ubicuo, políticas y relaciones con otros contextos. A continuación, presentamos los canvases para nuestros cinco bounded contexts identificados, que nos ayudaron a definir claramente las responsabilidades y límites de cada uno.
+
+**IAM (Identity & Access Management) Bounded Context:**
+Este canvas detalla nuestro contexto de acceso y seguridad, responsable de la autenticación, autorización y gestión de roles. Definimos sus principales modelos de dominio (Cuenta, Rol, Autenticación), las políticas de seguridad y los eventos clave como el registro de usuario y la confirmación de autenticación. Su propósito estratégico es garantizar que solo los usuarios autorizados puedan acceder a funcionalidades específicas del sistema, actuando como proveedor upstream de confianza para el resto de los contextos.
+
+<img src="./assets/eventstorming/boundedContext3.jpg"> 
+
+**Management Bounded Context:**
+Este canvas muestra el contexto de gestión, encargado de brindar a los gerentes y supervisores acceso a reportes, métricas y análisis de riesgo. Identificamos sus entidades principales (Reporte, Patrón de Riesgo, Rol de Usuario), así como las capacidades de exportación y gestión de roles. Este contexto actúa como consumidor de información proveniente de Trip e IAM, consolidando datos en reportes estratégicos. Su propósito es proveer herramientas de supervisión y auditoría que apoyen la toma de decisiones.
+
+<img src="./assets/eventstorming/boundedContex2.jpg"> 
+
+**Driver Bounded Context:**
+El canvas del contexto de conductor representa la interacción directa con el usuario final. Sus principales entidades son Alerta, Viaje, Resumen de Viaje y Guía Post-Alerta. Identificamos sus capacidades clave como la recepción de notificaciones en tiempo real, la configuración de alertas y la visualización de reportes resumidos al finalizar cada viaje. Este contexto actúa como consumidor de eventos generados por Trip y Monitoring, y como productor de confirmaciones de alertas. Su propósito estratégico es salvaguardar al conductor mediante una interfaz clara y efectiva.
+
+<img src="./assets/eventstorming/boundedContext1.jpg"> 
+
+**Monitoring Bounded Context:**
+Este canvas describe el contexto de monitoreo, núcleo técnico de la solución, responsable de procesar datos de video en tiempo real mediante IA. Identificamos sus entidades principales (Evento de Somnolencia, Detección de Fatiga, Alerta Crítica) y las capacidades de filtrado de falsos positivos, almacenamiento local y sincronización con la nube. Monitoring consume datos del dispositivo (cámara en cabina) y produce alertas hacia Driver y Trip. Su propósito estratégico es detectar la fatiga en milisegundos y disparar las acciones necesarias para evitar accidentes.
+
+<img src="./assets/eventstorming/boundedContext6.jpg"> 
+
+**Trip Bounded Context:**
+El canvas del contexto de viajes refleja la importancia de organizar los recorridos y asociar incidentes a cada trayecto. Sus principales modelos de dominio incluyen Viaje, Incidente y Alerta Registrada. Este contexto consume autenticación de IAM, eventos de monitoreo y configuraciones de Driver, para luego generar reportes de viaje consumidos por Management. Su propósito estratégico es mantener un historial confiable de la conducción y los incidentes ocurridos durante cada recorrido.
+
+<img src="./assets/eventstorming/boundedContext4.jpg"> 
+
+**Notification Bounded Context:**
+Este canvas detalla el contexto encargado de orquestar el envío de alertas y reportes hacia conductores y gerentes. Gestiona canales de entrega (app, SMS, correo), políticas de reintento y el historial de notificaciones. Su propósito estratégico es garantizar la entrega fiable y trazable de mensajes críticos derivados del monitoreo, actuando como proveedor de notificaciones para Driver y Management y como consumidor de eventos generados por Monitoring y Trip.
+
+<img src="./assets/eventstorming/boundedContext5.jpg">
+
+Estos canvases fueron herramientas fundamentales para definir la arquitectura de nuestra solución, permitiéndonos visualizar cada contexto como una unidad coherente con responsabilidades claras y bien definidas. Además, nos ayudaron a identificar los puntos de integración entre contextos que luego refinamos en el Context Mapping.
+
 ### 4.2.5. Context Mapping
 
 ## 4.3. Software Architecture
