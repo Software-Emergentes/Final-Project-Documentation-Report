@@ -1492,6 +1492,8 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
 
 ### 4.3.2. Software Architecture Context Level Diagrams
 
+<img src="./assets/software-architecture-diagrams/context-level.png">
+
 ### 4.3.3. Software Architecture Container Level Diagrams
 
 ### 4.3.4. Software Architecture Deployment Diagrams
