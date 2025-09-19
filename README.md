@@ -463,13 +463,13 @@ Las colaboraciones serán clave para aumentar la credibilidad y la adopción del
 
 **Segmento Objetivo 1: Conductores interprovinciales y de larga distancia**
 
-| **Entrevista 1** | Omar Morales MOntalvo Andrew             |
+| **Entrevista 1** | Omar Morales Montalvo Andrew             |
 |--------------|--------------|
 | Edad         |      25        |
 | Distrito     |       San Juan de Lurigancho       |
 | <img src="assets/interviews/omar-entrevista.jpeg" width="80">     |   Omar es un conductor de una famosa empresa de transportes, el nos habla de su experiencia conduciendo. Además de ello, habla de como se gestiona cuando tiene fatiga, tambien menciona que una combinacion de ciertos patrones puede oncasionarle fatiga, el apreciaria la implementacion de una aplicacion que permita alertarle constantemente en caso empiece a tener signos de somnolencia.   |
 | Timing:      |              |
-| **Entrevista 2** | Maria del Carmen Tejada Miranda             |
+| **Entrevista 2** | Maria del Carmen Tejada Miranda          |
 | Edad         |     60         |
 | Distrito     |     Bellavista        |
 | <img src="assets/interviews/mari-entrevista.jpg" width="80">   |   Maricarmen Tejada es una conductora de transporte interprovincial que vive en Bellavista, Callao. Ella comparte su experiencia al enfrentar la somnolencia en viajes largos, especialmente en la madrugada o después de comer. Reconoce síntomas como párpados pesados, bostezos y pérdida de concentración, además de que el cansancio acumulado empeora su estado de alerta. Señala que la fatiga retrasa sus tiempos de reacción y que los tramos largos y rectos generan mayor riesgo. Considera que las alertas sonoras combinadas con mensajes visuales serían las más efectivas, aunque expresa preocupación por la privacidad de un sistema que monitoree su rostro. Aun así, ve útil una herramienta que la alerte en tiempo real y que registre datos de conducción siempre que haya transparencia en su uso. Concluye que un sistema de monitoreo podría ayudarla a tomar descansos a tiempo y dar mayor seguridad a pasajeros y empresa.        |
