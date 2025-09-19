@@ -1488,11 +1488,13 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
 
 ### 4.3.1. Software Architecture System Landscape Diagram
 
-### 4.3.1. Software Architecture Context Level Diagrams
+<img src="./assets/software-architecture-diagrams/system-landscape.png">
 
-### 4.3.2. Software Architecture Container Level Diagrams
+### 4.3.2. Software Architecture Context Level Diagrams
 
-### 4.3.3. Software Architecture Deployment Diagrams
+### 4.3.3. Software Architecture Container Level Diagrams
+
+### 4.3.4. Software Architecture Deployment Diagrams
 
 # Conclusiones
 
