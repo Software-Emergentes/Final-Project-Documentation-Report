@@ -560,17 +560,17 @@ Entrevista a Conductores interprovinciales y de larga distancia.
 | Edad         |      25        |
 | Distrito     |       San Juan de Lurigancho       |
 | <img src="assets/interviews/omar-entrevista.jpeg" width="80">     |   Omar es un conductor de una famosa empresa de transportes, el nos habla de su experiencia conduciendo. Además de ello, habla de como se gestiona cuando tiene fatiga, tambien menciona que una combinacion de ciertos patrones puede oncasionarle fatiga, el apreciaria la implementacion de una aplicacion que permita alertarle constantemente en caso empiece a tener signos de somnolencia.   |
-| Timing:      |              |
+| Timing:      |    3:51 - 7:13 |
 | **Entrevista 2** | Maria del Carmen Tejada Miranda          |
 | Edad         |     60         |
 | Distrito     |     Bellavista        |
 | <img src="assets/interviews/mari-entrevista.jpg" width="80">   |   Maricarmen Tejada es una conductora de transporte interprovincial que vive en Bellavista, Callao. Ella comparte su experiencia al enfrentar la somnolencia en viajes largos, especialmente en la madrugada o después de comer. Reconoce síntomas como párpados pesados, bostezos y pérdida de concentración, además de que el cansancio acumulado empeora su estado de alerta. Señala que la fatiga retrasa sus tiempos de reacción y que los tramos largos y rectos generan mayor riesgo. Considera que las alertas sonoras combinadas con mensajes visuales serían las más efectivas, aunque expresa preocupación por la privacidad de un sistema que monitoree su rostro. Aun así, ve útil una herramienta que la alerte en tiempo real y que registre datos de conducción siempre que haya transparencia en su uso. Concluye que un sistema de monitoreo podría ayudarla a tomar descansos a tiempo y dar mayor seguridad a pasajeros y empresa.        |
-| Timing:      |              |
+| Timing:      |   00:04 - 3:51 |
 | **Entrevista 3** |              |
 | Edad         |              |
 | Distrito     |              |
 | **Imagen**   |              |
-| Timing:      |              |
+| Timing:      |  7:13 - 12:11 |
 
 <br>
 
@@ -581,17 +581,20 @@ Entrevista a Gerentes de empresas de transporte.
 | Edad         | 21           |
 | Distrito     | Lima         |
 | <img src="assets/interviews/juan-entrevista.jpg" width="80">  | Juan, gerente de transporte, comentó que administra unos 50 buses y que la fatiga de los conductores es el principal riesgo. Actualmente usan protocolos de descanso, pero no siempre resultan efectivos. Valora contar con reportes en la nube y prioriza efectividad y facilidad de uso por encima del precio. Estaría dispuesto a implementar SafeVision si es confiable, ya que le permitiría reducir accidentes, mejorar la seguridad y optimizar la gestión de su flota. |
-| Timing:     |              |
+| Timing:     | 12:14 - 16:15 |
 | **Entrevista 2** | <center>**Ernesto Miguel Vilca López**</center>             |
 | Edad         |  29            |
 | Distrito     |  Lince            |
 | <img src="assets/interviews/gerente-miguel-vilca.jpeg" width="80">   |  Miguel es un jefe de flota en la empresa MORCOR, una empresa de transporte de herramientas interprovincial. Nos comenta que tiene bajo supervición a 70 empleados y 30 camiones, a quienes monitorea por medios de comunicación tradicionales (véase, llamadas periódicas, mensajes de texto, entre otros). Por ello, le interesó la propuesta que ofrece el equipo con SafeVision, pues supone una gran mejora en la gestión del personal. Asimismo, mencionó que es muy importante para él que la herramienta tenga un precio módico dada la gran cantidad de buses con los que cuenta la empresa. |
-| Timing:      |              |
+| Timing:      |  16:15 - 25:19 |
 | Entrevista 3 |              |
 | Edad         |              |
 | Distrito     |              |
 | **Imagen**   |              |
-| Timing:      |              |
+| Timing:      | 25:19 - 29:59 |
+
+**Vídeo de Entrevistas:** <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y </a>
+
 
 ### 2.2.3. Análisis de entrevistas
 
@@ -1527,10 +1530,13 @@ En conjunto, estas acciones fortalecieron el trabajo en equipo y sentaron bases 
 
 # Anexos
 
-Organización del Proyecto: https://github.com/Software-Emergentes
+Organización del Proyecto: <a href="https://github.com/Software-Emergentes">https://github.com/Software-Emergentes</a>
 
-Reporte del Proyecto: https://github.com/Software-Emergentes/final-project-report
+Reporte del Proyecto: <a href="https://github.com/Software-Emergentes/final-project-report">https://github.com/Software-Emergentes/final-project-report</a>
 
-Enlace del Miro: https://miro.com/welcomeonboard/QUpZbWVHUWptZmJDTmxONi9VeU54STRSYUNaa0p1NTJRSUZzRjZFbC9BL0hYelNYNlhScmQ5QnRHRW9mMkxnUlpQT0JUcktVYU9aNHUrcmhxaWNTTTh4UHVNM0s5SWRPZkZPNnpaajFjMGdkeEpMRnRMcHQ0b0dZVk81WWpacTdhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=324109141341
+Enlace del Miro: <a href="https://miro.com/welcomeonboard/QUpZbWVHUWptZmJDTmxONi9VeU54STRSYUNaa0p1NTJRSUZzRjZFbC9BL0hYelNYNlhScmQ5QnRHRW9mMkxnUlpQT0JUcktVYU9aNHUrcmhxaWNTTTh4UHVNM0s5SWRPZkZPNnpaajFjMGdkeEpMRnRMcHQ0b0dZVk81WWpacTdhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=324109141341
+">https://miro.com/welcomeonboard/QUpZbWVHUWptZmJDTmxONi9VeU54STRSYUNaa0p1NTJRSUZzRjZFbC9BL0hYelNYNlhScmQ5QnRHRW9mMkxnUlpQT0JUcktVYU9aNHUrcmhxaWNTTTh4UHVNM0s5SWRPZkZPNnpaajFjMGdkeEpMRnRMcHQ0b0dZVk81WWpacTdhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=324109141341</a>
 
-Presentación del Proyecto: https://www.canva.com/design/DAGzYyHWuwg/C4jRhBTUp-d3zb44sBP2wg/edit?utm_content=DAGzYyHWuwg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Presentación del Proyecto: <a href="https://www.canva.com/design/DAGzYyHWuwg/C4jRhBTUp-d3zb44sBP2wg/edit?utm_content=DAGzYyHWuwg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">https://www.canva.com/design/DAGzYyHWuwg/C4jRhBTUp-d3zb44sBP2wg/edit?utm_content=DAGzYyHWuwg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton</a>
+
+Vídeo de Entrevistas: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y </a>
