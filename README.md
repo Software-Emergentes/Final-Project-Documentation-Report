@@ -1340,7 +1340,7 @@ Los Domain Message Flows modelan las interacciones entre los diferentes bounded 
 
 Este flujo modela cómo un nuevo conductor se registra en la aplicación. El bounded context de IAM gestiona la creación de la cuenta y valida al usuario, mientras que el bounded context de Driver administra el perfil del conductor y el registro de la licencia. Finalmente, se asegura que el sistema tenga la información necesaria para permitir la operación del conductor en viajes futuros.
 
-<img src="./assets/eventstorming/messageFlow1.jpg"> 
+<img src="./assets/eventstorming/messageFlow1v2.jpg"> 
 
 Este flujo muestra cómo IAM actúa como proveedor upstream para Driver, validando la identidad y garantizando que el perfil del conductor quede correctamente registrado en el sistema.
 
@@ -1356,7 +1356,7 @@ Este flujo ilustra cómo la interacción entre Monitoring, Notification y Manage
 
 Este flujo modela cómo, al finalizar un viaje, el bounded context de Trip genera el reporte del recorrido. Dicho reporte es enviado al bounded context de Notification, que a su vez lo distribuye al conductor y al gerente. Monitoring complementa el flujo añadiendo recomendaciones post-alerta, mientras que Management gestiona la información recurrente de riesgo para la empresa.
 
-<img src="./assets/eventstorming/messageFlow3v2.jpg">
+<img src="./assets/eventstorming/messageFlow3v3.jpg">
 
 Este flujo demuestra cómo Trip actúa como origen de la información de viaje, Notification se encarga de distribuirla, y Monitoring junto a Management aportan valor adicional con recomendaciones y análisis de patrones de riesgo.
 
