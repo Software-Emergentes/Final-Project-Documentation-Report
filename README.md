@@ -1348,7 +1348,7 @@ Este flujo muestra cómo IAM actúa como proveedor upstream para Driver, validan
 
 Este flujo modela cómo el bounded context de Monitoring detecta signos tempranos de fatiga en el conductor, generando alertas críticas que se comunican al bounded context de Notification. Posteriormente, Notification envía las alertas tanto al conductor en cabina como al gerente mediante reportes. Management registra y gestiona la confirmación o ignorancia de las alertas por parte del conductor.
 
-<img src="./assets/eventstorming/messageFlow2.jpg"> 
+<img src="./assets/eventstorming/messageFlow2v2.jpg"> 
 
 Este flujo ilustra cómo la interacción entre Monitoring, Notification y Management sigue un patrón event-driven, asegurando que las alertas críticas se propaguen de manera inmediata, confiable y con retroalimentación de los actores involucrados.
 
@@ -1356,7 +1356,7 @@ Este flujo ilustra cómo la interacción entre Monitoring, Notification y Manage
 
 Este flujo modela cómo, al finalizar un viaje, el bounded context de Trip genera el reporte del recorrido. Dicho reporte es enviado al bounded context de Notification, que a su vez lo distribuye al conductor y al gerente. Monitoring complementa el flujo añadiendo recomendaciones post-alerta, mientras que Management gestiona la información recurrente de riesgo para la empresa.
 
-<img src="./assets/eventstorming/messageFlow3.jpg">
+<img src="./assets/eventstorming/messageFlow3v2.jpg">
 
 Este flujo demuestra cómo Trip actúa como origen de la información de viaje, Notification se encarga de distribuirla, y Monitoring junto a Management aportan valor adicional con recomendaciones y análisis de patrones de riesgo.
 
