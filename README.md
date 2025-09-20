@@ -1334,23 +1334,39 @@ Esta identificación nos proporcionó una base sólida para continuar con el mod
 
 ### 4.2.3. Domain Message Flows Modeling
 
-Los Domain Message Flows modelan las interacciones entre los diferentes bounded contexts, mostrando cómo se comunican entre sí mediante comandos, eventos y consultas. A continuación, presentamos los flujos de mensaje para dos escenarios clave de nuestra aplicación:
+Los Domain Message Flows modelan las interacciones entre los diferentes bounded contexts, mostrando cómo se comunican entre sí mediante comandos, eventos y consultas. A continuación, presentamos los flujos de mensaje para cuatro escenarios clave de nuestra aplicación:
 
-**Scenario 1: Monitoring driver fatigue and sending alerts**
+**Scenario 1: Driver account and license registration**
 
-Este flujo modela cómo el bounded context de Monitoring detecta signos de fatiga en el conductor, generando una alerta crítica que se transmite al bounded context de Notification. Posteriormente, Notification se encarga de notificar tanto al conductor en la cabina como al gerente mediante reportes en la nube.
+Este flujo modela cómo un nuevo conductor se registra en la aplicación. El bounded context de IAM gestiona la creación de la cuenta y valida al usuario, mientras que el bounded context de Driver administra el perfil del conductor y el registro de la licencia. Finalmente, se asegura que el sistema tenga la información necesaria para permitir la operación del conductor en viajes futuros.
+
+<img src="./assets/eventstorming/messageFlow1.jpg"> 
+
+Este flujo muestra cómo IAM actúa como proveedor upstream para Driver, validando la identidad y garantizando que el perfil del conductor quede correctamente registrado en el sistema.
+
+**Scenario 2: Fatigue monitoring and notification**
+
+Este flujo modela cómo el bounded context de Monitoring detecta signos tempranos de fatiga en el conductor, generando alertas críticas que se comunican al bounded context de Notification. Posteriormente, Notification envía las alertas tanto al conductor en cabina como al gerente mediante reportes. Management registra y gestiona la confirmación o ignorancia de las alertas por parte del conductor.
 
 <img src="./assets/eventstorming/messageFlow2.jpg"> 
 
-Este flujo ilustra cómo la interacción del Monitoring con Notification sigue un patrón event-driven, garantizando que las alertas críticas se propaguen de manera inmediata y confiable.Este flujo ilustra cómo la interacción del Monitoring con Notification sigue un patrón event-driven, garantizando que las alertas críticas se propaguen de manera inmediata y confiable.
+Este flujo ilustra cómo la interacción entre Monitoring, Notification y Management sigue un patrón event-driven, asegurando que las alertas críticas se propaguen de manera inmediata, confiable y con retroalimentación de los actores involucrados.
 
-**Scenario 2: Generating route simulation**
+**Scenario 3: Trip report and recommendations**
 
-Este flujo muestra cómo un conductor inicia un viaje y cómo los bounded contexts de Trip, Monitoring y Management colaboran para supervisar y gestionar incidentes críticos, como la detección de micro-sueños. Finalmente, Management coordina con sistemas externos (seguros y emergencias) para dar una respuesta adecuada.
+Este flujo modela cómo, al finalizar un viaje, el bounded context de Trip genera el reporte del recorrido. Dicho reporte es enviado al bounded context de Notification, que a su vez lo distribuye al conductor y al gerente. Monitoring complementa el flujo añadiendo recomendaciones post-alerta, mientras que Management gestiona la información recurrente de riesgo para la empresa.
 
-<img src="./assets/eventstorming/messageFlow3.jpg"> 
+<img src="./assets/eventstorming/messageFlow3.jpg">
 
-Este flujo demuestra una relación de Partnership entre Trip y Monitoring, mientras que Management asume un rol de Orchestrator, comunicándose con servicios externos y notificando a los gerentes para garantizar la seguridad del conductor.
+Este flujo demuestra cómo Trip actúa como origen de la información de viaje, Notification se encarga de distribuirla, y Monitoring junto a Management aportan valor adicional con recomendaciones y análisis de patrones de riesgo.
+
+**Scenario 4: Travel and incident management**
+
+Este flujo muestra cómo un conductor inicia un viaje y el bounded context de Trip gestiona la información inicial. En caso de un incidente, Monitoring detecta la situación y notifica a Management, que coordina la respuesta adecuada. Notification se encarga de enviar los datos del viaje a la nube, y Management comunica con sistemas externos como seguros y equipos de emergencia para dar soporte inmediato.
+
+<img src="./assets/eventstorming/messageFlow4.jpg">
+
+Este flujo ilustra la relación de Partnership entre Trip y Monitoring, mientras que Management cumple el rol de Orchestrator, coordinando tanto con Notification como con actores externos para garantizar una respuesta rápida y efectiva ante incidentes críticos.
 
 ### 4.2.4. Bounded Context Canvases
 
