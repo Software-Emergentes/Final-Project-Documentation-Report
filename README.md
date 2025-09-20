@@ -566,10 +566,10 @@ Entrevista a Conductores interprovinciales y de larga distancia.
 | Distrito     |     Bellavista        |
 | <img src="assets/interviews/mari-entrevista.jpg" width="80">   |   Maricarmen Tejada es una conductora de transporte interprovincial que vive en Bellavista, Callao. Ella comparte su experiencia al enfrentar la somnolencia en viajes largos, especialmente en la madrugada o después de comer. Reconoce síntomas como párpados pesados, bostezos y pérdida de concentración, además de que el cansancio acumulado empeora su estado de alerta. Señala que la fatiga retrasa sus tiempos de reacción y que los tramos largos y rectos generan mayor riesgo. Considera que las alertas sonoras combinadas con mensajes visuales serían las más efectivas, aunque expresa preocupación por la privacidad de un sistema que monitoree su rostro. Aun así, ve útil una herramienta que la alerte en tiempo real y que registre datos de conducción siempre que haya transparencia en su uso. Concluye que un sistema de monitoreo podría ayudarla a tomar descansos a tiempo y dar mayor seguridad a pasajeros y empresa.        |
 | Timing:      |   00:04 - 3:51 |
-| **Entrevista 3** |              |
-| Edad         |              |
-| Distrito     |              |
-| **Imagen**   |              |
+| **Entrevista 3** | Manuel Chávez         |
+| Edad         |     28         |
+| Distrito     |  San Borja            |
+| <img src="assets/interviews/manuel-entrevista.png" width="80">  | Manuel Chávez es conductor de buses interprovinciales y realiza viajes largos desde Lima hacia distintas ciudades del país. Señala que la somnolencia aparece con frecuencia, sobre todo en la madrugada y después de varios días de trabajo sin descanso suficiente. Entre los síntomas que percibe están los parpadeos prolongados, la inclinación involuntaria de la cabeza y la dificultad para concentrarse, lo que reduce su capacidad de reacción ante imprevistos. Aunque suele detenerse a estirar o tomar café, reconoce que no siempre es suficiente. Considera que un sistema de alertas combinadas sería de gran ayuda, siempre que los datos se manejen de manera responsable, pues le permitiría anticipar la fatiga, mejorar la planificación de descansos y aumentar la seguridad en carretera. |
 | Timing:      |  7:13 - 12:11 |
 
 <br>
@@ -587,10 +587,10 @@ Entrevista a Gerentes de empresas de transporte.
 | Distrito     |  Lince            |
 | <img src="assets/interviews/gerente-miguel-vilca.jpeg" width="80">   |  Miguel es un jefe de flota en la empresa MORCOR, una empresa de transporte de herramientas interprovincial. Nos comenta que tiene bajo supervición a 70 empleados y 30 camiones, a quienes monitorea por medios de comunicación tradicionales (véase, llamadas periódicas, mensajes de texto, entre otros). Por ello, le interesó la propuesta que ofrece el equipo con SafeVision, pues supone una gran mejora en la gestión del personal. Asimismo, mencionó que es muy importante para él que la herramienta tenga un precio módico dada la gran cantidad de buses con los que cuenta la empresa. |
 | Timing:      |  16:15 - 25:19 |
-| Entrevista 3 |              |
-| Edad         |              |
-| Distrito     |              |
-| **Imagen**   |              |
+| Entrevista 3 |   Rhaí Vargas           |
+| Edad         |    32          |
+| Distrito     |   Surco           |
+|  <img src="assets/interviews/rhai-entrevista.png" width="80">  |  Rhaí es gerente de operaciones en una empresa de transporte interprovincial en Surco. Administra una flota de 35 unidades y cerca de 50 conductores, y destaca que la mayor preocupación es la fatiga en rutas largas y nocturnas, seguida del mal estado de las carreteras y factores climáticos. Explica que actualmente dependen de descansos obligatorios, rotación de choferes y reportes manuales, aunque estos no siempre son precisos. Considera que un sistema de monitoreo en tiempo real sería de gran valor por ofrecer datos objetivos y anticipar riesgos. Señala que la efectividad, facilidad de uso y costo razonable serían claves para implementarlo, y concluye que una solución así permitiría reducir accidentes, mejorar la seguridad y reforzar la confianza en la empresa.            |
 | Timing:      | 25:19 - 29:59 |
 
 **Vídeo de Entrevistas:** <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y </a>
