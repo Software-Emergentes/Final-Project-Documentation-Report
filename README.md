@@ -163,7 +163,6 @@ Los miembros del equipo son:
 - [Conclusiones](#conclusiones)
 - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
 
-## [Video About-the-Team](#video-about-the-team)
 
 ## [Bibliografía](#bibliografía)
 
