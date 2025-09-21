@@ -1520,6 +1520,10 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
 
 ### 4.3.4. Software Architecture Deployment Diagrams
 
+<img src="./assets/software-architecture-diagrams/deployment-diagram.png">
+
+
+
 # Conclusiones
 
 El desarrollo del proyecto permitió aplicar diferentes enfoques de diseño y análisis, desde la identificación de necesidades de los usuarios hasta la construcción de la arquitectura del sistema.  
