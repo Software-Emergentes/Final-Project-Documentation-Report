@@ -1521,7 +1521,63 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
 
 <img src="./assets/software-architecture-diagrams/deployment-diagram.png">
 
+# Capítulo V: Tactical-Level Software Design
 
+## 5.6 Bounded Context: Management
+
+Este bounded context concentra todo lo relativo a la gestión de la flota y conductores desde la perspectiva de los gerentes y supervisores. Modela las entidades relacionadas con Reportes, Patrones de Riesgo y Roles de Usuario, y proporciona capacidades para la generación de informes, detección de patrones históricos y control de permisos. Su límite garantiza que las políticas de supervisión y cumplimiento se apliquen de forma consistente en toda la plataforma.
+
+### 5.6.1. Domain Layer
+
+| Tipo            | Nombre                         | Descripción                                                                                          |
+| --------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| Entidad         | **Report**                     | Representa un reporte consolidado de alertas, viajes y métricas asociadas a un conductor o a toda la flota.|
+| Entidad         | **Manager (Usuario)**          | Representa al gerente o supervisor con acceso a los reportes completos y a las funcionalidades administrativas del sistema. |
+| Objeto de Valor | **RiskPattern**             | Define un patrón recurrente de somnolencia o incidentes detectado en base a datos históricos (ej. alertas en franjas horarias específicas).     |
+| Objeto de Valor | ****              |  |
+| Domain Service  | ****           |                   |
+| Domain Service  | **** |      |
+| Domain Event    | ****            |            |
+| Domain Event    | ****     |   |
+
+### 5.6.2. Interface Layer
+
+| Tipo           | Nombre / Endpoint                | Descripción                                                                                   |
+| -------------- | -------------------------------- | --------------------------------------------------------------------------------------------- |
+| API REST       | **`GET /api/`**      |  |
+| API REST       | **`GET /api/`** |  |
+| Interfaz de UI | **Panel de administración**      |   |
+
+### 5.6.3. Application Layer
+
+| Tipo                | Nombre                            | Descripción                                                                                       |
+| ------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Use Case            | ****           |            |
+| Use Case            | **** |                   |
+| Application Service | ****     |      |
+| DTO                 | ****                 |  |
+| DTO                 | ****                  |    |
+
+### 5.6.4. Infrastructure Layer
+
+| Tipo        | Nombre                                    | Descripción                                                                    |
+| ----------- | ----------------------------------------- | ------------------------------------------------------------------------------ |
+| Persistence | **R**           |  |
+| Integración | **S** |  |
+
+### 5.6.5. Bounded Context Software Architecture Component Level Diagrams
+
+<img src="./assets/img/chapter-V/" width="700"> 
+
+### 5.6.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.6.6.1 Bounded Context Domain Layer Class Diagrams
+
+<img src="./assets/img/chapter-V/" width="700"> 
+
+#### 5.6.6.2 Bounded Context Database Design Diagrams
+
+<img src="./assets/img/chapter-V/" width="700"> 
 
 # Conclusiones
 
