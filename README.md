@@ -1536,14 +1536,14 @@ Este bounded context concentra todo lo relativo a la gestión de la flota y cond
 | Objeto de Valor | **RiskPattern**                | Define un patrón recurrente de somnolencia o incidentes detectado en base a datos históricos (ej. alertas en franjas horarias específicas).|
 | Domain Service  | **RiskAnalysisService**        | Servicio de dominio que aplica reglas de negocio para identificar patrones de riesgo a partir de los datos de viajes y alertas de conductores.|
 | Domain Service  | **ReportGenerator**            | Lógica encargada de crear reportes, consolidar métricas, aplicar formato de exportación (PDF, Excel) y garantizar consistencia de la información.|
-| Domain Event    | **Manager Reassigned Driver**  |Evento que indica que un gerente ha reasignado a un conductor en un viaje en curso.|
-| Domain Event    | **Accident Prevented**         |Evento que indica que una intervención temprana evitó un accidente en carretera.|
-| Domain Event    | **Backup Driver Assigned**     |Evento que refleja la asignación de un conductor de respaldo en caso de riesgo o incapacidad del conductor principal.|
-| Domain Event    | **Accident Occurred**          |Evento que indica que un accidente ocurrió durante el viaje, lo que dispara la coordinación de protocolos de emergencia.|
-| Domain Event    | **Emergency Response Dispatched** |Evento que refleja que el equipo de respuesta de emergencias ha sido enviado tras un incidente crítico.|
-| Domain Event    | **Insurance Notified**         |Evento que confirma la notificación a la aseguradora tras un accidente o incidente relevante.|
-| Domain Event    | **Driver Suspension Initiated**  |Evento que refleja la suspensión temporal de un conductor por razones de seguridad o incumplimiento de políticas.|
-| Domain Event    | **Driver Suspension Lifted**   |Evento que refleja que la suspensión del conductor ha sido levantada y puede volver a operar.|
+| Domain Event    | **ManagerReassignedDriver**  |Evento que indica que un gerente ha reasignado a un conductor en un viaje en curso.|
+| Domain Event    | **AccidentPrevented**         |Evento que indica que una intervención temprana evitó un accidente en carretera.|
+| Domain Event    | **BackupDriverAssigned**     |Evento que refleja la asignación de un conductor de respaldo en caso de riesgo o incapacidad del conductor principal.|
+| Domain Event    | **AccidentOccurred**          |Evento que indica que un accidente ocurrió durante el viaje, lo que dispara la coordinación de protocolos de emergencia.|
+| Domain Event    | **EmergencyResponseDispatched** |Evento que refleja que el equipo de respuesta de emergencias ha sido enviado tras un incidente crítico.|
+| Domain Event    | **InsuranceNotified**         |Evento que confirma la notificación a la aseguradora tras un accidente o incidente relevante.|
+| Domain Event    | **DriverSuspensionInitiated**  |Evento que refleja la suspensión temporal de un conductor por razones de seguridad o incumplimiento de políticas.|
+| Domain Event    | **DriverSuspensionLifted**   |Evento que refleja que la suspensión del conductor ha sido levantada y puede volver a operar.|
 
 ### 5.6.2. Interface Layer
 
@@ -1555,47 +1555,45 @@ Este bounded context concentra todo lo relativo a la gestión de la flota y cond
 | **API REST** | `POST /api/critical-events/handle` | Permite al gerente registrar y gestionar un evento crítico (accidente, micro-sueño, emergencia).                          |
 | **API REST** | `GET /api/risk-patterns`           | Devuelve patrones de riesgo detectados (ej. horarios críticos, reincidencia de alertas).                                  |
 | **API REST** | `POST /api/reports/export`         | Genera y devuelve un archivo exportable (PDF o Excel) con métricas de seguridad de la flota.                              |
-| **UI**       | Dashboard de flota                 | Vista centralizada para gerentes y supervisores donde se muestran métricas globales de la flota y alertas en tiempo real. |
-| **UI**       | Panel de reportes detallados       | Interfaz donde los gerentes pueden visualizar reportes completos de cada conductor, incluyendo viajes y alertas.          |
-| **UI**       | Módulo de gestión de roles         | Pantalla de administración para asignar roles (gerente, supervisor, conductor) y controlar permisos de acceso.            |
+| **UI**       | FleetDashboard                 | Vista centralizada para gerentes y supervisores donde se muestran métricas globales de la flota y alertas en tiempo real. |
+| **UI**       | DetailedReportsPanel      | Interfaz donde los gerentes pueden visualizar reportes completos de cada conductor, incluyendo viajes y alertas.          |
+| **UI**       | RoleManagementModule         | Pantalla de administración para asignar roles (gerente, supervisor, conductor) y controlar permisos de acceso.            |
 
 ### 5.6.3. Application Layer
 
 | Tipo                    | Nombre                       | Descripción                                                                                                                         |
 | ----------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Use Case**            | GestionarAsignacionConductor | Caso de uso que permite asignar o reasignar un conductor a un viaje, verificando reglas de disponibilidad y roles.                  |
-| **Use Case**            | ManejarEventoCritico         | Caso de uso que orquesta la gestión de incidentes críticos (accidentes, emergencias), notificando a las entidades correspondientes. |
-| **Use Case**            | ConsultarReportes            | Caso de uso que permite a los gerentes visualizar reportes de viajes, alertas y métricas históricas de los conductores.             |
-| **Use Case**            | ExportarReportes             | Caso de uso que genera archivos exportables (PDF/Excel) con métricas de seguridad y desempeño de la flota.                          |
-| **Application Service** | ReporteManagementService     | Fachada que centraliza la generación, consulta y exportación de reportes, manejando transacciones.                                  |
-| **Application Service** | AsignacionConductorService   | Servicio de aplicación que encapsula la lógica para asignar/reasignar conductores y coordinar con el BC de Trip.                    |
-| **DTO**                 | ReporteDTO                   | Objeto plano que transporta datos de reportes (alertas, métricas, patrones de riesgo) hacia la UI/API.                              |
-| **DTO**                 | ConductorDTO                 | Objeto plano con los datos principales del conductor (nombre, estado, asignación actual).                                           |
-| **DTO**                 | EventoCriticoDTO             | Objeto plano con la información relevante de un incidente (tipo, hora, conductor involucrado, estado de respuesta).                 |
+| **Use Case**            | ManageDriverAssignment | Caso de uso que permite asignar o reasignar un conductor a un viaje, verificando reglas de disponibilidad y roles.                  |
+| **Use Case**            | HandleCriticalEvent         | Caso de uso que orquesta la gestión de incidentes críticos (accidentes, emergencias), notificando a las entidades correspondientes. |
+| **Use Case**            | ViewReports            | Caso de uso que permite a los gerentes visualizar reportes de viajes, alertas y métricas históricas de los conductores.             |
+| **Use Case**            | ExportReports             | Caso de uso que genera archivos exportables (PDF/Excel) con métricas de seguridad y desempeño de la flota.                          |
+| **Application Service** | ReportManagementService     | Fachada que centraliza la generación, consulta y exportación de reportes, manejando transacciones.                                  |
+| **Application Service** | DriverAssignmentService   | Servicio de aplicación que encapsula la lógica para asignar/reasignar conductores y coordinar con el BC de Trip.                    |
+| **DTO**                 | ReportDTO                   | Objeto plano que transporta datos de reportes (alertas, métricas, patrones de riesgo) hacia la UI/API.                              |
+| **DTO**                 | DriverDTO                 | Objeto plano con los datos principales del conductor (nombre, estado, asignación actual).                                           |
+| **DTO**                 | CriticalEventDTO             | Objeto plano con la información relevante de un incidente (tipo, hora, conductor involucrado, estado de respuesta).                 |
 
 ### 5.6.4. Infrastructure Layer
 
-| Tipo             | Nombre                                          | Descripción                                                                                                     |
-| ---------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| **Persistencia** | Base de datos relacional (PostgreSQL/MySQL)     | Almacena información de reportes, métricas de desempeño, patrones de riesgo y roles de usuario.                 |
-| **Persistencia** | Sistema de archivos local/nube (PDF/Excel)      | Guarda los reportes exportados en formatos PDF y Excel para acceso histórico y auditorías.                      |
-| **Integración**  | Servicio externo de notificaciones (Email/SMS)  | Envía reportes automáticos y alertas críticas a gerentes y supervisores en tiempo real.                         |
-| **Integración**  | API de Trip                                     | Provee datos sobre viajes finalizados, incidentes y alertas asociadas, necesarios para generar reportes.        |
-| **Integración**  | API de IAM                                      | Permite validar roles y credenciales antes de conceder acceso a los reportes y funcionalidades administrativas. |
+| Tipo             | Nombre                                          | Descripción                                                                                                    |
+| ---------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------|
+| **Persistence**  | ReportRepositoryImpl     | Almacena información de reportes, métricas de desempeño, patrones de riesgo y roles de usuario.                |
+| **Persistence**  | CloudSyncService     | Guarda los reportes exportados en formatos PDF y Excel para acceso histórico y auditorías.                     |
+| **Integration**  | NotificationPublisher  | Envía reportes automáticos y alertas críticas a gerentes y supervisores en tiempo real.                        |
 
 ### 5.6.5. Bounded Context Software Architecture Component Level Diagrams
 
-<img src="./assets/img/chapter-V/" width="700"> 
+<img src="./assets/" width="700"> 
 
 ### 5.6.6. Bounded Context Software Architecture Code Level Diagrams
 
 #### 5.6.6.1 Bounded Context Domain Layer Class Diagrams
 
-<img src="./assets/img/chapter-V/" width="700"> 
+<img src="./assets/" width="700"> 
 
 #### 5.6.6.2 Bounded Context Database Design Diagrams
 
-<img src="./assets/img/chapter-V/" width="700"> 
+<img src="./assets/" width="700"> 
 
 # Conclusiones
 
