@@ -1593,7 +1593,7 @@ Este bounded context concentra todo lo relativo a la gestión de la flota y cond
 
 #### 5.6.6.2 Bounded Context Database Design Diagrams
 
-<img src="./assets/Database-Diagrams-Management.png"> 
+<img src="./assets/Database-Diagrams-Management2.png"> 
 
 # Conclusiones
 
