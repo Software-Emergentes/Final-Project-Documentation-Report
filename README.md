@@ -1522,6 +1522,99 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
 <img src="./assets/software-architecture-diagrams/deployment-diagram.png">
 
 
+# Capítulo V: Tactical-Level Software Design
+
+## 5.4. Bounded Context: Trip
+
+Este Bounded Context abarca la gestión del ciclo de vida de los viajes realizados por los conductores. Su propósito es registrar y controlar los viajes desde su inicio hasta su finalización o cancelación, asegurando la integridad de la información y su comunicación con los contextos Monitoring y Notification.
+
+### 5.4.1. Domain Layer
+
+Esta capa representa el núcleo del contexto Trip, donde se definen las entidades, objetos de valor, servicios y eventos que contienen las reglas de negocio. Su objetivo es mantener la coherencia del dominio y reflejar fielmente los procesos del viaje dentro del sistema.
+
+| Tipo | Nombre | Descripción |
+|------|---------|-------------|
+| **Entidad** | `Trip` | Representa un viaje realizado por un conductor. Contiene información sobre el conductor, vehículo, horarios de inicio y fin, y el estado del viaje (activo, finalizado, cancelado). Es la entidad raíz del agregado. |
+| **Entidad** | `Driver` | Identifica al conductor responsable del viaje. Se utiliza como referencia externa desde el contexto Driver para validar disponibilidad y estado. |
+| **Entidad** | `Vehicle` | Define el vehículo asignado al viaje, incluyendo su placa y estado operativo. Referencia proveniente del contexto Management. |
+| **Entidad** | `Report` | Registra la información del viaje al finalizar. Puede ser generado automáticamente y enviado a diferentes actores (conductor o gerente). |
+| **Entidad** | `Alert` | Representa las alertas de somnolencia, distracción o micro-sueño detectadas durante el viaje. Está relacionada con el contexto Monitoring. |
+| **Objeto de Valor** | `TripStatus` | Define los estados válidos del viaje (Iniciado, En progreso, Finalizado, Cancelado) y asegura la consistencia en las transiciones. |
+| **Objeto de Valor** | `TripTime` | Agrupa las marcas temporales del viaje, validando que la hora de inicio sea anterior a la de finalización. |
+| **Objeto de Valor** | `TripDataPolicy` | Encapsula las reglas que determinan cuándo y cómo se recolectan o envían los datos del viaje hacia la nube para análisis posteriores. |
+| **Agregado** | `TripAggregate` | Agrupa las entidades y objetos de valor relacionados con un viaje, controlando las operaciones de inicio, finalización y cancelación. |
+| **Domain Service** | `TripManagerService` | Coordina las operaciones principales del viaje (inicio, fin, cancelación), aplicando reglas de negocio y validando los estados. |
+| **Domain Service** | `TripReportGenerator` | Procesa la información del viaje y genera los reportes finales para los usuarios correspondientes. |
+| **Repository (Interface)** | `TripRepository` | Define las operaciones de persistencia del agregado Trip, como registrar viajes, actualizar estado y recuperar historial. |
+| **Domain Event** | `TripStarted` | Evento que se dispara cuando un viaje es iniciado exitosamente por el conductor. |
+| **Domain Event** | `TripEnded` | Evento que indica la finalización de un viaje, desencadenando la generación del reporte y la sincronización de datos. |
+| **Domain Event** | `TripCancelled` | Evento que comunica la cancelación de un viaje antes de su finalización. |
+| **Domain Event** | `TripDataSentToCloud` | Evento emitido cuando los datos del viaje han sido enviados y almacenados correctamente en la nube. |
+
+### 5.4.2. Interface Layer
+
+Esta capa expone las funcionalidades del contexto Trip, permitiendo que los módulos Monitoring, Notification y Management, así como los usuarios finales, interactúen con los servicios del dominio. Incluye los controladores REST que gestionan solicitudes para iniciar, finalizar o cancelar viajes, y las interfaces de usuario que permiten a conductores y gerentes visualizar los recorridos, alertas y reportes generados.
+
+| Tipo | Nombre / Endpoint | Descripción |
+|------|--------------------|-------------|
+| **API REST** | `POST /api/trips/start` | Inicia un nuevo viaje, validando que el conductor y el vehículo estén disponibles. Registra la hora de inicio y el estado "En progreso". |
+| **API REST** | `PUT /api/trips/{id}/end` | Finaliza un viaje activo, registra la hora de finalización y dispara la generación del reporte asociado. |
+| **API REST** | `PUT /api/trips/{id}/cancel` | Permite cancelar un viaje antes de finalizarlo. Actualiza el estado y registra el motivo de cancelación. |
+| **API REST** | `GET /api/trips/{id}` | Devuelve los detalles de un viaje específico: conductor, vehículo, alertas asociadas y reporte generado. |
+| **API REST** | `GET /api/trips/driver/{driverId}` | Obtiene el historial de viajes realizados por un conductor determinado. Soporta filtros por fecha o estado. |
+| **API REST** | `GET /api/trips/vehicle/{vehicleId}` | Lista todos los viajes asociados a un vehículo para control de mantenimiento o análisis de uso. |
+| **API REST** | `GET /api/trips/reports` | Recupera los reportes de viaje generados (enviados a conductor o gerente) y su estado actual. |
+| **API REST** | `POST /api/trips/{id}/sync` | Sincroniza los datos del viaje (alertas, duración, métricas) con la nube según la política TripDataPolicy. |
+| **Interfaz de UI (Móvil)** | `Pantalla de Viaje Activo` | Muestra al conductor la información en tiempo real del viaje: duración, estado, alertas y recomendaciones. |
+| **Interfaz de UI (Móvil)** | `Historial de Viajes` | Permite al conductor revisar viajes anteriores, reportes generados y alertas registradas. |
+| **Interfaz de UI (Web - Gerente)** | `Panel de Seguimiento de Viajes` | Dashboard web que permite a los gerentes visualizar viajes activos, alertas críticas y reportes sincronizados. |
+
+### 5.4.3. Application Layer
+
+Esta capa coordina los flujos de negocio del contexto Trip, garantizando la correcta ejecución de las operaciones del dominio y su comunicación con las demás capas. A través de Use Cases, Application Services, Command Handlers y Event Handlers, se gestionan las acciones de inicio, finalización, cancelación y sincronización de los viajes, preservando la integridad del dominio y propagando eventos hacia Monitoring, Notification y Management.
+
+| Tipo | Nombre | Descripción |
+|------|---------|-------------|
+| **Use Case** | `StartTripHandler` | Orquesta el inicio de un viaje: valida la disponibilidad del conductor y del vehículo, crea la entidad Trip y dispara el evento TripStarted. |
+| **Use Case** | `EndTripHandler` | Gestiona la finalización de un viaje activo: actualiza su estado, registra la hora de fin y activa la generación del reporte correspondiente. |
+| **Use Case** | `CancelTripHandler` | Permite cancelar un viaje en curso, actualizando su estado y notificando al módulo de Management para fines de registro y auditoría. |
+| **Use Case** | `SyncTripDataHandler` | Controla la sincronización de los datos del viaje (alertas, duración, métricas) hacia la nube conforme a la política TripDataPolicy. |
+| **Application Service** | `TripApplicationService` | Fachada principal del contexto Trip. Expone los casos de uso, gestiona transacciones y coordina la comunicación entre el repositorio y los servicios de dominio. |
+| **Application Service** | `TripReportService` | Gestiona la creación y envío de reportes de viaje, interactuando con el contexto Notification mediante eventos de integración. |
+| **Command Handler** | `StartTripCommandHandler` | Procesa el comando de inicio de viaje proveniente de la capa de interfaz y ejecuta la lógica de creación del viaje en el dominio. |
+| **Command Handler** | `EndTripCommandHandler` | Ejecuta el comando que marca un viaje como finalizado y dispara el evento TripEnded. |
+| **Command Handler** | `CancelTripCommandHandler` | Procesa el comando de cancelación de viaje, validando estado actual y registrando el motivo. |
+| **Command Handler** | `SyncTripDataCommandHandler` | Ejecuta la acción de sincronizar los datos del viaje con la nube, validando las políticas definidas. |
+| **Event Handler** | `TripEndedEventHandler` | Escucha el evento TripEnded y coordina la generación automática del reporte y su notificación al gerente. |
+| **Event Handler** | `TripDataSentEventHandler` | Reacciona al evento TripDataSentToCloud, confirmando la sincronización exitosa y actualizando el estado del viaje. |
+| **DTO** | `TripDTO` | Objeto de transferencia que contiene los datos básicos del viaje (id, conductor, vehículo, horaInicio, horaFin, estado). |
+| **DTO** | `TripReportDTO` | Transporta la información del reporte de viaje, incluyendo métricas, alertas y destino de envío (conductor o gerente). |
+
+### 5.4.4. Infrastructure Layer
+
+En esta capa se implementan las clases que permiten al contexto Trip acceder a servicios externos, como bases de datos, sistemas en la nube o mensajería. Aquí se concretan los Repositories del dominio para la persistencia de viajes y reportes, junto con los componentes de integración que sincronizan datos y eventos con otros contextos del sistema, asegurando la disponibilidad y trazabilidad de la información.
+
+| Tipo | Nombre | Descripción |
+|------|---------|-------------|
+| **Persistence** | `TripRepositoryImpl` | Implementación concreta del TripRepository. Gestiona las operaciones CRUD del viaje (crear, actualizar estado, consultar historial) sobre la base de datos relacional. |
+| **Persistence** | `ReportRepositoryImpl` | Implementación responsable de almacenar y recuperar los reportes generados al finalizar un viaje. Permite mantener sincronizado el historial con el módulo de notificaciones. |
+| **Integration** | `CloudSyncService` | Servicio encargado de enviar los datos del viaje (duración, alertas, métricas) hacia la nube, cumpliendo las reglas definidas en la política TripDataPolicy. |
+| **Integration** | `NotificationPublisher` | Cliente de mensajería que publica eventos como TripEnded o TripDataSentToCloud hacia el módulo Notification mediante un Message Broker (por ejemplo, RabbitMQ o Kafka). |
+
+### 5.4.5. Bounded Context Software Architecture Component Level Diagrams
+
+![Component Level Diagram - Trip](assets/Component-Level-Diagrams-Trip.png)
+
+### 5.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.4.6.1. Bounded Context Domain Layer Class Diagrams
+
+![Class Diagram - Trip](assets/Class-Diagrams-Trip.png)
+
+#### 5.4.6.2. Bounded Context Database Design Diagram
+
+![Database Design Diagram - Trip](assets/Database-Design-Diagrams-Trip.png) 
+
 
 # Conclusiones
 
