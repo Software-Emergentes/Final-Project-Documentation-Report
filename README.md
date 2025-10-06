@@ -1522,6 +1522,74 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
 <img src="./assets/software-architecture-diagrams/deployment-diagram.png">
 
 
+# Capítulo V: Tactical-Level Software Design
+
+## 5.5. Bounded Context: Fatigue Monitoring
+
+Aquí se concentra la lógica de detección de fatiga de los conductores, la generación de alertas críticas y la visualización en tiempo real del estado de monitoreo. Este contexto limitado maneja la integración con los sistemas de inteligencia artificial y notificaciones externas para mantener la seguridad de los conductores.
+
+### 5.5.1. Domain Layer
+
+Esta capa contiene los elementos principales del dominio, como entidades, objetos de valor, servicios de dominio y eventos que representan la lógica central del negocio relacionada con la detección y gestión de la fatiga.
+
+| Tipo | Nombre | Descripción |
+|------|---------|-------------|
+| **Entidad** | `DrowsinessEvent` | Representa un evento de somnolencia detectado (como parpadeos, bostezos o micro sueños) asociado a una sesión de monitoreo. |
+| **Entidad** | `CriticalAlert` | Registra una alerta crítica generada por fatiga severa durante una sesión de conducción. |
+| **Objeto de Valor** | `SeverityScore` | Valor que mide la severidad del evento de fatiga con base en los datos de sensores. |
+| **Objeto de Valor** | `SensorData` | Contiene los valores recogidos por los sensores, como el índice de parpadeo o la apertura bucal. |
+| **Domain Service** | `FatigueDetectionService` | Servicio que detecta la fatiga analizando datos de sensores y calcula la severidad de los eventos. |
+| **Domain Service** | `AlertGenerationService` | Servicio encargado de generar alertas críticas a partir de los eventos de somnolencia acumulados. |
+| **Domain Event** | `FatigueDetectedEvent` | Evento que se dispara cuando se detectan signos de fatiga en el conductor. |
+| **Domain Event** | `CriticalAlertGeneratedEvent` | Evento que se emite al crear una alerta crítica para notificar a otros sistemas. |
+
+### 5.5.2. Interface Layer
+
+Esta capa define los puntos de interacción del usuario y los endpoints públicos del sistema.  
+Incluye tanto las API REST que exponen funcionalidades del backend, como las interfaces gráficas donde los usuarios visualizan el estado del monitoreo.
+
+| Tipo | Nombre / Endpoint | Descripción |
+|------|--------------------|-------------|
+| **API REST** | `GET /api/fatigue/status` | Consulta el estado actual de fatiga de un conductor. |
+| **API REST** | `GET /api/alerts/reports` | Obtiene reportes y métricas de alertas críticas generadas. |
+| **Interfaz de UI** | `Monitoring Panel` | Panel web para visualizar el estado de fatiga en tiempo real y gestionar alertas. |
+
+### 5.5.3. Application Layer
+
+Esta capa orquesta la lógica de aplicación y coordina la ejecución de los casos de uso.  
+Contiene los servicios que gestionan las operaciones principales, así como los DTOs utilizados para transferir datos entre capas.
+
+| Tipo | Nombre | Descripción |
+|------|---------|-------------|
+| **Use Case** | `DetectFatigueUseCase` | Analiza los datos de entrada en tiempo real para determinar si existe fatiga. |
+| **Use Case** | `GenerateCriticalAlertUseCase` | Crea y envía alertas críticas cuando se detectan niveles de fatiga peligrosos. |
+| **Application Service** | `MonitoringServiceApp` | Coordina los casos de uso y las operaciones de monitoreo general. |
+| **DTO** | `FatigueStatusDTO` | Transfiere información del estado de fatiga del conductor al panel o API. |
+| **DTO** | `CriticalAlertReportDTO` | Contiene los datos del reporte de alertas generadas para ser mostradas o exportadas. |
+
+### 5.5.4. Infraestructure Layer
+
+Esta capa gestiona la persistencia y la integración con sistemas externos.  
+Se encarga de conectar el dominio con las bases de datos y los servicios externos, como los de notificación o análisis de IA.
+
+| Tipo | Nombre | Descripción |
+|------|---------|-------------|
+| **Persistence** | `AlertRepository` | Accede a la base de datos para almacenar, recuperar y generar reportes de alertas. |
+| **Integración** | `NotificationAdapter` | Envía alertas a los sistemas externos de notificación o mensajería. |
+
+### 5.5.5. Bounded Context Software Architecture Component Level Diagrams
+
+![Component Level Diagram - Monitoring](assets/Component-Level-Diagrams-Monitoring.png)
+
+### 5.5.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.5.6.1. Bounded Context Domain Layer Class Diagrams
+
+![Class Diagram - Monitoring](assets/Class-Diagrams-Monitoring.png)
+
+#### 5.5.6.2. Bounded Context Database Design Diagrams
+
+
 
 # Conclusiones
 
@@ -1562,5 +1630,3 @@ Vídeo de Entrevistas: <a href="https://upcedupe-my.sharepoint.com/:v:/g/persona
 
 Video de Exposicion: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212077_upc_edu_pe/ESmGsetwsRdGihA6FwiD3lEBVVT6QLqebBhynCgMeW9qVw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HWsu6W">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212077_upc_edu_pe/ESmGsetwsRdGihA6FwiD3lEBVVT6QLqebBhynCgMeW9qVw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HWsu6W</a>
 =======
-
-
