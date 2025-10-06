@@ -1583,17 +1583,17 @@ Este bounded context concentra todo lo relativo a la gestión de la flota y cond
 
 ### 5.6.5. Bounded Context Software Architecture Component Level Diagrams
 
-<img src="./assets/" width="700"> 
+<img src="./assets/Component-Level-Diagrams-Management.png"> 
 
 ### 5.6.6. Bounded Context Software Architecture Code Level Diagrams
 
 #### 5.6.6.1 Bounded Context Domain Layer Class Diagrams
 
-<img src="./assets/" width="700"> 
+<img src="./assets/Class-Diagrams-Management.png"> 
 
 #### 5.6.6.2 Bounded Context Database Design Diagrams
 
-<img src="./assets/" width="700"> 
+<img src="./assets/Database-Diagrams-Management.png"> 
 
 # Conclusiones
 
