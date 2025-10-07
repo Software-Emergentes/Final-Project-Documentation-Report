@@ -1522,6 +1522,105 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
 <img src="./assets/software-architecture-diagrams/deployment-diagram.png">
 
 
+## 5.2.1. Bounded Context: IAM Context
+
+### 5.2.1.1. Domain Layer
+
+En esta sección se describen los elementos del modelo de dominio que componen el bounded context IAM. Estos elementos incluyen entidades, objetos de valor, agregados, servicios de dominio, repositorios e eventos de dominio que son fundamentales para la gestión de la identidad y el acceso de los conductores en el sistema.
+
+| Tipo | Nombre | Descripción |
+|------|--------|-------------|
+| Entidad | Driver | Representa a un conductor registrado en el sistema. Contiene información personal, credenciales de acceso, estado del conductor y referencia a su licencia de conducir. Es la entidad raíz del agregado. |
+| Entidad | DriverLicense | Almacena los datos de la licencia de conducir del conductor: número, fecha de emisión, fecha de vencimiento, categoría y estado de validación. Valida la vigencia de la licencia. |
+| Entidad | DriverProfile | Contiene la información de perfil del conductor: foto, información de contacto adicional, preferencias y configuraciones personales. |
+| Objeto de Valor | DriverStatus | Define los estados válidos del conductor (Activo, Inactivo, Suspendido, En Viaje) y asegura la consistencia en las transiciones de estado. |
+| Objeto de Valor | LicenseNumber | Encapsula el número de licencia de conducir con validación de formato según las reglas del país o región. |
+| Objeto de Valor | ContactInformation | Agrupa los datos de contacto del conductor (teléfono, email, dirección), validando formato y completitud. |
+| Objeto de Valor | DriverCredentials | Encapsula las credenciales de acceso del conductor (usuario, contraseña encriptada) con reglas de seguridad. |
+| Agregado | DriverAggregate | Agrupa las entidades y objetos de valor relacionados con un conductor, controlando las operaciones de registro, actualización de perfil y gestión de licencia. |
+| Domain Service | DriverRegistrationService | Coordina el proceso de registro de un nuevo conductor, validando datos personales, credenciales y verificando que la licencia esté vigente. |
+| Domain Service | DriverLicenseValidationService | Valida la autenticidad y vigencia de la licencia de conducir, aplicando reglas de negocio específicas según la categoría y jurisdicción. |
+| Domain Service | DriverAvailabilityService | Determina si un conductor está disponible para ser asignado a un viaje, evaluando su estado actual y condiciones operativas. |
+| Repository (Interface) | DriverRepository | Define las operaciones de persistencia del agregado Driver, como registrar conductores, actualizar estado, recuperar perfil y consultar disponibilidad. |
+| Repository (Interface) | DriverLicenseRepository | Define las operaciones para gestionar las licencias de conducir asociadas a los conductores, incluyendo validación y renovación. |
+| Domain Event | DriverRegistered | Evento que se dispara cuando un conductor completa exitosamente su registro en el sistema. |
+| Domain Event | DriverProfileUpdated | Evento emitido cuando un conductor actualiza información de su perfil personal. |
+| Domain Event | DriverLicenseValidated | Evento que indica que la licencia de un conductor ha sido validada correctamente por el sistema. |
+| Domain Event | DriverLicenseExpired | Evento que notifica la expiración de una licencia de conducir, requiriendo renovación. |
+| Domain Event | DriverStatusChanged | Evento que comunica cambios en el estado del conductor (Activo ↔ Inactivo, Suspensión, etc.). |
+
+
+### 5.2.1.2. Interface Layer
+
+En esta sección se describen las interfaces de usuario y APIs que interactúan con el bounded context IAM. Estas interfaces permiten a los usuarios y otros sistemas consumir las funcionalidades del contexto de manera segura y eficiente.
+
+| Tipo | Nombre / Endpoint | Descripción |
+|------|-------------------|-------------|
+| API REST | POST /api/drivers/register | Registra un nuevo conductor en el sistema. Valida datos personales, credenciales y licencia de conducir. |
+| API REST | PUT /api/drivers/{id}/profile | Actualiza la información del perfil del conductor: foto, contacto, preferencias personales. |
+| API REST | PUT /api/drivers/{id}/license | Actualiza o renueva la información de la licencia de conducir del conductor. |
+| API REST | GET /api/drivers/{id} | Devuelve los detalles completos de un conductor específico: perfil, licencia, estado actual. |
+| API REST | GET /api/drivers/{id}/license | Obtiene la información detallada de la licencia de conducir de un conductor, incluyendo estado de validación. |
+| API REST | PUT /api/drivers/{id}/status | Permite actualizar el estado del conductor (Activar, Desactivar, Suspender). Usado por gerentes o administradores. |
+| API REST | GET /api/drivers/{id}/availability | Consulta si un conductor está disponible para ser asignado a un viaje en el momento actual. |
+| API REST | GET /api/drivers | Lista todos los conductores registrados en el sistema. Soporta filtros por estado, disponibilidad o datos de licencia. |
+| API REST | POST /api/drivers/{id}/validate-license | Ejecuta el proceso de validación de la licencia de conducir del conductor contra fuentes externas o reglas internas. |
+| Interfaz de UI (Móvil) | Pantalla de Registro | Formulario que permite al conductor crear su cuenta, ingresando datos personales, credenciales y licencia. |
+| Interfaz de UI (Móvil) | Pantalla de Perfil | Permite al conductor visualizar y editar su información personal, foto de perfil y datos de contacto. |
+| Interfaz de UI (Móvil) | Gestión de Licencia | Pantalla donde el conductor puede actualizar los datos de su licencia, ver estado de validación y fecha de vencimiento. |
+| Interfaz de UI (Web - Gerente) | Panel de Conductores | Dashboard web que permite a los gerentes visualizar listado de conductores, estados, licencias y gestionar suspensiones o activaciones. |
+
+### 5.2.1.3. Application Layer
+
+En esta sección se describen los casos de uso y servicios de aplicación que componen la lógica de negocio del bounded context IAM.
+
+| Tipo | Nombre | Descripción |
+|------|--------|-------------|
+| Use Case | RegisterDriverHandler | Orquesta el registro de un nuevo conductor: valida datos personales, crea credenciales, registra licencia y dispara el evento DriverRegistered. |
+| Use Case | UpdateDriverProfileHandler | Gestiona la actualización del perfil del conductor: valida cambios, persiste nueva información y emite el evento DriverProfileUpdated. |
+| Use Case | ValidateDriverLicenseHandler | Ejecuta el proceso de validación de la licencia de conducir, verificando vigencia, autenticidad y categoría apropiada. |
+| Use Case | UpdateDriverLicenseHandler | Permite actualizar o renovar la información de la licencia de conducir, validando fechas y documentación requerida. |
+| Use Case | ChangeDriverStatusHandler | Gestiona cambios en el estado del conductor (activación, desactivación, suspensión), aplicando reglas de negocio y notificando a otros contextos. |
+| Use Case | CheckDriverAvailabilityHandler | Consulta la disponibilidad actual de un conductor para asignación a viajes, considerando estado y condiciones operativas. |
+| Application Service | DriverApplicationService | Fachada principal del contexto Driver. Expone los casos de uso, gestiona transacciones y coordina la comunicación entre repositorio y servicios de dominio. |
+| Application Service | DriverProfileService | Gestiona todas las operaciones relacionadas con el perfil del conductor: actualización, consulta y configuración de preferencias. |
+| Command Handler | RegisterDriverCommandHandler | Procesa el comando de registro de conductor proveniente de la capa de interfaz y ejecuta la lógica de creación en el dominio. |
+| Command Handler | UpdateProfileCommandHandler | Ejecuta el comando de actualización de perfil del conductor, validando datos y disparando eventos correspondientes. |
+| Command Handler | ValidateLicenseCommandHandler | Procesa el comando de validación de licencia, interactuando con servicios externos si es necesario. |
+| Command Handler | ChangeStatusCommandHandler | Ejecuta el comando de cambio de estado del conductor, validando transiciones permitidas. |
+| Event Handler | DriverRegisteredEventHandler | Escucha el evento DriverRegistered y coordina acciones posteriores como envío de email de bienvenida o creación de perfil inicial. |
+| Event Handler | DriverLicenseExpiredEventHandler | Reacciona al evento DriverLicenseExpired, notificando al conductor y gerentes sobre la necesidad de renovación. |
+| Event Handler | DriverStatusChangedEventHandler | Procesa cambios de estado del conductor, actualizando disponibilidad para viajes y notificando a contextos dependientes. |
+| DTO | DriverDTO | Objeto de transferencia que contiene los datos básicos del conductor (id, nombre, email, teléfono, estado). |
+| DTO | DriverLicenseDTO | Transporta la información de la licencia de conducir (número, categoría, fechas, estado de validación). |
+| DTO | DriverProfileDTO | Contiene información detallada del perfil del conductor (foto, contacto completo, preferencias). |
+| DTO | DriverRegistrationDTO | Objeto usado para transportar todos los datos necesarios en el proceso de registro inicial. |
+
+### 5.2.1.4. Infrastructure Layer
+
+En esta sección se describen los componentes de infraestructura que soportan el bounded context IAM. Estos componentes incluyen implementaciones concretas de repositorios, servicios externos y mecanismos de comunicación necesarios para el funcionamiento del contexto.
+
+| Tipo | Nombre | Descripción |
+|------|--------|-------------|
+| Persistence | DriverRepositoryImpl | Implementación concreta del DriverRepository. Gestiona las operaciones CRUD del conductor (crear, actualizar perfil y estado, consultar) sobre la base de datos relacional. |
+| Persistence | DriverLicenseRepositoryImpl | Implementación responsable de almacenar y recuperar las licencias de conducir. Permite validar vigencia y mantener historial de renovaciones. |
+| Integration | LicenseValidationService | Servicio externo que valida la autenticidad de las licencias de conducir consultando bases de datos gubernamentales o servicios de terceros. |
+| Integration | DriverEventPublisher | Cliente de mensajería que publica eventos como DriverRegistered, DriverStatusChanged o DriverLicenseExpired hacia otros módulos mediante un Message Broker (RabbitMQ o Kafka). |
+| Integration | EmailNotificationService | Servicio que envía notificaciones por email al conductor sobre cambios en su perfil, validación de licencia o cambios de estado. |
+| Security | PasswordEncryptionService | Servicio de infraestructura que encripta y valida las contraseñas de los conductores utilizando algoritmos seguros (bcrypt, Argon2). |
+
+## 5.2.6. Bounded Context Software Architecture Component Level Diagrams.
+
+![Driver Component Diagram](./assets/driver-bounded/component-diagram.png)
+
+## 5.2.7. Bounded Context Software Architecture Code Level Diagrams.
+### 5.2.7.1. Bounded Context Domain Layer Class Diagrams.
+
+![Driver Domain Class Diagram](./assets/driver-bounded/class-diagram.jpeg)
+
+### 5.2.7.2. Bounded Context Database Design Diagram.
+
+![Driver Database Design Diagram](./assets/driver-bounded/database-diagram.png)
 
 # Conclusiones
 
