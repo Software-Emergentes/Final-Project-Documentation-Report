@@ -199,7 +199,7 @@ Imagen de los Insights:
 
 ## [Conclusiones](#conclusiones)
 - [Conclusiones](#conclusiones)
-- [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+- [Recomendaciones](#recomendaciones)
 
 ## [Bibliografía](#bibliografía)
 
