@@ -1615,7 +1615,7 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
         - `SetNotificationSentAtAsync(int notificationId, DateTime sentAt)`: Establece la fecha y hora de envío exitoso para una notificación.
 
 
-### 4.2.1.2. Interface Layer
+### 5.1.1.2. Interface Layer
 
 #### Facades
 
@@ -1640,8 +1640,6 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
         - `GetNotificationsByAlert(int alertId)`: Endpoint que permite obtener todas las notificaciones asociadas a una alerta específica.
         - `GetPendingNotifications()`: Endpoint que permite obtener todas las notificaciones que están pendientes de envío.
         - `GetNotificationStatus(int notificationId)`: Endpoint que permite obtener el estado de una notificación específica.
-
-
 
 
 ### 5.1.1.3. Application Layer
@@ -1710,7 +1708,6 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
 #### 5.1.1.6.2. Bounded Context Database Design Diagram
 
 ![Diagrama Vertabelo[URL]())](assets/notifications-bounded/noti-db.png)
-
 
 
 ## 5.2.1. Bounded Context: Driver Context
@@ -2076,8 +2073,6 @@ En esta capa se implementan las clases que permiten al contexto Trip acceder a s
 #### 5.4.6.2. Bounded Context Database Design Diagram
 
 ![Database Design Diagram - Trip](assets/Database-Design-Diagrams-Trip.png) 
-
-# Capítulo V: Tactical-Level Software Design
 
 ## 5.5. Bounded Context: Fatigue Monitoring
 
