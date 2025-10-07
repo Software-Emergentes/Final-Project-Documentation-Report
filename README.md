@@ -1407,44 +1407,35 @@ Los Bounded Context Canvases son herramientas visuales que nos permiten document
 Este canvas detalla nuestro contexto de acceso y seguridad, responsable de la autenticación, autorización y gestión de roles. Definimos sus principales modelos de dominio (Cuenta, Rol, Autenticación), las políticas de seguridad y los eventos clave como el registro de usuario y la confirmación de autenticación. Su propósito estratégico es garantizar que solo los usuarios autorizados puedan acceder a funcionalidades específicas del sistema, actuando como proveedor upstream de confianza para el resto de los contextos.
 
 <img src="./assets/eventstorming/boundedContext3.jpg"> 
-<br>
-<br>
 
 #### Management Bounded Context
 
 Este canvas muestra el contexto de gestión, encargado de brindar a los gerentes y supervisores acceso a reportes, métricas y análisis de riesgo. Identificamos sus entidades principales (Reporte, Patrón de Riesgo, Rol de Usuario), así como las capacidades de exportación y gestión de roles. Este contexto actúa como consumidor de información proveniente de Trip e IAM, consolidando datos en reportes estratégicos. Su propósito es proveer herramientas de supervisión y auditoría que apoyen la toma de decisiones.
 
 <img src="./assets/eventstorming/boundedContex2.jpg"> 
-<br>
-<br>
 
 #### Driver Bounded Context
 
 El canvas del contexto de conductor representa la interacción directa con el usuario final. Sus principales entidades son Alerta, Viaje, Resumen de Viaje y Guía Post-Alerta. Identificamos sus capacidades clave como la recepción de notificaciones en tiempo real, la configuración de alertas y la visualización de reportes resumidos al finalizar cada viaje. Este contexto actúa como consumidor de eventos generados por Trip y Monitoring, y como productor de confirmaciones de alertas. Su propósito estratégico es salvaguardar al conductor mediante una interfaz clara y efectiva.
 
 <img src="./assets/eventstorming/boundedContext1.jpg"> 
-<br>
 
 #### Monitoring Bounded Context
 Este canvas describe el contexto de monitoreo, núcleo técnico de la solución, responsable de procesar datos de video en tiempo real mediante IA. Identificamos sus entidades principales (Evento de Somnolencia, Detección de Fatiga, Alerta Crítica) y las capacidades de filtrado de falsos positivos, almacenamiento local y sincronización con la nube. Monitoring consume datos del dispositivo (cámara en cabina) y produce alertas hacia Driver y Trip. Su propósito estratégico es detectar la fatiga en milisegundos y disparar las acciones necesarias para evitar accidentes.
 
 <img src="./assets/eventstorming/boundedContext6.jpg"> 
-<br>
 
 #### Trip Bounded Context
 
 El canvas del contexto de viajes refleja la importancia de organizar los recorridos y asociar incidentes a cada trayecto. Sus principales modelos de dominio incluyen Viaje, Incidente y Alerta Registrada. Este contexto consume autenticación de IAM, eventos de monitoreo y configuraciones de Driver, para luego generar reportes de viaje consumidos por Management. Su propósito estratégico es mantener un historial confiable de la conducción y los incidentes ocurridos durante cada recorrido.
 
 <img src="./assets/eventstorming/boundedContext4.jpg"> 
-<br>
-<br>
 
 #### Notification Bounded Context
 
 Este canvas detalla el contexto encargado de orquestar el envío de alertas y reportes hacia conductores y gerentes. Gestiona canales de entrega (app, SMS, correo), políticas de reintento y el historial de notificaciones. Su propósito estratégico es garantizar la entrega fiable y trazable de mensajes críticos derivados del monitoreo, actuando como proveedor de notificaciones para Driver y Management y como consumidor de eventos generados por Monitoring y Trip.
 
 <img src="./assets/eventstorming/boundedContext5.jpg">
-<br>
 
 Estos canvas fueron herramientas fundamentales para definir la arquitectura de nuestra solución, permitiéndonos visualizar cada contexto como una unidad coherente con responsabilidades claras y bien definidas. Además, nos ayudaron a identificar los puntos de integración entre contextos que luego refinamos en el Context Mapping.
 
@@ -1548,11 +1539,9 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
 
 <img src="./assets/software-architecture-diagrams/container-level.png">
 
-
 ### 4.3.4. Software Architecture Deployment Diagrams
 
 <img src="./assets/software-architecture-diagrams/deployment-diagram.png">
-
 
 # Capítulo V: Tactical-Level Software Design
 
@@ -1645,7 +1634,6 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
         - `UpdateNotificationStatusAsync(int notificationId, ENotificationStatus status)`: Permite actualizar el estado de una notificación.
         - `IncrementAttemptCountAsync(int notificationId)`: Incrementa el contador de intentos de envío para una notificación.
         - `SetNotificationSentAtAsync(int notificationId, DateTime sentAt)`: Establece la fecha y hora de envío exitoso para una notificación.
-
 
 ### 5.1.1.2. Interface Layer
 
@@ -1741,7 +1729,6 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
 
 ![Diagrama Vertabelo[URL]())](assets/notifications-bounded/noti-db.png)
 
-
 ## 5.2.1. Bounded Context: Driver Context
 
 ### 5.2.1.1. Domain Layer
@@ -1768,7 +1755,6 @@ En esta sección se describen los elementos del modelo de dominio que componen e
 | Domain Event | DriverLicenseValidated | Evento que indica que la licencia de un conductor ha sido validada correctamente por el sistema. |
 | Domain Event | DriverLicenseExpired | Evento que notifica la expiración de una licencia de conducir, requiriendo renovación. |
 | Domain Event | DriverStatusChanged | Evento que comunica cambios en el estado del conductor (Activo ↔ Inactivo, Suspensión, etc.). |
-
 
 ### 5.2.1.2. Interface Layer
 
@@ -1829,16 +1815,17 @@ En esta sección se describen los componentes de infraestructura que soportan el
 | Integration | EmailNotificationService | Servicio que envía notificaciones por email al conductor sobre cambios en su perfil, validación de licencia o cambios de estado. |
 | Security | PasswordEncryptionService | Servicio de infraestructura que encripta y valida las contraseñas de los conductores utilizando algoritmos seguros (bcrypt, Argon2). |
 
-## 5.2.6. Bounded Context Software Architecture Component Level Diagrams.
+## 5.2.6. Bounded Context Software Architecture Component Level Diagrams
 
 ![Driver Component Diagram](./assets/driver-bounded/component-diagram.png)
 
-## 5.2.7. Bounded Context Software Architecture Code Level Diagrams.
-### 5.2.7.1. Bounded Context Domain Layer Class Diagrams.
+## 5.2.7. Bounded Context Software Architecture Code Level Diagrams
+
+### 5.2.7.1. Bounded Context Domain Layer Class Diagrams
 
 ![Driver Domain Class Diagram](./assets/driver-bounded/class-diagram.jpeg)
 
-### 5.2.7.2. Bounded Context Database Design Diagram.
+### 5.2.7.2. Bounded Context Database Design Diagram
 
 ![Driver Database Design Diagram](./assets/driver-bounded/database-diagram.png)
 
@@ -2013,7 +2000,6 @@ En esta sección se describen los componentes de infraestructura que soportan el
 #### 5.3.1.6.2. Bounded Context Database Design Diagram
 
 ![Diagrama Vertabelo[URL]())](assets/iam-bounded/iam-db.png)
-
 
 ## 5.4. Bounded Context: Trip
 
@@ -2245,8 +2231,277 @@ Este bounded context concentra todo lo relativo a la gestión de la flota y cond
 
 <img src="./assets/Database-Diagrams-Management2.png"> 
 
+# Capítulo VI: Solution UI/UX Design
 
+## 6.1. Style Guidelines
 
+En esta sección, el equipo de SafeVision sienta las bases para contar con un repositorio central y organizado de uso común para todo el equipo, que incluye assets, fonts, colores, componentes y patrones de diseño. Esto con el fin de mantener una presentación consistente y enfocada en los valores de seguridad, confianza y profesionalismo que representa nuestra solución. Se incluyen secciones para General Style Guidelines, Web Style Guidelines y Mobile Style Guidelines.
+
+### 6.1.1. General Style Guidelines
+
+Aquí se explica las decisiones y referencias visuales sobre conceptos generales
+básicos como Branding, Typography, Colors y Spacing, así como las dimensiones a
+adoptar para el tono de comunicación y lenguaje aplicado (Divertido/Serio,
+Formal/Casual, Respetuoso/Irreverente, Entusiasta/Sereno). Puede tomarse como
+referencia un Design System existente, sobre el cual se puede realizar adaptaciones.
+Esta sección debe incluir el sustento de principios y elementos de diseño
+considerados para las decisiones.
+
+El diseño de SafeVision refleja la esencia de una marca tecnológica, confiable y enfocada en la seguridad vial, mediante decisiones visuales que priorizan la claridad, la legibilidad y el profesionalismo. La propuesta combina un lenguaje visual moderno con una comunicación sobria y empática, adaptada tanto a conductores profesionales como a gerentes de flota.
+
+#### Branding
+
+El concepto visual de SafeVision se inspira en la idea de visión inteligente y monitoreo constante, simbolizada por un logotipo basado en la forma de un ojo. Este elemento comunica los valores de vigilancia, prevención y protección, pilares centrales de la marca.
+El sistema visual se fundamenta en un tono serio, formal, respetuoso y sereno, acorde a su propósito de promover la seguridad y la confianza en el transporte.
+La voz de marca se mantiene profesional y cercana, evitando tecnicismos excesivos, y transmitiendo calma y credibilidad.
+
+#### Typography
+
+La tipografía seleccionada es Poppins, una fuente sans-serif geométrica, moderna y legible, ideal para interfaces digitales.
+
+Se utiliza con jerarquías bien definidas que garantizan orden visual:
+
+- Títulos: Poppins Bold, color #222222
+- Subtítulos: Poppins Medium, color #74788D
+- Texto general: Poppins Regular, color #757575
+- Botones principales: Poppins SemiBold, texto blanco sobre fondo #C13515
+
+Esta elección equilibra elegancia y funcionalidad, reforzando la identidad tecnológica de la aplicación.
+
+#### Colors
+
+La paleta cromática está cuidadosamente construida para comunicar seguridad, alerta y confianza. Combina tonos cálidos de atención con matices fríos y neutros que equilibran el diseño.
+
+| **Color**           | **Código**           | **Uso**                                                         |
+|----------------------|----------------------|------------------------------------------------------------------|
+| Rojo institucional   | #C13515              | Color principal de la marca. Se usa en botones y elementos de acción. |
+| Amarillo advertencia | #FFCD18              | Indicadores de precaución o atención.                           |
+| Azul tecnológico     | #0066CC              | Acentos informativos y enlaces secundarios.                     |
+| Verde seguro         | #00CA75              | Confirmaciones de éxito o estados óptimos.                      |
+| Borgoña oscuro       | #5A0000              | Alertas de riesgo alto o fondo de advertencia.                  |
+| Rojo medio           | #BA4848              | Errores o avisos secundarios.                                   |
+| Grises neutros       | #757575 y #74788D    | Textos secundarios, iconografía y fondos suaves.                |
+| Negro carbón         | #222222              | Texto principal y encabezados.                                  |
+
+La combinación de rojo, gris y blanco otorga una estética profesional, moderna y coherente con el objetivo del sistema.
+
+#### Spacing / Layout
+
+El diseño sigue una estructura modular basada en una rejilla de 8 px, permitiendo uniformidad en márgenes y alineaciones.
+
+Para la web se emplea una rejilla de 12 columnas, mientras que en la app móvil se usa una de 4 columnas, facilitando la adaptabilidad visual.
+
+Los espacios en blanco cumplen un rol clave para mantener equilibrio, legibilidad y orden en la interfaz.
+
+## 6.2. Information Architecture
+
+En esta sección el equipo plantea las decisiones y sustento que dirigen la manera
+como se organizará el contenido en las experiencias web y móvil, incluyendo el
+Landing Page y las Aplicaciones. Dichas propuestas deben estar orientadas a que los
+visitantes y usuarios se adapten con facilidad a la funcionalidad de cada producto y
+puedan encontrar todo aquello que necesiten sin esfuerzo. Se incluyen las decisiones
+sobre los Organization Systems, Labeling Systems, Navigation Systems y Searching
+Systems
+
+La arquitectura de información de SafeVision está diseñada para que los usuarios comprendan y accedan fácilmente a todas las funciones, tanto en la Landing Page como en la aplicación móvil.
+
+Su estructura se orienta a guiar la navegación de forma fluida, reduciendo el esfuerzo cognitivo y asegurando que la información relevante esté siempre visible.
+
+### Landing Page
+
+La "Landing Page" presenta un recorrido visual limpio y jerárquico, con secciones que comunican directamente la propuesta de valor del producto:
+
+“¿Eres gerente o conductor? Conduce seguro, llega tranquilo”. Expone la función principal del sistema: la detección de fatiga mediante IA.
+
+Accesos directos a Google Play y App Store.
+
+Bloque “Diseñado para todos” con dos perfiles:
+- Soy gerente de flota  
+- Soy conductor profesional  
+
+Beneficios para conductores:
+- Conduce seguro → recibe alertas ante signos de fatiga.  
+- Mantente alerta → IA que monitorea el estado constantemente.  
+- Descansa mejor → optimiza descansos con datos reales.  
+- Protégete → tecnología que vela por tu seguridad.  
+
+Beneficios para gerentes:
+- Monitorea el recorrido de la flota.  
+- Contacta con los conductores en tiempo real.  
+- Gestiona alertas y contenido relevante.  
+- Administra decisiones basadas en reportes reales.  
+
+Plan empresarial: “Comienza a trabajar con nosotros desde S/80 por bus” con características como inteligencia artificial, dashboards, dispositivos IoT y alertas personalizadas.  
+
+Sección institucional: incluye ¿Quiénes somos?, misión, visión y el equipo de SafeVision (Angello Soza, Beth Oneglio, Fernando Salgado, Leonardo Linares y Fabia Herrera).  
+
+Pie de página: enlaces a Empresa, Conductor, Nosotros, Contáctanos, Descargar y selector de idioma (ES/EN).
+
+### Aplicación Móvil
+
+El flujo móvil está estructurado de manera secuencial y lógica para facilitar el uso:
+
+1. **Inicio de sesión (Log in)**: campos de acceso y enlace a “Forgot your password?”.
+2. **Selección de perfil**: opciones “Professional Driver” o “Fleet Manager”.
+3. **Registro**: formulario con campos de nombre, DNI, email, teléfono y contraseña.
+4. **Datos de empresa**: nombre, alias y RUC.
+5. **Términos y condiciones**: texto legal con botón “Accept & continue”.
+6. **Confirmación de cuenta**: mensaje de éxito.
+7. **Panel principal**: estadísticas de conductores, alertas, descansos y niveles de riesgo.
+8. **Visualización de flota**: datos detallados de cada conductor y alertas activas.
+
+El diseño guía al usuario paso a paso, manteniendo coherencia visual y navegación intuitiva.
+
+### 6.2.2. Labeling Systems
+
+Aquí el equipo explica de qué maneras se representarán los datos, considerando
+simplicidad y buscando evitar la confusión para los visitantes y usuarios. En esta
+sección se especifica las etiquetas (con el mínimo número de palabras) a utilizar para
+representar los conjuntos de información y las asociaciones entre las mismas.
+
+El etiquetado busca simplicidad y consistencia, evitando confusión o ambigüedad.
+Las etiquetas están redactadas en lenguaje directo y positivo, adaptadas al contexto de acción.
+
+Principales Etiquetas:
+
+- “Log in”, “Sign up”, “Continue”, “Accept & continue”, “Let’s get started!”
+- “Drivers”, “Alerts”, “Stats”, “Profile”, “Critical alerts”
+- “Your account has been created”
+- “Now you can start using SafeVision”
+- En la web: “Comienza ahora”, “Descargar”, “Ver más”
+
+Todas las etiquetas mantienen el mismo estilo tipográfico (Poppins SemiBold) y los colores definidos por su jerarquía (#C13515 para botones activos y #74788D para textos secundarios).
+
+### 6.2.3. Searching Systems
+
+En esta sección el equipo explica qué medios de ayuda se brindará al usuario para la
+búsqueda de datos dentro de los productos digitales. Dichas decisiones sobre los
+sistemas de búsqueda tratan de evitar que los usuarios se sientan perdidos entre el
+volumen de información. Aquí se deben especificar qué opciones de búsqueda
+ofrecerán las aplicaciones, con qué filtros contará el usuario en cada caso y cómo
+lucirán los datos después de la búsqueda.
+
+SafeVision ofrece un sistema de búsqueda intuitivo y orientado a la toma de decisiones rápidas.
+En la versión web, el campo de búsqueda permite filtrar por conductor, fecha, nivel de alerta o tipo de evento.
+En la app móvil, el campo de búsqueda se ubica en la parte superior del panel principal y permite filtrar por conductor o alerta.
+
+Filtros disponibles:
+- Nombre o ID del conductor
+- Nivel de fatiga (bajo, medio, alto)
+- Fecha o rango de monitoreo
+- Tipo de alerta
+
+Los resultados se visualizan con códigos de color:
+- Verde (#00CA75): estado seguro
+- Amarillo (#FFCD18): alerta moderada
+- Rojo (#C13515): alerta crítica
+
+El diseño evita sobrecarga visual, mostrando la información más relevante en tarjetas compactas y legibles.
+
+### 6.2.4. SEO Tags and Meta Tags
+
+En esta sección se debe incluir los SEO (Search Engine Optimization) Tags y Meta
+Tags junto con los valores que asignará en las principales páginas de la experiencia
+tanto a nivel del sitio web estático (Landing Page) como Web Applications. Se debe
+incluir Title, los Meta Tags Description, Keywords, Author como mínimo. Del mismo
+modo, para las aplicaciones móviles u otros productos digitales que se exponen vía
+un app store, debe incluir los ASO (App Store Optimization) elements como App
+Title, App keywords, App subtitle, App description.
+
+#### Landing Page
+
+- **Title**: SafeVision | Tecnología de Seguridad Vial con Inteligencia Artificial
+- **Meta Description**: SafeVision detecta signos de somnolencia y fatiga mediante inteligencia artificial, brindando alertas y reportes en tiempo real para proteger a conductores y flotas.
+- **Keywords**: seguridad vial, transporte, IA, conducción segura, fatiga, monitoreo, prevención
+- **Author**: PCC Team
+
+#### Aplicación Móvil
+
+- **App Title**: SafeVision – Seguridad Inteligente en Carretera
+- **Subtitle**: Detección de fatiga y alertas en tiempo real
+- **Keywords**: IA, transporte, seguridad vial, conductores, flotas
+- **App Description**: SafeVision monitorea el estado de los conductores mediante inteligencia artificial e IoT, generando alertas y reportes automáticos que mejoran la seguridad y eficiencia del transporte.
+
+### 6.2.5. Navigation Systems
+
+Aquí el equipo explica cuáles serán las acciones y técnicas que guiarán a los usuarios
+a través del Landing Page y las aplicaciones, permitiéndoles cumplir sus metas e
+interactuar de forma satisfactoria con el producto. Aquí se debe incluir de qué
+maneras los usuarios irán recorriendo el contenido.
+
+La navegación en SafeVision se estructura para ofrecer una experiencia fluida, clara y guiada, donde tanto los visitantes del sitio web como los usuarios de la aplicación puedan recorrer el contenido sin perderse y cumplir fácilmente sus objetivos.
+Cada interacción fue diseñada con el propósito de que el usuario entienda siempre en qué parte del recorrido se encuentra y cuál es su siguiente paso.
+
+#### Landing Page
+
+El flujo de navegación del sitio web comienza con una sección principal de bienvenida, donde se presenta el mensaje “¿Eres gerente o conductor? Conduce seguro, llega tranquilo”, acompañado de botones directos para descargar la aplicación desde Google Play o App Store.
+Desde este punto, el usuario puede desplazarse de manera descendente (scroll) por las diferentes secciones del contenido, organizadas en un orden lógico y jerárquico:
+
+- **Diseñado para todos**: ofrece las dos rutas principales del sitio: Soy gerente de flota y Soy conductor profesional.
+- **Bloques informativos**: cada bloque presenta un beneficio clave (Conduce seguro, Mantente alerta, Descansa mejor, Protégete) con un subtítulo descriptivo y un número que guía la lectura.
+- **Sección empresarial**: orienta a los gerentes mediante acciones claras como Monitorea, Contacta, Gestiona y Administra, cada una acompañada de un breve texto explicativo.
+Plan de suscripción: invita al usuario a “Comenzar a trabajar con nosotros”, integrando botones de acción visibles.
+- **Sección institucional**: contiene ¿Quiénes somos?, Misión, Visión y presentación del equipo, cerrando el recorrido con el pie de página que ofrece accesos a Empresa, Conductor, Nosotros, Contáctanos, Descargar y selector de idioma (ES/EN).
+
+El diseño de navegación web está basado en scroll progresivo y anclas internas que permiten desplazarse a cada bloque sin salir de la página.
+Los botones de acción mantienen un color institucional rojo (#C13515) para destacar las interacciones primarias y guiar la mirada del usuario.
+
+#### Aplicación Móvil
+
+En la versión móvil, la navegación está pensada para acompañar al usuario desde el primer contacto con la app hasta su uso funcional.
+El flujo principal sigue un recorrido lineal, progresivo y claro, en el que cada pantalla representa un paso concreto:
+
+- **Inicio de sesión (Log in)**: ingreso a la cuenta o acceso al registro.
+- **Selección de perfil**: elección entre Professional Driver o Fleet Manager, determinando la ruta de uso.
+- **Registro**: formulario dividido en secciones para datos personales y datos empresariales.
+- **Aceptación de términos**: validación de condiciones con el botón “Accept & continue”.
+- **Confirmación**: mensaje visual de cuenta creada.
+- **Dashboard**: visualización de datos de flota, alertas y conductores.
+- **Panel de estadísticas**: navegación por métricas y perfiles individuales.
+
+Una vez dentro de la app, la interacción principal se realiza mediante una barra de navegación inferior fija, con accesos a Inicio, Historial, Alertas y Perfil.
+
+Cada ícono tiene una función específica:
+- Inicio muestra el resumen general de alertas.
+- Historial permite revisar viajes y eventos pasados.
+- Alertas presenta las notificaciones activas o críticas.
+- Perfil centraliza la información del usuario o gerente.
+
+Los íconos activos se muestran en rojo (#C13515) y los inactivos en gris (#74788D), reforzando la orientación visual.
+El uso de animaciones suaves y cambios de color ayuda a indicar qué acción fue ejecutada, brindando una sensación de control y coherencia.
+En ambos entornos, la navegación de SafeVision se apoya en principios de jerarquía visual, consistencia de color y retroalimentación inmediata, asegurando que los usuarios puedan recorrer el contenido, entender la información y alcanzar sus metas de manera satisfactoria.
+
+## 6.3. Landing Page UI Design
+
+En esta sección se presenta el diseño visual de la landing page, donde se aplican los lineamientos de estilo, colores, tipografía e iconografía definidos previamente. El diseño busca ofrecer una experiencia clara, atractiva y coherente con la identidad del proyecto, facilitando la navegación y destacando las principales funcionalidades del sistema.
+
+### 6.3.1. Landing Page Wireframe
+
+En esta sección se presenta un esquema general del diseño de la landing page, destacando las áreas principales de contenido, como el encabezado y las secciones correspondientes a cada segmento. Este wireframe ilustra la estructura base de la página sin incluir elementos visuales detallados.
+
+**Agregar imágenes**
+
+### 6.3.2. Landing Page Mock-up
+
+El mock-up de la landing page muestra una versión visual más desarrollada del diseño final, incorporando la paleta de colores, tipografía, imágenes y elementos interactivos. Este diseño permite visualizar con mayor precisión cómo lucirá la interfaz implementada, reflejando la identidad visual de SafeVision y priorizando la usabilidad del usuario.
+
+**Agregar imágenes**
+
+## 6.4. Applications UX/UI Design
+
+En este apartado se describen los aspectos vinculados al diseño de interfaces y flujos de las pantallas desarrolladas, con el propósito de ofrecer una vista previa de cómo se visualizará la aplicación una vez finalizada. El proceso inició con la elaboración de los wireframes de cada interfaz, los cuales posteriormente fueron convertidos en mock-ups, aplicando los estilos de color y tipografía previamente definidos.
+
+### 6.4.1. Applications Wireframes
+
+Se presentan los wireframes principales, que servirán como base fundamental para el desarrollo posterior de los mock-ups.
+
+**Agregar imágenes**
+
+### 6.4.2. Applications Wireflow Diagrams
+
+A partir de los wireframes generados, se elaboran diagramas que representan los flujos básicos de cada uno de los procesos principales que sigue la aplicación.
+
+**Agregar imágenes**
 
 # Conclusiones
 
@@ -2259,32 +2514,39 @@ Entre los principales logros destacan:
 
 En conjunto, estas acciones fortalecieron el trabajo en equipo y sentaron bases sólidas para el desarrollo de la solución tecnológica planteada.  
 
+# Recomendaciones
+
+Se recomienda mantener actualizados los wireframes y mock-ups conforme se reciba retroalimentación de usuarios y stakeholders, asegurando la consistencia en colores, tipografía y estilos en todas las pantallas. Además, se sugiere realizar pruebas de usabilidad periódicas, documentar claramente los flujos de navegación y elementos interactivos, y garantizar la adaptabilidad de la interfaz a distintos dispositivos y tamaños de pantalla, revisando y ajustando los diagramas de flujo y wireflows a medida que se incorporen nuevas funcionalidades o se modifiquen procesos existentes.
+
 # Bibliografía
 
-- Qoomon. (2021, 11 enero). *Conventional Commit Messages*. Gist.  
-  Recuperado 20 de junio de 2022, de [https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)  
+Qoomon. (2021, enero 11). *Conventional commit messages*. Gist. https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13
 
-- LeaseIN. (2018). *Software Architecture Documentation*.  
+LeaseIN. (2018). *Software architecture documentation*. https://www.leasein.com/software-architecture-documentation
 
-- Bass, L., Clements, P., & Kazman, R. (2021). *Software Architecture in Practice* (4th ed.). Addison-Wesley.  
+Bass, L., Clements, P., & Kazman, R. (2021). *Software architecture in practice* (4th ed.). Addison-Wesley. https://www.pearson.com/us/higher-education/product/Bass-Software-Architecture-in-Practice-4th-Edition/9780136885979.html
 
-- Gothelf, J., & Seiden, J. (2017). *Lean UX: Designing Great Products with Agile Teams* (2nd ed.). O’Reilly Media.  
+Gothelf, J., & Seiden, J. (2017). *Lean UX: Designing great products with agile teams* (2nd ed.). O’Reilly Media. https://www.oreilly.com/library/view/lean-ux-2nd/9781491953600/
 
-- Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley.  
+Evans, E. (2003). *Domain-driven design: Tackling complexity in the heart of software*. Addison-Wesley. https://www.pearson.com/store/p/domain-driven-design-tackling-complexity-in-the-heart-of-software/P100000401118
+
+Fowler, M. (2018). *Refactoring: Improving the design of existing code* (2nd ed.). Addison-Wesley. https://martinfowler.com/books/refactoring.html
+
+Krug, S. (2014). *Don’t make me think, revisited: A common sense approach to web usability* (3rd ed.). New Riders. https://www.peachpit.com/store/dont-make-me-think-revisited-a-common-sense-approach-9780321965516
+
+Rosen, J., & Campbell, R. (2019). *UX for lean startups: Faster, smarter user experience research and design*. O’Reilly Media. https://www.oreilly.com/library/view/ux-for-lean/9781492045540/
+
+Pohl, K., & Rupp, C. (2011). *Requirements engineering fundamentals: A study guide for the certified professional for requirements engineering exam—Foundation level—IREB compliant* (2nd ed.). Rocky Nook. https://www.rockynook.com/store/requirements-engineering-fundamentals-2nd-edition
+
+Chen, L., Babar, M. A., & Nuseibeh, B. (2015). *Software architecture knowledge management: Theory and practice*. Springer. https://www.springer.com/gp/book/9783319180441
 
 # Anexos
 
-Organización del Proyecto: <a href="https://github.com/Software-Emergentes">https://github.com/Software-Emergentes</a>
-
-Reporte del Proyecto: <a href="https://github.com/Software-Emergentes/final-project-report">https://github.com/Software-Emergentes/final-project-report</a>
-
-Enlace del Miro: <a href="https://miro.com/welcomeonboard/QUpZbWVHUWptZmJDTmxONi9VeU54STRSYUNaa0p1NTJRSUZzRjZFbC9BL0hYelNYNlhScmQ5QnRHRW9mMkxnUlpQT0JUcktVYU9aNHUrcmhxaWNTTTh4UHVNM0s5SWRPZkZPNnpaajFjMGdkeEpMRnRMcHQ0b0dZVk81WWpacTdhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=324109141341
-">https://miro.com/welcomeonboard/QUpZbWVHUWptZmJDTmxONi9VeU54STRSYUNaa0p1NTJRSUZzRjZFbC9BL0hYelNYNlhScmQ5QnRHRW9mMkxnUlpQT0JUcktVYU9aNHUrcmhxaWNTTTh4UHVNM0s5SWRPZkZPNnpaajFjMGdkeEpMRnRMcHQ0b0dZVk81WWpacTdhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=324109141341</a>
-
-Presentación del Proyecto: <a href="https://www.canva.com/design/DAGzYyHWuwg/C4jRhBTUp-d3zb44sBP2wg/edit?utm_content=DAGzYyHWuwg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">https://www.canva.com/design/DAGzYyHWuwg/C4jRhBTUp-d3zb44sBP2wg/edit?utm_content=DAGzYyHWuwg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton</a>
-
-Vídeo de Entrevistas: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y">https://upcedupe-my.sharepoint.com/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y </a>
-
-Video de Exposicion: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212077_upc_edu_pe/ESmGsetwsRdGihA6FwiD3lEBVVT6QLqebBhynCgMeW9qVw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HWsu6W">https://upcedupe-my.sharepoint.com/g/personal/u202212077_upc_edu_pe/ESmGsetwsRdGihA6FwiD3lEBVVT6QLqebBhynCgMeW9qVw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HWsu6W</a>
-
-
+| Nº | Nombre del Anexo              | Enlace                                     |
+|----|-------------------------------|--------------------------------------------|
+| 1  | Organización del Proyecto     | https://n9.cl/zq44f                        |
+| 2  | Reporte del Proyecto          | https://n9.cl/8jrsmb                       |
+| 3  | Enlace del Miro               | https://n9.cl/8btu2                        |
+| 4  | Presentación del Proyecto     | https://n9.cl/d8zk6                        |
+| 5  | Vídeo de Entrevistas          | https://n9.cl/ylsnf                        |
+| 6  | Landing Page                  | https://n9.cl/56v9y                        |
