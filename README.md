@@ -1589,7 +1589,7 @@ Se encarga de conectar el dominio con las bases de datos y los servicios externo
 
 #### 5.5.6.2. Bounded Context Database Design Diagrams
 
-
+<img src="./assets/Database-Diagrams-Monitoring.png">
 
 # Conclusiones
 
