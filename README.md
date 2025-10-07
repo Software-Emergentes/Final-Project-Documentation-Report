@@ -1522,6 +1522,195 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
 <img src="./assets/software-architecture-diagrams/deployment-diagram.png">
 
 
+## 5.1.1. Bounded Context: Notification Context
+
+### 5.1.1.1. Domain Layer
+
+#### Aggregates
+
+1. **Alert**
+    - **Descripción:** Representa una alerta generada por el sistema de inteligencia artificial de SafeVision cuando se detecta una condición anómala o de riesgo durante el viaje.  
+
+    - **Atributos:**
+        - `Id`: Identificador único de la alerta.
+        - `TripId`: Relación con el viaje asociado (FK al contexto Trips).
+        - `AlertType`: Tipo de alerta (Fatigue, Speeding, Distraction, etc).
+        - `Severity`: Nivel de severidad: Low, Medium, High, Critical.
+        - `TimeStamp`: Fecha y hora en la que se generó la alerta.
+        - `Status`: Estado de la alerta (New, Reviewed, FalsePositive).
+        - `FatigueSymptoms`: Síntomas asociados a la alerta (bostezo, ojos cerrados, etc).
+
+#### Entities
+
+1. **FatigueSymptom**
+    - **Descripción:** Representa un síntoma específico detectado durante la sesión del conductor.  
+    - **Atributos:**
+        - `Id`: Identificador único del síntoma.
+        - `AlertId`: Referencia a la alerta principal.
+        - `SymptoName`: Nombre del síntoma (Yawning, EyeClosure, HeadDroop, etc).
+
+2. **Notification**
+    - **Descripción:** Representa una notificación enviada a un usuario (conductor o gerente) relacionada con una alerta o evento del sistema.  
+    - **Atributos:**
+        - `Id`: Identificador único de la notificación.
+        - `AlertId`: Alerta asociada.
+        - `RecipientId`: Usuario destino de la notificación.
+        - `RecipientRole`: Rol del destinatario (Driver, Manager).
+        - `Message`: Contenido del mensaje de alerta.
+        - `Status`: Estado (PENDING, SENT, FAILED, RETRYING).
+        - `AttemptCount`: Número de intentos de envío.
+        - `SentAt`: Fecha/hora de envío exitoso.
+
+#### Value Objects
+
+1. **ESeverityLevel**
+    - **Descripción:** Enumerable que define los niveles de severidad de una alerta.
+2. **EAlertStatus**
+    - **Descripción:** Enumerable que define los posibles estados de una alerta.
+3. **ENotificationStatus:** 
+    - **Descripción:** Enumerable que define los posibles estados de una notificación.
+
+#### Commands
+
+1. **AlertCommand:**
+    - **Descripción:** Maneja comandos relacionados con la creación y gestión de alertas.
+
+2. **NotificationCommand:**
+    - **Descripción:** Maneja comandos relacionados con el envío y gestión de notificaciones y reintentos de la misma.
+
+#### Queries
+
+1. **GetAlertByUserQuery:**
+    - **Descripción:** Obtener alertas en base al usuario.
+2. **GetAllAlertsQuery:**
+    - **Descripción:** Obtener todas las alertas.
+3. **GetNotificationsByAlertQuery:**
+    - **Descripción:** Obtener notificaciones en base a una alerta.
+4. **GetPendingNotificationsQuery:**
+    - **Descripción:** Obtener notificaciones pendientes de envío.
+5. **GetNotificationStatusQuery:**  
+    - **Descripción:** Obtener el estado de una notificación en base a su id.
+
+#### Repositories
+
+1. **AlertRepository:**
+    - **Descripción:** Repositorio que permite interactuar con la base de datos de alertas, tiene como función la persistencia de alertas.
+    - **Métodos:**
+        - `GetAlertByUserAsync(int userId)`: Devuelve una lista de alertas en base al id de un usuario.
+        - `GetAllAlertsAsync()`: Devuelve una lista de todas las alertas.
+        - `CreateAlertAsync(Alert alert)`: Permite crear una nueva alerta en la base de datos.
+        - `UpdateAlertStatusAsync(int alertId, EAlertStatus status)`: Permite actualizar el estado de una alerta.
+
+
+2. **NotificationRepository:**
+    - **Descripción:** Repositorio que permite la gestión de notificaciones y reintentos de envío.
+    - **Métodos:**
+        - `GetNotificationsByAlertAsync(int alertId)`: Devuelve una lista de notificaciones en base al id de una alerta.
+        - `GetPendingNotificationsAsync()`: Devuelve una lista de notificaciones pendientes de envío.
+        - `CreateNotificationAsync(Notification notification)`: Permite crear una nueva notificación en la base de datos.
+        - `UpdateNotificationStatusAsync(int notificationId, ENotificationStatus status)`: Permite actualizar el estado de una notificación.
+        - `IncrementAttemptCountAsync(int notificationId)`: Incrementa el contador de intentos de envío para una notificación.
+        - `SetNotificationSentAtAsync(int notificationId, DateTime sentAt)`: Establece la fecha y hora de envío exitoso para una notificación.
+
+
+### 4.2.1.2. Interface Layer
+
+#### Facades
+
+1. **NotificationFacade:**
+    - **Descripción:** Proporciona una interfaz simplificada para interactuar con los servicios de notificación.
+    - **Métodos:**
+        - `SendAlertNotification(int alertId, int recipientId, string message)`: Envía una notificación de alerta a un usuario específico.
+        - `GetAlertsByUser(int userId)`: Obtiene todas las alertas asociadas a un usuario.
+        - `GetAllAlerts()`: Obtiene todas las alertas en el sistema.
+        - `GetNotificationsByAlert(int alertId)`: Obtiene todas las notificaciones asociadas a una alerta específica.
+        - `GetPendingNotifications()`: Obtiene todas las notificaciones que están pendientes de envío.
+        - `GetNotificationStatus(int notificationId)`: Obtiene el estado de una notificación específica.
+
+#### Controllers
+
+1. **NotificationController:** 
+    - **Descripción:** Expone endpoints para la gestión de alertas y notificaciones.
+    - **Métodos:**
+        - `SendAlert(int alertId, int recipientId, string message)`: Endpoint que permite enviar una alerta a un usuario específico.
+        - `GetAlertsByUser(int userId)`: Endpoint que permite obtener todas las alertas asociadas a un usuario.
+        - `GetAllAlerts()`: Endpoint que permite obtener todas las alertas en el sistema.
+        - `GetNotificationsByAlert(int alertId)`: Endpoint que permite obtener todas las notificaciones asociadas a una alerta específica.
+        - `GetPendingNotifications()`: Endpoint que permite obtener todas las notificaciones que están pendientes de envío.
+        - `GetNotificationStatus(int notificationId)`: Endpoint que permite obtener el estado de una notificación específica.
+
+
+
+
+### 5.1.1.3. Application Layer
+
+#### Command Services
+
+1. **AlertCommandService:**
+    - **Descripción:** Ofrece comandos para crear y gestionar alertas.
+    - **Métodos:**
+        - `Handle(CreateAlertCommand command)`: Valida y aplica el comando para crear una nueva alerta.
+        - `Handle(UpdateAlertStatusCommand command)`: Valida y aplica el comando para actualizar el estado de una alerta.
+2. **NotificationCommandService:**
+    - **Descripción:** Ofrece comandos para enviar y gestionar notificaciones.
+    - **Métodos:**
+        - `Handle(SendNotificationCommand command)`: Valida y aplica el comando para enviar una notificación.
+        - `Handle(UpdateNotificationStatusCommand command)`: Valida y aplica el comando para actualizar el estado de una notificación.
+        - `Handle(RetryPendingNotificationsCommand command)`: Valida y aplica el comando para reintentar el envío de notificaciones pendientes.
+
+#### Query Services
+
+1. **AlertQueryService:**
+    - **Descripción:** Ofrece consultas para obtener alertas.
+    - **Métodos:**
+        - `Handle(GetAlertByUserQuery query)`: Valida y aplica la consulta para obtener alertas por usuario.
+        - `Handle(GetAllAlertsQuery query)`: Valida y aplica la consulta para obtener todas las alertas.
+
+2. **NotificationQueryService:**
+    - **Descripción:** Ofrece consultas para obtener notificaciones.
+    - **Métodos:**
+        - `Handle(GetNotificationsByAlertQuery query)`: Valida y aplica la consulta para obtener notificaciones por alerta.
+        - `Handle(GetPendingNotificationsQuery query)`: Valida y aplica la consulta para obtener notificaciones pendientes.
+        - `Handle(GetNotificationStatusQuery query)`: Valida y aplica la consulta para obtener el estado de una notificación.
+
+### 5.1.1.4. Infrastructure Layer
+
+#### Repositories (Implementacion)
+
+1. **AlertRepository:**
+    - **Descripción:** Implementación concreta del repositorio de alertas, interactúa con la base de datos para persistir y recuperar alertas.
+    - **Métodos:**
+        - `GetAlertByUserAsync(int userId)`: Devuelve una lista de alertas en base al id de un usuario.
+        - `GetAllAlertsAsync()`: Devuelve una lista de todas las alertas.
+        - `CreateAlertAsync(Alert alert)`: Permite crear una nueva alerta en la base de datos.
+        - `UpdateAlertStatusAsync(int alertId, EAlertStatus status)`: Permite actualizar el estado de una alerta.
+
+2. **NotificationRepository:**
+    - **Descripción:** Implementación concreta del repositorio de notificaciones, interactúa con la base de datos para persistir y recuperar notificaciones.
+    - **Métodos:**
+        - `GetNotificationsByAlertAsync(int alertId)`: Devuelve una lista de notificaciones en base al id de una alerta.
+        - `GetPendingNotificationsAsync()`: Devuelve una lista de notificaciones pendientes de envío.
+        - `CreateNotificationAsync(Notification notification)`: Permite crear una nueva notificación en la base de datos.
+        - `UpdateNotificationStatusAsync(int notificationId, ENotificationStatus status)`: Permite actualizar el estado de una notificación.
+        - `IncrementAttemptCountAsync(int notificationId)`: Incrementa el contador de intentos de envío para una notificación.
+        - `SetNotificationSentAtAsync(int notificationId, DateTime sentAt)`: Establece la fecha y hora de envío exitoso para una notificación.
+
+### 5.1.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+![Diagrama Structurizr([URL]())](assets/notifications-bounded/noti-context.png)
+
+### 5.1.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.1.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+![Diagrama LucidChart([URL]())](assets/notifications-bounded/noti-class-diagram.png)
+
+#### 5.1.1.6.2. Bounded Context Database Design Diagram
+
+![Diagrama Vertabelo[URL]())](assets/notifications-bounded/noti-db.png)
+
+
+
 
 # Conclusiones
 
@@ -1558,9 +1747,8 @@ Enlace del Miro: <a href="https://miro.com/welcomeonboard/QUpZbWVHUWptZmJDTmxONi
 
 Presentación del Proyecto: <a href="https://www.canva.com/design/DAGzYyHWuwg/C4jRhBTUp-d3zb44sBP2wg/edit?utm_content=DAGzYyHWuwg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">https://www.canva.com/design/DAGzYyHWuwg/C4jRhBTUp-d3zb44sBP2wg/edit?utm_content=DAGzYyHWuwg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton</a>
 
-Vídeo de Entrevistas: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y </a>
+Vídeo de Entrevistas: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y">https://upcedupe-my.sharepoint.com/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y </a>
 
-Video de Exposicion: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212077_upc_edu_pe/ESmGsetwsRdGihA6FwiD3lEBVVT6QLqebBhynCgMeW9qVw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HWsu6W">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212077_upc_edu_pe/ESmGsetwsRdGihA6FwiD3lEBVVT6QLqebBhynCgMeW9qVw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HWsu6W</a>
-=======
+Video de Exposicion: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212077_upc_edu_pe/ESmGsetwsRdGihA6FwiD3lEBVVT6QLqebBhynCgMeW9qVw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HWsu6W">https://upcedupe-my.sharepoint.com/g/personal/u202212077_upc_edu_pe/ESmGsetwsRdGihA6FwiD3lEBVVT6QLqebBhynCgMeW9qVw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HWsu6W</a>
 
 
