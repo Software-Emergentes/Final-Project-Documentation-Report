@@ -101,9 +101,6 @@ Imagen de los Insights:
 
 <img src="assets/commits/tb1-commits.png">
 
-<br> 
-<br>
-
 **Trabajo Parcial**
 
 Para esta entrega el equipo se enfocó en el diseño arquitectónico y de experiencia de usuario, siguiendo los lineamientos establecidos en los Capítulos V y VI. En el ámbito del diseño táctico, se documentaron las capas de dominio, aplicación, infraestructura e interfaz, junto con los diagramas de componentes y el diseño de la base de datos. En cuanto a la experiencia de usuario, se establecieron los lineamientos de estilo, la arquitectura de información, los sistemas de búsqueda y navegación, además de los wireframes, mock-ups y prototipos interactivos de la landing page y las aplicaciones móviles. Este trabajo permitió consolidar la estructura del sistema y validar la experiencia del usuario antes de la integración final, garantizando un producto coherente con los objetivos de SafeVision.
