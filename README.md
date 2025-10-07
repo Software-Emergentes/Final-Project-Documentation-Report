@@ -1697,18 +1697,17 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
 
 ### 5.1.1.5. Bounded Context Software Architecture Component Level Diagrams
 
-![Diagrama Structurizr([URL]())](assets/noti-bounded/noti-context.png)
+![Diagrama Structurizr([URL]())](assets/notifications-bounded/noti-context.png)
 
 ### 5.1.1.6. Bounded Context Software Architecture Code Level Diagrams
 
 #### 5.1.1.6.1. Bounded Context Domain Layer Class Diagrams
 
-![Diagrama LucidChart([URL]())](assets/noti-bounded/noti-class-diagram.png)
+![Diagrama LucidChart([URL]())](assets/notifications-bounded/noti-class-diagram.png)
 
 #### 5.1.1.6.2. Bounded Context Database Design Diagram
 
-![Diagrama Vertabelo[URL]())](assets/noti-bounded/noti-db.png)
-
+![Diagrama Vertabelo[URL]())](assets/notifications-bounded/noti-db.png)
 
 
 
@@ -1748,9 +1747,8 @@ Enlace del Miro: <a href="https://miro.com/welcomeonboard/QUpZbWVHUWptZmJDTmxONi
 
 Presentación del Proyecto: <a href="https://www.canva.com/design/DAGzYyHWuwg/C4jRhBTUp-d3zb44sBP2wg/edit?utm_content=DAGzYyHWuwg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">https://www.canva.com/design/DAGzYyHWuwg/C4jRhBTUp-d3zb44sBP2wg/edit?utm_content=DAGzYyHWuwg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton</a>
 
-Vídeo de Entrevistas: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y </a>
+Vídeo de Entrevistas: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y">https://upcedupe-my.sharepoint.com/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y </a>
 
-Video de Exposicion: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212077_upc_edu_pe/ESmGsetwsRdGihA6FwiD3lEBVVT6QLqebBhynCgMeW9qVw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HWsu6W">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212077_upc_edu_pe/ESmGsetwsRdGihA6FwiD3lEBVVT6QLqebBhynCgMeW9qVw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HWsu6W</a>
-=======
+Video de Exposicion: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212077_upc_edu_pe/ESmGsetwsRdGihA6FwiD3lEBVVT6QLqebBhynCgMeW9qVw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HWsu6W">https://upcedupe-my.sharepoint.com/g/personal/u202212077_upc_edu_pe/ESmGsetwsRdGihA6FwiD3lEBVVT6QLqebBhynCgMeW9qVw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HWsu6W</a>
 
 
