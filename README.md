@@ -1522,7 +1522,7 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
 <img src="./assets/software-architecture-diagrams/deployment-diagram.png">
 
 
-## 5.2.1. Bounded Context: IAM Context
+## 5.2.1. Bounded Context: Driver Context
 
 ### 5.2.1.1. Domain Layer
 
