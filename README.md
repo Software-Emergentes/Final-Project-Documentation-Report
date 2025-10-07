@@ -60,22 +60,12 @@
 | 4.0         | 11/09/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Realización y registro de entrevistas con los segmentos objetivo y análisis de los resultados. Creación del Impact Mapping. Redacción de las guías de estilo y la arquitectura de la información. |
 | 5.0         | 13/09/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Elaboración de historias de usuario y del backlog del producto. |
 | 6.0         | 19/09/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Creación del diagrama de base de datos, diagrama de clases, diccionario de clases, diagramas de contenedores, diagramas de contexto y diagramas de componentes. |
+| 7.0         | 3/10/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Se realizaron las correcciones correspondientes del TB1 y se avanzó en el desarrollo de los *Bounded Contexts*, incorporando los ajustes y mejoras necesarias según las observaciones recibidas. |
+| 7.0         | 7/10/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Avance en el Capítulo 6: Solution UX Design, se definieron los wireframes de la aplicación |
 
 # Registro de Versiones del Informe
 
 URL del repositorio para el Project Report en la organización de GitHub del equipo: https://github.com/Software-Emergentes
-
-**TB1**
-
-Para la elaboración del informe correspondiente a la entrega TB1, la implementación de las secciones se distribuyó entre los miembros del equipo de la siguiente manera:
-
-| Integrante                          | Tareas asignadas |
-|-------------------------------------|------------------|
-| Fabia Alejandra Herrera Aguirre     | Needfinding, As Is, To Be, User Personas, Empathy Mapping, Product Backlog, User Task Matrix |
-| Leonardo Felix Jesus Linares Tejada | Architectural Drivers Backlog, Architectural Design Decisions, Quality Attribute Scenario Refinements, Strategic-Level Domain-Driven Design, Event Storming, Candidate Context Discovery, Domain Message Flows Modeling, Bounded Context Canvases |
-| Beth Shantal Oneglio De Paz         | Strategic-Level Attribute-Driven Design, Design Purpose, Attribute-Design Inputs, Primary Functionality (Primary User Stories), Quality attribute Scenarios, Constraints |
-| Fernando Brian Salgada Luna         | Capítulo I: Introducción, Capítulo II: Requirements Elicitation & Analysis, Event Storming |
-| Angello Rodolfo Sosa Colca           | Context Mapping, Software Architecture, Software Architecture System Landscape Diagram, Software Architecture Context Level Diagrams, Container Level Diagrams, Deployment Diagrams, Event Storming |
 
 La colaboración en el informe se llevó a cabo mediante commits frecuentes en el repositorio de la organización PCC Team.
 
@@ -97,7 +87,30 @@ Los miembros del equipo son:
 
 **TB1**
 
+Para la elaboración del informe correspondiente a la entrega TB1, la implementación de las secciones se distribuyó entre los miembros del equipo de la siguiente manera:
+
+| Integrante                          | Tareas asignadas |
+|-------------------------------------|------------------|
+| Fabia Alejandra Herrera Aguirre     | Needfinding, As Is, To Be, User Personas, Empathy Mapping, Product Backlog, User Task Matrix |
+| Leonardo Felix Jesus Linares Tejada | Architectural Drivers Backlog, Architectural Design Decisions, Quality Attribute Scenario Refinements, Strategic-Level Domain-Driven Design, Event Storming, Candidate Context Discovery, Domain Message Flows Modeling, Bounded Context Canvases |
+| Beth Shantal Oneglio De Paz         | Strategic-Level Attribute-Driven Design, Design Purpose, Attribute-Design Inputs, Primary Functionality (Primary User Stories), Quality attribute Scenarios, Constraints |
+| Fernando Brian Salgada Luna         | Capítulo I: Introducción, Capítulo II: Requirements Elicitation & Analysis, Event Storming |
+| Angello Rodolfo Sosa Colca           | Context Mapping, Software Architecture, Software Architecture System Landscape Diagram, Software Architecture Context Level Diagrams, Container Level Diagrams, Deployment Diagrams, Event Storming |
+
+Imagen de los Insights: 
+
 <img src="assets/commits/tb1-commits.png">
+
+<br> 
+<br>
+
+**Trabajo Parcial**
+
+Para esta entrega el equipo se enfocó en el diseño arquitectónico y de experiencia de usuario, siguiendo los lineamientos establecidos en los Capítulos V y VI. En el ámbito del diseño táctico, se documentaron las capas de dominio, aplicación, infraestructura e interfaz, junto con los diagramas de componentes y el diseño de la base de datos. En cuanto a la experiencia de usuario, se establecieron los lineamientos de estilo, la arquitectura de información, los sistemas de búsqueda y navegación, además de los wireframes, mock-ups y prototipos interactivos de la landing page y las aplicaciones móviles. Este trabajo permitió consolidar la estructura del sistema y validar la experiencia del usuario antes de la integración final, garantizando un producto coherente con los objetivos de SafeVision.
+
+Imagen de los Insights: 
+
+<img src="assets/commits/tp1-commits.png">
 
 ## Contenido
 
@@ -158,11 +171,38 @@ Los miembros del equipo son:
   - [4.3.2. Software Architecture Context Level Diagrams](#432-software-architecture-context-level-diagrams)
   - [4.3.3. Software Architecture Container Level Diagrams](#433-software-architecture-container-level-diagrams)
   - [4.3.4. Software Architecture Deployment Diagrams](#434-software-architecture-deployment-diagrams)
+  
+## [Capítulo V: Tactical-Level Software Design](#capítulo-v-tactical-level-software-design)
+- [5.1. Bounded Context](#51-bounded-context)
+  - [5.1.1. Domain Layer](#511-domain-layer)
+  - [5.1.2. Interface Layer](#512-interface-layer)
+  - [5.1.3. Application Layer](#513-application-layer)
+  - [5.1.4. Infrastructure Layer](#514-infrastructure-layer)
+  - [5.1.5. Bounded Context Software Architecture Component Level Diagrams](#515-bounded-context-software-architecture-component-level-diagrams)
+  - [5.1.6. Bounded Context Software Architecture Code Level Diagrams](#516-bounded-context-software-architecture-code-level-diagrams)
+    - [5.1.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
+    - [5.1.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
+
+## [Capítulo VI: Solution UX Design](#capítulo-vi-solution-ux-design)
+- [6.1. Style Guidelines](#61-style-guidelines)
+  - [6.1.1. General Style Guidelines](#611-general-style-guidelines)
+  - [6.1.2. Web, Mobile & Devices Style Guidelines](#612-web-mobile--devices-style-guidelines)
+- [6.2. Information Architecture](#62-information-architecture)
+  - [6.2.1. Organization Systems](#621-organization-systems)
+  - [6.2.2. Labeling Systems](#622-labeling-systems)
+  - [6.2.3. Searching Systems](#623-searching-systems)
+  - [6.2.4. SEO Tags and Meta Tags](#624-seo-tags-and-meta-tags)
+  - [6.2.5. Navigation Systems](#625-navigation-systems)
+- [6.3. Landing Page UI Design](#63-landing-page-ui-design)
+  - [6.3.1. Landing Page Wireframe](#631-landing-page-wireframe)
+  - [6.3.2. Landing Page Mock-up](#632-landing-page-mock-up)
+- [6.4. Applications UX/UI Design](#64-applications-uxui-design)
+  - [6.4.1. Applications Wireframes](#641-applications-wireframes)
+  - [6.4.2. Applications Wireflow Diagrams](#642-applications-wireflow-diagrams)
 
 ## [Conclusiones](#conclusiones)
 - [Conclusiones](#conclusiones)
 - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
-
 
 ## [Bibliografía](#bibliografía)
 
@@ -174,8 +214,8 @@ Los miembros del equipo son:
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |----------------------|---------------------|--------------|
-| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre  <br><br> **TB1**  <br><br> Se expusieron los resultados del Needfinding, mostrando el As Is y el To Be, además de explicar los User Personas y el Empathy Mapping en presentaciones grupales.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se presentaron los Architectural Drivers Backlog y las Architectural Design Decisions, explicando cómo se refinaron los Quality Attribute Scenarios y los resultados del Event Storming en sesiones grupales.<br><br>Beth Shantal Oneglio De Paz<br><br> **TB1** <br><br> Se expuso el Strategic-Level Attribute-Driven Design, destacando el Design Purpose y los Primary User Stories, junto con los Quality Attribute Scenarios más relevantes. <br><br> Fernando Brian Salgada Luna <br><br> **TB1** <br><br> Se presentó el Capítulo I: Introducción y el Capítulo II: Requirements Elicitation & Analysis, explicando los puntos clave y los resultados del Event Storming en exposición grupal.<br><br>Angello Rodolfo Sosa Colca<br><br> **TB1** <br><br> Se explicó el Context Mapping y los diagramas de Software Architecture (System Landscape, Context Level, Container y Deployment), además de los hallazgos del Event Storming en presentaciones grupales. | El trabajo realizado ha sido sobresaliente, cumpliendo con todos los segmentos del proyecto. El documento redactado ofrece un detallado informe sobre los pasos seguidos en la planificación, desarrollo y envío del proyecto a producción, garantizando así un resultado digno y completo. |
-| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre <br><br> **TB1** <br><br> Se documentaron los hallazgos en el Product Backlog y se elaboró la User Task Matrix, complementada con la descripción escrita de escenarios y perfiles de usuario.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se documentaron los hallazgos del Candidate Context Discovery, los Domain Message Flows Modeling y los Bounded Context Canvases, integrándolos en el informe de Strategic-Level Domain-Driven Design. <br><br> Beth Shantal Oneglio De Paz <br><br> **TB1** <br><br> Se documentaron los Attribute-Design Inputs y las Constraints, integrándolos en el reporte de diseño estratégico para el proyecto.<br><br> Fernando Brian Salgada Luna <br><br> **TB1** <br><br> Se redactaron los apartados del informe correspondientes a la Introducción, el Requirements Elicitation & Analysis y la documentación del Event Storming. <br><br> Angello Rodolfo Sosa Colca <br><br> **TB1** <br><br> Se documentaron los diagramas de Software Architecture y el Context Mapping, junto con la descripción escrita del Event Storming, integrados en el informe técnico.  | El trabajo realizado ha sido sobresaliente en términos de comunicación, cubriendo todos los aspectos necesarios para garantizar una coordinación efectiva. El documento final no solo detalla los pasos seguidos en la planificación y desarrollo del proyecto, sino que también refleja una comunicación clara y precisa durante todo el proceso, asegurando así una entrega bien fundamentada y comprensible. |
+| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre  <br><br> **TB1**  <br><br> Se expusieron los resultados del Needfinding, mostrando el As Is y el To Be, además de explicar los User Personas y el Empathy Mapping en presentaciones grupales.<br><br> **TP1** <br><br>Expresó de manera clara y objetiva los avances relacionados con el bounded context Notifications y el apartado de Style Guidelines, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del desarrollo del proyecto de ingeniería.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se presentaron los Architectural Drivers Backlog y las Architectural Design Decisions, explicando cómo se refinaron los Quality Attribute Scenarios y los resultados del Event Storming en sesiones grupales.<br><br> **TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Management y brindó apoyo en el desarrollo del bounded context Monitoring, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>Beth Shantal Oneglio De Paz<br><br> **TB1** <br><br> Se expuso el Strategic-Level Attribute-Driven Design, destacando el Design Purpose y los Primary User Stories, junto con los Quality Attribute Scenarios más relevantes. <br><br> **TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Monitoring y en el desarrollo de la landing page, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Fernando Brian Salgada Luna <br><br> **TB1** <br><br> Se presentó el Capítulo I: Introducción y el Capítulo II: Requirements Elicitation & Analysis, explicando los puntos clave y los resultados del Event Storming en exposición grupal.<br><br>**TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Trip y en el apartado de Style Guidelines, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>Angello Rodolfo Sosa Colca<br><br> **TB1** <br><br> Se explicó el Context Mapping y los diagramas de Software Architecture (System Landscape, Context Level, Container y Deployment), además de los hallazgos del Event Storming en presentaciones grupales.<br><br>**TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en los bounded context Driver e IAM, así como en el desarrollo de la landing page y el diseño general, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería. | El trabajo realizado ha sido sobresaliente, cumpliendo con todos los segmentos del proyecto. El documento redactado ofrece un detallado informe sobre los pasos seguidos en la planificación, desarrollo y envío del proyecto a producción, garantizando así un resultado digno y completo. |
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre <br><br> **TB1** <br><br> Se documentaron los hallazgos en el Product Backlog y se elaboró la User Task Matrix, complementada con la descripción escrita de escenarios y perfiles de usuario.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances relacionados con el bounded context Notifications y el apartado de Style Guidelines, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del desarrollo del proyecto de ingeniería.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se documentaron los hallazgos del Candidate Context Discovery, los Domain Message Flows Modeling y los Bounded Context Canvases, integrándolos en el informe de Strategic-Level Domain-Driven Design. <br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Management y el apoyo brindado en el desarrollo del bounded context Monitoring, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Beth Shantal Oneglio De Paz <br><br> **TB1** <br><br> Se documentaron los Attribute-Design Inputs y las Constraints, integrándolos en el reporte de diseño estratégico para el proyecto.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Monitoring y en el desarrollo de la landing page, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Fernando Brian Salgada Luna <br><br> **TB1** <br><br> Se redactaron los apartados del informe correspondientes a la Introducción, el Requirements Elicitation & Analysis y la documentación del Event Storming.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Trip y en el apartado de Style Guidelines, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Angello Rodolfo Sosa Colca <br><br> **TB1** <br><br> Se documentaron los diagramas de Software Architecture y el Context Mapping, junto con la descripción escrita del Event Storming, integrados en el informe técnico.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en los bounded context Driver e IAM, así como en el desarrollo de la landing page y el diseño general, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.  | El trabajo realizado ha sido sobresaliente en términos de comunicación, cubriendo todos los aspectos necesarios para garantizar una coordinación efectiva. El documento final no solo detalla los pasos seguidos en la planificación y desarrollo del proyecto, sino que también refleja una comunicación clara y precisa durante todo el proceso, asegurando así una entrega bien fundamentada y comprensible. |
 
 # Capítulo I: Introducción
 
@@ -592,8 +632,7 @@ Entrevista a Gerentes de empresas de transporte.
 |  <img src="assets/interviews/rhai-entrevista.png" width="80">  |  Rhaí es gerente de operaciones en una empresa de transporte interprovincial en Surco. Administra una flota de 35 unidades y cerca de 50 conductores, y destaca que la mayor preocupación es la fatiga en rutas largas y nocturnas, seguida del mal estado de las carreteras y factores climáticos. Explica que actualmente dependen de descansos obligatorios, rotación de choferes y reportes manuales, aunque estos no siempre son precisos. Considera que un sistema de monitoreo en tiempo real sería de gran valor por ofrecer datos objetivos y anticipar riesgos. Señala que la efectividad, facilidad de uso y costo razonable serían claves para implementarlo, y concluye que una solución así permitiría reducir accidentes, mejorar la seguridad y reforzar la confianza en la empresa.            |
 | Timing:      | 25:19 - 29:59 |
 
-**Vídeo de Entrevistas:** <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y </a>
-
+**Vídeo de Entrevistas:** https://n9.cl/14tc2
 
 ### 2.2.3. Análisis de entrevistas
 
@@ -679,8 +718,7 @@ A continuación se presenta el Empathy Map que detalla las percepciones, pensami
 </div>  
 <br>
 
-Enlace del Miro: <a href="https://miro.com/app/board/uXjVJI4Pgq0=/?share_link_id=121411571054">https://miro.com/app/board/uXjVJI4Pgq0=/?share_link_id=121411571054</a>
-<br>
+Enlace del Miro: https://n9.cl/86zi5i
 
 ## 2.4. Ubiquitous Language
 
@@ -723,7 +761,7 @@ Para elaborar el To-be Scenario Mapping, el equipo definió cómo sería el fluj
 
 <br>
 
-Enlace del To-Be Scenario Mapping: <a href="https://miro.com/app/board/uXjVJI4Pgq0=/?share_link_id=121411571054">https://miro.com/app/board/uXjVJI4Pgq0=/?share_link_id=121411571054</a>
+Enlace del To-Be Scenario Mapping: https://n9.cl/86zi5i
 
 ## 3.2. User Stories
 
@@ -853,7 +891,7 @@ Para el desarrollo de SafeVision, se ha elaborado un Impact Mapping que detalla 
 | 42    | US30          | Configuración de parámetros de seguridad | Como gerente, quiero ajustar umbrales de detección de fatiga según políticas internas.                                                      | 3            |
 | 43    | US31          | Gestión de roles de usuario              | Como empresa, quiero asignar diferentes roles (gerente, supervisor, conductor).                                                             | 3            |
 
-Enlace del Trello: https://trello.com/b/lXUHFcEl/entrega-1
+Enlace del Trello: https://n9.cl/6fa6c
 
 # Capítulo IV: Strategic-Level Software Design
 
@@ -1125,8 +1163,6 @@ En esta sección, se detallan como la importancia y el impacto que tienen tanto 
   </tbody>
 </table>
 
-<br>
-
 <table border="0" cellspacing="0" cellpadding="8">
   <tbody>
     <tr>
@@ -1179,8 +1215,6 @@ En esta sección, se detallan como la importancia y el impacto que tienen tanto 
     </tr>
   </tbody>
 </table>
-
-<br>
 
 <table border="0" cellspacing="0" cellpadding="8">
   <tbody>
@@ -1379,39 +1413,40 @@ Este canvas detalla nuestro contexto de acceso y seguridad, responsable de la au
 <br>
 <br>
 
-**Management Bounded Context:**
+#### Management Bounded Context
+
 Este canvas muestra el contexto de gestión, encargado de brindar a los gerentes y supervisores acceso a reportes, métricas y análisis de riesgo. Identificamos sus entidades principales (Reporte, Patrón de Riesgo, Rol de Usuario), así como las capacidades de exportación y gestión de roles. Este contexto actúa como consumidor de información proveniente de Trip e IAM, consolidando datos en reportes estratégicos. Su propósito es proveer herramientas de supervisión y auditoría que apoyen la toma de decisiones.
 
 <img src="./assets/eventstorming/boundedContex2.jpg"> 
 <br>
 <br>
 
-**Driver Bounded Context:**
+#### Driver Bounded Context
+
 El canvas del contexto de conductor representa la interacción directa con el usuario final. Sus principales entidades son Alerta, Viaje, Resumen de Viaje y Guía Post-Alerta. Identificamos sus capacidades clave como la recepción de notificaciones en tiempo real, la configuración de alertas y la visualización de reportes resumidos al finalizar cada viaje. Este contexto actúa como consumidor de eventos generados por Trip y Monitoring, y como productor de confirmaciones de alertas. Su propósito estratégico es salvaguardar al conductor mediante una interfaz clara y efectiva.
 
 <img src="./assets/eventstorming/boundedContext1.jpg"> 
 <br>
-<br>
 
-**Monitoring Bounded Context:**
+#### Monitoring Bounded Context
 Este canvas describe el contexto de monitoreo, núcleo técnico de la solución, responsable de procesar datos de video en tiempo real mediante IA. Identificamos sus entidades principales (Evento de Somnolencia, Detección de Fatiga, Alerta Crítica) y las capacidades de filtrado de falsos positivos, almacenamiento local y sincronización con la nube. Monitoring consume datos del dispositivo (cámara en cabina) y produce alertas hacia Driver y Trip. Su propósito estratégico es detectar la fatiga en milisegundos y disparar las acciones necesarias para evitar accidentes.
 
 <img src="./assets/eventstorming/boundedContext6.jpg"> 
 <br>
-<br>
 
-**Trip Bounded Context:**
+#### Trip Bounded Context
+
 El canvas del contexto de viajes refleja la importancia de organizar los recorridos y asociar incidentes a cada trayecto. Sus principales modelos de dominio incluyen Viaje, Incidente y Alerta Registrada. Este contexto consume autenticación de IAM, eventos de monitoreo y configuraciones de Driver, para luego generar reportes de viaje consumidos por Management. Su propósito estratégico es mantener un historial confiable de la conducción y los incidentes ocurridos durante cada recorrido.
 
 <img src="./assets/eventstorming/boundedContext4.jpg"> 
 <br>
 <br>
 
-**Notification Bounded Context:**
+#### Notification Bounded Context
+
 Este canvas detalla el contexto encargado de orquestar el envío de alertas y reportes hacia conductores y gerentes. Gestiona canales de entrega (app, SMS, correo), políticas de reintento y el historial de notificaciones. Su propósito estratégico es garantizar la entrega fiable y trazable de mensajes críticos derivados del monitoreo, actuando como proveedor de notificaciones para Driver y Management y como consumidor de eventos generados por Monitoring y Trip.
 
 <img src="./assets/eventstorming/boundedContext5.jpg">
-<br>
 <br>
 
 Estos canvas fueron herramientas fundamentales para definir la arquitectura de nuestra solución, permitiéndonos visualizar cada contexto como una unidad coherente con responsabilidades claras y bien definidas. Además, nos ayudaron a identificar los puntos de integración entre contextos que luego refinamos en el Context Mapping.
@@ -2212,6 +2247,8 @@ Este bounded context concentra todo lo relativo a la gestión de la flota y cond
 #### 5.6.6.2 Bounded Context Database Design Diagrams
 
 <img src="./assets/Database-Diagrams-Management2.png"> 
+
+
 
 
 # Conclusiones
