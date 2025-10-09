@@ -2293,15 +2293,11 @@ Para la web se emplea una rejilla de 12 columnas, mientras que en la app móvil 
 
 Los espacios en blanco cumplen un rol clave para mantener equilibrio, legibilidad y orden en la interfaz.
 
+<img src="./assets/app-design/general-style.png">
+
 ## 6.2. Information Architecture
 
-En esta sección el equipo plantea las decisiones y sustento que dirigen la manera
-como se organizará el contenido en las experiencias web y móvil, incluyendo el
-Landing Page y las Aplicaciones. Dichas propuestas deben estar orientadas a que los
-visitantes y usuarios se adapten con facilidad a la funcionalidad de cada producto y
-puedan encontrar todo aquello que necesiten sin esfuerzo. Se incluyen las decisiones
-sobre los Organization Systems, Labeling Systems, Navigation Systems y Searching
-Systems
+En esta sección el equipo plantea las decisiones y sustento que dirigen la manera como se organizará el contenido en las experiencias web y móvil, incluyendo el Landing Page y las Aplicaciones. Dichas propuestas deben estar orientadas a que los visitantes y usuarios se adapten con facilidad a la funcionalidad de cada producto y puedan encontrar todo aquello que necesiten sin esfuerzo. Se incluyen las decisiones sobre los Organization Systems, Labeling Systems, Navigation Systems y Searching Systems
 
 La arquitectura de información de SafeVision está diseñada para que los usuarios comprendan y accedan fácilmente a todas las funciones, tanto en la Landing Page como en la aplicación móvil.
 
@@ -2354,10 +2350,7 @@ El diseño guía al usuario paso a paso, manteniendo coherencia visual y navegac
 
 ### 6.2.2. Labeling Systems
 
-Aquí el equipo explica de qué maneras se representarán los datos, considerando
-simplicidad y buscando evitar la confusión para los visitantes y usuarios. En esta
-sección se especifica las etiquetas (con el mínimo número de palabras) a utilizar para
-representar los conjuntos de información y las asociaciones entre las mismas.
+Aquí el equipo explica de qué maneras se representarán los datos, considerando simplicidad y buscando evitar la confusión para los visitantes y usuarios. En esta sección se especifica las etiquetas (con el mínimo número de palabras) a utilizar para representar los conjuntos de información y las asociaciones entre las mismas.
 
 El etiquetado busca simplicidad y consistencia, evitando confusión o ambigüedad.
 Las etiquetas están redactadas en lenguaje directo y positivo, adaptadas al contexto de acción.
@@ -2374,12 +2367,7 @@ Todas las etiquetas mantienen el mismo estilo tipográfico (Poppins SemiBold) y 
 
 ### 6.2.3. Searching Systems
 
-En esta sección el equipo explica qué medios de ayuda se brindará al usuario para la
-búsqueda de datos dentro de los productos digitales. Dichas decisiones sobre los
-sistemas de búsqueda tratan de evitar que los usuarios se sientan perdidos entre el
-volumen de información. Aquí se deben especificar qué opciones de búsqueda
-ofrecerán las aplicaciones, con qué filtros contará el usuario en cada caso y cómo
-lucirán los datos después de la búsqueda.
+En esta sección el equipo explica qué medios de ayuda se brindará al usuario para la búsqueda de datos dentro de los productos digitales. Dichas decisiones sobre los sistemas de búsqueda tratan de evitar que los usuarios se sientan perdidos entre el volumen de información. Aquí se deben especificar qué opciones de búsqueda ofrecerán las aplicaciones, con qué filtros contará el usuario en cada caso y cómo lucirán los datos después de la búsqueda.
 
 SafeVision ofrece un sistema de búsqueda intuitivo y orientado a la toma de decisiones rápidas.
 En la versión web, el campo de búsqueda permite filtrar por conductor, fecha, nivel de alerta o tipo de evento.
@@ -2397,6 +2385,8 @@ Los resultados se visualizan con códigos de color:
 - Rojo (#C13515): alerta crítica
 
 El diseño evita sobrecarga visual, mostrando la información más relevante en tarjetas compactas y legibles.
+
+<img src="./assets/app-design/search-system.png">
 
 ### 6.2.4. SEO Tags and Meta Tags
 
