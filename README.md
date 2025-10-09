@@ -2501,7 +2501,28 @@ Se presentan los wireframes principales, que servirán como base fundamental par
 
 A partir de los wireframes generados, se elaboran diagramas que representan los flujos básicos de cada uno de los procesos principales que sigue la aplicación.
 
-**Agregar imágenes**
+**Flujo: Usuario gerente de flota crea una nueva cuenta en SafeVision**
+
+<img src="./assets/wireflows/signup-flow.png" >
+
+Como se observa en el diagrama, el flujo inicia con la pantalla de bienvenida, donde el usuario tiene la opción de iniciar sesión y de registrarse de no contar con una cuenta. Al seleccionar "Sign up", se despliega el formulario de registro, que incluye campos para nombre, apellidos, correo electrónico, teléfono y contraseña. Después de completar el formulario de forma correcta, aparece otro en el que debe registrar la información de su empresa de transporte. Al finalizar y aceptar los términos y condiciones, el usuario recibe una confirmación de que su cuenta ha sido creada exitosamente.
+
+**Flujo: Usuario inicia sesión en SafeVision**
+
+<img src="./assets/wireflows/signin-flow.png" >
+
+El flujo comienza en la pantalla de bienvenida, donde el usuario puede optar por iniciar sesión o registrarse si aún no tiene una cuenta. Luego, se muestra el formulario de inicio de sesión con campos para correo electrónico y contraseña. Si el usuario ha olvidado su contraseña, puede hacer clic en "Forgot your password?" para iniciar el proceso de recuperación. Al ingresar las credenciales correctas y presionar "Continue", el usuario recibe una confirmación de un loggeo correcto y este es redirigido al panel principal de la aplicación.
+
+**Flujo: Gerente de flota revisa las estadísticas de los conductores**
+
+<img src="./assets/wireflows/stats-flow.png" >
+El flujo inicia en la pantalla de bienvenida, donde el usuario puede iniciar sesión. Al ingresar las credenciales correctas y presionar "Continue", el usuario recibe una confirmación de un loggeo exitoso y es redirigido al panel principal de la aplicación. Desde allí, puede acceder a la sección de estadísticas para revisar los datos globales de los conductores. Y en el tab de conductores, puede seleccionar a un conductor específico para ver sus estadísticas detalladas.
+
+**Flujo: Conductor profesional realiza verificaciones rutinarias**
+
+<img src="./assets/wireflows/verify-flow.png" >
+
+El flujo comienza cuando un conductor requiere comenzar un viaje, para lo cual se dirige a la panatalla de "Start trip". A continuación, se le presenta una serie de verificaciones rutinarias que debe completar antes de iniciar el viaje. Estas verificaciones incluyen revisar el correcto funcionamiento de las cámaras que lo ayudarán a mantenerse alerta durante el viaje, y el sonido de las notificaciones. Una vez que el conductor ha completado todas las verificaciones y presiona "Continue", recibe una confirmación de que el viaje ha comenzado exitosamente.
 
 # Conclusiones
 
