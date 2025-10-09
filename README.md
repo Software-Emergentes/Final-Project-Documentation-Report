@@ -2400,13 +2400,8 @@ El diseño evita sobrecarga visual, mostrando la información más relevante en 
 
 ### 6.2.4. SEO Tags and Meta Tags
 
-En esta sección se debe incluir los SEO (Search Engine Optimization) Tags y Meta
-Tags junto con los valores que asignará en las principales páginas de la experiencia
-tanto a nivel del sitio web estático (Landing Page) como Web Applications. Se debe
-incluir Title, los Meta Tags Description, Keywords, Author como mínimo. Del mismo
-modo, para las aplicaciones móviles u otros productos digitales que se exponen vía
-un app store, debe incluir los ASO (App Store Optimization) elements como App
-Title, App keywords, App subtitle, App description.
+En esta sección se debe incluir los SEO (Search Engine Optimization) Tags y Meta Tags junto con los valores que asignará en las principales páginas de la experiencia tanto a nivel del sitio web estático (Landing Page) como Web applications. Se debe incluir Title, los Meta Tags Description, Keywords, Author como mínimo. Del mismo
+modo, para las aplicaciones móviles u otros productos digitales que se exponen vía un app store, debe incluir los ASO (App Store Optimization) elements como App Title, App keywords, App subtitle, App description.
 
 #### Landing Page
 
@@ -2424,13 +2419,12 @@ Title, App keywords, App subtitle, App description.
 
 ### 6.2.5. Navigation Systems
 
-Aquí el equipo explica cuáles serán las acciones y técnicas que guiarán a los usuarios
-a través del Landing Page y las aplicaciones, permitiéndoles cumplir sus metas e
-interactuar de forma satisfactoria con el producto. Aquí se debe incluir de qué
-maneras los usuarios irán recorriendo el contenido.
+Aquí el equipo explica cuáles serán las acciones y técnicas que guiarán a los usuarios a través del Landing Page y las aplicaciones, permitiéndoles cumplir sus metas e interactuar de forma satisfactoria con el producto. Aquí se debe incluir de qué maneras los usuarios irán recorriendo el contenido.
 
 La navegación en SafeVision se estructura para ofrecer una experiencia fluida, clara y guiada, donde tanto los visitantes del sitio web como los usuarios de la aplicación puedan recorrer el contenido sin perderse y cumplir fácilmente sus objetivos.
 Cada interacción fue diseñada con el propósito de que el usuario entienda siempre en qué parte del recorrido se encuentra y cuál es su siguiente paso.
+
+
 
 #### Landing Page
 
@@ -2471,6 +2465,8 @@ Los íconos activos se muestran en rojo (#C13515) y los inactivos en gris (#7478
 El uso de animaciones suaves y cambios de color ayuda a indicar qué acción fue ejecutada, brindando una sensación de control y coherencia.
 En ambos entornos, la navegación de SafeVision se apoya en principios de jerarquía visual, consistencia de color y retroalimentación inmediata, asegurando que los usuarios puedan recorrer el contenido, entender la información y alcanzar sus metas de manera satisfactoria.
 
+<img src="./assets/app-design/nav-system.png" >
+
 ## 6.3. Landing Page UI Design
 
 En esta sección se presenta el diseño visual de la landing page, donde se aplican los lineamientos de estilo, colores, tipografía e iconografía definidos previamente. El diseño busca ofrecer una experiencia clara, atractiva y coherente con la identidad del proyecto, facilitando la navegación y destacando las principales funcionalidades del sistema.
@@ -2479,13 +2475,13 @@ En esta sección se presenta el diseño visual de la landing page, donde se apli
 
 En esta sección se presenta un esquema general del diseño de la landing page, destacando las áreas principales de contenido, como el encabezado y las secciones correspondientes a cada segmento. Este wireframe ilustra la estructura base de la página sin incluir elementos visuales detallados.
 
-**Agregar imágenes**
+<img src="./assets/app-design/landing-wireframe.jpg" >
 
 ### 6.3.2. Landing Page Mock-up
 
 El mock-up de la landing page muestra una versión visual más desarrollada del diseño final, incorporando la paleta de colores, tipografía, imágenes y elementos interactivos. Este diseño permite visualizar con mayor precisión cómo lucirá la interfaz implementada, reflejando la identidad visual de SafeVision y priorizando la usabilidad del usuario.
 
-**Agregar imágenes**
+<img src="./assets/app-design/landing-mock.png" >
 
 ## 6.4. Applications UX/UI Design
 
