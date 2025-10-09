@@ -2495,7 +2495,7 @@ En este apartado se describen los aspectos vinculados al diseño de interfaces y
 
 Se presentan los wireframes principales, que servirán como base fundamental para el desarrollo posterior de los mock-ups.
 
-**Agregar imágenes**
+<img src="./assets/app-design/wireframes.png" >
 
 ### 6.4.2. Applications Wireflow Diagrams
 
