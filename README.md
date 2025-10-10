@@ -60,22 +60,12 @@
 | 4.0         | 11/09/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Realización y registro de entrevistas con los segmentos objetivo y análisis de los resultados. Creación del Impact Mapping. Redacción de las guías de estilo y la arquitectura de la información. |
 | 5.0         | 13/09/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Elaboración de historias de usuario y del backlog del producto. |
 | 6.0         | 19/09/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Creación del diagrama de base de datos, diagrama de clases, diccionario de clases, diagramas de contenedores, diagramas de contexto y diagramas de componentes. |
+| 7.0         | 3/10/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Se realizaron las correcciones correspondientes del TB1 y se avanzó en el desarrollo de los *Bounded Contexts*, incorporando los ajustes y mejoras necesarias según las observaciones recibidas. |
+| 7.0         | 7/10/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Avance en el Capítulo 6: Solution UX Design, se definieron los wireframes de la aplicación |
 
 # Registro de Versiones del Informe
 
 URL del repositorio para el Project Report en la organización de GitHub del equipo: https://github.com/Software-Emergentes
-
-**TB1**
-
-Para la elaboración del informe correspondiente a la entrega TB1, la implementación de las secciones se distribuyó entre los miembros del equipo de la siguiente manera:
-
-| Integrante                          | Tareas asignadas |
-|-------------------------------------|------------------|
-| Fabia Alejandra Herrera Aguirre     | Needfinding, As Is, To Be, User Personas, Empathy Mapping, Product Backlog, User Task Matrix |
-| Leonardo Felix Jesus Linares Tejada | Architectural Drivers Backlog, Architectural Design Decisions, Quality Attribute Scenario Refinements, Strategic-Level Domain-Driven Design, Event Storming, Candidate Context Discovery, Domain Message Flows Modeling, Bounded Context Canvases |
-| Beth Shantal Oneglio De Paz         | Strategic-Level Attribute-Driven Design, Design Purpose, Attribute-Design Inputs, Primary Functionality (Primary User Stories), Quality attribute Scenarios, Constraints |
-| Fernando Brian Salgada Luna         | Capítulo I: Introducción, Capítulo II: Requirements Elicitation & Analysis, Event Storming |
-| Angello Rodolfo Sosa Colca           | Context Mapping, Software Architecture, Software Architecture System Landscape Diagram, Software Architecture Context Level Diagrams, Container Level Diagrams, Deployment Diagrams, Event Storming |
 
 La colaboración en el informe se llevó a cabo mediante commits frecuentes en el repositorio de la organización PCC Team.
 
@@ -97,7 +87,27 @@ Los miembros del equipo son:
 
 **TB1**
 
+Para la elaboración del informe correspondiente a la entrega TB1, la implementación de las secciones se distribuyó entre los miembros del equipo de la siguiente manera:
+
+| Integrante                          | Tareas asignadas |
+|-------------------------------------|------------------|
+| Fabia Alejandra Herrera Aguirre     | Needfinding, As Is, To Be, User Personas, Empathy Mapping, Product Backlog, User Task Matrix |
+| Leonardo Felix Jesus Linares Tejada | Architectural Drivers Backlog, Architectural Design Decisions, Quality Attribute Scenario Refinements, Strategic-Level Domain-Driven Design, Event Storming, Candidate Context Discovery, Domain Message Flows Modeling, Bounded Context Canvases |
+| Beth Shantal Oneglio De Paz         | Strategic-Level Attribute-Driven Design, Design Purpose, Attribute-Design Inputs, Primary Functionality (Primary User Stories), Quality attribute Scenarios, Constraints |
+| Fernando Brian Salgada Luna         | Capítulo I: Introducción, Capítulo II: Requirements Elicitation & Analysis, Event Storming |
+| Angello Rodolfo Sosa Colca           | Context Mapping, Software Architecture, Software Architecture System Landscape Diagram, Software Architecture Context Level Diagrams, Container Level Diagrams, Deployment Diagrams, Event Storming |
+
+Imagen de los Insights: 
+
 <img src="assets/commits/tb1-commits.png">
+
+**Trabajo Parcial**
+
+Para esta entrega el equipo se enfocó en el diseño arquitectónico y de experiencia de usuario, siguiendo los lineamientos establecidos en los Capítulos V y VI. En el ámbito del diseño táctico, se documentaron las capas de dominio, aplicación, infraestructura e interfaz, junto con los diagramas de componentes y el diseño de la base de datos. En cuanto a la experiencia de usuario, se establecieron los lineamientos de estilo, la arquitectura de información, los sistemas de búsqueda y navegación, además de los wireframes, mock-ups y prototipos interactivos de la landing page y las aplicaciones móviles. Este trabajo permitió consolidar la estructura del sistema y validar la experiencia del usuario antes de la integración final, garantizando un producto coherente con los objetivos de SafeVision.
+
+Imagen de los Insights: 
+
+<img src="assets/commits/tp1-commits.png">
 
 ## Contenido
 
@@ -158,11 +168,83 @@ Los miembros del equipo son:
   - [4.3.2. Software Architecture Context Level Diagrams](#432-software-architecture-context-level-diagrams)
   - [4.3.3. Software Architecture Container Level Diagrams](#433-software-architecture-container-level-diagrams)
   - [4.3.4. Software Architecture Deployment Diagrams](#434-software-architecture-deployment-diagrams)
+  
+## [Capítulo V: Tactical-Level Software Design](#capítulo-v-tactical-level-software-design)
+- [5.1. Bounded Context: Notification Context](#51-bounded-context-notification-context)
+  - [5.1.1. Domain Layer](#511-domain-layer)
+  - [5.1.2. Interface Layer](#512-interface-layer)
+  - [5.1.3. Application Layer](#513-application-layer)
+  - [5.1.4. Infrastructure Layer](#514-infrastructure-layer)
+  - [5.1.5. Bounded Context Software Architecture Component Level Diagrams](#515-bounded-context-software-architecture-component-level-diagrams)
+  - [5.1.6. Bounded Context Software Architecture Code Level Diagrams](#516-bounded-context-software-architecture-code-level-diagrams)
+    - [5.1.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
+    - [5.1.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
+- [5.2. Bounded Context: Driver Context](#52-bounded-context-driver-context)
+  - [5.2.1. Domain Layer](#521-domain-layer)
+  - [5.2.2. Interface Layer](#522-interface-layer)
+  - [5.2.3. Application Layer](#523-application-layer)
+  - [5.2.4. Infrastructure Layer](#524-infrastructure-layer)
+  - [5.2.5. Bounded Context Software Architecture Component Level Diagrams](#525-bounded-context-software-architecture-component-level-diagrams)
+  - [5.2.6. Bounded Context Software Architecture Code Level Diagrams](#526-bounded-context-software-architecture-code-level-diagrams)
+    - [5.2.6.1. Bounded Context Domain Layer Class Diagrams](#5261-bounded-context-domain-layer-class-diagrams)
+    - [5.2.6.2. Bounded Context Database Design Diagram](#5262-bounded-context-database-design-diagram)
+- [5.3. Bounded Context: IAM Context](#53-bounded-context-iam-context)
+  - [5.3.1. Domain Layer](#531-domain-layer)
+  - [5.3.2. Interface Layer](#532-interface-layer)
+  - [5.3.3. Application Layer](#533-application-layer)
+  - [5.3.4. Infrastructure Layer](#534-infrastructure-layer)
+  - [5.3.5. Bounded Context Software Architecture Component Level Diagrams](#535-bounded-context-software-architecture-component-level-diagrams)
+  - [5.3.6. Bounded Context Software Architecture Code Level Diagrams](#536-bounded-context-software-architecture-code-level-diagrams)
+    - [5.3.6.1. Bounded Context Domain Layer Class Diagrams](#5361-bounded-context-domain-layer-class-diagrams)
+    - [5.3.6.2. Bounded Context Database Design Diagram](#5362-bounded-context-database-design-diagram)
+- [5.4. Bounded Context: Trip](#54-bounded-context-trip)
+  - [5.4.1. Domain Layer](#541-domain-layer)
+  - [5.4.2. Interface Layer](#542-interface-layer)
+  - [5.4.3. Application Layer](#543-application-layer)
+  - [5.4.4. Infrastructure Layer](#544-infrastructure-layer)
+  - [5.4.5. Bounded Context Software Architecture Component Level Diagrams](#545-bounded-context-software-architecture-component-level-diagrams)
+  - [5.4.6. Bounded Context Software Architecture Code Level Diagrams](#546-bounded-context-software-architecture-code-level-diagrams)
+    - [5.4.6.1. Bounded Context Domain Layer Class Diagrams](#5461-bounded-context-domain-layer-class-diagrams)
+    - [5.4.6.2. Bounded Context Database Design Diagram](#5462-bounded-context-database-design-diagram)
+- [5.5. Bounded Context: Fatigue Monitoring](#55-bounded-context-fatigue-monitoring)
+  - [5.5.1. Domain Layer](#551-domain-layer)
+  - [5.5.2. Interface Layer](#552-interface-layer)
+  - [5.5.3. Application Layer](#553-application-layer)
+  - [5.5.4. Infrastructure Layer](#554-infrastructure-layer)
+  - [5.5.5. Bounded Context Software Architecture Component Level Diagrams](#555-bounded-context-software-architecture-component-level-diagrams)
+  - [5.5.6. Bounded Context Software Architecture Code Level Diagrams](#556-bounded-context-software-architecture-code-level-diagrams)
+    - [5.5.6.1. Bounded Context Domain Layer Class Diagrams](#5561-bounded-context-domain-layer-class-diagrams)
+    - [5.5.6.2. Bounded Context Database Design Diagram](#5562-bounded-context-database-design-diagram)
+- [5.6. Bounded Context: Management](#56-bounded-context-management)
+  - [5.6.1. Domain Layer](#561-domain-layer)
+  - [5.6.2. Interface Layer](#562-interface-layer)
+  - [5.6.3. Application Layer](#563-application-layer)
+  - [5.6.4. Infrastructure Layer](#564-infrastructure-layer)
+  - [5.6.5. Bounded Context Software Architecture Component Level Diagrams](#565-bounded-context-software-architecture-component-level-diagrams)
+  - [5.6.6. Bounded Context Software Architecture Code Level Diagrams](#566-bounded-context-software-architecture-code-level-diagrams)
+    - [5.6.6.1. Bounded Context Domain Layer Class Diagrams](#5661-bounded-context-domain-layer-class-diagrams)
+    - [5.6.6.2. Bounded Context Database Design Diagram](#5662-bounded-context-database-design-diagram)
+
+## [Capítulo VI: Solution UX Design](#capítulo-vi-solution-ux-design)
+- [6.1. Style Guidelines](#61-style-guidelines)
+  - [6.1.1. General Style Guidelines](#611-general-style-guidelines)
+  - [6.1.2. Web, Mobile & Devices Style Guidelines](#612-web-mobile--devices-style-guidelines)
+- [6.2. Information Architecture](#62-information-architecture)
+  - [6.2.1. Organization Systems](#621-organization-systems)
+  - [6.2.2. Labeling Systems](#622-labeling-systems)
+  - [6.2.3. Searching Systems](#623-searching-systems)
+  - [6.2.4. SEO Tags and Meta Tags](#624-seo-tags-and-meta-tags)
+  - [6.2.5. Navigation Systems](#625-navigation-systems)
+- [6.3. Landing Page UI Design](#63-landing-page-ui-design)
+  - [6.3.1. Landing Page Wireframe](#631-landing-page-wireframe)
+  - [6.3.2. Landing Page Mock-up](#632-landing-page-mock-up)
+- [6.4. Applications UX/UI Design](#64-applications-uxui-design)
+  - [6.4.1. Applications Wireframes](#641-applications-wireframes)
+  - [6.4.2. Applications Wireflow Diagrams](#642-applications-wireflow-diagrams)
 
 ## [Conclusiones](#conclusiones)
 - [Conclusiones](#conclusiones)
-- [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
-
+- [Recomendaciones](#recomendaciones)
 
 ## [Bibliografía](#bibliografía)
 
@@ -174,8 +256,8 @@ Los miembros del equipo son:
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |----------------------|---------------------|--------------|
-| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre  <br><br> **TB1**  <br><br> Se expusieron los resultados del Needfinding, mostrando el As Is y el To Be, además de explicar los User Personas y el Empathy Mapping en presentaciones grupales.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se presentaron los Architectural Drivers Backlog y las Architectural Design Decisions, explicando cómo se refinaron los Quality Attribute Scenarios y los resultados del Event Storming en sesiones grupales.<br><br>Beth Shantal Oneglio De Paz<br><br> **TB1** <br><br> Se expuso el Strategic-Level Attribute-Driven Design, destacando el Design Purpose y los Primary User Stories, junto con los Quality Attribute Scenarios más relevantes. <br><br> Fernando Brian Salgada Luna <br><br> **TB1** <br><br> Se presentó el Capítulo I: Introducción y el Capítulo II: Requirements Elicitation & Analysis, explicando los puntos clave y los resultados del Event Storming en exposición grupal.<br><br>Angello Rodolfo Sosa Colca<br><br> **TB1** <br><br> Se explicó el Context Mapping y los diagramas de Software Architecture (System Landscape, Context Level, Container y Deployment), además de los hallazgos del Event Storming en presentaciones grupales. | El trabajo realizado ha sido sobresaliente, cumpliendo con todos los segmentos del proyecto. El documento redactado ofrece un detallado informe sobre los pasos seguidos en la planificación, desarrollo y envío del proyecto a producción, garantizando así un resultado digno y completo. |
-| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre <br><br> **TB1** <br><br> Se documentaron los hallazgos en el Product Backlog y se elaboró la User Task Matrix, complementada con la descripción escrita de escenarios y perfiles de usuario.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se documentaron los hallazgos del Candidate Context Discovery, los Domain Message Flows Modeling y los Bounded Context Canvases, integrándolos en el informe de Strategic-Level Domain-Driven Design. <br><br> Beth Shantal Oneglio De Paz <br><br> **TB1** <br><br> Se documentaron los Attribute-Design Inputs y las Constraints, integrándolos en el reporte de diseño estratégico para el proyecto.<br><br> Fernando Brian Salgada Luna <br><br> **TB1** <br><br> Se redactaron los apartados del informe correspondientes a la Introducción, el Requirements Elicitation & Analysis y la documentación del Event Storming. <br><br> Angello Rodolfo Sosa Colca <br><br> **TB1** <br><br> Se documentaron los diagramas de Software Architecture y el Context Mapping, junto con la descripción escrita del Event Storming, integrados en el informe técnico.  | El trabajo realizado ha sido sobresaliente en términos de comunicación, cubriendo todos los aspectos necesarios para garantizar una coordinación efectiva. El documento final no solo detalla los pasos seguidos en la planificación y desarrollo del proyecto, sino que también refleja una comunicación clara y precisa durante todo el proceso, asegurando así una entrega bien fundamentada y comprensible. |
+| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre  <br><br> **TB1**  <br><br> Se expusieron los resultados del Needfinding, mostrando el As Is y el To Be, además de explicar los User Personas y el Empathy Mapping en presentaciones grupales.<br><br> **TP1** <br><br>Expresó de manera clara y objetiva los avances relacionados con el bounded context Notifications y el apartado de Style Guidelines, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del desarrollo del proyecto de ingeniería.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se presentaron los Architectural Drivers Backlog y las Architectural Design Decisions, explicando cómo se refinaron los Quality Attribute Scenarios y los resultados del Event Storming en sesiones grupales.<br><br> **TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Management y brindó apoyo en el desarrollo del bounded context Monitoring, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>Beth Shantal Oneglio De Paz<br><br> **TB1** <br><br> Se expuso el Strategic-Level Attribute-Driven Design, destacando el Design Purpose y los Primary User Stories, junto con los Quality Attribute Scenarios más relevantes. <br><br> **TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Monitoring y en el desarrollo de la landing page, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Fernando Brian Salgada Luna <br><br> **TB1** <br><br> Se presentó el Capítulo I: Introducción y el Capítulo II: Requirements Elicitation & Analysis, explicando los puntos clave y los resultados del Event Storming en exposición grupal.<br><br>**TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Trip y en el apartado de Style Guidelines, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>Angello Rodolfo Sosa Colca<br><br> **TB1** <br><br> Se explicó el Context Mapping y los diagramas de Software Architecture (System Landscape, Context Level, Container y Deployment), además de los hallazgos del Event Storming en presentaciones grupales.<br><br>**TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en los bounded context Driver e IAM, así como en el desarrollo de la landing page y el diseño general, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería. | El trabajo realizado ha sido sobresaliente, cumpliendo con todos los segmentos del proyecto. El documento redactado ofrece un detallado informe sobre los pasos seguidos en la planificación, desarrollo y envío del proyecto a producción, garantizando así un resultado digno y completo. |
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre <br><br> **TB1** <br><br> Se documentaron los hallazgos en el Product Backlog y se elaboró la User Task Matrix, complementada con la descripción escrita de escenarios y perfiles de usuario.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances relacionados con el bounded context Notifications y el apartado de Style Guidelines, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del desarrollo del proyecto de ingeniería.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se documentaron los hallazgos del Candidate Context Discovery, los Domain Message Flows Modeling y los Bounded Context Canvases, integrándolos en el informe de Strategic-Level Domain-Driven Design. <br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Management y el apoyo brindado en el desarrollo del bounded context Monitoring, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Beth Shantal Oneglio De Paz <br><br> **TB1** <br><br> Se documentaron los Attribute-Design Inputs y las Constraints, integrándolos en el reporte de diseño estratégico para el proyecto.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Monitoring y en el desarrollo de la landing page, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Fernando Brian Salgada Luna <br><br> **TB1** <br><br> Se redactaron los apartados del informe correspondientes a la Introducción, el Requirements Elicitation & Analysis y la documentación del Event Storming.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Trip y en el apartado de Style Guidelines, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Angello Rodolfo Sosa Colca <br><br> **TB1** <br><br> Se documentaron los diagramas de Software Architecture y el Context Mapping, junto con la descripción escrita del Event Storming, integrados en el informe técnico.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en los bounded context Driver e IAM, así como en el desarrollo de la landing page y el diseño general, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.  | El trabajo realizado ha sido sobresaliente en términos de comunicación, cubriendo todos los aspectos necesarios para garantizar una coordinación efectiva. El documento final no solo detalla los pasos seguidos en la planificación y desarrollo del proyecto, sino que también refleja una comunicación clara y precisa durante todo el proceso, asegurando así una entrega bien fundamentada y comprensible. |
 
 # Capítulo I: Introducción
 
@@ -203,7 +285,7 @@ Convertirnos en una startup líder en el Perú en soluciones inteligentes para l
 | Linares Tejada, Leonardo Félix Jesús | U202211168       | Ingeniería de Software | Mi nombre es Leonardo Linares, tengo 20 años y estoy en el 8vo ciclo de la UPC, estudiando para ser un Ingeniero de Software. Actualmente, tengo conocimientos sobre lenguajes y tecnologias como Python, C++, C#, HTML, JavaScript, MySQL, etc. | <img src="assets/team-members/yo.png" width="80"> |
 | Oneglio De Paz, Beth Shantal         | U202213423       | Ingeniería de Software | Mi nombre es Beth Shantal Oneglio De Paz - u202213423, tengo 20 años y estudio Ingeniería de Software en la UPC. Disfruto trabajar en equipo y resolver problemas digitales. Estoy capacitada para enfrentar situaciones estresantes con responsabilidad y liderazgo. Poseo conocimientos avanzados en gestión y programación, adquiridos en ciclos anteriores. Manejo lenguajes y tecnologías como Python, C++, HTML5, CSS3, .NET, Vue.js, C#, JavaScript, PHP, MongoDB, MySQL, entre otras. | <img src="assets/team-members/beth-oneglio.jpg" width="80"> |
 | Salgado Luna, Fernando Brian        | U202212023        | Ingeniería de Software | Soy Fernando Salgado, tengo 20 años y me apasiona la tecnología. Tengo experiencia en desarrollo frontend y backend, trabajando con lenguajes y tecnologías como Python, C++, C#, Java, HTML, CSS, JavaScript, MySQL, así como frameworks de frontend como Vue.js y Angular. Disfruto resolviendo problemas y buscando soluciones prácticas que contribuyan a los proyectos en los que participo. | <img src="assets/team-members/fernando-salgado.jpeg" width="80"> |
-| Sosa Colca Angello Rodolfo          | U202212077       | Ingeniería de Software | Tengo 19 años y curso el 7mo ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Soy una persona enfocada, perseverante y colaborativo. Estas cualidades me permiten ser una persona que ayudará de manera óptima el requisito que se me imponga. Además, soy una persona que apoya cuando los demás se encuentran en problemas. | <img src="assets/team-members/angello-sosa.jpg" width="80"> |
+| Sosa Colca Angello Rodolfo          | U202212077       | Ingeniería de Software | Tengo 19 años y curso el 7mo ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Soy una persona enfocada, perseverante y colaborativo. Estas cualidades me permiten ser una persona que ayudará de manera óptima el requisito que se me imponga. Además, soy una persona que apoya cuando los demás se encuentran en problemas. | <img src="assets/team-members/angello-sosa.jpg" width="80" height="auto"> |
 
 ## 1.2. Solution Profile
 
@@ -592,8 +674,7 @@ Entrevista a Gerentes de empresas de transporte.
 |  <img src="assets/interviews/rhai-entrevista.png" width="80">  |  Rhaí es gerente de operaciones en una empresa de transporte interprovincial en Surco. Administra una flota de 35 unidades y cerca de 50 conductores, y destaca que la mayor preocupación es la fatiga en rutas largas y nocturnas, seguida del mal estado de las carreteras y factores climáticos. Explica que actualmente dependen de descansos obligatorios, rotación de choferes y reportes manuales, aunque estos no siempre son precisos. Considera que un sistema de monitoreo en tiempo real sería de gran valor por ofrecer datos objetivos y anticipar riesgos. Señala que la efectividad, facilidad de uso y costo razonable serían claves para implementarlo, y concluye que una solución así permitiría reducir accidentes, mejorar la seguridad y reforzar la confianza en la empresa.            |
 | Timing:      | 25:19 - 29:59 |
 
-**Vídeo de Entrevistas:** <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y </a>
-
+**Vídeo de Entrevistas:** https://n9.cl/14tc2
 
 ### 2.2.3. Análisis de entrevistas
 
@@ -679,8 +760,7 @@ A continuación se presenta el Empathy Map que detalla las percepciones, pensami
 </div>  
 <br>
 
-Enlace del Miro: <a href="https://miro.com/app/board/uXjVJI4Pgq0=/?share_link_id=121411571054">https://miro.com/app/board/uXjVJI4Pgq0=/?share_link_id=121411571054</a>
-<br>
+Enlace del Miro: https://n9.cl/86zi5i
 
 ## 2.4. Ubiquitous Language
 
@@ -723,7 +803,7 @@ Para elaborar el To-be Scenario Mapping, el equipo definió cómo sería el fluj
 
 <br>
 
-Enlace del To-Be Scenario Mapping: <a href="https://miro.com/app/board/uXjVJI4Pgq0=/?share_link_id=121411571054">https://miro.com/app/board/uXjVJI4Pgq0=/?share_link_id=121411571054</a>
+Enlace del To-Be Scenario Mapping: https://n9.cl/86zi5i
 
 ## 3.2. User Stories
 
@@ -853,7 +933,7 @@ Para el desarrollo de SafeVision, se ha elaborado un Impact Mapping que detalla 
 | 42    | US30          | Configuración de parámetros de seguridad | Como gerente, quiero ajustar umbrales de detección de fatiga según políticas internas.                                                      | 3            |
 | 43    | US31          | Gestión de roles de usuario              | Como empresa, quiero asignar diferentes roles (gerente, supervisor, conductor).                                                             | 3            |
 
-Enlace del Trello: https://trello.com/b/lXUHFcEl/entrega-1
+Enlace del Trello: https://n9.cl/6fa6c
 
 # Capítulo IV: Strategic-Level Software Design
 
@@ -1125,8 +1205,6 @@ En esta sección, se detallan como la importancia y el impacto que tienen tanto 
   </tbody>
 </table>
 
-<br>
-
 <table border="0" cellspacing="0" cellpadding="8">
   <tbody>
     <tr>
@@ -1179,8 +1257,6 @@ En esta sección, se detallan como la importancia y el impacto que tienen tanto 
     </tr>
   </tbody>
 </table>
-
-<br>
 
 <table border="0" cellspacing="0" cellpadding="8">
   <tbody>
@@ -1376,43 +1452,35 @@ Los Bounded Context Canvases son herramientas visuales que nos permiten document
 Este canvas detalla nuestro contexto de acceso y seguridad, responsable de la autenticación, autorización y gestión de roles. Definimos sus principales modelos de dominio (Cuenta, Rol, Autenticación), las políticas de seguridad y los eventos clave como el registro de usuario y la confirmación de autenticación. Su propósito estratégico es garantizar que solo los usuarios autorizados puedan acceder a funcionalidades específicas del sistema, actuando como proveedor upstream de confianza para el resto de los contextos.
 
 <img src="./assets/eventstorming/boundedContext3.jpg"> 
-<br>
-<br>
 
-**Management Bounded Context:**
+#### Management Bounded Context
+
 Este canvas muestra el contexto de gestión, encargado de brindar a los gerentes y supervisores acceso a reportes, métricas y análisis de riesgo. Identificamos sus entidades principales (Reporte, Patrón de Riesgo, Rol de Usuario), así como las capacidades de exportación y gestión de roles. Este contexto actúa como consumidor de información proveniente de Trip e IAM, consolidando datos en reportes estratégicos. Su propósito es proveer herramientas de supervisión y auditoría que apoyen la toma de decisiones.
 
 <img src="./assets/eventstorming/boundedContex2.jpg"> 
-<br>
-<br>
 
-**Driver Bounded Context:**
+#### Driver Bounded Context
+
 El canvas del contexto de conductor representa la interacción directa con el usuario final. Sus principales entidades son Alerta, Viaje, Resumen de Viaje y Guía Post-Alerta. Identificamos sus capacidades clave como la recepción de notificaciones en tiempo real, la configuración de alertas y la visualización de reportes resumidos al finalizar cada viaje. Este contexto actúa como consumidor de eventos generados por Trip y Monitoring, y como productor de confirmaciones de alertas. Su propósito estratégico es salvaguardar al conductor mediante una interfaz clara y efectiva.
 
 <img src="./assets/eventstorming/boundedContext1.jpg"> 
-<br>
-<br>
 
-**Monitoring Bounded Context:**
+#### Monitoring Bounded Context
 Este canvas describe el contexto de monitoreo, núcleo técnico de la solución, responsable de procesar datos de video en tiempo real mediante IA. Identificamos sus entidades principales (Evento de Somnolencia, Detección de Fatiga, Alerta Crítica) y las capacidades de filtrado de falsos positivos, almacenamiento local y sincronización con la nube. Monitoring consume datos del dispositivo (cámara en cabina) y produce alertas hacia Driver y Trip. Su propósito estratégico es detectar la fatiga en milisegundos y disparar las acciones necesarias para evitar accidentes.
 
 <img src="./assets/eventstorming/boundedContext6.jpg"> 
-<br>
-<br>
 
-**Trip Bounded Context:**
+#### Trip Bounded Context
+
 El canvas del contexto de viajes refleja la importancia de organizar los recorridos y asociar incidentes a cada trayecto. Sus principales modelos de dominio incluyen Viaje, Incidente y Alerta Registrada. Este contexto consume autenticación de IAM, eventos de monitoreo y configuraciones de Driver, para luego generar reportes de viaje consumidos por Management. Su propósito estratégico es mantener un historial confiable de la conducción y los incidentes ocurridos durante cada recorrido.
 
 <img src="./assets/eventstorming/boundedContext4.jpg"> 
-<br>
-<br>
 
-**Notification Bounded Context:**
+#### Notification Bounded Context
+
 Este canvas detalla el contexto encargado de orquestar el envío de alertas y reportes hacia conductores y gerentes. Gestiona canales de entrega (app, SMS, correo), políticas de reintento y el historial de notificaciones. Su propósito estratégico es garantizar la entrega fiable y trazable de mensajes críticos derivados del monitoreo, actuando como proveedor de notificaciones para Driver y Management y como consumidor de eventos generados por Monitoring y Trip.
 
 <img src="./assets/eventstorming/boundedContext5.jpg">
-<br>
-<br>
 
 Estos canvas fueron herramientas fundamentales para definir la arquitectura de nuestra solución, permitiéndonos visualizar cada contexto como una unidad coherente con responsabilidades claras y bien definidas. Además, nos ayudaron a identificar los puntos de integración entre contextos que luego refinamos en el Context Mapping.
 
@@ -1421,7 +1489,7 @@ Estos canvas fueron herramientas fundamentales para definir la arquitectura de n
 Después de identificar nuestros bounded contexts (Access, Monitoring, Simulation e IoT Device), procedimos a definir las relaciones entre ellos mediante la técnica de Context Mapping. Este proceso nos permitió visualizar cómo estos contextos se comunican y colaboran entre sí en nuestro sistema Safe Vision.
 
 
-## 1. Pasos para Crear el Context Mapping  
+### 1. Pasos para Crear el Context Mapping  
 
 ### 1.1. Identificación de los Bounded Contexts  
 - **IAM (Identity & Access Management)**  
@@ -1516,12 +1584,969 @@ En esta sección se presentan los diagramas de arquitectura de la solución, que
 
 <img src="./assets/software-architecture-diagrams/container-level.png">
 
-
 ### 4.3.4. Software Architecture Deployment Diagrams
 
 <img src="./assets/software-architecture-diagrams/deployment-diagram.png">
 
+# Capítulo V: Tactical-Level Software Design
 
+## 5.1.1. Bounded Context: Notification Context
+
+### 5.1.1.1. Domain Layer
+
+#### Aggregates
+
+1. **Alert**
+    - **Descripción:** Representa una alerta generada por el sistema de inteligencia artificial de SafeVision cuando se detecta una condición anómala o de riesgo durante el viaje.  
+
+    - **Atributos:**
+        - `Id`: Identificador único de la alerta.
+        - `TripId`: Relación con el viaje asociado (FK al contexto Trips).
+        - `AlertType`: Tipo de alerta (Fatigue, Speeding, Distraction, etc).
+        - `Severity`: Nivel de severidad: Low, Medium, High, Critical.
+        - `TimeStamp`: Fecha y hora en la que se generó la alerta.
+        - `Status`: Estado de la alerta (New, Reviewed, FalsePositive).
+        - `FatigueSymptoms`: Síntomas asociados a la alerta (bostezo, ojos cerrados, etc).
+
+#### Entities
+
+1. **FatigueSymptom**
+    - **Descripción:** Representa un síntoma específico detectado durante la sesión del conductor.  
+    - **Atributos:**
+        - `Id`: Identificador único del síntoma.
+        - `AlertId`: Referencia a la alerta principal.
+        - `SymptoName`: Nombre del síntoma (Yawning, EyeClosure, HeadDroop, etc).
+
+2. **Notification**
+    - **Descripción:** Representa una notificación enviada a un usuario (conductor o gerente) relacionada con una alerta o evento del sistema.  
+    - **Atributos:**
+        - `Id`: Identificador único de la notificación.
+        - `AlertId`: Alerta asociada.
+        - `RecipientId`: Usuario destino de la notificación.
+        - `RecipientRole`: Rol del destinatario (Driver, Manager).
+        - `Message`: Contenido del mensaje de alerta.
+        - `Status`: Estado (PENDING, SENT, FAILED, RETRYING).
+        - `AttemptCount`: Número de intentos de envío.
+        - `SentAt`: Fecha/hora de envío exitoso.
+
+#### Value Objects
+
+1. **ESeverityLevel**
+    - **Descripción:** Enumerable que define los niveles de severidad de una alerta.
+2. **EAlertStatus**
+    - **Descripción:** Enumerable que define los posibles estados de una alerta.
+3. **ENotificationStatus:** 
+    - **Descripción:** Enumerable que define los posibles estados de una notificación.
+
+#### Commands
+
+1. **AlertCommand:**
+    - **Descripción:** Maneja comandos relacionados con la creación y gestión de alertas.
+
+2. **NotificationCommand:**
+    - **Descripción:** Maneja comandos relacionados con el envío y gestión de notificaciones y reintentos de la misma.
+
+#### Queries
+
+1. **GetAlertByUserQuery:**
+    - **Descripción:** Obtener alertas en base al usuario.
+2. **GetAllAlertsQuery:**
+    - **Descripción:** Obtener todas las alertas.
+3. **GetNotificationsByAlertQuery:**
+    - **Descripción:** Obtener notificaciones en base a una alerta.
+4. **GetPendingNotificationsQuery:**
+    - **Descripción:** Obtener notificaciones pendientes de envío.
+5. **GetNotificationStatusQuery:**  
+    - **Descripción:** Obtener el estado de una notificación en base a su id.
+
+#### Repositories
+
+1. **AlertRepository:**
+    - **Descripción:** Repositorio que permite interactuar con la base de datos de alertas, tiene como función la persistencia de alertas.
+    - **Métodos:**
+        - `GetAlertByUserAsync(int userId)`: Devuelve una lista de alertas en base al id de un usuario.
+        - `GetAllAlertsAsync()`: Devuelve una lista de todas las alertas.
+        - `CreateAlertAsync(Alert alert)`: Permite crear una nueva alerta en la base de datos.
+        - `UpdateAlertStatusAsync(int alertId, EAlertStatus status)`: Permite actualizar el estado de una alerta.
+
+
+2. **NotificationRepository:**
+    - **Descripción:** Repositorio que permite la gestión de notificaciones y reintentos de envío.
+    - **Métodos:**
+        - `GetNotificationsByAlertAsync(int alertId)`: Devuelve una lista de notificaciones en base al id de una alerta.
+        - `GetPendingNotificationsAsync()`: Devuelve una lista de notificaciones pendientes de envío.
+        - `CreateNotificationAsync(Notification notification)`: Permite crear una nueva notificación en la base de datos.
+        - `UpdateNotificationStatusAsync(int notificationId, ENotificationStatus status)`: Permite actualizar el estado de una notificación.
+        - `IncrementAttemptCountAsync(int notificationId)`: Incrementa el contador de intentos de envío para una notificación.
+        - `SetNotificationSentAtAsync(int notificationId, DateTime sentAt)`: Establece la fecha y hora de envío exitoso para una notificación.
+
+### 5.1.1.2. Interface Layer
+
+#### Facades
+
+1. **NotificationFacade:**
+    - **Descripción:** Proporciona una interfaz simplificada para interactuar con los servicios de notificación.
+    - **Métodos:**
+        - `SendAlertNotification(int alertId, int recipientId, string message)`: Envía una notificación de alerta a un usuario específico.
+        - `GetAlertsByUser(int userId)`: Obtiene todas las alertas asociadas a un usuario.
+        - `GetAllAlerts()`: Obtiene todas las alertas en el sistema.
+        - `GetNotificationsByAlert(int alertId)`: Obtiene todas las notificaciones asociadas a una alerta específica.
+        - `GetPendingNotifications()`: Obtiene todas las notificaciones que están pendientes de envío.
+        - `GetNotificationStatus(int notificationId)`: Obtiene el estado de una notificación específica.
+
+#### Controllers
+
+1. **NotificationController:** 
+    - **Descripción:** Expone endpoints para la gestión de alertas y notificaciones.
+    - **Métodos:**
+        - `SendAlert(int alertId, int recipientId, string message)`: Endpoint que permite enviar una alerta a un usuario específico.
+        - `GetAlertsByUser(int userId)`: Endpoint que permite obtener todas las alertas asociadas a un usuario.
+        - `GetAllAlerts()`: Endpoint que permite obtener todas las alertas en el sistema.
+        - `GetNotificationsByAlert(int alertId)`: Endpoint que permite obtener todas las notificaciones asociadas a una alerta específica.
+        - `GetPendingNotifications()`: Endpoint que permite obtener todas las notificaciones que están pendientes de envío.
+        - `GetNotificationStatus(int notificationId)`: Endpoint que permite obtener el estado de una notificación específica.
+
+
+### 5.1.1.3. Application Layer
+
+#### Command Services
+
+1. **AlertCommandService:**
+    - **Descripción:** Ofrece comandos para crear y gestionar alertas.
+    - **Métodos:**
+        - `Handle(CreateAlertCommand command)`: Valida y aplica el comando para crear una nueva alerta.
+        - `Handle(UpdateAlertStatusCommand command)`: Valida y aplica el comando para actualizar el estado de una alerta.
+2. **NotificationCommandService:**
+    - **Descripción:** Ofrece comandos para enviar y gestionar notificaciones.
+    - **Métodos:**
+        - `Handle(SendNotificationCommand command)`: Valida y aplica el comando para enviar una notificación.
+        - `Handle(UpdateNotificationStatusCommand command)`: Valida y aplica el comando para actualizar el estado de una notificación.
+        - `Handle(RetryPendingNotificationsCommand command)`: Valida y aplica el comando para reintentar el envío de notificaciones pendientes.
+
+#### Query Services
+
+1. **AlertQueryService:**
+    - **Descripción:** Ofrece consultas para obtener alertas.
+    - **Métodos:**
+        - `Handle(GetAlertByUserQuery query)`: Valida y aplica la consulta para obtener alertas por usuario.
+        - `Handle(GetAllAlertsQuery query)`: Valida y aplica la consulta para obtener todas las alertas.
+
+2. **NotificationQueryService:**
+    - **Descripción:** Ofrece consultas para obtener notificaciones.
+    - **Métodos:**
+        - `Handle(GetNotificationsByAlertQuery query)`: Valida y aplica la consulta para obtener notificaciones por alerta.
+        - `Handle(GetPendingNotificationsQuery query)`: Valida y aplica la consulta para obtener notificaciones pendientes.
+        - `Handle(GetNotificationStatusQuery query)`: Valida y aplica la consulta para obtener el estado de una notificación.
+
+### 5.1.1.4. Infrastructure Layer
+
+#### Repositories (Implementacion)
+
+1. **AlertRepository:**
+    - **Descripción:** Implementación concreta del repositorio de alertas, interactúa con la base de datos para persistir y recuperar alertas.
+    - **Métodos:**
+        - `GetAlertByUserAsync(int userId)`: Devuelve una lista de alertas en base al id de un usuario.
+        - `GetAllAlertsAsync()`: Devuelve una lista de todas las alertas.
+        - `CreateAlertAsync(Alert alert)`: Permite crear una nueva alerta en la base de datos.
+        - `UpdateAlertStatusAsync(int alertId, EAlertStatus status)`: Permite actualizar el estado de una alerta.
+
+2. **NotificationRepository:**
+    - **Descripción:** Implementación concreta del repositorio de notificaciones, interactúa con la base de datos para persistir y recuperar notificaciones.
+    - **Métodos:**
+        - `GetNotificationsByAlertAsync(int alertId)`: Devuelve una lista de notificaciones en base al id de una alerta.
+        - `GetPendingNotificationsAsync()`: Devuelve una lista de notificaciones pendientes de envío.
+        - `CreateNotificationAsync(Notification notification)`: Permite crear una nueva notificación en la base de datos.
+        - `UpdateNotificationStatusAsync(int notificationId, ENotificationStatus status)`: Permite actualizar el estado de una notificación.
+        - `IncrementAttemptCountAsync(int notificationId)`: Incrementa el contador de intentos de envío para una notificación.
+        - `SetNotificationSentAtAsync(int notificationId, DateTime sentAt)`: Establece la fecha y hora de envío exitoso para una notificación.
+
+### 5.1.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+![Diagrama Structurizr([URL]())](assets/notifications-bounded/noti-context.png)
+
+### 5.1.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.1.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+![Diagrama LucidChart([URL]())](assets/notifications-bounded/noti-class-diagram.png)
+
+#### 5.1.1.6.2. Bounded Context Database Design Diagram
+
+![Diagrama Vertabelo[URL]())](assets/notifications-bounded/noti-db.png)
+
+## 5.2.1. Bounded Context: Driver Context
+
+### 5.2.1.1. Domain Layer
+
+En esta sección se describen los elementos del modelo de dominio que componen el bounded context IAM. Estos elementos incluyen entidades, objetos de valor, agregados, servicios de dominio, repositorios e eventos de dominio que son fundamentales para la gestión de la identidad y el acceso de los conductores en el sistema.
+
+| Tipo | Nombre | Descripción |
+|------|--------|-------------|
+| Entidad | Driver | Representa a un conductor registrado en el sistema. Contiene información personal, credenciales de acceso, estado del conductor y referencia a su licencia de conducir. Es la entidad raíz del agregado. |
+| Entidad | DriverLicense | Almacena los datos de la licencia de conducir del conductor: número, fecha de emisión, fecha de vencimiento, categoría y estado de validación. Valida la vigencia de la licencia. |
+| Entidad | DriverProfile | Contiene la información de perfil del conductor: foto, información de contacto adicional, preferencias y configuraciones personales. |
+| Objeto de Valor | DriverStatus | Define los estados válidos del conductor (Activo, Inactivo, Suspendido, En Viaje) y asegura la consistencia en las transiciones de estado. |
+| Objeto de Valor | LicenseNumber | Encapsula el número de licencia de conducir con validación de formato según las reglas del país o región. |
+| Objeto de Valor | ContactInformation | Agrupa los datos de contacto del conductor (teléfono, email, dirección), validando formato y completitud. |
+| Objeto de Valor | DriverCredentials | Encapsula las credenciales de acceso del conductor (usuario, contraseña encriptada) con reglas de seguridad. |
+| Agregado | DriverAggregate | Agrupa las entidades y objetos de valor relacionados con un conductor, controlando las operaciones de registro, actualización de perfil y gestión de licencia. |
+| Domain Service | DriverRegistrationService | Coordina el proceso de registro de un nuevo conductor, validando datos personales, credenciales y verificando que la licencia esté vigente. |
+| Domain Service | DriverLicenseValidationService | Valida la autenticidad y vigencia de la licencia de conducir, aplicando reglas de negocio específicas según la categoría y jurisdicción. |
+| Domain Service | DriverAvailabilityService | Determina si un conductor está disponible para ser asignado a un viaje, evaluando su estado actual y condiciones operativas. |
+| Repository (Interface) | DriverRepository | Define las operaciones de persistencia del agregado Driver, como registrar conductores, actualizar estado, recuperar perfil y consultar disponibilidad. |
+| Repository (Interface) | DriverLicenseRepository | Define las operaciones para gestionar las licencias de conducir asociadas a los conductores, incluyendo validación y renovación. |
+| Domain Event | DriverRegistered | Evento que se dispara cuando un conductor completa exitosamente su registro en el sistema. |
+| Domain Event | DriverProfileUpdated | Evento emitido cuando un conductor actualiza información de su perfil personal. |
+| Domain Event | DriverLicenseValidated | Evento que indica que la licencia de un conductor ha sido validada correctamente por el sistema. |
+| Domain Event | DriverLicenseExpired | Evento que notifica la expiración de una licencia de conducir, requiriendo renovación. |
+| Domain Event | DriverStatusChanged | Evento que comunica cambios en el estado del conductor (Activo ↔ Inactivo, Suspensión, etc.). |
+
+### 5.2.1.2. Interface Layer
+
+En esta sección se describen las interfaces de usuario y APIs que interactúan con el bounded context IAM. Estas interfaces permiten a los usuarios y otros sistemas consumir las funcionalidades del contexto de manera segura y eficiente.
+
+| Tipo | Nombre / Endpoint | Descripción |
+|------|-------------------|-------------|
+| API REST | POST /api/drivers/register | Registra un nuevo conductor en el sistema. Valida datos personales, credenciales y licencia de conducir. |
+| API REST | PUT /api/drivers/{id}/profile | Actualiza la información del perfil del conductor: foto, contacto, preferencias personales. |
+| API REST | PUT /api/drivers/{id}/license | Actualiza o renueva la información de la licencia de conducir del conductor. |
+| API REST | GET /api/drivers/{id} | Devuelve los detalles completos de un conductor específico: perfil, licencia, estado actual. |
+| API REST | GET /api/drivers/{id}/license | Obtiene la información detallada de la licencia de conducir de un conductor, incluyendo estado de validación. |
+| API REST | PUT /api/drivers/{id}/status | Permite actualizar el estado del conductor (Activar, Desactivar, Suspender). Usado por gerentes o administradores. |
+| API REST | GET /api/drivers/{id}/availability | Consulta si un conductor está disponible para ser asignado a un viaje en el momento actual. |
+| API REST | GET /api/drivers | Lista todos los conductores registrados en el sistema. Soporta filtros por estado, disponibilidad o datos de licencia. |
+| API REST | POST /api/drivers/{id}/validate-license | Ejecuta el proceso de validación de la licencia de conducir del conductor contra fuentes externas o reglas internas. |
+| Interfaz de UI (Móvil) | Pantalla de Registro | Formulario que permite al conductor crear su cuenta, ingresando datos personales, credenciales y licencia. |
+| Interfaz de UI (Móvil) | Pantalla de Perfil | Permite al conductor visualizar y editar su información personal, foto de perfil y datos de contacto. |
+| Interfaz de UI (Móvil) | Gestión de Licencia | Pantalla donde el conductor puede actualizar los datos de su licencia, ver estado de validación y fecha de vencimiento. |
+| Interfaz de UI (Web - Gerente) | Panel de Conductores | Dashboard web que permite a los gerentes visualizar listado de conductores, estados, licencias y gestionar suspensiones o activaciones. |
+
+### 5.2.1.3. Application Layer
+
+En esta sección se describen los casos de uso y servicios de aplicación que componen la lógica de negocio del bounded context IAM.
+
+| Tipo | Nombre | Descripción |
+|------|--------|-------------|
+| Use Case | RegisterDriverHandler | Orquesta el registro de un nuevo conductor: valida datos personales, crea credenciales, registra licencia y dispara el evento DriverRegistered. |
+| Use Case | UpdateDriverProfileHandler | Gestiona la actualización del perfil del conductor: valida cambios, persiste nueva información y emite el evento DriverProfileUpdated. |
+| Use Case | ValidateDriverLicenseHandler | Ejecuta el proceso de validación de la licencia de conducir, verificando vigencia, autenticidad y categoría apropiada. |
+| Use Case | UpdateDriverLicenseHandler | Permite actualizar o renovar la información de la licencia de conducir, validando fechas y documentación requerida. |
+| Use Case | ChangeDriverStatusHandler | Gestiona cambios en el estado del conductor (activación, desactivación, suspensión), aplicando reglas de negocio y notificando a otros contextos. |
+| Use Case | CheckDriverAvailabilityHandler | Consulta la disponibilidad actual de un conductor para asignación a viajes, considerando estado y condiciones operativas. |
+| Application Service | DriverApplicationService | Fachada principal del contexto Driver. Expone los casos de uso, gestiona transacciones y coordina la comunicación entre repositorio y servicios de dominio. |
+| Application Service | DriverProfileService | Gestiona todas las operaciones relacionadas con el perfil del conductor: actualización, consulta y configuración de preferencias. |
+| Command Handler | RegisterDriverCommandHandler | Procesa el comando de registro de conductor proveniente de la capa de interfaz y ejecuta la lógica de creación en el dominio. |
+| Command Handler | UpdateProfileCommandHandler | Ejecuta el comando de actualización de perfil del conductor, validando datos y disparando eventos correspondientes. |
+| Command Handler | ValidateLicenseCommandHandler | Procesa el comando de validación de licencia, interactuando con servicios externos si es necesario. |
+| Command Handler | ChangeStatusCommandHandler | Ejecuta el comando de cambio de estado del conductor, validando transiciones permitidas. |
+| Event Handler | DriverRegisteredEventHandler | Escucha el evento DriverRegistered y coordina acciones posteriores como envío de email de bienvenida o creación de perfil inicial. |
+| Event Handler | DriverLicenseExpiredEventHandler | Reacciona al evento DriverLicenseExpired, notificando al conductor y gerentes sobre la necesidad de renovación. |
+| Event Handler | DriverStatusChangedEventHandler | Procesa cambios de estado del conductor, actualizando disponibilidad para viajes y notificando a contextos dependientes. |
+| DTO | DriverDTO | Objeto de transferencia que contiene los datos básicos del conductor (id, nombre, email, teléfono, estado). |
+| DTO | DriverLicenseDTO | Transporta la información de la licencia de conducir (número, categoría, fechas, estado de validación). |
+| DTO | DriverProfileDTO | Contiene información detallada del perfil del conductor (foto, contacto completo, preferencias). |
+| DTO | DriverRegistrationDTO | Objeto usado para transportar todos los datos necesarios en el proceso de registro inicial. |
+
+### 5.2.1.4. Infrastructure Layer
+
+En esta sección se describen los componentes de infraestructura que soportan el bounded context IAM. Estos componentes incluyen implementaciones concretas de repositorios, servicios externos y mecanismos de comunicación necesarios para el funcionamiento del contexto.
+
+| Tipo | Nombre | Descripción |
+|------|--------|-------------|
+| Persistence | DriverRepositoryImpl | Implementación concreta del DriverRepository. Gestiona las operaciones CRUD del conductor (crear, actualizar perfil y estado, consultar) sobre la base de datos relacional. |
+| Persistence | DriverLicenseRepositoryImpl | Implementación responsable de almacenar y recuperar las licencias de conducir. Permite validar vigencia y mantener historial de renovaciones. |
+| Integration | LicenseValidationService | Servicio externo que valida la autenticidad de las licencias de conducir consultando bases de datos gubernamentales o servicios de terceros. |
+| Integration | DriverEventPublisher | Cliente de mensajería que publica eventos como DriverRegistered, DriverStatusChanged o DriverLicenseExpired hacia otros módulos mediante un Message Broker (RabbitMQ o Kafka). |
+| Integration | EmailNotificationService | Servicio que envía notificaciones por email al conductor sobre cambios en su perfil, validación de licencia o cambios de estado. |
+| Security | PasswordEncryptionService | Servicio de infraestructura que encripta y valida las contraseñas de los conductores utilizando algoritmos seguros (bcrypt, Argon2). |
+
+## 5.2.6. Bounded Context Software Architecture Component Level Diagrams
+
+![Driver Component Diagram](./assets/driver-bounded/component-diagram.png)
+
+## 5.2.7. Bounded Context Software Architecture Code Level Diagrams
+
+### 5.2.7.1. Bounded Context Domain Layer Class Diagrams
+
+![Driver Domain Class Diagram](./assets/driver-bounded/class-diagram.jpeg)
+
+### 5.2.7.2. Bounded Context Database Design Diagram
+
+![Driver Database Design Diagram](./assets/driver-bounded/database-diagram.png)
+
+## 5.3.1. Bounded Context: IAM Context
+
+### 5.3.1.1. Domain Layer
+
+#### Aggregates
+
+1. **User**
+    - **Descripción:** Representa un usuario en la aplicación.
+    - **Atributos:**
+        - `Id`: Identificador unico para el usuario.
+        - `Username`: Nombre del usuario.
+        - `Email`: Correo electronico del usuario.
+        - `RoleId`: El rol de acceso del usuario.
+
+#### Entities
+
+1. **UserRole**
+    - **Descripción:** Representa el rol de acceso que puede tener un usuario (Tester, admin, usuario)
+    - **Atributos:**
+        - `Id`: Identificador unico para el rol
+        - `Role`: Nombre del rol
+
+#### Value Objects
+
+1. **EUserRoles**
+    - **Descripción:** Enumerable que contiene todos los tipos de roles que puede tener un usuario.
+
+#### Commands
+
+1. **SeedUserRolesCommand:**
+    - **Descripción:** Genera los roles de acceso para poder ser usados.
+
+2. **SignInCommand:**
+    - **Descripción:** Inicio de sesión de un usuario ya registrado.
+
+3. **SignUpCommand:**
+    - **Descripción:** Registro de un nuevo usuario en la aplicación.
+
+4. **UpdateUsernameCommand:**
+    - **Descripción:** Permite el cambio del nombre de un usuario.
+
+#### Queries
+
+1. **GetAllUsersQuery:**
+    - **Descripción:** Obtener todos los usuarios registrados.
+
+2. **GetUserByEmailQuery:**
+    - **Descripción:** Obtener un usuario en base a su correo electronico.
+
+3. **GetUserByIdQuery:**
+    - **Descripción:** Obtener un usuario en base a su Id.
+
+4. **GetUsernameByIdQuery:**
+    - **Descripción:** Obtener el nombre de un usuario en base a su Id.
+
+5. **UserExistsQuery:**
+    - **Descripción:** Verificar si el usuario ya existe.
+
+#### Repositories
+
+1. **UserRepositroy:**
+    - **Descripción:** Interfaz que permite interactuar con la base de datos de usuarios.
+    - **Métodos:**
+        - `FindByEmailAsync(string email)`: Devuelve un usuario en base al email proporcionado
+        - `ExistByUsername(string username)`: Devuelve un valor positivo si el nombre de usuario se encuentra en otro usuario
+        - `GetUsernameByIdAsync(int userId)`: Devuelve el nombre de usuario con en base a un id proporcionado
+        - `ExistsById(int userId)`: Devuelve un valor positivo si hay un usuario con el id proporcionado
+
+2. **UserRoleRepository:**  
+    - **Descripción:** Interfaz que permite interactuar con la base de datos de roles de usuario
+    - **Métodos:**
+        - `ExistsUserRole(EUserRoles role)`: Devuelve positivo si el rol de usuario ya existe.
+
+### 5.3.1.2. Interface Layer
+
+#### Facades
+
+1. **IamContextFacade:**
+    - **Descripción:** Permite que otros bounded context accedan a este contexto a traves del patrón facade
+    - **Métodos:**
+        - `CreateUser(string username, string password, string email)`: Permite crear un usuario desde fuera del bounded context.
+        - `FetchUserIdByUsername(string username)`: Permite extrar el id de un usuario a traves de su nombre de usuario.
+        - `FetchUsernameById(int userId)`: Devuelve un nombre de usuario en base a un id proporcionado
+
+#### Controllers
+
+1. **AuthenticationController:**
+    - **Descripción:** Expone endpoints para autenticación de usuarios.
+    - **Métodos:**
+        - `SignIn(SignInResource signInResource)`: Endpoint para el inicio de sesión.
+        - `SignUp(SignUpResource signUpResource)`: Endpoint para el registro de un nuevo usuario.
+
+2. **UsersController:** 
+    - **Descripción:** Expone endpoints para la gestión de usuarios
+    - **Métodos:**
+        - `GetUserById(int userId)`: Enpoint que permite obtener un usuario a traves de su id
+        - `GetAllUsers()`: Endpoint que permite obtener a todos los usuarios.
+        - `GetUserNameById`: Endpoint que permite obtener un nombre de usuario a traves del id del usuario.
+        - `UpdateUser(int userId, UpdateUsernameResource updateUsernameResource)`: Endpoint que permite actualizar el nombre de usuario de un usuario
+
+### 5.3.1.3. Application Layer
+
+#### Command Services
+
+1. **SeedUserRoleCommandService:**
+    - **Descripción:** Inicializa la tabla de roles de usuarios con los valores preestablecidos
+    - **Métodos:**
+        - `Handle(SeedUserRolesCommand command)`: Valida y aplica el comando para generar los roles de usuario
+
+2. **UserCommandService:**
+    - **Descripción:** Maneja comandos para crear, actualizar o validar usuarios.
+    - **Métodos:**
+        - `Handle(SignInCommand command)`: Valida y aplica el comando para iniciar la sesión del usuario.
+        - `Handle(SignUpCommand command)`: Valida y aplica el comando para registrar un nuevo usuario.
+        - `Handle(UpdateUsernameCommand command)`: Valida y aplica el comando para cambiar el nombre a un usuario existente.
+
+#### Query Services
+
+1. **UserQueryService:**
+    - **Descripción:** Ofrece consultas para obtener información de los usuarios.
+    - **Métodos:**
+        - `Handle(GetUserByIdQuery query)`: Valida y aplica la consulta para obtener un usuario dado su id.
+        - `Handle(GetAllUsersQuery query)`: Valida y aplica la consulta para obtener todos los usuarios.
+        - `Handle(GetUserByEmailQuery)`: Valida y aplica la consulta para obtener un usuario dado su email.
+        - `Handle(GetUsernameByIdQuery)`: Valida y aplica la consulta para obtener el nombre de usuario dado el id de un usuario.
+        - `Handle(UserExistsQuery)`: Valida y aplica la consulta para verificar que un usuario exista.
+
+#### Outbound Services
+
+1. **Hashing Service:** 
+    - **Descripción:** Maneja metodos para encriptar contraseñas y verificarlas.
+    - **Métodos:**
+        - `HashPassword(string password)`: Permite hashear o encriptar una contraseña
+        - `VerifyPassword(string password, string passwordHash)`: Permite validar una contraseña hasheada o encriptada con una original
+
+2. **Token Service:**
+    - **Descripción:** Maneja los tokens para poder manejar la sesión de los usuarios.
+    - **Métodos:**
+        - `GenerateToken(User user)`: Permite generar un token unico asociado a un usuario.
+        - `ValidateToken(string token)`: Permite validar el token de un usuario.
+
+### 5.3.1.4. Infrastructure Layer
+
+#### Repositories (Implementacion)
+
+1. **UserRepository:**
+    - **Descripción:** Implementación que permite interactuar con la base de datos de usuarios.
+    - **Métodos:**
+        - `FindByEmailAsync(string email)`: Devuelve un usuario en base al email proporcionado
+        - `ExistByUsername(string username)`: Devuelve un valor positivo si el nombre de usuario se encuentra en otro usuario
+        - `GetUsernameByIdAsync(int userId)`: Devuelve el nombre de usuario con en base a un id proporcionado
+        - `ExistsById(int userId)`: Devuelve un valor positivo si hay un usuario con el id proporcionado
+
+2. **UserRoleRepository:** 
+    - **Descripción:** Implementación que permite interactuar con la base de datos de roles de usuario
+    - **Métodos:**
+        - `ExistsUserRole(EUserRoles role)`: Devuelve positivo si el rol de usuario ya existe.
+
+### 5.3.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+![Diagrama Structurizr([URL]())](assets/iam-bounded/iam-context.png)
+
+### 5.3.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.3.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+![Diagrama LucidChart([URL]())](assets/iam-bounded/iam-class-diagram.png)
+
+#### 5.3.1.6.2. Bounded Context Database Design Diagram
+
+![Diagrama Vertabelo[URL]())](assets/iam-bounded/iam-db.png)
+
+## 5.4. Bounded Context: Trip
+
+Este Bounded Context abarca la gestión del ciclo de vida de los viajes realizados por los conductores. Su propósito es registrar y controlar los viajes desde su inicio hasta su finalización o cancelación, asegurando la integridad de la información y su comunicación con los contextos Monitoring y Notification.
+
+### 5.4.1. Domain Layer
+
+Esta capa representa el núcleo del contexto Trip, donde se definen las entidades, objetos de valor, servicios y eventos que contienen las reglas de negocio. Su objetivo es mantener la coherencia del dominio y reflejar fielmente los procesos del viaje dentro del sistema.
+
+| Tipo | Nombre | Descripción |
+|------|---------|-------------|
+| **Entidad** | `Trip` | Representa un viaje realizado por un conductor. Contiene información sobre el conductor, vehículo, horarios de inicio y fin, y el estado del viaje (activo, finalizado, cancelado). Es la entidad raíz del agregado. |
+| **Entidad** | `Driver` | Identifica al conductor responsable del viaje. Se utiliza como referencia externa desde el contexto Driver para validar disponibilidad y estado. |
+| **Entidad** | `Vehicle` | Define el vehículo asignado al viaje, incluyendo su placa y estado operativo. Referencia proveniente del contexto Management. |
+| **Entidad** | `Report` | Registra la información del viaje al finalizar. Puede ser generado automáticamente y enviado a diferentes actores (conductor o gerente). |
+| **Entidad** | `Alert` | Representa las alertas de somnolencia, distracción o micro-sueño detectadas durante el viaje. Está relacionada con el contexto Monitoring. |
+| **Objeto de Valor** | `TripStatus` | Define los estados válidos del viaje (Iniciado, En progreso, Finalizado, Cancelado) y asegura la consistencia en las transiciones. |
+| **Objeto de Valor** | `TripTime` | Agrupa las marcas temporales del viaje, validando que la hora de inicio sea anterior a la de finalización. |
+| **Objeto de Valor** | `TripDataPolicy` | Encapsula las reglas que determinan cuándo y cómo se recolectan o envían los datos del viaje hacia la nube para análisis posteriores. |
+| **Agregado** | `TripAggregate` | Agrupa las entidades y objetos de valor relacionados con un viaje, controlando las operaciones de inicio, finalización y cancelación. |
+| **Domain Service** | `TripManagerService` | Coordina las operaciones principales del viaje (inicio, fin, cancelación), aplicando reglas de negocio y validando los estados. |
+| **Domain Service** | `TripReportGenerator` | Procesa la información del viaje y genera los reportes finales para los usuarios correspondientes. |
+| **Repository (Interface)** | `TripRepository` | Define las operaciones de persistencia del agregado Trip, como registrar viajes, actualizar estado y recuperar historial. |
+| **Domain Event** | `TripStarted` | Evento que se dispara cuando un viaje es iniciado exitosamente por el conductor. |
+| **Domain Event** | `TripEnded` | Evento que indica la finalización de un viaje, desencadenando la generación del reporte y la sincronización de datos. |
+| **Domain Event** | `TripCancelled` | Evento que comunica la cancelación de un viaje antes de su finalización. |
+| **Domain Event** | `TripDataSentToCloud` | Evento emitido cuando los datos del viaje han sido enviados y almacenados correctamente en la nube. |
+
+### 5.4.2. Interface Layer
+
+Esta capa expone las funcionalidades del contexto Trip, permitiendo que los módulos Monitoring, Notification y Management, así como los usuarios finales, interactúen con los servicios del dominio. Incluye los controladores REST que gestionan solicitudes para iniciar, finalizar o cancelar viajes, y las interfaces de usuario que permiten a conductores y gerentes visualizar los recorridos, alertas y reportes generados.
+
+| Tipo | Nombre / Endpoint | Descripción |
+|------|--------------------|-------------|
+| **API REST** | `POST /api/trips/start` | Inicia un nuevo viaje, validando que el conductor y el vehículo estén disponibles. Registra la hora de inicio y el estado "En progreso". |
+| **API REST** | `PUT /api/trips/{id}/end` | Finaliza un viaje activo, registra la hora de finalización y dispara la generación del reporte asociado. |
+| **API REST** | `PUT /api/trips/{id}/cancel` | Permite cancelar un viaje antes de finalizarlo. Actualiza el estado y registra el motivo de cancelación. |
+| **API REST** | `GET /api/trips/{id}` | Devuelve los detalles de un viaje específico: conductor, vehículo, alertas asociadas y reporte generado. |
+| **API REST** | `GET /api/trips/driver/{driverId}` | Obtiene el historial de viajes realizados por un conductor determinado. Soporta filtros por fecha o estado. |
+| **API REST** | `GET /api/trips/vehicle/{vehicleId}` | Lista todos los viajes asociados a un vehículo para control de mantenimiento o análisis de uso. |
+| **API REST** | `GET /api/trips/reports` | Recupera los reportes de viaje generados (enviados a conductor o gerente) y su estado actual. |
+| **API REST** | `POST /api/trips/{id}/sync` | Sincroniza los datos del viaje (alertas, duración, métricas) con la nube según la política TripDataPolicy. |
+| **Interfaz de UI (Móvil)** | `Pantalla de Viaje Activo` | Muestra al conductor la información en tiempo real del viaje: duración, estado, alertas y recomendaciones. |
+| **Interfaz de UI (Móvil)** | `Historial de Viajes` | Permite al conductor revisar viajes anteriores, reportes generados y alertas registradas. |
+| **Interfaz de UI (Web - Gerente)** | `Panel de Seguimiento de Viajes` | Dashboard web que permite a los gerentes visualizar viajes activos, alertas críticas y reportes sincronizados. |
+
+### 5.4.3. Application Layer
+
+Esta capa coordina los flujos de negocio del contexto Trip, garantizando la correcta ejecución de las operaciones del dominio y su comunicación con las demás capas. A través de Use Cases, Application Services, Command Handlers y Event Handlers, se gestionan las acciones de inicio, finalización, cancelación y sincronización de los viajes, preservando la integridad del dominio y propagando eventos hacia Monitoring, Notification y Management.
+
+| Tipo | Nombre | Descripción |
+|------|---------|-------------|
+| **Use Case** | `StartTripHandler` | Orquesta el inicio de un viaje: valida la disponibilidad del conductor y del vehículo, crea la entidad Trip y dispara el evento TripStarted. |
+| **Use Case** | `EndTripHandler` | Gestiona la finalización de un viaje activo: actualiza su estado, registra la hora de fin y activa la generación del reporte correspondiente. |
+| **Use Case** | `CancelTripHandler` | Permite cancelar un viaje en curso, actualizando su estado y notificando al módulo de Management para fines de registro y auditoría. |
+| **Use Case** | `SyncTripDataHandler` | Controla la sincronización de los datos del viaje (alertas, duración, métricas) hacia la nube conforme a la política TripDataPolicy. |
+| **Application Service** | `TripApplicationService` | Fachada principal del contexto Trip. Expone los casos de uso, gestiona transacciones y coordina la comunicación entre el repositorio y los servicios de dominio. |
+| **Application Service** | `TripReportService` | Gestiona la creación y envío de reportes de viaje, interactuando con el contexto Notification mediante eventos de integración. |
+| **Command Handler** | `StartTripCommandHandler` | Procesa el comando de inicio de viaje proveniente de la capa de interfaz y ejecuta la lógica de creación del viaje en el dominio. |
+| **Command Handler** | `EndTripCommandHandler` | Ejecuta el comando que marca un viaje como finalizado y dispara el evento TripEnded. |
+| **Command Handler** | `CancelTripCommandHandler` | Procesa el comando de cancelación de viaje, validando estado actual y registrando el motivo. |
+| **Command Handler** | `SyncTripDataCommandHandler` | Ejecuta la acción de sincronizar los datos del viaje con la nube, validando las políticas definidas. |
+| **Event Handler** | `TripEndedEventHandler` | Escucha el evento TripEnded y coordina la generación automática del reporte y su notificación al gerente. |
+| **Event Handler** | `TripDataSentEventHandler` | Reacciona al evento TripDataSentToCloud, confirmando la sincronización exitosa y actualizando el estado del viaje. |
+| **DTO** | `TripDTO` | Objeto de transferencia que contiene los datos básicos del viaje (id, conductor, vehículo, horaInicio, horaFin, estado). |
+| **DTO** | `TripReportDTO` | Transporta la información del reporte de viaje, incluyendo métricas, alertas y destino de envío (conductor o gerente). |
+
+### 5.4.4. Infrastructure Layer
+
+En esta capa se implementan las clases que permiten al contexto Trip acceder a servicios externos, como bases de datos, sistemas en la nube o mensajería. Aquí se concretan los Repositories del dominio para la persistencia de viajes y reportes, junto con los componentes de integración que sincronizan datos y eventos con otros contextos del sistema, asegurando la disponibilidad y trazabilidad de la información.
+
+| Tipo | Nombre | Descripción |
+|------|---------|-------------|
+| **Persistence** | `TripRepositoryImpl` | Implementación concreta del TripRepository. Gestiona las operaciones CRUD del viaje (crear, actualizar estado, consultar historial) sobre la base de datos relacional. |
+| **Persistence** | `ReportRepositoryImpl` | Implementación responsable de almacenar y recuperar los reportes generados al finalizar un viaje. Permite mantener sincronizado el historial con el módulo de notificaciones. |
+| **Integration** | `CloudSyncService` | Servicio encargado de enviar los datos del viaje (duración, alertas, métricas) hacia la nube, cumpliendo las reglas definidas en la política TripDataPolicy. |
+| **Integration** | `NotificationPublisher` | Cliente de mensajería que publica eventos como TripEnded o TripDataSentToCloud hacia el módulo Notification mediante un Message Broker (por ejemplo, RabbitMQ o Kafka). |
+
+### 5.4.5. Bounded Context Software Architecture Component Level Diagrams
+
+![Component Level Diagram - Trip](assets/Component-Level-Diagrams-Trip.png)
+
+### 5.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.4.6.1. Bounded Context Domain Layer Class Diagrams
+
+![Class Diagram - Trip](assets/Class-Diagrams-Trip.png)
+
+#### 5.4.6.2. Bounded Context Database Design Diagram
+
+![Database Design Diagram - Trip](assets/Database-Design-Diagrams-Trip.png) 
+
+## 5.5. Bounded Context: Fatigue Monitoring
+
+Aquí se concentra la lógica de detección de fatiga de los conductores, la generación de alertas críticas y la visualización en tiempo real del estado de monitoreo. Este contexto limitado maneja la integración con los sistemas de inteligencia artificial y notificaciones externas para mantener la seguridad de los conductores.
+
+### 5.5.1. Domain Layer
+
+Esta capa contiene los elementos principales del dominio, como entidades, objetos de valor, servicios de dominio y eventos que representan la lógica central del negocio relacionada con la detección y gestión de la fatiga.
+
+| Tipo | Nombre | Descripción |
+|------|---------|-------------|
+| **Entidad** | `DrowsinessEvent` | Representa un evento de somnolencia detectado (como parpadeos, bostezos o micro sueños) asociado a una sesión de monitoreo. |
+| **Entidad** | `CriticalAlert` | Registra una alerta crítica generada por fatiga severa durante una sesión de conducción. |
+| **Objeto de Valor** | `SeverityScore` | Valor que mide la severidad del evento de fatiga con base en los datos de sensores. |
+| **Objeto de Valor** | `SensorData` | Contiene los valores recogidos por los sensores, como el índice de parpadeo o la apertura bucal. |
+| **Domain Service** | `FatigueDetectionService` | Servicio que detecta la fatiga analizando datos de sensores y calcula la severidad de los eventos. |
+| **Domain Service** | `AlertGenerationService` | Servicio encargado de generar alertas críticas a partir de los eventos de somnolencia acumulados. |
+| **Domain Event** | `FatigueDetectedEvent` | Evento que se dispara cuando se detectan signos de fatiga en el conductor. |
+| **Domain Event** | `CriticalAlertGeneratedEvent` | Evento que se emite al crear una alerta crítica para notificar a otros sistemas. |
+
+### 5.5.2. Interface Layer
+
+Esta capa define los puntos de interacción del usuario y los endpoints públicos del sistema.  
+Incluye tanto las API REST que exponen funcionalidades del backend, como las interfaces gráficas donde los usuarios visualizan el estado del monitoreo.
+
+| Tipo | Nombre / Endpoint | Descripción |
+|------|--------------------|-------------|
+| **API REST** | `GET /api/fatigue/status` | Consulta el estado actual de fatiga de un conductor. |
+| **API REST** | `GET /api/alerts/reports` | Obtiene reportes y métricas de alertas críticas generadas. |
+| **Interfaz de UI** | `Monitoring Panel` | Panel web para visualizar el estado de fatiga en tiempo real y gestionar alertas. |
+
+### 5.5.3. Application Layer
+
+Esta capa orquesta la lógica de aplicación y coordina la ejecución de los casos de uso.  
+Contiene los servicios que gestionan las operaciones principales, así como los DTOs utilizados para transferir datos entre capas.
+
+| Tipo | Nombre | Descripción |
+|------|---------|-------------|
+| **Use Case** | `DetectFatigueUseCase` | Analiza los datos de entrada en tiempo real para determinar si existe fatiga. |
+| **Use Case** | `GenerateCriticalAlertUseCase` | Crea y envía alertas críticas cuando se detectan niveles de fatiga peligrosos. |
+| **Application Service** | `MonitoringServiceApp` | Coordina los casos de uso y las operaciones de monitoreo general. |
+| **DTO** | `FatigueStatusDTO` | Transfiere información del estado de fatiga del conductor al panel o API. |
+| **DTO** | `CriticalAlertReportDTO` | Contiene los datos del reporte de alertas generadas para ser mostradas o exportadas. |
+
+### 5.5.4. Infraestructure Layer
+
+Esta capa gestiona la persistencia y la integración con sistemas externos.  
+Se encarga de conectar el dominio con las bases de datos y los servicios externos, como los de notificación o análisis de IA.
+
+| Tipo | Nombre | Descripción |
+|------|---------|-------------|
+| **Persistence** | `AlertRepository` | Accede a la base de datos para almacenar, recuperar y generar reportes de alertas. |
+| **Integración** | `NotificationAdapter` | Envía alertas a los sistemas externos de notificación o mensajería. |
+
+### 5.5.5. Bounded Context Software Architecture Component Level Diagrams
+
+![Component Level Diagram - Monitoring](assets/Component-Level-Diagrams-Monitoring.png)
+
+### 5.5.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.5.6.1. Bounded Context Domain Layer Class Diagrams
+
+![Class Diagram - Monitoring](assets/Class-Diagrams-Monitoring.png)
+
+#### 5.5.6.2. Bounded Context Database Design Diagrams
+
+<img src="./assets/Database-Diagrams-Monitoring.png">
+
+## 5.6 Bounded Context: Management
+
+Este bounded context concentra todo lo relativo a la gestión de la flota y conductores desde la perspectiva de los gerentes y supervisores. Modela las entidades relacionadas con Reportes, Patrones de Riesgo y Roles de Usuario, y proporciona capacidades para la generación de informes, detección de patrones históricos y control de permisos. Su límite garantiza que las políticas de supervisión y cumplimiento se apliquen de forma consistente en toda la plataforma.
+
+### 5.6.1. Domain Layer
+
+| Tipo            | Nombre                         | Descripción                                                                                          |
+| --------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| Entidad         | **Report**                     | Representa un reporte consolidado de alertas, viajes y métricas asociadas a un conductor o a toda la flota.|
+| Entidad         | **Manager (Usuario)**          | Representa al gerente o supervisor con acceso a los reportes completos y a las funcionalidades administrativas del sistema.|
+| Objeto de Valor | **RiskPattern**                | Define un patrón recurrente de somnolencia o incidentes detectado en base a datos históricos (ej. alertas en franjas horarias específicas).|
+| Domain Service  | **RiskAnalysisService**        | Servicio de dominio que aplica reglas de negocio para identificar patrones de riesgo a partir de los datos de viajes y alertas de conductores.|
+| Domain Service  | **ReportGenerator**            | Lógica encargada de crear reportes, consolidar métricas, aplicar formato de exportación (PDF, Excel) y garantizar consistencia de la información.|
+| Domain Event    | **ManagerReassignedDriver**  |Evento que indica que un gerente ha reasignado a un conductor en un viaje en curso.|
+| Domain Event    | **AccidentPrevented**         |Evento que indica que una intervención temprana evitó un accidente en carretera.|
+| Domain Event    | **BackupDriverAssigned**     |Evento que refleja la asignación de un conductor de respaldo en caso de riesgo o incapacidad del conductor principal.|
+| Domain Event    | **AccidentOccurred**          |Evento que indica que un accidente ocurrió durante el viaje, lo que dispara la coordinación de protocolos de emergencia.|
+| Domain Event    | **EmergencyResponseDispatched** |Evento que refleja que el equipo de respuesta de emergencias ha sido enviado tras un incidente crítico.|
+| Domain Event    | **InsuranceNotified**         |Evento que confirma la notificación a la aseguradora tras un accidente o incidente relevante.|
+| Domain Event    | **DriverSuspensionInitiated**  |Evento que refleja la suspensión temporal de un conductor por razones de seguridad o incumplimiento de políticas.|
+| Domain Event    | **DriverSuspensionLifted**   |Evento que refleja que la suspensión del conductor ha sido levantada y puede volver a operar.|
+
+### 5.6.2. Interface Layer
+
+| Tipo         | Nombre / Endpoint                  | Descripción                                                                                                               |
+| ------------ | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **API REST** | `GET /api/reports`                 | Devuelve los reportes de seguridad y desempeño de conductores, incluyendo métricas históricas y alertas críticas.         |
+| **API REST** | `GET /api/reports/:id`             | Devuelve el detalle de un reporte específico, con alertas, métricas y patrones de riesgo asociados a un conductor.        |
+| **API REST** | `POST /api/driver/assignment`      | Permite asignar o reasignar un conductor a un viaje específico, según reglas de disponibilidad.                           |
+| **API REST** | `POST /api/critical-events/handle` | Permite al gerente registrar y gestionar un evento crítico (accidente, micro-sueño, emergencia).                          |
+| **API REST** | `GET /api/risk-patterns`           | Devuelve patrones de riesgo detectados (ej. horarios críticos, reincidencia de alertas).                                  |
+| **API REST** | `POST /api/reports/export`         | Genera y devuelve un archivo exportable (PDF o Excel) con métricas de seguridad de la flota.                              |
+| **UI**       | FleetDashboard                 | Vista centralizada para gerentes y supervisores donde se muestran métricas globales de la flota y alertas en tiempo real. |
+| **UI**       | DetailedReportsPanel      | Interfaz donde los gerentes pueden visualizar reportes completos de cada conductor, incluyendo viajes y alertas.          |
+| **UI**       | RoleManagementModule         | Pantalla de administración para asignar roles (gerente, supervisor, conductor) y controlar permisos de acceso.            |
+
+### 5.6.3. Application Layer
+
+| Tipo                    | Nombre                       | Descripción                                                                                                                         |
+| ----------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Use Case**            | ManageDriverAssignment | Caso de uso que permite asignar o reasignar un conductor a un viaje, verificando reglas de disponibilidad y roles.                  |
+| **Use Case**            | HandleCriticalEvent         | Caso de uso que orquesta la gestión de incidentes críticos (accidentes, emergencias), notificando a las entidades correspondientes. |
+| **Use Case**            | ViewReports            | Caso de uso que permite a los gerentes visualizar reportes de viajes, alertas y métricas históricas de los conductores.             |
+| **Use Case**            | ExportReports             | Caso de uso que genera archivos exportables (PDF/Excel) con métricas de seguridad y desempeño de la flota.                          |
+| **Application Service** | ReportManagementService     | Fachada que centraliza la generación, consulta y exportación de reportes, manejando transacciones.                                  |
+| **Application Service** | DriverAssignmentService   | Servicio de aplicación que encapsula la lógica para asignar/reasignar conductores y coordinar con el BC de Trip.                    |
+| **DTO**                 | ReportDTO                   | Objeto plano que transporta datos de reportes (alertas, métricas, patrones de riesgo) hacia la UI/API.                              |
+| **DTO**                 | DriverDTO                 | Objeto plano con los datos principales del conductor (nombre, estado, asignación actual).                                           |
+| **DTO**                 | CriticalEventDTO             | Objeto plano con la información relevante de un incidente (tipo, hora, conductor involucrado, estado de respuesta).                 |
+
+### 5.6.4. Infrastructure Layer
+
+| Tipo             | Nombre                                          | Descripción                                                                                                    |
+| ---------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------|
+| **Persistence**  | ReportRepositoryImpl     | Almacena información de reportes, métricas de desempeño, patrones de riesgo y roles de usuario.                |
+| **Persistence**  | CloudSyncService     | Guarda los reportes exportados en formatos PDF y Excel para acceso histórico y auditorías.                     |
+| **Integration**  | NotificationPublisher  | Envía reportes automáticos y alertas críticas a gerentes y supervisores en tiempo real.                        |
+
+### 5.6.5. Bounded Context Software Architecture Component Level Diagrams
+
+<img src="./assets/Component-Level-Diagrams-Management.png"> 
+
+### 5.6.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.6.6.1 Bounded Context Domain Layer Class Diagrams
+
+<img src="./assets/Class-Diagrams-Management.png"> 
+
+#### 5.6.6.2 Bounded Context Database Design Diagrams
+
+<img src="./assets/Database-Diagrams-Management2.png"> 
+
+# Capítulo VI: Solution UI/UX Design
+
+## 6.1. Style Guidelines
+
+En esta sección, el equipo de SafeVision sienta las bases para contar con un repositorio central y organizado de uso común para todo el equipo, que incluye assets, fonts, colores, componentes y patrones de diseño. Esto con el fin de mantener una presentación consistente y enfocada en los valores de seguridad, confianza y profesionalismo que representa nuestra solución. Se incluyen secciones para General Style Guidelines, Web Style Guidelines y Mobile Style Guidelines.
+
+### 6.1.1. General Style Guidelines
+
+Aquí se explica las decisiones y referencias visuales sobre conceptos generales
+básicos como Branding, Typography, Colors y Spacing, así como las dimensiones a
+adoptar para el tono de comunicación y lenguaje aplicado (Divertido/Serio,
+Formal/Casual, Respetuoso/Irreverente, Entusiasta/Sereno). Puede tomarse como
+referencia un Design System existente, sobre el cual se puede realizar adaptaciones.
+Esta sección debe incluir el sustento de principios y elementos de diseño
+considerados para las decisiones.
+
+El diseño de SafeVision refleja la esencia de una marca tecnológica, confiable y enfocada en la seguridad vial, mediante decisiones visuales que priorizan la claridad, la legibilidad y el profesionalismo. La propuesta combina un lenguaje visual moderno con una comunicación sobria y empática, adaptada tanto a conductores profesionales como a gerentes de flota.
+
+#### Branding
+
+El concepto visual de SafeVision se inspira en la idea de visión inteligente y monitoreo constante, simbolizada por un logotipo basado en la forma de un ojo. Este elemento comunica los valores de vigilancia, prevención y protección, pilares centrales de la marca.
+El sistema visual se fundamenta en un tono serio, formal, respetuoso y sereno, acorde a su propósito de promover la seguridad y la confianza en el transporte.
+La voz de marca se mantiene profesional y cercana, evitando tecnicismos excesivos, y transmitiendo calma y credibilidad.
+
+#### Typography
+
+La tipografía seleccionada es Poppins, una fuente sans-serif geométrica, moderna y legible, ideal para interfaces digitales.
+
+Se utiliza con jerarquías bien definidas que garantizan orden visual:
+
+- Títulos: Poppins Bold, color #222222
+- Subtítulos: Poppins Medium, color #74788D
+- Texto general: Poppins Regular, color #757575
+- Botones principales: Poppins SemiBold, texto blanco sobre fondo #C13515
+
+Esta elección equilibra elegancia y funcionalidad, reforzando la identidad tecnológica de la aplicación.
+
+#### Colors
+
+La paleta cromática está cuidadosamente construida para comunicar seguridad, alerta y confianza. Combina tonos cálidos de atención con matices fríos y neutros que equilibran el diseño.
+
+| **Color**           | **Código**           | **Uso**                                                         |
+|----------------------|----------------------|------------------------------------------------------------------|
+| Rojo institucional   | #C13515              | Color principal de la marca. Se usa en botones y elementos de acción. |
+| Amarillo advertencia | #FFCD18              | Indicadores de precaución o atención.                           |
+| Azul tecnológico     | #0066CC              | Acentos informativos y enlaces secundarios.                     |
+| Verde seguro         | #00CA75              | Confirmaciones de éxito o estados óptimos.                      |
+| Borgoña oscuro       | #5A0000              | Alertas de riesgo alto o fondo de advertencia.                  |
+| Rojo medio           | #BA4848              | Errores o avisos secundarios.                                   |
+| Grises neutros       | #757575 y #74788D    | Textos secundarios, iconografía y fondos suaves.                |
+| Negro carbón         | #222222              | Texto principal y encabezados.                                  |
+
+La combinación de rojo, gris y blanco otorga una estética profesional, moderna y coherente con el objetivo del sistema.
+
+#### Spacing / Layout
+
+El diseño sigue una estructura modular basada en una rejilla de 8 px, permitiendo uniformidad en márgenes y alineaciones.
+
+Para la web se emplea una rejilla de 12 columnas, mientras que en la app móvil se usa una de 4 columnas, facilitando la adaptabilidad visual.
+
+Los espacios en blanco cumplen un rol clave para mantener equilibrio, legibilidad y orden en la interfaz.
+
+## 6.2. Information Architecture
+
+En esta sección el equipo plantea las decisiones y sustento que dirigen la manera
+como se organizará el contenido en las experiencias web y móvil, incluyendo el
+Landing Page y las Aplicaciones. Dichas propuestas deben estar orientadas a que los
+visitantes y usuarios se adapten con facilidad a la funcionalidad de cada producto y
+puedan encontrar todo aquello que necesiten sin esfuerzo. Se incluyen las decisiones
+sobre los Organization Systems, Labeling Systems, Navigation Systems y Searching
+Systems
+
+La arquitectura de información de SafeVision está diseñada para que los usuarios comprendan y accedan fácilmente a todas las funciones, tanto en la Landing Page como en la aplicación móvil.
+
+Su estructura se orienta a guiar la navegación de forma fluida, reduciendo el esfuerzo cognitivo y asegurando que la información relevante esté siempre visible.
+
+### Landing Page
+
+La "Landing Page" presenta un recorrido visual limpio y jerárquico, con secciones que comunican directamente la propuesta de valor del producto:
+
+“¿Eres gerente o conductor? Conduce seguro, llega tranquilo”. Expone la función principal del sistema: la detección de fatiga mediante IA.
+
+Accesos directos a Google Play y App Store.
+
+Bloque “Diseñado para todos” con dos perfiles:
+- Soy gerente de flota  
+- Soy conductor profesional  
+
+Beneficios para conductores:
+- Conduce seguro → recibe alertas ante signos de fatiga.  
+- Mantente alerta → IA que monitorea el estado constantemente.  
+- Descansa mejor → optimiza descansos con datos reales.  
+- Protégete → tecnología que vela por tu seguridad.  
+
+Beneficios para gerentes:
+- Monitorea el recorrido de la flota.  
+- Contacta con los conductores en tiempo real.  
+- Gestiona alertas y contenido relevante.  
+- Administra decisiones basadas en reportes reales.  
+
+Plan empresarial: “Comienza a trabajar con nosotros desde S/80 por bus” con características como inteligencia artificial, dashboards, dispositivos IoT y alertas personalizadas.  
+
+Sección institucional: incluye ¿Quiénes somos?, misión, visión y el equipo de SafeVision (Angello Soza, Beth Oneglio, Fernando Salgado, Leonardo Linares y Fabia Herrera).  
+
+Pie de página: enlaces a Empresa, Conductor, Nosotros, Contáctanos, Descargar y selector de idioma (ES/EN).
+
+### Aplicación Móvil
+
+El flujo móvil está estructurado de manera secuencial y lógica para facilitar el uso:
+
+1. **Inicio de sesión (Log in)**: campos de acceso y enlace a “Forgot your password?”.
+2. **Selección de perfil**: opciones “Professional Driver” o “Fleet Manager”.
+3. **Registro**: formulario con campos de nombre, DNI, email, teléfono y contraseña.
+4. **Datos de empresa**: nombre, alias y RUC.
+5. **Términos y condiciones**: texto legal con botón “Accept & continue”.
+6. **Confirmación de cuenta**: mensaje de éxito.
+7. **Panel principal**: estadísticas de conductores, alertas, descansos y niveles de riesgo.
+8. **Visualización de flota**: datos detallados de cada conductor y alertas activas.
+
+El diseño guía al usuario paso a paso, manteniendo coherencia visual y navegación intuitiva.
+
+### 6.2.2. Labeling Systems
+
+Aquí el equipo explica de qué maneras se representarán los datos, considerando
+simplicidad y buscando evitar la confusión para los visitantes y usuarios. En esta
+sección se especifica las etiquetas (con el mínimo número de palabras) a utilizar para
+representar los conjuntos de información y las asociaciones entre las mismas.
+
+El etiquetado busca simplicidad y consistencia, evitando confusión o ambigüedad.
+Las etiquetas están redactadas en lenguaje directo y positivo, adaptadas al contexto de acción.
+
+Principales Etiquetas:
+
+- “Log in”, “Sign up”, “Continue”, “Accept & continue”, “Let’s get started!”
+- “Drivers”, “Alerts”, “Stats”, “Profile”, “Critical alerts”
+- “Your account has been created”
+- “Now you can start using SafeVision”
+- En la web: “Comienza ahora”, “Descargar”, “Ver más”
+
+Todas las etiquetas mantienen el mismo estilo tipográfico (Poppins SemiBold) y los colores definidos por su jerarquía (#C13515 para botones activos y #74788D para textos secundarios).
+
+### 6.2.3. Searching Systems
+
+En esta sección el equipo explica qué medios de ayuda se brindará al usuario para la
+búsqueda de datos dentro de los productos digitales. Dichas decisiones sobre los
+sistemas de búsqueda tratan de evitar que los usuarios se sientan perdidos entre el
+volumen de información. Aquí se deben especificar qué opciones de búsqueda
+ofrecerán las aplicaciones, con qué filtros contará el usuario en cada caso y cómo
+lucirán los datos después de la búsqueda.
+
+SafeVision ofrece un sistema de búsqueda intuitivo y orientado a la toma de decisiones rápidas.
+En la versión web, el campo de búsqueda permite filtrar por conductor, fecha, nivel de alerta o tipo de evento.
+En la app móvil, el campo de búsqueda se ubica en la parte superior del panel principal y permite filtrar por conductor o alerta.
+
+Filtros disponibles:
+- Nombre o ID del conductor
+- Nivel de fatiga (bajo, medio, alto)
+- Fecha o rango de monitoreo
+- Tipo de alerta
+
+Los resultados se visualizan con códigos de color:
+- Verde (#00CA75): estado seguro
+- Amarillo (#FFCD18): alerta moderada
+- Rojo (#C13515): alerta crítica
+
+El diseño evita sobrecarga visual, mostrando la información más relevante en tarjetas compactas y legibles.
+
+### 6.2.4. SEO Tags and Meta Tags
+
+En esta sección se debe incluir los SEO (Search Engine Optimization) Tags y Meta
+Tags junto con los valores que asignará en las principales páginas de la experiencia
+tanto a nivel del sitio web estático (Landing Page) como Web Applications. Se debe
+incluir Title, los Meta Tags Description, Keywords, Author como mínimo. Del mismo
+modo, para las aplicaciones móviles u otros productos digitales que se exponen vía
+un app store, debe incluir los ASO (App Store Optimization) elements como App
+Title, App keywords, App subtitle, App description.
+
+#### Landing Page
+
+- **Title**: SafeVision | Tecnología de Seguridad Vial con Inteligencia Artificial
+- **Meta Description**: SafeVision detecta signos de somnolencia y fatiga mediante inteligencia artificial, brindando alertas y reportes en tiempo real para proteger a conductores y flotas.
+- **Keywords**: seguridad vial, transporte, IA, conducción segura, fatiga, monitoreo, prevención
+- **Author**: PCC Team
+
+#### Aplicación Móvil
+
+- **App Title**: SafeVision – Seguridad Inteligente en Carretera
+- **Subtitle**: Detección de fatiga y alertas en tiempo real
+- **Keywords**: IA, transporte, seguridad vial, conductores, flotas
+- **App Description**: SafeVision monitorea el estado de los conductores mediante inteligencia artificial e IoT, generando alertas y reportes automáticos que mejoran la seguridad y eficiencia del transporte.
+
+### 6.2.5. Navigation Systems
+
+Aquí el equipo explica cuáles serán las acciones y técnicas que guiarán a los usuarios
+a través del Landing Page y las aplicaciones, permitiéndoles cumplir sus metas e
+interactuar de forma satisfactoria con el producto. Aquí se debe incluir de qué
+maneras los usuarios irán recorriendo el contenido.
+
+La navegación en SafeVision se estructura para ofrecer una experiencia fluida, clara y guiada, donde tanto los visitantes del sitio web como los usuarios de la aplicación puedan recorrer el contenido sin perderse y cumplir fácilmente sus objetivos.
+Cada interacción fue diseñada con el propósito de que el usuario entienda siempre en qué parte del recorrido se encuentra y cuál es su siguiente paso.
+
+#### Landing Page
+
+El flujo de navegación del sitio web comienza con una sección principal de bienvenida, donde se presenta el mensaje “¿Eres gerente o conductor? Conduce seguro, llega tranquilo”, acompañado de botones directos para descargar la aplicación desde Google Play o App Store.
+Desde este punto, el usuario puede desplazarse de manera descendente (scroll) por las diferentes secciones del contenido, organizadas en un orden lógico y jerárquico:
+
+- **Diseñado para todos**: ofrece las dos rutas principales del sitio: Soy gerente de flota y Soy conductor profesional.
+- **Bloques informativos**: cada bloque presenta un beneficio clave (Conduce seguro, Mantente alerta, Descansa mejor, Protégete) con un subtítulo descriptivo y un número que guía la lectura.
+- **Sección empresarial**: orienta a los gerentes mediante acciones claras como Monitorea, Contacta, Gestiona y Administra, cada una acompañada de un breve texto explicativo.
+Plan de suscripción: invita al usuario a “Comenzar a trabajar con nosotros”, integrando botones de acción visibles.
+- **Sección institucional**: contiene ¿Quiénes somos?, Misión, Visión y presentación del equipo, cerrando el recorrido con el pie de página que ofrece accesos a Empresa, Conductor, Nosotros, Contáctanos, Descargar y selector de idioma (ES/EN).
+
+El diseño de navegación web está basado en scroll progresivo y anclas internas que permiten desplazarse a cada bloque sin salir de la página.
+Los botones de acción mantienen un color institucional rojo (#C13515) para destacar las interacciones primarias y guiar la mirada del usuario.
+
+#### Aplicación Móvil
+
+En la versión móvil, la navegación está pensada para acompañar al usuario desde el primer contacto con la app hasta su uso funcional.
+El flujo principal sigue un recorrido lineal, progresivo y claro, en el que cada pantalla representa un paso concreto:
+
+- **Inicio de sesión (Log in)**: ingreso a la cuenta o acceso al registro.
+- **Selección de perfil**: elección entre Professional Driver o Fleet Manager, determinando la ruta de uso.
+- **Registro**: formulario dividido en secciones para datos personales y datos empresariales.
+- **Aceptación de términos**: validación de condiciones con el botón “Accept & continue”.
+- **Confirmación**: mensaje visual de cuenta creada.
+- **Dashboard**: visualización de datos de flota, alertas y conductores.
+- **Panel de estadísticas**: navegación por métricas y perfiles individuales.
+
+Una vez dentro de la app, la interacción principal se realiza mediante una barra de navegación inferior fija, con accesos a Inicio, Historial, Alertas y Perfil.
+
+Cada ícono tiene una función específica:
+- Inicio muestra el resumen general de alertas.
+- Historial permite revisar viajes y eventos pasados.
+- Alertas presenta las notificaciones activas o críticas.
+- Perfil centraliza la información del usuario o gerente.
+
+Los íconos activos se muestran en rojo (#C13515) y los inactivos en gris (#74788D), reforzando la orientación visual.
+El uso de animaciones suaves y cambios de color ayuda a indicar qué acción fue ejecutada, brindando una sensación de control y coherencia.
+En ambos entornos, la navegación de SafeVision se apoya en principios de jerarquía visual, consistencia de color y retroalimentación inmediata, asegurando que los usuarios puedan recorrer el contenido, entender la información y alcanzar sus metas de manera satisfactoria.
+
+## 6.3. Landing Page UI Design
+
+En esta sección se presenta el diseño visual de la landing page, donde se aplican los lineamientos de estilo, colores, tipografía e iconografía definidos previamente. El diseño busca ofrecer una experiencia clara, atractiva y coherente con la identidad del proyecto, facilitando la navegación y destacando las principales funcionalidades del sistema.
+
+### 6.3.1. Landing Page Wireframe
+
+En esta sección se presenta un esquema general del diseño de la landing page, destacando las áreas principales de contenido, como el encabezado y las secciones correspondientes a cada segmento. Este wireframe ilustra la estructura base de la página sin incluir elementos visuales detallados.
+
+**Agregar imágenes**
+
+### 6.3.2. Landing Page Mock-up
+
+El mock-up de la landing page muestra una versión visual más desarrollada del diseño final, incorporando la paleta de colores, tipografía, imágenes y elementos interactivos. Este diseño permite visualizar con mayor precisión cómo lucirá la interfaz implementada, reflejando la identidad visual de SafeVision y priorizando la usabilidad del usuario.
+
+**Agregar imágenes**
+
+## 6.4. Applications UX/UI Design
+
+En este apartado se describen los aspectos vinculados al diseño de interfaces y flujos de las pantallas desarrolladas, con el propósito de ofrecer una vista previa de cómo se visualizará la aplicación una vez finalizada. El proceso inició con la elaboración de los wireframes de cada interfaz, los cuales posteriormente fueron convertidos en mock-ups, aplicando los estilos de color y tipografía previamente definidos.
+
+### 6.4.1. Applications Wireframes
+
+Se presentan los wireframes principales, que servirán como base fundamental para el desarrollo posterior de los mock-ups.
+
+**Agregar imágenes**
+
+### 6.4.2. Applications Wireflow Diagrams
+
+A partir de los wireframes generados, se elaboran diagramas que representan los flujos básicos de cada uno de los procesos principales que sigue la aplicación.
+
+**Agregar imágenes**
 
 # Conclusiones
 
@@ -1534,33 +2559,40 @@ Entre los principales logros destacan:
 
 En conjunto, estas acciones fortalecieron el trabajo en equipo y sentaron bases sólidas para el desarrollo de la solución tecnológica planteada.  
 
+# Recomendaciones
+
+Se recomienda mantener actualizados los wireframes y mock-ups conforme se reciba retroalimentación de usuarios y stakeholders, asegurando la consistencia en colores, tipografía y estilos en todas las pantallas. Además, se sugiere realizar pruebas de usabilidad periódicas, documentar claramente los flujos de navegación y elementos interactivos, y garantizar la adaptabilidad de la interfaz a distintos dispositivos y tamaños de pantalla, revisando y ajustando los diagramas de flujo y wireflows a medida que se incorporen nuevas funcionalidades o se modifiquen procesos existentes.
+
 # Bibliografía
 
-- Qoomon. (2021, 11 enero). *Conventional Commit Messages*. Gist.  
-  Recuperado 20 de junio de 2022, de [https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)  
+Qoomon. (2021, enero 11). *Conventional commit messages*. Gist. https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13
 
-- LeaseIN. (2018). *Software Architecture Documentation*.  
+LeaseIN. (2018). *Software architecture documentation*. https://www.leasein.com/software-architecture-documentation
 
-- Bass, L., Clements, P., & Kazman, R. (2021). *Software Architecture in Practice* (4th ed.). Addison-Wesley.  
+Bass, L., Clements, P., & Kazman, R. (2021). *Software architecture in practice* (4th ed.). Addison-Wesley. https://www.pearson.com/us/higher-education/product/Bass-Software-Architecture-in-Practice-4th-Edition/9780136885979.html
 
-- Gothelf, J., & Seiden, J. (2017). *Lean UX: Designing Great Products with Agile Teams* (2nd ed.). O’Reilly Media.  
+Gothelf, J., & Seiden, J. (2017). *Lean UX: Designing great products with agile teams* (2nd ed.). O’Reilly Media. https://www.oreilly.com/library/view/lean-ux-2nd/9781491953600/
 
-- Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley.  
+Evans, E. (2003). *Domain-driven design: Tackling complexity in the heart of software*. Addison-Wesley. https://www.pearson.com/store/p/domain-driven-design-tackling-complexity-in-the-heart-of-software/P100000401118
+
+Fowler, M. (2018). *Refactoring: Improving the design of existing code* (2nd ed.). Addison-Wesley. https://martinfowler.com/books/refactoring.html
+
+Krug, S. (2014). *Don’t make me think, revisited: A common sense approach to web usability* (3rd ed.). New Riders. https://www.peachpit.com/store/dont-make-me-think-revisited-a-common-sense-approach-9780321965516
+
+Rosen, J., & Campbell, R. (2019). *UX for lean startups: Faster, smarter user experience research and design*. O’Reilly Media. https://www.oreilly.com/library/view/ux-for-lean/9781492045540/
+
+Pohl, K., & Rupp, C. (2011). *Requirements engineering fundamentals: A study guide for the certified professional for requirements engineering exam—Foundation level—IREB compliant* (2nd ed.). Rocky Nook. https://www.rockynook.com/store/requirements-engineering-fundamentals-2nd-edition
+
+Chen, L., Babar, M. A., & Nuseibeh, B. (2015). *Software architecture knowledge management: Theory and practice*. Springer. https://www.springer.com/gp/book/9783319180441
 
 # Anexos
 
-Organización del Proyecto: <a href="https://github.com/Software-Emergentes">https://github.com/Software-Emergentes</a>
-
-Reporte del Proyecto: <a href="https://github.com/Software-Emergentes/final-project-report">https://github.com/Software-Emergentes/final-project-report</a>
-
-Enlace del Miro: <a href="https://miro.com/welcomeonboard/QUpZbWVHUWptZmJDTmxONi9VeU54STRSYUNaa0p1NTJRSUZzRjZFbC9BL0hYelNYNlhScmQ5QnRHRW9mMkxnUlpQT0JUcktVYU9aNHUrcmhxaWNTTTh4UHVNM0s5SWRPZkZPNnpaajFjMGdkeEpMRnRMcHQ0b0dZVk81WWpacTdhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=324109141341
-">https://miro.com/welcomeonboard/QUpZbWVHUWptZmJDTmxONi9VeU54STRSYUNaa0p1NTJRSUZzRjZFbC9BL0hYelNYNlhScmQ5QnRHRW9mMkxnUlpQT0JUcktVYU9aNHUrcmhxaWNTTTh4UHVNM0s5SWRPZkZPNnpaajFjMGdkeEpMRnRMcHQ0b0dZVk81WWpacTdhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=324109141341</a>
-
-Presentación del Proyecto: <a href="https://www.canva.com/design/DAGzYyHWuwg/C4jRhBTUp-d3zb44sBP2wg/edit?utm_content=DAGzYyHWuwg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">https://www.canva.com/design/DAGzYyHWuwg/C4jRhBTUp-d3zb44sBP2wg/edit?utm_content=DAGzYyHWuwg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton</a>
-
-Vídeo de Entrevistas: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Wgod4y </a>
-
-Video de Exposicion: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212077_upc_edu_pe/ESmGsetwsRdGihA6FwiD3lEBVVT6QLqebBhynCgMeW9qVw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HWsu6W">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212077_upc_edu_pe/ESmGsetwsRdGihA6FwiD3lEBVVT6QLqebBhynCgMeW9qVw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HWsu6W</a>
-=======
-
-
+| Nº | Nombre del Anexo              | Enlace                                     |
+|----|-------------------------------|--------------------------------------------|
+| 1  | Organización del Proyecto     | https://n9.cl/zq44f   /  [link de respaldo](https://github.com/Software-Emergentes)          |
+| 2  | Reporte del Proyecto          | https://n9.cl/8jrsmb   /  [link de respaldo](https://github.com/Software-Emergentes/Final-Project-Documentation-Report)       |
+| 3  | Enlace del Miro               | https://n9.cl/8btu2   /  [link de respaldo](https://miro.com/app/board/uXjVJJy03vk=/)        |
+| 4  | Video de Exposición           | https://n9.cl/gn41vu   /  [link de respaldo](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212077_upc_edu_pe/Eb9fBd0UEhFHptMWoQQ2mLMBjJire23QIVO87cqMYy7xUg?e=MGWNVb&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)        |
+| 4  | Presentación del Proyecto     | https://n9.cl/d8zk6   /  [link de respaldo](https://www.canva.com/design/DAGzYyHWuwg/C4jRhBTUp-d3zb44sBP2wg/edit)       |
+| 5  | Vídeo de Entrevistas          | https://n9.cl/ym0y9  /  [link de respaldo](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?e=OpJhgR&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)       |
+| 6  | Landing Page                  | https://n9.cl/56v9y   /  [link de respaldo](https://software-emergentes.github.io/Landing-Page-Safe-Vision/)       |
