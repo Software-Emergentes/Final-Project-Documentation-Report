@@ -170,7 +170,7 @@ Imagen de los Insights:
   - [4.3.4. Software Architecture Deployment Diagrams](#434-software-architecture-deployment-diagrams)
   
 ## [Capítulo V: Tactical-Level Software Design](#capítulo-v-tactical-level-software-design)
-- [5.1. Bounded Context](#51-bounded-context)
+- [5.1. Bounded Context: Notification Context](#51-bounded-context-notification-context)
   - [5.1.1. Domain Layer](#511-domain-layer)
   - [5.1.2. Interface Layer](#512-interface-layer)
   - [5.1.3. Application Layer](#513-application-layer)
@@ -179,6 +179,51 @@ Imagen de los Insights:
   - [5.1.6. Bounded Context Software Architecture Code Level Diagrams](#516-bounded-context-software-architecture-code-level-diagrams)
     - [5.1.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
     - [5.1.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
+- [5.2. Bounded Context: Driver Context](#52-bounded-context-driver-context)
+  - [5.2.1. Domain Layer](#521-domain-layer)
+  - [5.2.2. Interface Layer](#522-interface-layer)
+  - [5.2.3. Application Layer](#523-application-layer)
+  - [5.2.4. Infrastructure Layer](#524-infrastructure-layer)
+  - [5.2.5. Bounded Context Software Architecture Component Level Diagrams](#525-bounded-context-software-architecture-component-level-diagrams)
+  - [5.2.6. Bounded Context Software Architecture Code Level Diagrams](#526-bounded-context-software-architecture-code-level-diagrams)
+    - [5.2.6.1. Bounded Context Domain Layer Class Diagrams](#5261-bounded-context-domain-layer-class-diagrams)
+    - [5.2.6.2. Bounded Context Database Design Diagram](#5262-bounded-context-database-design-diagram)
+- [5.3. Bounded Context: IAM Context](#53-bounded-context-iam-context)
+  - [5.3.1. Domain Layer](#531-domain-layer)
+  - [5.3.2. Interface Layer](#532-interface-layer)
+  - [5.3.3. Application Layer](#533-application-layer)
+  - [5.3.4. Infrastructure Layer](#534-infrastructure-layer)
+  - [5.3.5. Bounded Context Software Architecture Component Level Diagrams](#535-bounded-context-software-architecture-component-level-diagrams)
+  - [5.3.6. Bounded Context Software Architecture Code Level Diagrams](#536-bounded-context-software-architecture-code-level-diagrams)
+    - [5.3.6.1. Bounded Context Domain Layer Class Diagrams](#5361-bounded-context-domain-layer-class-diagrams)
+    - [5.3.6.2. Bounded Context Database Design Diagram](#5362-bounded-context-database-design-diagram)
+- [5.4. Bounded Context: Trip](#54-bounded-context-trip)
+  - [5.4.1. Domain Layer](#541-domain-layer)
+  - [5.4.2. Interface Layer](#542-interface-layer)
+  - [5.4.3. Application Layer](#543-application-layer)
+  - [5.4.4. Infrastructure Layer](#544-infrastructure-layer)
+  - [5.4.5. Bounded Context Software Architecture Component Level Diagrams](#545-bounded-context-software-architecture-component-level-diagrams)
+  - [5.4.6. Bounded Context Software Architecture Code Level Diagrams](#546-bounded-context-software-architecture-code-level-diagrams)
+    - [5.4.6.1. Bounded Context Domain Layer Class Diagrams](#5461-bounded-context-domain-layer-class-diagrams)
+    - [5.4.6.2. Bounded Context Database Design Diagram](#5462-bounded-context-database-design-diagram)
+- [5.5. Bounded Context: Fatigue Monitoring](#55-bounded-context-fatigue-monitoring)
+  - [5.5.1. Domain Layer](#551-domain-layer)
+  - [5.5.2. Interface Layer](#552-interface-layer)
+  - [5.5.3. Application Layer](#553-application-layer)
+  - [5.5.4. Infrastructure Layer](#554-infrastructure-layer)
+  - [5.5.5. Bounded Context Software Architecture Component Level Diagrams](#555-bounded-context-software-architecture-component-level-diagrams)
+  - [5.5.6. Bounded Context Software Architecture Code Level Diagrams](#556-bounded-context-software-architecture-code-level-diagrams)
+    - [5.5.6.1. Bounded Context Domain Layer Class Diagrams](#5561-bounded-context-domain-layer-class-diagrams)
+    - [5.5.6.2. Bounded Context Database Design Diagram](#5562-bounded-context-database-design-diagram)
+- [5.6. Bounded Context: Management](#56-bounded-context-management)
+  - [5.6.1. Domain Layer](#561-domain-layer)
+  - [5.6.2. Interface Layer](#562-interface-layer)
+  - [5.6.3. Application Layer](#563-application-layer)
+  - [5.6.4. Infrastructure Layer](#564-infrastructure-layer)
+  - [5.6.5. Bounded Context Software Architecture Component Level Diagrams](#565-bounded-context-software-architecture-component-level-diagrams)
+  - [5.6.6. Bounded Context Software Architecture Code Level Diagrams](#566-bounded-context-software-architecture-code-level-diagrams)
+    - [5.6.6.1. Bounded Context Domain Layer Class Diagrams](#5661-bounded-context-domain-layer-class-diagrams)
+    - [5.6.6.2. Bounded Context Database Design Diagram](#5662-bounded-context-database-design-diagram)
 
 ## [Capítulo VI: Solution UX Design](#capítulo-vi-solution-ux-design)
 - [6.1. Style Guidelines](#61-style-guidelines)
@@ -1444,7 +1489,7 @@ Estos canvas fueron herramientas fundamentales para definir la arquitectura de n
 Después de identificar nuestros bounded contexts (Access, Monitoring, Simulation e IoT Device), procedimos a definir las relaciones entre ellos mediante la técnica de Context Mapping. Este proceso nos permitió visualizar cómo estos contextos se comunican y colaboran entre sí en nuestro sistema Safe Vision.
 
 
-## 1. Pasos para Crear el Context Mapping  
+### 1. Pasos para Crear el Context Mapping  
 
 ### 1.1. Identificación de los Bounded Contexts  
 - **IAM (Identity & Access Management)**  
@@ -2544,9 +2589,10 @@ Chen, L., Babar, M. A., & Nuseibeh, B. (2015). *Software architecture knowledge 
 
 | Nº | Nombre del Anexo              | Enlace                                     |
 |----|-------------------------------|--------------------------------------------|
-| 1  | Organización del Proyecto     | https://n9.cl/zq44f                        |
-| 2  | Reporte del Proyecto          | https://n9.cl/8jrsmb                       |
-| 3  | Enlace del Miro               | https://n9.cl/8btu2                        |
-| 4  | Presentación del Proyecto     | https://n9.cl/d8zk6                        |
-| 5  | Vídeo de Entrevistas          | https://n9.cl/ylsnf                        |
-| 6  | Landing Page                  | https://n9.cl/56v9y                        |
+| 1  | Organización del Proyecto     | https://n9.cl/zq44f   /  [link de respaldo](https://github.com/Software-Emergentes)          |
+| 2  | Reporte del Proyecto          | https://n9.cl/8jrsmb   /  [link de respaldo](https://github.com/Software-Emergentes/Final-Project-Documentation-Report)       |
+| 3  | Enlace del Miro               | https://n9.cl/8btu2   /  [link de respaldo](https://miro.com/app/board/uXjVJJy03vk=/)        |
+| 4  | Video de Exposición           | https://n9.cl/8btu2   /  [link de respaldo](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202212077_upc_edu_pe/Eb9fBd0UEhFHptMWoQQ2mLMBjJire23QIVO87cqMYy7xUg?e=MGWNVb&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)        |
+| 4  | Presentación del Proyecto     | https://n9.cl/d8zk6   /  [link de respaldo](https://www.canva.com/design/DAGzYyHWuwg/C4jRhBTUp-d3zb44sBP2wg/edit)       |
+| 5  | Vídeo de Entrevistas          | https://n9.cl/ym0y9  /  [link de respaldo](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202219422_upc_edu_pe/EYdM5BSerG9LmmI8HzXfedIBCf1U1gUS7K7ZgdUX-EXHYg?e=OpJhgR&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)       |
+| 6  | Landing Page                  | https://n9.cl/56v9y   /  [link de respaldo](https://software-emergentes.github.io/Landing-Page-Safe-Vision/)       |
