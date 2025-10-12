@@ -2338,15 +2338,11 @@ Para la web se emplea una rejilla de 12 columnas, mientras que en la app móvil 
 
 Los espacios en blanco cumplen un rol clave para mantener equilibrio, legibilidad y orden en la interfaz.
 
+<img src="./assets/app-design/general-style.png">
+
 ## 6.2. Information Architecture
 
-En esta sección el equipo plantea las decisiones y sustento que dirigen la manera
-como se organizará el contenido en las experiencias web y móvil, incluyendo el
-Landing Page y las Aplicaciones. Dichas propuestas deben estar orientadas a que los
-visitantes y usuarios se adapten con facilidad a la funcionalidad de cada producto y
-puedan encontrar todo aquello que necesiten sin esfuerzo. Se incluyen las decisiones
-sobre los Organization Systems, Labeling Systems, Navigation Systems y Searching
-Systems
+En esta sección el equipo plantea las decisiones y sustento que dirigen la manera como se organizará el contenido en las experiencias web y móvil, incluyendo el Landing Page y las Aplicaciones. Dichas propuestas deben estar orientadas a que los visitantes y usuarios se adapten con facilidad a la funcionalidad de cada producto y puedan encontrar todo aquello que necesiten sin esfuerzo. Se incluyen las decisiones sobre los Organization Systems, Labeling Systems, Navigation Systems y Searching Systems
 
 La arquitectura de información de SafeVision está diseñada para que los usuarios comprendan y accedan fácilmente a todas las funciones, tanto en la Landing Page como en la aplicación móvil.
 
@@ -2399,10 +2395,7 @@ El diseño guía al usuario paso a paso, manteniendo coherencia visual y navegac
 
 ### 6.2.2. Labeling Systems
 
-Aquí el equipo explica de qué maneras se representarán los datos, considerando
-simplicidad y buscando evitar la confusión para los visitantes y usuarios. En esta
-sección se especifica las etiquetas (con el mínimo número de palabras) a utilizar para
-representar los conjuntos de información y las asociaciones entre las mismas.
+Aquí el equipo explica de qué maneras se representarán los datos, considerando simplicidad y buscando evitar la confusión para los visitantes y usuarios. En esta sección se especifica las etiquetas (con el mínimo número de palabras) a utilizar para representar los conjuntos de información y las asociaciones entre las mismas.
 
 El etiquetado busca simplicidad y consistencia, evitando confusión o ambigüedad.
 Las etiquetas están redactadas en lenguaje directo y positivo, adaptadas al contexto de acción.
@@ -2419,12 +2412,7 @@ Todas las etiquetas mantienen el mismo estilo tipográfico (Poppins SemiBold) y 
 
 ### 6.2.3. Searching Systems
 
-En esta sección el equipo explica qué medios de ayuda se brindará al usuario para la
-búsqueda de datos dentro de los productos digitales. Dichas decisiones sobre los
-sistemas de búsqueda tratan de evitar que los usuarios se sientan perdidos entre el
-volumen de información. Aquí se deben especificar qué opciones de búsqueda
-ofrecerán las aplicaciones, con qué filtros contará el usuario en cada caso y cómo
-lucirán los datos después de la búsqueda.
+En esta sección el equipo explica qué medios de ayuda se brindará al usuario para la búsqueda de datos dentro de los productos digitales. Dichas decisiones sobre los sistemas de búsqueda tratan de evitar que los usuarios se sientan perdidos entre el volumen de información. Aquí se deben especificar qué opciones de búsqueda ofrecerán las aplicaciones, con qué filtros contará el usuario en cada caso y cómo lucirán los datos después de la búsqueda.
 
 SafeVision ofrece un sistema de búsqueda intuitivo y orientado a la toma de decisiones rápidas.
 En la versión web, el campo de búsqueda permite filtrar por conductor, fecha, nivel de alerta o tipo de evento.
@@ -2443,15 +2431,12 @@ Los resultados se visualizan con códigos de color:
 
 El diseño evita sobrecarga visual, mostrando la información más relevante en tarjetas compactas y legibles.
 
+<img src="./assets/app-design/search-system.png">
+
 ### 6.2.4. SEO Tags and Meta Tags
 
-En esta sección se debe incluir los SEO (Search Engine Optimization) Tags y Meta
-Tags junto con los valores que asignará en las principales páginas de la experiencia
-tanto a nivel del sitio web estático (Landing Page) como Web Applications. Se debe
-incluir Title, los Meta Tags Description, Keywords, Author como mínimo. Del mismo
-modo, para las aplicaciones móviles u otros productos digitales que se exponen vía
-un app store, debe incluir los ASO (App Store Optimization) elements como App
-Title, App keywords, App subtitle, App description.
+En esta sección se debe incluir los SEO (Search Engine Optimization) Tags y Meta Tags junto con los valores que asignará en las principales páginas de la experiencia tanto a nivel del sitio web estático (Landing Page) como Web applications. Se debe incluir Title, los Meta Tags Description, Keywords, Author como mínimo. Del mismo
+modo, para las aplicaciones móviles u otros productos digitales que se exponen vía un app store, debe incluir los ASO (App Store Optimization) elements como App Title, App keywords, App subtitle, App description.
 
 #### Landing Page
 
@@ -2469,13 +2454,12 @@ Title, App keywords, App subtitle, App description.
 
 ### 6.2.5. Navigation Systems
 
-Aquí el equipo explica cuáles serán las acciones y técnicas que guiarán a los usuarios
-a través del Landing Page y las aplicaciones, permitiéndoles cumplir sus metas e
-interactuar de forma satisfactoria con el producto. Aquí se debe incluir de qué
-maneras los usuarios irán recorriendo el contenido.
+Aquí el equipo explica cuáles serán las acciones y técnicas que guiarán a los usuarios a través del Landing Page y las aplicaciones, permitiéndoles cumplir sus metas e interactuar de forma satisfactoria con el producto. Aquí se debe incluir de qué maneras los usuarios irán recorriendo el contenido.
 
 La navegación en SafeVision se estructura para ofrecer una experiencia fluida, clara y guiada, donde tanto los visitantes del sitio web como los usuarios de la aplicación puedan recorrer el contenido sin perderse y cumplir fácilmente sus objetivos.
 Cada interacción fue diseñada con el propósito de que el usuario entienda siempre en qué parte del recorrido se encuentra y cuál es su siguiente paso.
+
+
 
 #### Landing Page
 
@@ -2516,6 +2500,8 @@ Los íconos activos se muestran en rojo (#C13515) y los inactivos en gris (#7478
 El uso de animaciones suaves y cambios de color ayuda a indicar qué acción fue ejecutada, brindando una sensación de control y coherencia.
 En ambos entornos, la navegación de SafeVision se apoya en principios de jerarquía visual, consistencia de color y retroalimentación inmediata, asegurando que los usuarios puedan recorrer el contenido, entender la información y alcanzar sus metas de manera satisfactoria.
 
+<img src="./assets/app-design/nav-system.png" >
+
 ## 6.3. Landing Page UI Design
 
 En esta sección se presenta el diseño visual de la landing page, donde se aplican los lineamientos de estilo, colores, tipografía e iconografía definidos previamente. El diseño busca ofrecer una experiencia clara, atractiva y coherente con la identidad del proyecto, facilitando la navegación y destacando las principales funcionalidades del sistema.
@@ -2524,13 +2510,13 @@ En esta sección se presenta el diseño visual de la landing page, donde se apli
 
 En esta sección se presenta un esquema general del diseño de la landing page, destacando las áreas principales de contenido, como el encabezado y las secciones correspondientes a cada segmento. Este wireframe ilustra la estructura base de la página sin incluir elementos visuales detallados.
 
-**Agregar imágenes**
+<img src="./assets/app-design/landing-wireframe.jpg" >
 
 ### 6.3.2. Landing Page Mock-up
 
 El mock-up de la landing page muestra una versión visual más desarrollada del diseño final, incorporando la paleta de colores, tipografía, imágenes y elementos interactivos. Este diseño permite visualizar con mayor precisión cómo lucirá la interfaz implementada, reflejando la identidad visual de SafeVision y priorizando la usabilidad del usuario.
 
-**Agregar imágenes**
+<img src="./assets/app-design/landing-mock.png" >
 
 ## 6.4. Applications UX/UI Design
 
@@ -2540,13 +2526,34 @@ En este apartado se describen los aspectos vinculados al diseño de interfaces y
 
 Se presentan los wireframes principales, que servirán como base fundamental para el desarrollo posterior de los mock-ups.
 
-**Agregar imágenes**
+<img src="./assets/app-design/wireframes.png" >
 
 ### 6.4.2. Applications Wireflow Diagrams
 
 A partir de los wireframes generados, se elaboran diagramas que representan los flujos básicos de cada uno de los procesos principales que sigue la aplicación.
 
-**Agregar imágenes**
+**Flujo: Usuario gerente de flota crea una nueva cuenta en SafeVision**
+
+<img src="./assets/wireflows/signup-flow.png" >
+
+Como se observa en el diagrama, el flujo inicia con la pantalla de bienvenida, donde el usuario tiene la opción de iniciar sesión y de registrarse de no contar con una cuenta. Al seleccionar "Sign up", se despliega el formulario de registro, que incluye campos para nombre, apellidos, correo electrónico, teléfono y contraseña. Después de completar el formulario de forma correcta, aparece otro en el que debe registrar la información de su empresa de transporte. Al finalizar y aceptar los términos y condiciones, el usuario recibe una confirmación de que su cuenta ha sido creada exitosamente.
+
+**Flujo: Usuario inicia sesión en SafeVision**
+
+<img src="./assets/wireflows/signin-flow.png" >
+
+El flujo comienza en la pantalla de bienvenida, donde el usuario puede optar por iniciar sesión o registrarse si aún no tiene una cuenta. Luego, se muestra el formulario de inicio de sesión con campos para correo electrónico y contraseña. Si el usuario ha olvidado su contraseña, puede hacer clic en "Forgot your password?" para iniciar el proceso de recuperación. Al ingresar las credenciales correctas y presionar "Continue", el usuario recibe una confirmación de un loggeo correcto y este es redirigido al panel principal de la aplicación.
+
+**Flujo: Gerente de flota revisa las estadísticas de los conductores**
+
+<img src="./assets/wireflows/stats-flow.png" >
+El flujo inicia en la pantalla de bienvenida, donde el usuario puede iniciar sesión. Al ingresar las credenciales correctas y presionar "Continue", el usuario recibe una confirmación de un loggeo exitoso y es redirigido al panel principal de la aplicación. Desde allí, puede acceder a la sección de estadísticas para revisar los datos globales de los conductores. Y en el tab de conductores, puede seleccionar a un conductor específico para ver sus estadísticas detalladas.
+
+**Flujo: Conductor profesional realiza verificaciones rutinarias**
+
+<img src="./assets/wireflows/verify-flow.png" >
+
+El flujo comienza cuando un conductor requiere comenzar un viaje, para lo cual se dirige a la panatalla de "Start trip". A continuación, se le presenta una serie de verificaciones rutinarias que debe completar antes de iniciar el viaje. Estas verificaciones incluyen revisar el correcto funcionamiento de las cámaras que lo ayudarán a mantenerse alerta durante el viaje, y el sonido de las notificaciones. Una vez que el conductor ha completado todas las verificaciones y presiona "Continue", recibe una confirmación de que el viaje ha comenzado exitosamente.
 
 # Conclusiones
 
