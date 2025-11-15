@@ -62,6 +62,7 @@
 | 6.0         | 19/09/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Creación del diagrama de base de datos, diagrama de clases, diccionario de clases, diagramas de contenedores, diagramas de contexto y diagramas de componentes. |
 | 7.0         | 3/10/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Se realizaron las correcciones correspondientes del TB1 y se avanzó en el desarrollo de los *Bounded Contexts*, incorporando los ajustes y mejoras necesarias según las observaciones recibidas. |
 | 7.0         | 7/10/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Avance en el Capítulo 6: Solution UX Design, se definieron los wireframes de la aplicación |
+| 8.0         | 14/11/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Capítulo 6 y Capítulo 7 completados. |
 
 # Registro de Versiones del Informe
 
@@ -108,6 +109,10 @@ Para esta entrega el equipo se enfocó en el diseño arquitectónico y de experi
 Imagen de los Insights: 
 
 <img src="assets/commits/tp1-commits.png">
+
+**TB3**
+
+El equipo tiene definidas todas las tareas de los capítulos 6 y 7: Leo completará los mockups, diagramas de flujo y prototipos; Fer desarrollará toda la parte de configuración del software, entorno, gestión del código, convenciones y despliegue; Angello implementará la solución y ejecutará el Sprint 1 con su planificación, backlog y evidencias; Fabia elaborará todas las evidencias del sprint, incluyendo pruebas, ejecución, documentación de servicios, despliegue y conclusiones; y Beth realizará las entrevistas de validación, su diseño, registro, evaluaciones heurísticas, el video final del producto y el avance de conclusiones, bibliografía y anexos. Con esto, las responsabilidades ya están completamente desarrolladas y organizadas.
 
 ## Contenido
 
@@ -241,6 +246,38 @@ Imagen de los Insights:
 - [6.4. Applications UX/UI Design](#64-applications-uxui-design)
   - [6.4.1. Applications Wireframes](#641-applications-wireframes)
   - [6.4.2. Applications Wireflow Diagrams](#642-applications-wireflow-diagrams)
+  - [6.4.2. Applications Mock-ups](#642-applications-mock-ups)
+  - [6.4.3. Applications User Flow Diagrams](#643-applications-user-flow-diagrams)
+- [6.5. Applications Prototyping](#65-applications-prototyping)
+
+## [Capítulo VII: Product Implementation, Validation & Deployment]()
+
+- [7.1. Software Configuration Management](#71-software-configuration-management)
+  - [7.1.1. Software Development Environment Configuration](#711-software-development-environment-configuration)
+  - [7.1.2. Source Code Management](#712-source-code-management)
+  - [7.1.3. Source Code Style Guide & Conventions](#713-source-code-style-guide--conventions)
+  - [7.1.4. Software Deployment Configuration](#714-software-deployment-configuration)
+
+- [7.2. Solution Implementation](#72-solution-implementation)
+  - [7.2.1. Sprint 1](#721-sprint-1)
+    - [7.2.1.1. Sprint Planning 1](#7211-sprint-planning-1)
+    - [7.2.1.2. Sprint Backlog 1](#7212-sprint-backlog-1)
+    - [7.2.1.3. Development Evidence for Sprint Review](#7213-development-evidence-for-sprint-review)
+    - [7.2.1.4. Testing Suite Evidence for Sprint Review](#7214-testing-suite-evidence-for-sprint-review)
+    - [7.2.1.5. Execution Evidence for Sprint Review](#7215-execution-evidence-for-sprint-review)
+    - [7.2.1.6. Services Documentation Evidence for Sprint Review](#7216-services-documentation-evidence-for-sprint-review)
+    - [7.2.1.7. Software Deployment Evidence for Sprint Review](#7217-software-deployment-evidence-for-sprint-review)
+    - [7.2.1.8. Team Collaboration Insights during Sprint](#7218-team-collaboration-insights-during-sprint)
+
+- [7.3. Validation Interviews](#73-validation-interviews)
+  - [7.3.1. Diseño de Entrevistas](#731-diseño-de-entrevistas)
+  - [7.3.2. Registro de Entrevistas](#732-registro-de-entrevistas)
+  - [7.3.3. Evaluaciones según heurísticas](#733-evaluaciones-según-heurísticas)
+
+- [7.4. Video About-the-Product](#74-video-about-the-product)
+  - [Avance de Conclusiones](#avance-de-conclusiones)
+  - [Bibliografía](#bibliografía)
+  - [Anexos](#anexos)
 
 ## [Conclusiones](#conclusiones)
 - [Conclusiones](#conclusiones)
@@ -256,8 +293,8 @@ Imagen de los Insights:
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |----------------------|---------------------|--------------|
-| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre  <br><br> **TB1**  <br><br> Se expusieron los resultados del Needfinding, mostrando el As Is y el To Be, además de explicar los User Personas y el Empathy Mapping en presentaciones grupales.<br><br> **TP1** <br><br>Expresó de manera clara y objetiva los avances relacionados con el bounded context Notifications y el apartado de Style Guidelines, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del desarrollo del proyecto de ingeniería.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se presentaron los Architectural Drivers Backlog y las Architectural Design Decisions, explicando cómo se refinaron los Quality Attribute Scenarios y los resultados del Event Storming en sesiones grupales.<br><br> **TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Management y brindó apoyo en el desarrollo del bounded context Monitoring, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>Beth Shantal Oneglio De Paz<br><br> **TB1** <br><br> Se expuso el Strategic-Level Attribute-Driven Design, destacando el Design Purpose y los Primary User Stories, junto con los Quality Attribute Scenarios más relevantes. <br><br> **TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Monitoring y en el desarrollo de la landing page, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Fernando Brian Salgada Luna <br><br> **TB1** <br><br> Se presentó el Capítulo I: Introducción y el Capítulo II: Requirements Elicitation & Analysis, explicando los puntos clave y los resultados del Event Storming en exposición grupal.<br><br>**TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Trip y en el apartado de Style Guidelines, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>Angello Rodolfo Sosa Colca<br><br> **TB1** <br><br> Se explicó el Context Mapping y los diagramas de Software Architecture (System Landscape, Context Level, Container y Deployment), además de los hallazgos del Event Storming en presentaciones grupales.<br><br>**TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en los bounded context Driver e IAM, así como en el desarrollo de la landing page y el diseño general, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería. | El trabajo realizado ha sido sobresaliente, cumpliendo con todos los segmentos del proyecto. El documento redactado ofrece un detallado informe sobre los pasos seguidos en la planificación, desarrollo y envío del proyecto a producción, garantizando así un resultado digno y completo. |
-| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre <br><br> **TB1** <br><br> Se documentaron los hallazgos en el Product Backlog y se elaboró la User Task Matrix, complementada con la descripción escrita de escenarios y perfiles de usuario.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances relacionados con el bounded context Notifications y el apartado de Style Guidelines, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del desarrollo del proyecto de ingeniería.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se documentaron los hallazgos del Candidate Context Discovery, los Domain Message Flows Modeling y los Bounded Context Canvases, integrándolos en el informe de Strategic-Level Domain-Driven Design. <br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Management y el apoyo brindado en el desarrollo del bounded context Monitoring, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Beth Shantal Oneglio De Paz <br><br> **TB1** <br><br> Se documentaron los Attribute-Design Inputs y las Constraints, integrándolos en el reporte de diseño estratégico para el proyecto.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Monitoring y en el desarrollo de la landing page, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Fernando Brian Salgada Luna <br><br> **TB1** <br><br> Se redactaron los apartados del informe correspondientes a la Introducción, el Requirements Elicitation & Analysis y la documentación del Event Storming.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Trip y en el apartado de Style Guidelines, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Angello Rodolfo Sosa Colca <br><br> **TB1** <br><br> Se documentaron los diagramas de Software Architecture y el Context Mapping, junto con la descripción escrita del Event Storming, integrados en el informe técnico.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en los bounded context Driver e IAM, así como en el desarrollo de la landing page y el diseño general, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.  | El trabajo realizado ha sido sobresaliente en términos de comunicación, cubriendo todos los aspectos necesarios para garantizar una coordinación efectiva. El documento final no solo detalla los pasos seguidos en la planificación y desarrollo del proyecto, sino que también refleja una comunicación clara y precisa durante todo el proceso, asegurando así una entrega bien fundamentada y comprensible. |
+| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre  <br><br> **TB1**  <br><br> Se expusieron los resultados del Needfinding, mostrando el As Is y el To Be, además de explicar los User Personas y el Empathy Mapping en presentaciones grupales.<br><br> **TP1** <br><br>Expresó de manera clara y objetiva los avances relacionados con el bounded context Notifications y el apartado de Style Guidelines, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del desarrollo del proyecto de ingeniería.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se presentaron los Architectural Drivers Backlog y las Architectural Design Decisions, explicando cómo se refinaron los Quality Attribute Scenarios y los resultados del Event Storming en sesiones grupales.<br><br> **TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Management y brindó apoyo en el desarrollo del bounded context Monitoring, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>Beth Shantal Oneglio De Paz<br><br> **TB1** <br><br> Se expuso el Strategic-Level Attribute-Driven Design, destacando el Design Purpose y los Primary User Stories, junto con los Quality Attribute Scenarios más relevantes. <br><br> **TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Monitoring y en el desarrollo de la landing page, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>**TB2**<br><br>Me encargué de la validación del proyecto, desarrollando el diseño y registro de entrevistas, así como las evaluaciones heurísticas; además, trabajé en el video “About-the-Product” y en el avance de las conclusiones, la bibliografía y los anexos.<br><br> Fernando Brian Salgada Luna <br><br> **TB1** <br><br> Se presentó el Capítulo I: Introducción y el Capítulo II: Requirements Elicitation & Analysis, explicando los puntos clave y los resultados del Event Storming en exposición grupal.<br><br>**TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Trip y en el apartado de Style Guidelines, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>Angello Rodolfo Sosa Colca<br><br> **TB1** <br><br> Se explicó el Context Mapping y los diagramas de Software Architecture (System Landscape, Context Level, Container y Deployment), además de los hallazgos del Event Storming en presentaciones grupales.<br><br>**TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en los bounded context Driver e IAM, así como en el desarrollo de la landing page y el diseño general, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería. | El trabajo realizado ha sido sobresaliente, cumpliendo con todos los segmentos del proyecto. El documento redactado ofrece un detallado informe sobre los pasos seguidos en la planificación, desarrollo y envío del proyecto a producción, garantizando así un resultado digno y completo. |
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre <br><br> **TB1** <br><br> Se documentaron los hallazgos en el Product Backlog y se elaboró la User Task Matrix, complementada con la descripción escrita de escenarios y perfiles de usuario.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances relacionados con el bounded context Notifications y el apartado de Style Guidelines, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del desarrollo del proyecto de ingeniería.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se documentaron los hallazgos del Candidate Context Discovery, los Domain Message Flows Modeling y los Bounded Context Canvases, integrándolos en el informe de Strategic-Level Domain-Driven Design. <br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Management y el apoyo brindado en el desarrollo del bounded context Monitoring, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Beth Shantal Oneglio De Paz <br><br> **TB1** <br><br> Se documentaron los Attribute-Design Inputs y las Constraints, integrándolos en el reporte de diseño estratégico para el proyecto.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Monitoring y en el desarrollo de la landing page, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>**TB2**<br><br>Me encargué de la validación del proyecto, desarrollando el diseño y registro de entrevistas, así como las evaluaciones heurísticas; además, trabajé en el video “About-the-Product” y en el avance de las conclusiones, la bibliografía y los anexos.<br><br> Fernando Brian Salgada Luna <br><br> **TB1** <br><br> Se redactaron los apartados del informe correspondientes a la Introducción, el Requirements Elicitation & Analysis y la documentación del Event Storming.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Trip y en el apartado de Style Guidelines, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Angello Rodolfo Sosa Colca <br><br> **TB1** <br><br> Se documentaron los diagramas de Software Architecture y el Context Mapping, junto con la descripción escrita del Event Storming, integrados en el informe técnico.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en los bounded context Driver e IAM, así como en el desarrollo de la landing page y el diseño general, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.  | El trabajo realizado ha sido sobresaliente en términos de comunicación, cubriendo todos los aspectos necesarios para garantizar una coordinación efectiva. El documento final no solo detalla los pasos seguidos en la planificación y desarrollo del proyecto, sino que también refleja una comunicación clara y precisa durante todo el proceso, asegurando así una entrega bien fundamentada y comprensible. |
 
 # Capítulo I: Introducción
 
@@ -2554,6 +2591,233 @@ El flujo inicia en la pantalla de bienvenida, donde el usuario puede iniciar ses
 <img src="./assets/wireflows/verify-flow.png" >
 
 El flujo comienza cuando un conductor requiere comenzar un viaje, para lo cual se dirige a la panatalla de "Start trip". A continuación, se le presenta una serie de verificaciones rutinarias que debe completar antes de iniciar el viaje. Estas verificaciones incluyen revisar el correcto funcionamiento de las cámaras que lo ayudarán a mantenerse alerta durante el viaje, y el sonido de las notificaciones. Una vez que el conductor ha completado todas las verificaciones y presiona "Continue", recibe una confirmación de que el viaje ha comenzado exitosamente.
+
+### 6.4.2. Applications Mock-ups
+
+### 6.4.3. Applications User Flow Diagrams
+
+### 6.5. Applications Prototyping
+
+# Capítulo VII: Product Implementation, Validation & Deployment
+
+## 7.1. Software Configuration Management
+
+### 7.1.1. Software Development Environment Configuration
+
+### 7.1.2. Source Code Management
+
+### 7.1.3. Source Code Style Guide & Conventions
+
+### 7.1.4. Software Deployment Configuration
+
+## 7.2. Solution Implementation
+
+### 7.2.1. Sprint 1
+
+#### 7.2.1.1. Sprint Planning 1
+
+#### 7.2.1.2. Sprint Backlog 1
+
+#### 7.2.1.3. Development Evidence for Sprint Review
+
+#### 7.2.1.4. Testing Suite Evidence for Sprint Review
+
+#### 7.2.1.5. Execution Evidence for Sprint Review
+
+#### 7.2.1.6. Services Documentation Evidence for Sprint Review
+
+#### 7.2.1.7. Software Deployment Evidence for Sprint Review
+
+#### 7.2.1.8. Team Collaboration Insights during Sprint
+
+## 7.3. Validation Interviews
+
+Este apartado describe el proceso de entrevistas de validación realizado con los actores clave del sistema SafeVision. Su finalidad fue obtener comentarios directos que permitan confirmar la propuesta desde una perspectiva práctica, garantizando que las funcionalidades planteadas realmente respondan a las necesidades de los usuarios.
+
+### 7.3.1. Diseño de Entrevistas
+
+El diseño de las entrevistas se organizó considerando dos segmentos principales. Las preguntas se elaboraron con un enfoque exploratorio y de validación, con el propósito de identificar los desafíos actuales, analizar el valor que los usuarios perciben en nuestra solución tecnológica y recoger sugerencias que permitan mejorarla.
+
+**Primer Segmento: Conductores Profesionales**
+
+Preguntas Generales:
+
+- ¿Cuál es su nombre y edad?
+
+- ¿Cuántos años de experiencia tiene como conductor profesional?
+
+- ¿Qué tipo de vehículo conduce actualmente?
+
+- ¿Cuál es la duración promedio de sus rutas?
+
+- ¿En qué horarios suele trabajar con mayor frecuencia?
+
+Preguntas Principales:
+
+- ¿Qué tan útil considera recibir alertas en tiempo real cuando se detecte somnolencia o distracción?
+
+- ¿Le resultaría conveniente que la app registre su nivel de alerta durante el viaje?
+
+- ¿Le incomodaría que la cámara monitoree su rostro mientras conduce?
+
+- ¿Qué tipo de alertas (sonoras, visuales, vibración) le resultarían más efectivas?
+
+**Segundo Segmento: Gerentes o Supervisores de Flota**
+
+Preguntas Generales:
+
+- ¿Cuál es su nombre, cargo y edad?
+
+- ¿Cuánto tiempo lleva gestionando flotas de transporte?
+
+- ¿Cuántos conductores administra actualmente?
+
+- ¿Qué herramientas utiliza para supervisar la seguridad de la flota?
+
+Preguntas Principales:
+
+- ¿Qué tan útil sería contar con reportes en tiempo real sobre el estado del conductor?
+
+- ¿Qué información le gustaría visualizar en el panel de monitoreo?
+
+- ¿Le sería valioso recibir alertas cuando un conductor muestre señales de fatiga?
+
+- ¿Qué funcionalidades adicionales considera importantes para mejorar la gestión de la flota?
+
+### 7.3.2. Registro de Entrevistas
+
+**Primer Segmento: Conductores Profesionales**
+
+Entrevistado Número 1:
+
+Sexo:
+
+Edad:
+
+Distrito donde Reside:
+
+Imagen:
+
+Resumen de la Entrevista:
+
+Entrevistado Número 2:
+
+Sexo:
+
+Edad:
+
+Distrito donde Reside:
+
+Imagen:
+
+Resumen de la Entrevista:
+
+Entrevistado Número 3:
+
+Sexo:
+
+Edad:
+
+Distrito donde Reside:
+
+Imagen:
+
+Resumen de la Entrevista:
+
+---
+
+**Segundo Segmento: Gerentes**
+
+Entrevistado Número 1: Andre La Torre
+
+Sexo: Masculino
+
+Edad: 27
+
+Distrito donde Reside: Lima, Perú
+
+Imagen: <img src="./assets/Andre_Entrevista.png" >
+
+Resumen de la Entrevista: El supervisor de flota entrevistado, con 10 años de experiencia, administra actualmente a 35 conductores y utiliza herramientas básicas como GPS y reportes manuales para supervisar la operación. Considera que contar con reportes en tiempo real sobre el estado de alerta del conductor sería muy útil para prevenir riesgos y mejorar la seguridad. Señala que le gustaría visualizar indicadores como nivel de fatiga, historial de alertas, horas de conducción y ubicación. Además, afirma que recibir notificaciones inmediatas ante señales de somnolencia sería valioso para tomar decisiones preventivas. Finalmente, sugiere funciones adicionales como reportes automáticos, estadísticas de rendimiento e integración con sistemas GPS existentes para optimizar la gestión de la flota.
+
+Entrevistado Número 2:
+
+Sexo:
+
+Edad:
+
+Distrito donde Reside:
+
+Imagen:
+
+Resumen de la Entrevista:
+
+Entrevistado Número 3:
+
+Sexo:
+
+Edad:
+
+Distrito donde Reside:
+
+Imagen:
+
+Resumen de la Entrevista:
+
+### 7.3.3. Evaluaciones según heurísticas
+
+En este capítulo se detalla la evaluación de usabilidad de SafeVision mediante la técnica de Evaluaciones según Heurísticas de Nielsen, identificando fortalezas y áreas de mejora para optimizar la experiencia.
+
+| Heurística | Descripción | Hallazgo principal | Severidad |
+|-----------|-------------|--------------------|-----------|
+| Visibilidad del estado del sistema | El sistema debe mantener informado al usuario sobre lo que ocurre. | No se muestran mensajes claros durante la carga de datos ni confirmaciones después de ciertas acciones. | Media |
+| Correspondencia con el mundo real | La interfaz debe usar lenguaje familiar para el usuario. | Algunos términos técnicos generan confusión en usuarios no expertos. | Baja |
+| Control y libertad del usuario | El usuario debe poder deshacer o rehacer acciones fácilmente. | No existe opción de deshacer en acciones críticas como eliminar o confirmar. | Alta |
+| Consistencia y estándares | El sistema debe mantener patrones comunes. | Botones similares con acciones diferentes generan confusión. | Media |
+| Prevención de errores | El diseño debe evitar que ocurran errores. | Faltan validaciones en formularios, permitiendo enviar datos incompletos. | Alta |
+| Reconocer antes que recordar | La interfaz debe reducir la carga de memoria del usuario. | Opciones relevantes están ocultas dentro de menús, obligando al usuario a recordar rutas. | Media |
+| Flexibilidad y eficiencia de uso | El sistema debe permitir atajos para usuarios expertos. | No existen accesos rápidos ni personalización. | Baja |
+| Diseño estético y minimalista | La interfaz debe evitar información irrelevante. | Algunas pantallas tienen elementos redundantes que distraen. | Baja |
+| Ayuda para reconocer, diagnosticar y recuperarse de errores | Los mensajes de error deben ser claros. | Los mensajes no explican cómo resolver el problema. | Alta |
+| Ayuda y documentación | El sistema debe ofrecer soporte accesible. | No hay manual ni sección de ayuda dentro de la plataforma. | Media |
+
+A partir de la evaluación realizada, pudimos obtener las siguientes áreas de mejora:
+
+- **Validación de parámetros:**  
+  Se detectó que algunos formularios permiten enviar datos incompletos o incorrectos. Esto incrementa la posibilidad de errores y afecta la precisión del sistema.
+
+- **Mensajes de retroalimentación insuficientes:**  
+  Varias acciones no muestran confirmaciones ni alertas claras, lo que genera incertidumbre en el usuario sobre si la tarea se completó correctamente.
+
+- **Inconsistencia en elementos de la interfaz:**  
+  Se observan variaciones en el diseño y comportamiento de botones y menús, lo cual puede provocar confusión.
+
+- **Falta de prevención de errores:**  
+  No se implementan advertencias previas en acciones críticas, como eliminar datos o confirmar operaciones importantes.
+
+- **Navegación poco intuitiva:**  
+  Algunas opciones relevantes están ocultas o requieren pasos adicionales para acceder a ellas.
+
+- **Carga cognitiva elevada:**  
+  El usuario debe recordar pasos o rutas dentro del sistema debido a la falta de indicadores y señales visuales claras.
+
+- **Ausencia de ayuda contextual:**  
+  El sistema no presenta guías, tutoriales o documentación interna que facilite la comprensión de las funcionalidades.
+
+- **Velocidad de respuesta inconsistente:**  
+  En ciertos módulos, la carga de información es lenta y no se muestran indicadores de progreso.
+
+- **Diseño visual con elementos redundantes:**  
+  Existen pantallas con exceso de información o componentes repetidos que distraen al usuario.
+
+- **Falta de accesibilidad:**  
+  Algunos textos tienen bajo contraste y ciertos elementos no son completamente accesibles para personas con limitaciones visuales.
+
+## 7.4. Video About-the-Product
+
+En este video sobre el producto presentaremos SafeVision, un sistema que integra tecnologías de Internet de las Cosas (IoT) junto con algoritmos avanzados para mejorar sus funcionalidades. El objetivo del video es mostrar cómo SafeVision está transformando la forma en que se gestionan y supervisan estas operaciones.
+
+Enlace: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213423_upc_edu_pe/IQDZxCHV9vYyQok-PGldJ1xGASKQhYG6w2eKFLr_LWs7W6Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=tiTCdK
 
 # Conclusiones
 
