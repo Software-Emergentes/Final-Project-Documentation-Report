@@ -2743,15 +2743,152 @@ Se muestra el prototipo móvil y web de la aplicación, generado a partir de los
 
 #### 7.2.1.3. Development Evidence for Sprint Review
 
+
 #### 7.2.1.4. Testing Suite Evidence for Sprint Review
+
+## IAM Bounded Context
+
+```gherkin
+Feature: Gestión de usuarios y acceso en SafeVision
+
+  Scenario: Registrar una cuenta de gerente de flota
+    Given El gerente accede al formulario de registro de SafeVision
+    When Ingresa sus datos personales y los de su organización
+    Then El sistema debe crear la cuenta y asignarle permisos de gerente
+
+  Scenario: Registrar un nuevo conductor
+    Given El gerente accede a la sección de conductores
+    When Completa el formulario con los datos del conductor
+    Then El sistema debe crear la cuenta y enviarle las credenciales de acceso
+
+  Scenario: Revocar acceso de un conductor
+    Given El gerente visualiza la lista de conductores
+    When Selecciona uno para desactivar su cuenta
+    Then El conductor debe perder acceso al sistema y su estado debe reflejarse como inactivo
+```
+
+## Notifications Bounded Context
+
+```gherkin
+Feature: Notificaciones de seguridad y eventos críticos
+
+  Scenario: Enviar alerta de comportamiento riesgoso al gerente
+    Given El sistema detecta un evento de alta gravedad (p.ej., somnolencia)
+    When Se genera una alerta en tiempo real
+    Then El gerente debe recibir una notificación inmediata en el dashboard y por correo
+
+  Scenario: Notificar al conductor sobre una infracción detectada
+    Given El sistema registra una infracción como uso del celular o distracción
+    When La IA clasifica el evento
+    Then El conductor debe recibir una notificación en su aplicación móvil
+
+  Scenario: Ver historial de notificaciones
+    Given El gerente accede al módulo de notificaciones
+    When Filtra por fecha o conductor
+    Then El sistema debe mostrar todas las alertas generadas con su respectiva categoría y hora
+```
+
+## Driver Bounded Context
+
+```gherkin
+Feature: Gestión de información de conductores
+
+  Scenario: Registrar información personal del conductor
+    Given El gerente inicia el registro de un nuevo conductor
+    When Ingresa datos como nombre, licencia y foto
+    Then El sistema debe guardar la información y asociarla a su organización
+
+  Scenario: Ver perfil del conductor
+    Given El gerente accede a la lista de conductores
+    When Selecciona el perfil de un conductor
+    Then El sistema debe mostrar su información, historial de alertas y estado actual
+
+  Scenario: Actualizar estado de aptitud del conductor
+    Given El sistema recibe múltiples alertas de riesgo de un conductor
+    When Supera el umbral de riesgo configurado
+    Then El estado del conductor debe cambiar automáticamente a "En observación"
+```
+
+
+## Trip Bounded Context
+
+```gherkin
+Feature: Gestión de viajes y seguimiento de rutas
+
+  Scenario: Iniciar un viaje
+    Given El conductor inicia sesión en su aplicación móvil
+    When Selecciona la opción "Iniciar viaje"
+    Then El sistema debe registrar el inicio y comenzar a capturar datos del trayecto
+
+  Scenario: Finalizar un viaje
+    Given El conductor tiene un viaje activo
+    When Selecciona "Finalizar viaje"
+    Then El sistema debe cerrar el registro, almacenar estadísticas y generar un reporte del viaje
+
+  Scenario: Registrar evento durante el viaje
+    Given El sistema de IA detecta un evento como distracción o microsueño
+    When El evento se clasifica
+    Then Debe asociarse al viaje en curso con marca de tiempo y ubicación
+```
+
+
+## Monitoring Bounded Context
+
+```gherkin
+Feature: Monitoreo en tiempo real de vehículos y conductores
+
+  Scenario: Detectar comportamiento riesgoso
+    Given El sistema recibe streaming del dispositivo IoT
+    When La IA detecta un patrón como parpadeo excesivo o desviación del carril
+    Then El evento debe registrarse y mostrarse en el panel del gerente
+
+  Scenario: Generar alerta en tiempo real
+    Given Un evento supera un umbral crítico
+    When Se clasifica como alta gravedad
+    Then El sistema debe generar una alerta inmediata y notificar al gerente y al conductor
+```
+
+## Management Bounded Context
+
+```gherkin
+Feature: Gestión administrativa de la organización
+
+  Scenario: Registrar una nueva organización
+    Given Un gerente accede al formulario de creación de organización
+    When Ingresa datos como nombre, RUC, rubro y tamaño de flota
+    Then El sistema debe crear la organización y asociarla al gerente
+
+  Scenario: Ver reporte global de seguridad
+    Given El gerente accede al dashboard principal
+    When Selecciona la vista de análisis mensual
+    Then El sistema muestra métricas agregadas como viajes, alertas y nivel de riesgo por conductor
+
+  Scenario: Configurar parámetros de seguridad
+    Given El gerente accede al módulo de configuración
+    When Modifica umbrales de gravedad para alertas
+    Then El sistema debe aplicar los nuevos parámetros a todos los conductores de la organización
+```
+
+
+
 
 #### 7.2.1.5. Execution Evidence for Sprint Review
 
+
+
 #### 7.2.1.6. Services Documentation Evidence for Sprint Review
+
+PEDIR CAPTURAS DEL SWAGGER
 
 #### 7.2.1.7. Software Deployment Evidence for Sprint Review
 
+En esta 
+
+
 #### 7.2.1.8. Team Collaboration Insights during Sprint
+
+------------
+
 
 ## 7.3. Validation Interviews
 
@@ -2941,6 +3078,11 @@ A partir de la evaluación realizada, pudimos obtener las siguientes áreas de m
 En este video sobre el producto presentaremos SafeVision, un sistema que integra tecnologías de Internet de las Cosas (IoT) junto con algoritmos avanzados para mejorar sus funcionalidades. El objetivo del video es mostrar cómo SafeVision está transformando la forma en que se gestionan y supervisan estas operaciones.
 
 Enlace: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213423_upc_edu_pe/IQDZxCHV9vYyQok-PGldJ1xGASKQhYG6w2eKFLr_LWs7W6Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=tiTCdK
+
+
+
+
+
 
 # Conclusiones
 
