@@ -2727,11 +2727,146 @@ Se muestra el prototipo móvil y web de la aplicación, generado a partir de los
 
 ### 7.1.1. Software Development Environment Configuration
 
+En esta sección se detallan las herramientas de software empleadas en SafeVision para gestionar el ciclo completo de vida del proyecto, desde la planificación hasta la documentación y pruebas.
+
+#### Project Management:
+
+- **Discord**: Utilizamos Discord como herramienta principal de comunicación para la coordinación diaria del equipo.
+
+- **WhatsApp**: Sirve como canal rápido para notificaciones, recordatorios y coordinación informal.
+
+- **Trello**: Gestión del Product Backlog y seguimiento de User Stories.
+
+#### Requirements Management:
+
+- **Miro**: Empleado para mapear funcionalidades, eventos y procesos con diagramas colaborativos.
+
+- **Lucidchart**: Para modelar arquitecturas, flujos y relaciones.
+
+#### Product Design:
+
+- **Figma**: Diseño de interfaz, flujos y prototipos interactivos.
+
+- **UXPressia**: Desarrollo de perfiles de usuario y customer journey.
+
+- **Canva**: Recursos visuales complementarios (gráficos, banners).
+
+#### Software Development:
+
+- **WebStorm**: IDE para desarrollo frontend con Vue.js.
+
+- **Visual Studio Code**: IDE para desarrollo backend.
+
+- **Android Studio**: Desarrollo de la aplicación móvil para Android.
+
+- **Python**: Lenguaje para procesamiento de IA y detección de fatiga.
+
+- **Vue.js**: Framework para desarrollo del frontend web.
+
+#### Software Documentation y Landing Page:
+
+- **GitHub**: Repositorio de código y documentación.
+
+- **HTML/CSS/JS**: Tecnologías empleadas en la creación de la landing page.
+
+---
+
 ### 7.1.2. Source Code Management
+
+Se utilizó GitHub como plataforma centralizada de control de versiones, alojando repositorios del frontend, backend, aplicaciones móviles, landing page e infraestructura. Esta práctica facilita la colaboración en equipo, la trazabilidad de cambios y la automatización del flujo de trabajo.
+
+#### Repositorios:
+
+- **Frontend**:  
+  https://github.com/Software-Emergentes/safevision-web-app
+
+- **Backend**:  
+  https://github.com/Software-Emergentes/safevision-web-service
+
+- **Mobile Android**:  
+  https://github.com/Software-Emergentes/Safe-Vision-Mobile
+
+- **Landing**:  
+  https://github.com/Software-Emergentes/Landing-Page-Safe-Vision
+
+#### Modelo de ramas (GitFlow):
+
+- **main**: rama estable
+- **develop**: rama de integración
+- **feature/\***: rama por funcionalidad nueva
+- **release/\***: versiones candidatas
+- **hotfix/\***: correcciones críticas post-producción
+
+#### Convenciones de nombres de branches:
+
+- `feature/driver-registration`
+- `feature/alert-notifications`
+- `release/1.0.0`
+- `hotfix/camera-connection`
+
+#### Commits:
+
+Se utiliza la convención Conventional Commits con mensajes como:
+```
+feat: add fatigue detection module
+fix: correct notification delivery
+docs: update README
+```
+
+---
 
 ### 7.1.3. Source Code Style Guide & Conventions
 
+Esta guía define las convenciones que aseguran coherencia, legibilidad y mantenibilidad del código fuente durante todo el proyecto.
+
+#### Convenciones de Nombres:
+
+- **Clases e Interfaces**: PascalCase (e.g., DriverService, TripRepository)
+- **Métodos y Variables**: camelCase (e.g., registerDriver(), alertStatus)
+- **Constantes**: MAYÚSCULAS_CON_GUIONES (e.g., MAX_ALERTS, DEFAULT_TIMEOUT)
+- **Enums**: PascalCase para el nombre, valores en mayúsculas (e.g., Status.ACTIVE)
+
+#### Diseño del Código:
+
+- Indentación de 4 espacios
+- Llaves con estilo egipcio (K&R)
+- Longitud de línea: 80–120 caracteres
+- Comentarios claros sobre el "por qué", no sobre el "qué"
+- Docstrings en Python y JSDoc en frontend
+
+#### Estructura de Archivos:
+
+- Una clase por archivo
+- Carpetas organizadas por módulos o funcionalidades (no por tipo)
+
+#### Prácticas Recomendadas:
+
+- Uso de patrones de diseño cuando sea apropiado
+- No realizar optimización prematura sin evidencia de cuellos de botella
+
+---
+
 ### 7.1.4. Software Deployment Configuration
+
+El despliegue de SafeVision se ejecuta de forma automatizada en entornos en la nube, utilizando herramientas modernas de integración continua (CI) y entrega continua (CD).
+
+#### Herramientas de despliegue utilizadas:
+
+- **Azure App Services**: Hospedaje del backend
+
+- **Vercel**: Despliegue de frontend con CDN global
+
+- **AWS RDS PostgreSQL**: Base de datos escalable
+
+- **GitHub Actions**: CI/CD para pruebas y despliegue
+
+#### Pasos de despliegue:
+
+1. Cambios se suben a rama `release/*`
+2. GitHub Actions ejecuta pruebas y linter
+3. Backend se despliega en Azure, frontend en Vercel
+4. Dispositivos IoT son conectados para monitoreo
+5. Validación final en entorno productivo
 
 ## 7.2. Solution Implementation
 
