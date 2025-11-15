@@ -2882,7 +2882,18 @@ PEDIR CAPTURAS DEL SWAGGER
 
 #### 7.2.1.7. Software Deployment Evidence for Sprint Review
 
-En esta 
+En esta se detalla el proceso para realizar el despliegue de la Landing Page de SafeVision, haciendo uso de Github Pages como plataforma de hosting gratuita. A continuación, se describen los pasos seguidos para llevar a cabo este proceso:
+
+1. **Preparación del Repositorio**: Se creó un repositorio en GitHub llamado "SafeVision-LandingPage" donde se alojaron todos los archivos estáticos de la landing page, incluyendo HTML, CSS, JavaScript e imágenes.
+
+2. **Configuración de GitHub Pages**: En la configuración del repositorio, se habilitó la opción de GitHub Pages seleccionando la rama "main" como fuente y la carpeta raíz (root) para publicar el sitio.
+
+3. **Despliegue del Sitio**: Una vez configurado, GitHub Pages generó automáticamente una URL pública donde la landing page quedó accesible para cualquier usuario.
+
+4. **Verificación del Despliegue**: Se accedió a la URL proporcionada por GitHub Pages para verificar que la landing page se visualizara correctamente y que todas las funcionalidades estuvieran operativas.
+
+
+<img src="./assets/app-design/landing.png" >
 
 
 #### 7.2.1.8. Team Collaboration Insights during Sprint
