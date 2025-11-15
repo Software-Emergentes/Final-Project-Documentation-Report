@@ -3141,7 +3141,7 @@ Edad: 60
 
 Distrito donde Reside: Bellavista, Callao – Perú
 
-Imagen: <img src="./assets/Andre_Entrevista.png" >
+Imagen: <img src="./assets/Maricarmen-entrevistaVal.png" >
 
 Resumen de la Entrevista:
 
