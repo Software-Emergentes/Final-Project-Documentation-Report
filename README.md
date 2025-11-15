@@ -3012,19 +3012,22 @@ Feature: Gestión administrativa de la organización
 En este sprint se logró desarrollar las funcionalidades principales del sistema SafeVision, enfocándonos en la creación de cuentas para gerentes y conductores, el inicio de sesión, y la visualización del panel principal con estadísticas básicas. A continuación, se detallan las tareas completadas durante este sprint:
 
 
-- **Registro de Usuarios**: Se implementó el formulario de registro que permite a los gerentes crear cuentas para ellos mismos y para sus conductores, almacenando la información en la base de datos.
-
-
 - **Inicio de Sesión**: Se desarrolló la funcionalidad de inicio de sesión, permitiendo a los usuarios autenticarse y acceder a sus respectivas cuentas de manera segura.
 
+<img src="./assets/execution-evidence/inicio.png" >
 
 - **Panel Principal**: Se creó el panel principal para los gerentes, donde pueden visualizar estadísticas básicas de sus conductores, incluyendo el número de alertas generadas y el estado general de la flota.
 
+<img src="./assets/execution-evidence/panel-general.png" >
+
+- **Reporte General**: Se implementó una vista de reporte general que muestra un resumen de las actividades de los conductores, incluyendo el número total de viajes y alertas.
+
+<img src="./assets/execution-evidence/reporte.png" >
 
 
 #### 7.2.1.6. Services Documentation Evidence for Sprint Review
 
-
+En esta entrega se culminó con la parte del front end de la aplicación web y móvil de SafeVision, por lo que no se cuenta con servicios documentados en esta etapa del proyecto. Sin embargo, se ha planificado que en los próximos sprints se desarrollarán e implementarán los servicios necesarios para la comunicación entre el front y el backend.
 
 
 #### 7.2.1.7. Software Deployment Evidence for Sprint Review
