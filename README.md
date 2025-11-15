@@ -2876,9 +2876,12 @@ Feature: Gestión administrativa de la organización
 
 
 
+
+
 #### 7.2.1.6. Services Documentation Evidence for Sprint Review
 
-PEDIR CAPTURAS DEL SWAGGER
+
+
 
 #### 7.2.1.7. Software Deployment Evidence for Sprint Review
 
@@ -2898,7 +2901,10 @@ En esta se detalla el proceso para realizar el despliegue de la Landing Page de 
 
 #### 7.2.1.8. Team Collaboration Insights during Sprint
 
-------------
+En los siguientes gráficos, se muestran las métricas de colaboración del equipo durante el Sprint 1, obtenidas a través de la herramienta proporcionada por Github para visualizar la cantidad de commits de cada miembro del equipo. Estos gráficos reflejan la distribución de tareas, el progreso del sprint y la participación de cada miembro del equipo en las actividades asignadas.
+
+<img src="./assets/collab-insights/graph1.png" >
+<img src="./assets/collab-insights/graph2.png" >
 
 
 ## 7.3. Validation Interviews
