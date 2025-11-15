@@ -3132,7 +3132,7 @@ Edad: 28
 
 Distrito donde Reside: San Borja, Lima, Perú
 
-Imagen: <img src="./assets/manuel-chavez-entrevista.png" >
+Imagen: <img src="./assets/manuel-entrevista.png" >
 
 Resumen de la Entrevista: El entrevistado es un conductor profesional de buses interprovinciales con 6 años de experiencia, especializado en rutas largas de 8 a 14 horas en turnos nocturnos. Considera que el monitoreo en tiempo real sería muy útil ya que muchas veces no se da cuenta del cansancio hasta que es tarde, y valora tener un supervisor que lo alerte objetivamente para detenerse a tiempo. Aprecia que la aplicación registre niveles de alerta durante el viaje porque le permite identificar patrones de fatiga, justificar paradas de descanso y contar con evidencia objetiva que lo protege legalmente. Sobre la cámara, expresa desconfianza inicial por temor a vigilancia constante, pero acepta el sistema si se garantiza transparencia total: que solo analiza fatiga sin grabar video ni guardar imágenes, y que solo su gerente directo tiene acceso, requiriendo estas garantías por escrito. Finalmente, considera que la combinación de alerta sonora y vibración es la más efectiva, ya que necesita estímulos físicos intensos que lo saquen del estado de somnolencia de forma imposible de ignorar.
 
@@ -3186,7 +3186,7 @@ Edad: 32
 
 Distrito donde Reside: Surco, Lima, Perú
 
-Imagen: <img src="./assets/entrevistas/rhai-vargas-entrevista.png" >
+Imagen: <img src="./assets/entrevistas/rhai-entrevista.png" >
 
 Resumen de la Entrevista: El entrevistado es gerente de operaciones con 8 años de experiencia en transporte interprovincial, administrando 50 conductores activos y 35 unidades. Utiliza métodos básicos como descansos obligatorios cada 4 horas y reportes manuales que reconoce son poco confiables. Considera que los reportes en tiempo real serían súper útiles porque actualmente solo se enteran de problemas después de que ocurren, y con SafeVision podrían prevenir accidentes antes de que pasen, especialmente en viajes nocturnos. Sugiere integrar información del estado del vehículo (mantenimiento, revisiones técnicas), comparar conductores entre sí, y dejar notas internas sobre cada conductor. Afirma que recibir alertas en tiempo real sería un cambio radical porque les permitiría anticiparse a problemas, contactar al conductor inmediatamente, mandar relevos si es necesario, y protegerse legalmente al documentar medidas preventivas. Como funcionalidades adicionales menciona un chat o llamada rápida integrada y estadísticas comparativas entre conductores para identificar quiénes necesitan apoyo y reconocer a los que lo hacen bien.
 
