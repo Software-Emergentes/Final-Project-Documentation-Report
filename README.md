@@ -2874,7 +2874,16 @@ Feature: Gestión administrativa de la organización
 
 #### 7.2.1.5. Execution Evidence for Sprint Review
 
+En este sprint se logró desarrollar las funcionalidades principales del sistema SafeVision, enfocándonos en la creación de cuentas para gerentes y conductores, el inicio de sesión, y la visualización del panel principal con estadísticas básicas. A continuación, se detallan las tareas completadas durante este sprint:
 
+
+- **Registro de Usuarios**: Se implementó el formulario de registro que permite a los gerentes crear cuentas para ellos mismos y para sus conductores, almacenando la información en la base de datos.
+
+
+- **Inicio de Sesión**: Se desarrolló la funcionalidad de inicio de sesión, permitiendo a los usuarios autenticarse y acceder a sus respectivas cuentas de manera segura.
+
+
+- **Panel Principal**: Se creó el panel principal para los gerentes, donde pueden visualizar estadísticas básicas de sus conductores, incluyendo el número de alertas generadas y el estado general de la flota.
 
 
 
@@ -3017,17 +3026,19 @@ Imagen: <img src="./assets/Andre_Entrevista.png" >
 
 Resumen de la Entrevista: El supervisor de flota entrevistado, con 10 años de experiencia, administra actualmente a 35 conductores y utiliza herramientas básicas como GPS y reportes manuales para supervisar la operación. Considera que contar con reportes en tiempo real sobre el estado de alerta del conductor sería muy útil para prevenir riesgos y mejorar la seguridad. Señala que le gustaría visualizar indicadores como nivel de fatiga, historial de alertas, horas de conducción y ubicación. Además, afirma que recibir notificaciones inmediatas ante señales de somnolencia sería valioso para tomar decisiones preventivas. Finalmente, sugiere funciones adicionales como reportes automáticos, estadísticas de rendimiento e integración con sistemas GPS existentes para optimizar la gestión de la flota.
 
-Entrevistado Número 2:
+Entrevistado Número 2: Ernesto Miguel Vilca Lopez
 
-Sexo:
+Sexo: Masculino
 
-Edad:
+Edad: 29
 
-Distrito donde Reside:
+Distrito donde Reside: Breña
 
-Imagen:
+Imagen: <img src="./assets/entrevistas/miguel.png" >
+
 
 Resumen de la Entrevista:
+Miguel nos comenta que para monitorear a su flota actualmente utiliza medios de comunicación tradicionales como llamadas telefónicas y mensajes de texto, lo que le dificulta obtener información en tiempo real sobre el estado de sus conductores. Considera que contar con reportes en tiempo real sobre el estado del conductor sería extremadamente útil para mejorar la seguridad y eficiencia de su flota. Le gustaría visualizar en el panel de monitoreo indicadores clave como el nivel de fatiga, alertas de distracción, historial de viajes y ubicación en tiempo real. Además, cree que recibir alertas inmediatas cuando un conductor muestre señales de fatiga sería crucial para prevenir accidentes y tomar medidas correctivas oportunas. Finalmente, sugiere que funcionalidades adicionales como análisis de rendimiento, integración con sistemas GPS y reportes automáticos podrían mejorar significativamente la gestión de su flota.
 
 Entrevistado Número 3:
 
