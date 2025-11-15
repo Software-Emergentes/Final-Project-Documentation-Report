@@ -246,8 +246,8 @@ El equipo tiene definidas todas las tareas de los capítulos 6 y 7: Leo completa
 - [6.4. Applications UX/UI Design](#64-applications-uxui-design)
   - [6.4.1. Applications Wireframes](#641-applications-wireframes)
   - [6.4.2. Applications Wireflow Diagrams](#642-applications-wireflow-diagrams)
-  - [6.4.2. Applications Mock-ups](#642-applications-mock-ups)
-  - [6.4.3. Applications User Flow Diagrams](#643-applications-user-flow-diagrams)
+  - [6.4.3. Applications Mock-ups](#643-applications-mock-ups)
+  - [6.4.4. Applications User Flow Diagrams](#644-applications-user-flow-diagrams)
 - [6.5. Applications Prototyping](#65-applications-prototyping)
 
 ## [Capítulo VII: Product Implementation, Validation & Deployment]()
@@ -2592,11 +2592,134 @@ El flujo inicia en la pantalla de bienvenida, donde el usuario puede iniciar ses
 
 El flujo comienza cuando un conductor requiere comenzar un viaje, para lo cual se dirige a la panatalla de "Start trip". A continuación, se le presenta una serie de verificaciones rutinarias que debe completar antes de iniciar el viaje. Estas verificaciones incluyen revisar el correcto funcionamiento de las cámaras que lo ayudarán a mantenerse alerta durante el viaje, y el sonido de las notificaciones. Una vez que el conductor ha completado todas las verificaciones y presiona "Continue", recibe una confirmación de que el viaje ha comenzado exitosamente.
 
-### 6.4.2. Applications Mock-ups
+### 6.4.3. Applications Mock-ups
 
-### 6.4.3. Applications User Flow Diagrams
+En esta sección, se mostrarán los Mock-ups generados utilizando la aplicación Figma, realizados en base a los Wireframes previamente diseñados, a la vez de la realización de ajustes necesarios para el funcionamiento de la aplicación en web y móvil. El desarrollo de los mismos servirá como base principal del frontend y app mobile.
+
+A continuación se presentan los mockups de la aplicación móvil:
+
+**Registro e Inicio de Sesión del Usuario:**
+Diseño de la interfaz de registro de usuario, en la cual se podrán registrar tanto los conductores como los administradores de flota.
+
+<img src="./assets/mockup-mobile-login-signup.png" >
+
+**Dashboard, Alerta e Historial de Viajes:**
+Diseño del panel principal de la aplicación, junto a un ejemplo de la vista de Alerta, y la vista del historial de los viajes realizados.
+
+<img src="./assets/mockup-mobile-dashboard-alert-history.png" >
+
+**Notificaciones y Configuración de camaras:**
+Diseño de la página donde se ven las notificaciones de la app, al igual el donde se configuran y se vinculan las camaras.
+
+<img src="./assets/mockup-mobile-configuration-notif-cam.png" >
+
+**Detalles del viaje:**
+Diseño de la vista donde se ven los detalles del viaje realizado por el usuario.
+
+<img src="./assets/mockup-mobile-trip.png" >
+
+A continuación se presentan los mockups de la aplicación web:
+
+**Inicio de Sesión del Usuario:**
+Diseño de la interfaz del inicio de sesión, exclusivo para los administradores de flota.
+
+<img src="./assets/mockup-login.png" >
+
+**Panel de Control:**
+Diseño de la vista principal, donde el adminstrador puede ver y filtrar los viajes de los conductores.
+
+<img src="./assets/mockup-dashboard1.png" >
+<img src="./assets/mockup-dashboard2.png" >
+<img src="./assets/mockup-dashboard3.png" >
+<img src="./assets/mockup-dashboard4.png" >
+<img src="./assets/mockup-dashboard5.png" >
+<img src="./assets/mockup-dashboard6.png" >
+<img src="./assets/mockup-dashboard7.png" >
+
+**Detalles del Conductor:**
+Diseño de la vista que brinda los datos de un conductor seleccionado, donde se puede ver sus alertas recientes, su historial de viajes y estadísticas generales.
+
+<img src="./assets/mockup-driver1.png" >
+<img src="./assets/mockup-driver2.png" >
+<img src="./assets/mockup-driver3.png" >
+
+**Reportes y Análisis:**
+Diseño de la vista donde el administrador puede obtener un resumen general de todos los conductores, a la vez de exportar un documento con toda la información.
+
+<img src="./assets/mockup-report1.png" >
+<img src="./assets/mockup-report2.png" >
+<img src="./assets/mockup-report3.png" >
+<img src="./assets/mockup-report4.png" >
+
+### 6.4.4. Applications User Flow Diagrams
+
+En esta sección, se mostrarán una serie de flujos base de cada uno de los procesos que seguirá la aplicación una vez desarrollada, los flujos fueron realizados usando los Mock-ups diseñados.
+
+Empezaremos con los flujos de la app móvil:
+
+**Flujo: Registro de usuario**  
+Se muestra el flujo de registro de un usuario, en el cual el usuario elige su tipo de usuario, y a partir de esa decisión, genera las credenciales necesarias en la página de registro.
+
+<img src="./assets/userflow-signup.png" >
+
+**Flujo: Inicio de sesión**
+En el caso de que un usuario ya tenga una cuenta registrada, este podra iniciar directamente al dashboard principal después de brindar sus credenciales.
+
+<img src="./assets/userflow-login.png" >
+
+**Flujo: Alerta en Tiempo Real**
+En caso que el usuario sea detectado con fatiga, se mostrara la siguiente alerta de manera inmediata.
+
+<img src="./assets/userflow-alert.png" >
+
+**Flujo: Notificaciones**
+El usuario tiene la habilidad de ver todas las notificaciones que haya obtenido en la aplicación.
+
+<img src="./assets/userflow-notification.png" >
+
+**Flujo: Configuración de Camaras**
+En el siguiente flujo se muestra las acciones que debe de hacer el usuario para poder vincular las camaras a la aplicación, además de ver el estado actual de estas.
+
+<img src="./assets/userflow-cam.png" >
+
+**Flujo: Historial de Viajes**
+Se muestra el flujo del historial de viajes, donde el usuario puede ver todos los viajes que ha realizada hasta el momento, además de poder ver los detalles de este.
+
+<img src="./assets/userflow-history-report.png" >
+
+A continuación, los flujos de la aplicación web:
+
+**Flujo: Inicio de Sesión**
+Se muestra el flujo de inicio de sesión, donde el usuario puede ingresar al servicio web mediante sus credenciales, además de poder cerrar sesión en cualquier momento.
+
+<img src="./assets/userflow-login-frontend.png" >
+
+**Flujo: Panel de Control**
+Una vez iniciada su sesión, el usuario podra ver el panel de control, donde podrá monitoriar los viajes de los conductores al momento, y filtrarlos según el nivel de alerta.
+
+<img src="./assets/userflow-control-frontend.png" >
+
+**Flujo: Detalles de Conductor**
+A partir del panel de control, el usuario puede seleccionar un conductor en específico, y ver sus datos de alertas, historial de viajes y estadísticas generales.
+
+<img src="./assets/userflow-driverdetails-frontend.png" >
+
+**Flujo: Ver los Reportes y Análisis**
+A partir del panel de control, el usuario puede seleccionar la vista de reportes y análisis, donde podrá ver un resumen general de los viajes, junto a los reportes ordenados por conductor o ruta, y las alertas por horario. Además de la opción de exportar toda la información en un documento.
+
+<img src="./assets/userflow-report-frontend.png" >
 
 ### 6.5. Applications Prototyping
+
+Se muestra el prototipo móvil y web de la aplicación, generado a partir de los mock-ups diseñados gracias a Figma.
+
+**Aplicación Móvil:**
+<img src="./assets/prototype-mobile.png" >
+
+**Aplicación Web:**
+<img src="./assets/prototype-frontend.png" >
+
+<a href="https://www.figma.com/proto/cLri1pLLJV6PW5eyjQrL8k/Prototipo-SafeVision?node-id=0-754&p=f&t=kqXyDQBvajbV7P3v-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=0%3A754&show-proto-sidebar=" target="_blank">Link del Web-Mobile-App-Prototype en figma</a>
 
 # Capítulo VII: Product Implementation, Validation & Deployment
 
