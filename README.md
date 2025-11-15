@@ -3133,17 +3133,19 @@ Imagen:
 
 Resumen de la Entrevista:
 
-Entrevistado Número 3:
+Entrevistado Número 3: Maricarmen Tejada
 
-Sexo:
+Sexo: Femenino
 
-Edad:
+Edad: 60
 
-Distrito donde Reside:
+Distrito donde Reside: Bellavista, Callao – Perú
 
-Imagen:
+Imagen: <img src="./assets/Andre_Entrevista.png" >
 
 Resumen de la Entrevista:
+
+La entrevistada es una conductora interprovincial con más de 25 años de experiencia manejando buses de dos pisos en rutas largas que suelen durar entre 8 y 14 horas, especialmente en horarios nocturnos. Reporta haber experimentado somnolencia en múltiples ocasiones durante viajes de madrugada, manifestada principalmente mediante párpados pesados, bostezos frecuentes y pérdida de concentración. Considera que las alertas en tiempo real serían altamente útiles para evitar accidentes, ya que muchas veces el cansancio avanza sin que el conductor sea plenamente consciente. Aprecia que la aplicación registre niveles de alerta durante el viaje siempre que exista transparencia en el uso de los datos. Sobre la cámara, indica que podría ser incómoda si almacena su rostro, pero no tendría problema si el análisis es solo en tiempo real. Menciona que las alertas sonoras son las más efectivas para ella, complementadas con señales visuales. También resalta que los tramos largos, rectos y nocturnos incrementan el riesgo de somnolencia, y que un sistema como SafeVision podría ayudarla a reaccionar antes, mejorar sus hábitos de descanso y aumentar la seguridad tanto para ella como para sus pasajeros.
 
 ---
 
