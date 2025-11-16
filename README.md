@@ -62,6 +62,7 @@
 | 6.0         | 19/09/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Creación del diagrama de base de datos, diagrama de clases, diccionario de clases, diagramas de contenedores, diagramas de contexto y diagramas de componentes. |
 | 7.0         | 3/10/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Se realizaron las correcciones correspondientes del TB1 y se avanzó en el desarrollo de los *Bounded Contexts*, incorporando los ajustes y mejoras necesarias según las observaciones recibidas. |
 | 7.0         | 7/10/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Avance en el Capítulo 6: Solution UX Design, se definieron los wireframes de la aplicación |
+| 8.0         | 14/11/2025| Herrera, Linares, Oneglio, Salgada, Sosa | Capítulo 6 y Capítulo 7 completados. |
 
 # Registro de Versiones del Informe
 
@@ -108,6 +109,10 @@ Para esta entrega el equipo se enfocó en el diseño arquitectónico y de experi
 Imagen de los Insights: 
 
 <img src="assets/commits/tp1-commits.png">
+
+**TB2**
+
+El equipo tiene definidas todas las tareas de los capítulos 6 y 7: Leo completará los mockups, diagramas de flujo y prototipos; Fer desarrollará toda la parte de configuración del software, entorno, gestión del código, convenciones y despliegue; Angello implementará la solución y ejecutará el Sprint 1 con su planificación, backlog y evidencias; Fabia elaborará todas las evidencias del sprint, incluyendo pruebas, ejecución, documentación de servicios, despliegue y conclusiones; y Beth realizará las entrevistas de validación, su diseño, registro, evaluaciones heurísticas, el video final del producto y el avance de conclusiones, bibliografía y anexos. Con esto, las responsabilidades ya están completamente desarrolladas y organizadas.
 
 ## Contenido
 
@@ -241,6 +246,38 @@ Imagen de los Insights:
 - [6.4. Applications UX/UI Design](#64-applications-uxui-design)
   - [6.4.1. Applications Wireframes](#641-applications-wireframes)
   - [6.4.2. Applications Wireflow Diagrams](#642-applications-wireflow-diagrams)
+  - [6.4.3. Applications Mock-ups](#643-applications-mock-ups)
+  - [6.4.4. Applications User Flow Diagrams](#644-applications-user-flow-diagrams)
+- [6.5. Applications Prototyping](#65-applications-prototyping)
+
+## [Capítulo VII: Product Implementation, Validation & Deployment]()
+
+- [7.1. Software Configuration Management](#71-software-configuration-management)
+  - [7.1.1. Software Development Environment Configuration](#711-software-development-environment-configuration)
+  - [7.1.2. Source Code Management](#712-source-code-management)
+  - [7.1.3. Source Code Style Guide & Conventions](#713-source-code-style-guide--conventions)
+  - [7.1.4. Software Deployment Configuration](#714-software-deployment-configuration)
+
+- [7.2. Solution Implementation](#72-solution-implementation)
+  - [7.2.1. Sprint 1](#721-sprint-1)
+    - [7.2.1.1. Sprint Planning 1](#7211-sprint-planning-1)
+    - [7.2.1.2. Sprint Backlog 1](#7212-sprint-backlog-1)
+    - [7.2.1.3. Development Evidence for Sprint Review](#7213-development-evidence-for-sprint-review)
+    - [7.2.1.4. Testing Suite Evidence for Sprint Review](#7214-testing-suite-evidence-for-sprint-review)
+    - [7.2.1.5. Execution Evidence for Sprint Review](#7215-execution-evidence-for-sprint-review)
+    - [7.2.1.6. Services Documentation Evidence for Sprint Review](#7216-services-documentation-evidence-for-sprint-review)
+    - [7.2.1.7. Software Deployment Evidence for Sprint Review](#7217-software-deployment-evidence-for-sprint-review)
+    - [7.2.1.8. Team Collaboration Insights during Sprint](#7218-team-collaboration-insights-during-sprint)
+
+- [7.3. Validation Interviews](#73-validation-interviews)
+  - [7.3.1. Diseño de Entrevistas](#731-diseño-de-entrevistas)
+  - [7.3.2. Registro de Entrevistas](#732-registro-de-entrevistas)
+  - [7.3.3. Evaluaciones según heurísticas](#733-evaluaciones-según-heurísticas)
+
+- [7.4. Video About-the-Product](#74-video-about-the-product)
+  - [Avance de Conclusiones](#avance-de-conclusiones)
+  - [Bibliografía](#bibliografía)
+  - [Anexos](#anexos)
 
 ## [Conclusiones](#conclusiones)
 - [Conclusiones](#conclusiones)
@@ -256,8 +293,8 @@ Imagen de los Insights:
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |----------------------|---------------------|--------------|
-| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre  <br><br> **TB1**  <br><br> Se expusieron los resultados del Needfinding, mostrando el As Is y el To Be, además de explicar los User Personas y el Empathy Mapping en presentaciones grupales.<br><br> **TP1** <br><br>Expresó de manera clara y objetiva los avances relacionados con el bounded context Notifications y el apartado de Style Guidelines, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del desarrollo del proyecto de ingeniería.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se presentaron los Architectural Drivers Backlog y las Architectural Design Decisions, explicando cómo se refinaron los Quality Attribute Scenarios y los resultados del Event Storming en sesiones grupales.<br><br> **TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Management y brindó apoyo en el desarrollo del bounded context Monitoring, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>Beth Shantal Oneglio De Paz<br><br> **TB1** <br><br> Se expuso el Strategic-Level Attribute-Driven Design, destacando el Design Purpose y los Primary User Stories, junto con los Quality Attribute Scenarios más relevantes. <br><br> **TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Monitoring y en el desarrollo de la landing page, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Fernando Brian Salgada Luna <br><br> **TB1** <br><br> Se presentó el Capítulo I: Introducción y el Capítulo II: Requirements Elicitation & Analysis, explicando los puntos clave y los resultados del Event Storming en exposición grupal.<br><br>**TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Trip y en el apartado de Style Guidelines, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>Angello Rodolfo Sosa Colca<br><br> **TB1** <br><br> Se explicó el Context Mapping y los diagramas de Software Architecture (System Landscape, Context Level, Container y Deployment), además de los hallazgos del Event Storming en presentaciones grupales.<br><br>**TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en los bounded context Driver e IAM, así como en el desarrollo de la landing page y el diseño general, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería. | El trabajo realizado ha sido sobresaliente, cumpliendo con todos los segmentos del proyecto. El documento redactado ofrece un detallado informe sobre los pasos seguidos en la planificación, desarrollo y envío del proyecto a producción, garantizando así un resultado digno y completo. |
-| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre <br><br> **TB1** <br><br> Se documentaron los hallazgos en el Product Backlog y se elaboró la User Task Matrix, complementada con la descripción escrita de escenarios y perfiles de usuario.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances relacionados con el bounded context Notifications y el apartado de Style Guidelines, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del desarrollo del proyecto de ingeniería.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se documentaron los hallazgos del Candidate Context Discovery, los Domain Message Flows Modeling y los Bounded Context Canvases, integrándolos en el informe de Strategic-Level Domain-Driven Design. <br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Management y el apoyo brindado en el desarrollo del bounded context Monitoring, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Beth Shantal Oneglio De Paz <br><br> **TB1** <br><br> Se documentaron los Attribute-Design Inputs y las Constraints, integrándolos en el reporte de diseño estratégico para el proyecto.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Monitoring y en el desarrollo de la landing page, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Fernando Brian Salgada Luna <br><br> **TB1** <br><br> Se redactaron los apartados del informe correspondientes a la Introducción, el Requirements Elicitation & Analysis y la documentación del Event Storming.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Trip y en el apartado de Style Guidelines, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br> Angello Rodolfo Sosa Colca <br><br> **TB1** <br><br> Se documentaron los diagramas de Software Architecture y el Context Mapping, junto con la descripción escrita del Event Storming, integrados en el informe técnico.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en los bounded context Driver e IAM, así como en el desarrollo de la landing page y el diseño general, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.  | El trabajo realizado ha sido sobresaliente en términos de comunicación, cubriendo todos los aspectos necesarios para garantizar una coordinación efectiva. El documento final no solo detalla los pasos seguidos en la planificación y desarrollo del proyecto, sino que también refleja una comunicación clara y precisa durante todo el proceso, asegurando así una entrega bien fundamentada y comprensible. |
+| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre  <br><br> **TB1**  <br><br> Se expusieron los resultados del Needfinding, mostrando el As Is y el To Be, además de explicar los User Personas y el Empathy Mapping en presentaciones grupales.<br><br> **TP1** <br><br>Expresó de manera clara y objetiva los avances relacionados con el bounded context Notifications y el apartado de Style Guidelines, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del desarrollo del proyecto de ingeniería.<br><br> **TB2** <br><br>En esta entrega se realizaron entrevistas de validación para poder corroborar si es que el alcance de nuestro proyecto satisface las necesidades de nuestro público objetivo. Con estos insights logramos incorporar nuevas funcionalidades a nuestra solución.<br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se presentaron los Architectural Drivers Backlog y las Architectural Design Decisions, explicando cómo se refinaron los Quality Attribute Scenarios y los resultados del Event Storming en sesiones grupales.<br><br> **TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Management y brindó apoyo en el desarrollo del bounded context Monitoring, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>**TB2**<br><br>Me encargue de la realización de los mockups, los user flows, y la creación del prototipo, tanto de la versión móvil de la aplicación, como la versión web.<br><br>Beth Shantal Oneglio De Paz<br><br> **TB1** <br><br> Se expuso el Strategic-Level Attribute-Driven Design, destacando el Design Purpose y los Primary User Stories, junto con los Quality Attribute Scenarios más relevantes.<br><br> **TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Monitoring y en el desarrollo de la landing page, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>**TB2**<br><br>Me encargué de la validación del proyecto, desarrollando el diseño y registro de entrevistas, así como las evaluaciones heurísticas; además, trabajé en el video "About-the-Product" y en el avance de las conclusiones, la bibliografía y los anexos.<br><br> Fernando Brian Salgado Luna <br><br> **TB1** <br><br> Se presentó el Capítulo I: Introducción y el Capítulo II: Requirements Elicitation & Analysis, explicando los puntos clave y los resultados del Event Storming en exposición grupal.<br><br>**TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en el bounded context Trip y en el apartado de Style Guidelines, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>**TB2**<br><br>Presenté de manera clara y objetiva la configuración del entorno de desarrollo y las herramientas implementadas para el frontend de la aplicación web, explicando los procesos de deployment y las convenciones de código adoptadas, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del desarrollo del proyecto de ingeniería.<br><br>Angello Rodolfo Sosa Colca<br><br> **TB1** <br><br> Se explicó el Context Mapping y los diagramas de Software Architecture (System Landscape, Context Level, Container y Deployment), además de los hallazgos del Event Storming en presentaciones grupales.<br><br>**TP1**<br><br>Expresó de manera clara y objetiva los avances realizados en los bounded context Driver e IAM, así como en el desarrollo de la landing page y el diseño general, comunicando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería. | El trabajo realizado ha sido sobresaliente, cumpliendo con todos los segmentos del proyecto. El documento redactado ofrece un detallado informe sobre los pasos seguidos en la planificación, desarrollo y envío del proyecto a producción, garantizando así un resultado digno y completo. |
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | Fabia Alejandra Herrera Aguirre <br><br> **TB1** <br><br> Se documentaron los hallazgos en el Product Backlog y se elaboró la User Task Matrix, complementada con la descripción escrita de escenarios y perfiles de usuario.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances relacionados con el bounded context Notifications y el apartado de Style Guidelines, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del desarrollo del proyecto de ingeniería.<br><br> **TB2** <br><br>Para esta entrega del trabajo me encargué principalmente del desarrollo del front de la aplicación móvil de SafeVision. Por otro lado, me encargué de documentar de forma detallada el proceso de deploy para nuestra landing page, así como redactar las funcionalidades más resaltantes de nuestra app desarrolladas en el sprint. <br><br> Leonardo Felix Jesus Linares Tejada <br><br> **TB1** <br><br> Se documentaron los hallazgos del Candidate Context Discovery, los Domain Message Flows Modeling y los Bounded Context Canvases, integrándolos en el informe de Strategic-Level Domain-Driven Design. <br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Management y el apoyo brindado en el desarrollo del bounded context Monitoring, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>**TB2**<br><br>Me encargue de la realización de los mockups, los user flows, y la creación del prototipo, tanto de la versión móvil de la aplicación, como la versión web.<br><br> Beth Shantal Oneglio De Paz <br><br> **TB1** <br><br> Se documentaron los Attribute-Design Inputs y las Constraints, integrándolos en el reporte de diseño estratégico para el proyecto.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Monitoring y en el desarrollo de la landing page, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>**TB2**<br><br>Me encargué de la validación del proyecto, desarrollando el diseño y registro de entrevistas, así como las evaluaciones heurísticas; además, trabajé en el video "About-the-Product" y en el avance de las conclusiones, la bibliografía y los anexos.<br><br> Fernando Brian Salgado Luna <br><br> **TB1** <br><br> Se redactaron los apartados del informe correspondientes a la Introducción, el Requirements Elicitation & Analysis y la documentación del Event Storming.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en el bounded context Trip y en el apartado de Style Guidelines, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería.<br><br>**TB2**<br><br>Documenté de manera detallada la configuración del entorno de desarrollo del frontend, el manejo del código fuente con Git, las convenciones de estilo y código adoptadas, y el proceso de deployment de la aplicación web, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del desarrollo del proyecto de ingeniería.<br><br> Angello Rodolfo Sosa Colca <br><br> **TB1** <br><br> Se documentaron los diagramas de Software Architecture y el Context Mapping, junto con la descripción escrita del Event Storming, integrados en el informe técnico.<br><br>**TP1**<br><br>Comunicó por escrito de manera clara y objetiva los avances realizados en los bounded context Driver e IAM, así como en el desarrollo de la landing page y el diseño general, presentando los resultados de forma comprensible para públicos de distintas especialidades y niveles jerárquicos dentro del proyecto de ingeniería. <br>**TB2**<br>  Demostré mi capacidad para diseñar e implementar soluciones de ingeniería al desarrollar el programa de detección de somnolencia con cámara y el backend del sistema. Además, realicé entrevistas de levantamiento de requisitos, aplicando una comunicación clara y efectiva. Estas actividades evidenciaron mis competencias técnicas y mi habilidad para trabajar de manera profesional dentro del proyecto. | El trabajo realizado ha sido sobresaliente en términos de comunicación, cubriendo todos los aspectos necesarios para garantizar una coordinación efectiva. El documento final no solo detalla los pasos seguidos en la planificación y desarrollo del proyecto, sino que también refleja una comunicación clara y precisa durante todo el proceso, asegurando así una entrega bien fundamentada y comprensible. |
 
 # Capítulo I: Introducción
 
@@ -2338,15 +2375,11 @@ Para la web se emplea una rejilla de 12 columnas, mientras que en la app móvil 
 
 Los espacios en blanco cumplen un rol clave para mantener equilibrio, legibilidad y orden en la interfaz.
 
+<img src="./assets/app-design/general-style.png">
+
 ## 6.2. Information Architecture
 
-En esta sección el equipo plantea las decisiones y sustento que dirigen la manera
-como se organizará el contenido en las experiencias web y móvil, incluyendo el
-Landing Page y las Aplicaciones. Dichas propuestas deben estar orientadas a que los
-visitantes y usuarios se adapten con facilidad a la funcionalidad de cada producto y
-puedan encontrar todo aquello que necesiten sin esfuerzo. Se incluyen las decisiones
-sobre los Organization Systems, Labeling Systems, Navigation Systems y Searching
-Systems
+En esta sección el equipo plantea las decisiones y sustento que dirigen la manera como se organizará el contenido en las experiencias web y móvil, incluyendo el Landing Page y las Aplicaciones. Dichas propuestas deben estar orientadas a que los visitantes y usuarios se adapten con facilidad a la funcionalidad de cada producto y puedan encontrar todo aquello que necesiten sin esfuerzo. Se incluyen las decisiones sobre los Organization Systems, Labeling Systems, Navigation Systems y Searching Systems
 
 La arquitectura de información de SafeVision está diseñada para que los usuarios comprendan y accedan fácilmente a todas las funciones, tanto en la Landing Page como en la aplicación móvil.
 
@@ -2399,10 +2432,7 @@ El diseño guía al usuario paso a paso, manteniendo coherencia visual y navegac
 
 ### 6.2.2. Labeling Systems
 
-Aquí el equipo explica de qué maneras se representarán los datos, considerando
-simplicidad y buscando evitar la confusión para los visitantes y usuarios. En esta
-sección se especifica las etiquetas (con el mínimo número de palabras) a utilizar para
-representar los conjuntos de información y las asociaciones entre las mismas.
+Aquí el equipo explica de qué maneras se representarán los datos, considerando simplicidad y buscando evitar la confusión para los visitantes y usuarios. En esta sección se especifica las etiquetas (con el mínimo número de palabras) a utilizar para representar los conjuntos de información y las asociaciones entre las mismas.
 
 El etiquetado busca simplicidad y consistencia, evitando confusión o ambigüedad.
 Las etiquetas están redactadas en lenguaje directo y positivo, adaptadas al contexto de acción.
@@ -2419,12 +2449,7 @@ Todas las etiquetas mantienen el mismo estilo tipográfico (Poppins SemiBold) y 
 
 ### 6.2.3. Searching Systems
 
-En esta sección el equipo explica qué medios de ayuda se brindará al usuario para la
-búsqueda de datos dentro de los productos digitales. Dichas decisiones sobre los
-sistemas de búsqueda tratan de evitar que los usuarios se sientan perdidos entre el
-volumen de información. Aquí se deben especificar qué opciones de búsqueda
-ofrecerán las aplicaciones, con qué filtros contará el usuario en cada caso y cómo
-lucirán los datos después de la búsqueda.
+En esta sección el equipo explica qué medios de ayuda se brindará al usuario para la búsqueda de datos dentro de los productos digitales. Dichas decisiones sobre los sistemas de búsqueda tratan de evitar que los usuarios se sientan perdidos entre el volumen de información. Aquí se deben especificar qué opciones de búsqueda ofrecerán las aplicaciones, con qué filtros contará el usuario en cada caso y cómo lucirán los datos después de la búsqueda.
 
 SafeVision ofrece un sistema de búsqueda intuitivo y orientado a la toma de decisiones rápidas.
 En la versión web, el campo de búsqueda permite filtrar por conductor, fecha, nivel de alerta o tipo de evento.
@@ -2443,15 +2468,12 @@ Los resultados se visualizan con códigos de color:
 
 El diseño evita sobrecarga visual, mostrando la información más relevante en tarjetas compactas y legibles.
 
+<img src="./assets/app-design/search-system.png">
+
 ### 6.2.4. SEO Tags and Meta Tags
 
-En esta sección se debe incluir los SEO (Search Engine Optimization) Tags y Meta
-Tags junto con los valores que asignará en las principales páginas de la experiencia
-tanto a nivel del sitio web estático (Landing Page) como Web Applications. Se debe
-incluir Title, los Meta Tags Description, Keywords, Author como mínimo. Del mismo
-modo, para las aplicaciones móviles u otros productos digitales que se exponen vía
-un app store, debe incluir los ASO (App Store Optimization) elements como App
-Title, App keywords, App subtitle, App description.
+En esta sección se debe incluir los SEO (Search Engine Optimization) Tags y Meta Tags junto con los valores que asignará en las principales páginas de la experiencia tanto a nivel del sitio web estático (Landing Page) como Web applications. Se debe incluir Title, los Meta Tags Description, Keywords, Author como mínimo. Del mismo
+modo, para las aplicaciones móviles u otros productos digitales que se exponen vía un app store, debe incluir los ASO (App Store Optimization) elements como App Title, App keywords, App subtitle, App description.
 
 #### Landing Page
 
@@ -2469,13 +2491,12 @@ Title, App keywords, App subtitle, App description.
 
 ### 6.2.5. Navigation Systems
 
-Aquí el equipo explica cuáles serán las acciones y técnicas que guiarán a los usuarios
-a través del Landing Page y las aplicaciones, permitiéndoles cumplir sus metas e
-interactuar de forma satisfactoria con el producto. Aquí se debe incluir de qué
-maneras los usuarios irán recorriendo el contenido.
+Aquí el equipo explica cuáles serán las acciones y técnicas que guiarán a los usuarios a través del Landing Page y las aplicaciones, permitiéndoles cumplir sus metas e interactuar de forma satisfactoria con el producto. Aquí se debe incluir de qué maneras los usuarios irán recorriendo el contenido.
 
 La navegación en SafeVision se estructura para ofrecer una experiencia fluida, clara y guiada, donde tanto los visitantes del sitio web como los usuarios de la aplicación puedan recorrer el contenido sin perderse y cumplir fácilmente sus objetivos.
 Cada interacción fue diseñada con el propósito de que el usuario entienda siempre en qué parte del recorrido se encuentra y cuál es su siguiente paso.
+
+
 
 #### Landing Page
 
@@ -2516,6 +2537,8 @@ Los íconos activos se muestran en rojo (#C13515) y los inactivos en gris (#7478
 El uso de animaciones suaves y cambios de color ayuda a indicar qué acción fue ejecutada, brindando una sensación de control y coherencia.
 En ambos entornos, la navegación de SafeVision se apoya en principios de jerarquía visual, consistencia de color y retroalimentación inmediata, asegurando que los usuarios puedan recorrer el contenido, entender la información y alcanzar sus metas de manera satisfactoria.
 
+<img src="./assets/app-design/nav-system.png" >
+
 ## 6.3. Landing Page UI Design
 
 En esta sección se presenta el diseño visual de la landing page, donde se aplican los lineamientos de estilo, colores, tipografía e iconografía definidos previamente. El diseño busca ofrecer una experiencia clara, atractiva y coherente con la identidad del proyecto, facilitando la navegación y destacando las principales funcionalidades del sistema.
@@ -2524,13 +2547,13 @@ En esta sección se presenta el diseño visual de la landing page, donde se apli
 
 En esta sección se presenta un esquema general del diseño de la landing page, destacando las áreas principales de contenido, como el encabezado y las secciones correspondientes a cada segmento. Este wireframe ilustra la estructura base de la página sin incluir elementos visuales detallados.
 
-**Agregar imágenes**
+<img src="./assets/app-design/landing-wireframe.jpg" >
 
 ### 6.3.2. Landing Page Mock-up
 
 El mock-up de la landing page muestra una versión visual más desarrollada del diseño final, incorporando la paleta de colores, tipografía, imágenes y elementos interactivos. Este diseño permite visualizar con mayor precisión cómo lucirá la interfaz implementada, reflejando la identidad visual de SafeVision y priorizando la usabilidad del usuario.
 
-**Agregar imágenes**
+<img src="./assets/app-design/landing-mock.png" >
 
 ## 6.4. Applications UX/UI Design
 
@@ -2540,13 +2563,693 @@ En este apartado se describen los aspectos vinculados al diseño de interfaces y
 
 Se presentan los wireframes principales, que servirán como base fundamental para el desarrollo posterior de los mock-ups.
 
-**Agregar imágenes**
+<img src="./assets/app-design/wireframes.png" >
 
 ### 6.4.2. Applications Wireflow Diagrams
 
 A partir de los wireframes generados, se elaboran diagramas que representan los flujos básicos de cada uno de los procesos principales que sigue la aplicación.
 
-**Agregar imágenes**
+**Flujo: Usuario gerente de flota crea una nueva cuenta en SafeVision**
+
+<img src="./assets/wireflows/signup-flow.png" >
+
+Como se observa en el diagrama, el flujo inicia con la pantalla de bienvenida, donde el usuario tiene la opción de iniciar sesión y de registrarse de no contar con una cuenta. Al seleccionar "Sign up", se despliega el formulario de registro, que incluye campos para nombre, apellidos, correo electrónico, teléfono y contraseña. Después de completar el formulario de forma correcta, aparece otro en el que debe registrar la información de su empresa de transporte. Al finalizar y aceptar los términos y condiciones, el usuario recibe una confirmación de que su cuenta ha sido creada exitosamente.
+
+**Flujo: Usuario inicia sesión en SafeVision**
+
+<img src="./assets/wireflows/signin-flow.png" >
+
+El flujo comienza en la pantalla de bienvenida, donde el usuario puede optar por iniciar sesión o registrarse si aún no tiene una cuenta. Luego, se muestra el formulario de inicio de sesión con campos para correo electrónico y contraseña. Si el usuario ha olvidado su contraseña, puede hacer clic en "Forgot your password?" para iniciar el proceso de recuperación. Al ingresar las credenciales correctas y presionar "Continue", el usuario recibe una confirmación de un loggeo correcto y este es redirigido al panel principal de la aplicación.
+
+**Flujo: Gerente de flota revisa las estadísticas de los conductores**
+
+<img src="./assets/wireflows/stats-flow.png" >
+El flujo inicia en la pantalla de bienvenida, donde el usuario puede iniciar sesión. Al ingresar las credenciales correctas y presionar "Continue", el usuario recibe una confirmación de un loggeo exitoso y es redirigido al panel principal de la aplicación. Desde allí, puede acceder a la sección de estadísticas para revisar los datos globales de los conductores. Y en el tab de conductores, puede seleccionar a un conductor específico para ver sus estadísticas detalladas.
+
+**Flujo: Conductor profesional realiza verificaciones rutinarias**
+
+<img src="./assets/wireflows/verify-flow.png" >
+
+El flujo comienza cuando un conductor requiere comenzar un viaje, para lo cual se dirige a la panatalla de "Start trip". A continuación, se le presenta una serie de verificaciones rutinarias que debe completar antes de iniciar el viaje. Estas verificaciones incluyen revisar el correcto funcionamiento de las cámaras que lo ayudarán a mantenerse alerta durante el viaje, y el sonido de las notificaciones. Una vez que el conductor ha completado todas las verificaciones y presiona "Continue", recibe una confirmación de que el viaje ha comenzado exitosamente.
+
+### 6.4.3. Applications Mock-ups
+
+En esta sección, se mostrarán los Mock-ups generados utilizando la aplicación Figma, realizados en base a los Wireframes previamente diseñados, a la vez de la realización de ajustes necesarios para el funcionamiento de la aplicación en web y móvil. El desarrollo de los mismos servirá como base principal del frontend y app mobile.
+
+A continuación se presentan los mockups de la aplicación móvil:
+
+**Registro e Inicio de Sesión del Usuario:**
+Diseño de la interfaz de registro de usuario, en la cual se podrán registrar tanto los conductores como los administradores de flota.
+
+<img src="./assets/mockup-mobile-login-signup.png" >
+
+**Dashboard, Alerta e Historial de Viajes:**
+Diseño del panel principal de la aplicación, junto a un ejemplo de la vista de Alerta, y la vista del historial de los viajes realizados.
+
+<img src="./assets/mockup-mobile-dashboard-alert-history.png" >
+
+**Notificaciones y Configuración de camaras:**
+Diseño de la página donde se ven las notificaciones de la app, al igual el donde se configuran y se vinculan las camaras.
+
+<img src="./assets/mockup-mobile-configuration-notif-cam.png" >
+
+**Detalles del viaje:**
+Diseño de la vista donde se ven los detalles del viaje realizado por el usuario.
+
+<img src="./assets/mockup-mobile-trip.png" >
+
+A continuación se presentan los mockups de la aplicación web:
+
+**Inicio de Sesión del Usuario:**
+Diseño de la interfaz del inicio de sesión, exclusivo para los administradores de flota.
+
+<img src="./assets/mockup-login.png" >
+
+**Panel de Control:**
+Diseño de la vista principal, donde el adminstrador puede ver y filtrar los viajes de los conductores.
+
+<img src="./assets/mockup-dashboard1.png" >
+<img src="./assets/mockup-dashboard2.png" >
+<img src="./assets/mockup-dashboard3.png" >
+<img src="./assets/mockup-dashboard4.png" >
+<img src="./assets/mockup-dashboard5.png" >
+<img src="./assets/mockup-dashboard6.png" >
+<img src="./assets/mockup-dashboard7.png" >
+
+**Detalles del Conductor:**
+Diseño de la vista que brinda los datos de un conductor seleccionado, donde se puede ver sus alertas recientes, su historial de viajes y estadísticas generales.
+
+<img src="./assets/mockup-driver1.png" >
+<img src="./assets/mockup-driver2.png" >
+<img src="./assets/mockup-driver3.png" >
+
+**Reportes y Análisis:**
+Diseño de la vista donde el administrador puede obtener un resumen general de todos los conductores, a la vez de exportar un documento con toda la información.
+
+<img src="./assets/mockup-report1.png" >
+<img src="./assets/mockup-report2.png" >
+<img src="./assets/mockup-report3.png" >
+<img src="./assets/mockup-report4.png" >
+
+### 6.4.4. Applications User Flow Diagrams
+
+En esta sección, se mostrarán una serie de flujos base de cada uno de los procesos que seguirá la aplicación una vez desarrollada, los flujos fueron realizados usando los Mock-ups diseñados.
+
+Empezaremos con los flujos de la app móvil:
+
+**Flujo: Registro de usuario**  
+Se muestra el flujo de registro de un usuario, en el cual el usuario elige su tipo de usuario, y a partir de esa decisión, genera las credenciales necesarias en la página de registro.
+
+<img src="./assets/userflow-signup.png" >
+
+**Flujo: Inicio de sesión**
+En el caso de que un usuario ya tenga una cuenta registrada, este podra iniciar directamente al dashboard principal después de brindar sus credenciales.
+
+<img src="./assets/userflow-login.png" >
+
+**Flujo: Alerta en Tiempo Real**
+En caso que el usuario sea detectado con fatiga, se mostrara la siguiente alerta de manera inmediata.
+
+<img src="./assets/userflow-alert.png" >
+
+**Flujo: Notificaciones**
+El usuario tiene la habilidad de ver todas las notificaciones que haya obtenido en la aplicación.
+
+<img src="./assets/userflow-notification.png" >
+
+**Flujo: Configuración de Camaras**
+En el siguiente flujo se muestra las acciones que debe de hacer el usuario para poder vincular las camaras a la aplicación, además de ver el estado actual de estas.
+
+<img src="./assets/userflow-cam.png" >
+
+**Flujo: Historial de Viajes**
+Se muestra el flujo del historial de viajes, donde el usuario puede ver todos los viajes que ha realizada hasta el momento, además de poder ver los detalles de este.
+
+<img src="./assets/userflow-history-report.png" >
+
+A continuación, los flujos de la aplicación web:
+
+**Flujo: Inicio de Sesión**
+Se muestra el flujo de inicio de sesión, donde el usuario puede ingresar al servicio web mediante sus credenciales, además de poder cerrar sesión en cualquier momento.
+
+<img src="./assets/userflow-login-frontend.png" >
+
+**Flujo: Panel de Control**
+Una vez iniciada su sesión, el usuario podra ver el panel de control, donde podrá monitoriar los viajes de los conductores al momento, y filtrarlos según el nivel de alerta.
+
+<img src="./assets/userflow-control-frontend.png" >
+
+**Flujo: Detalles de Conductor**
+A partir del panel de control, el usuario puede seleccionar un conductor en específico, y ver sus datos de alertas, historial de viajes y estadísticas generales.
+
+<img src="./assets/userflow-driverdetails-frontend.png" >
+
+**Flujo: Ver los Reportes y Análisis**
+A partir del panel de control, el usuario puede seleccionar la vista de reportes y análisis, donde podrá ver un resumen general de los viajes, junto a los reportes ordenados por conductor o ruta, y las alertas por horario. Además de la opción de exportar toda la información en un documento.
+
+<img src="./assets/userflow-report-frontend.png" >
+
+### 6.5. Applications Prototyping
+
+Se muestra el prototipo móvil y web de la aplicación, generado a partir de los mock-ups diseñados gracias a Figma.
+
+**Aplicación Móvil:**
+<img src="./assets/prototype-mobile.png" >
+
+**Aplicación Web:**
+<img src="./assets/prototype-frontend.png" >
+
+<a href="https://www.figma.com/proto/cLri1pLLJV6PW5eyjQrL8k/Prototipo-SafeVision?node-id=0-754&p=f&t=kqXyDQBvajbV7P3v-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=0%3A754&show-proto-sidebar=" target="_blank">Link del Web-Mobile-App-Prototype en figma</a>
+
+# Capítulo VII: Product Implementation, Validation & Deployment
+
+## 7.1. Software Configuration Management
+
+### 7.1.1. Software Development Environment Configuration
+
+En esta sección se detallan las herramientas de software empleadas en SafeVision para gestionar el ciclo completo de vida del proyecto, desde la planificación hasta la documentación y pruebas.
+
+#### Project Management:
+
+- **Discord**: Utilizamos Discord como herramienta principal de comunicación para la coordinación diaria del equipo.
+
+- **WhatsApp**: Sirve como canal rápido para notificaciones, recordatorios y coordinación informal.
+
+- **Trello**: Gestión del Product Backlog y seguimiento de User Stories.
+
+#### Requirements Management:
+
+- **Miro**: Empleado para mapear funcionalidades, eventos y procesos con diagramas colaborativos.
+
+- **Lucidchart**: Para modelar arquitecturas, flujos y relaciones.
+
+#### Product Design:
+
+- **Figma**: Diseño de interfaz, flujos y prototipos interactivos.
+
+- **UXPressia**: Desarrollo de perfiles de usuario y customer journey.
+
+- **Canva**: Recursos visuales complementarios (gráficos, banners).
+
+#### Software Development:
+
+- **WebStorm**: IDE para desarrollo frontend con Vue.js.
+
+- **Visual Studio Code**: IDE para desarrollo backend.
+
+- **Android Studio**: Desarrollo de la aplicación móvil para Android.
+
+- **Python**: Lenguaje para procesamiento de IA y detección de fatiga.
+
+- **Vue.js**: Framework para desarrollo del frontend web.
+
+#### Software Documentation y Landing Page:
+
+- **GitHub**: Repositorio de código y documentación.
+
+- **HTML/CSS/JS**: Tecnologías empleadas en la creación de la landing page.
+
+---
+
+### 7.1.2. Source Code Management
+
+Se utilizó GitHub como plataforma centralizada de control de versiones, alojando repositorios del frontend, backend, aplicaciones móviles, landing page e infraestructura. Esta práctica facilita la colaboración en equipo, la trazabilidad de cambios y la automatización del flujo de trabajo.
+
+#### Repositorios:
+
+- **Frontend**:  
+  https://github.com/Software-Emergentes/safevision-web-app
+
+- **Backend**:  
+  https://github.com/Software-Emergentes/safevision-web-service
+
+- **Mobile Android**:  
+  https://github.com/Software-Emergentes/Safe-Vision-Mobile
+
+- **Landing**:  
+  https://github.com/Software-Emergentes/Landing-Page-Safe-Vision
+
+#### Modelo de ramas (GitFlow):
+
+- **main**: rama estable
+- **develop**: rama de integración
+- **feature/\***: rama por funcionalidad nueva
+- **release/\***: versiones candidatas
+- **hotfix/\***: correcciones críticas post-producción
+
+#### Convenciones de nombres de branches:
+
+- `feature/driver-registration`
+- `feature/alert-notifications`
+- `release/1.0.0`
+- `hotfix/camera-connection`
+
+#### Commits:
+
+Se utiliza la convención Conventional Commits con mensajes como:
+```
+feat: add fatigue detection module
+fix: correct notification delivery
+docs: update README
+```
+
+---
+
+### 7.1.3. Source Code Style Guide & Conventions
+
+Esta guía define las convenciones que aseguran coherencia, legibilidad y mantenibilidad del código fuente durante todo el proyecto.
+
+#### Convenciones de Nombres:
+
+- **Clases e Interfaces**: PascalCase (e.g., DriverService, TripRepository)
+- **Métodos y Variables**: camelCase (e.g., registerDriver(), alertStatus)
+- **Constantes**: MAYÚSCULAS_CON_GUIONES (e.g., MAX_ALERTS, DEFAULT_TIMEOUT)
+- **Enums**: PascalCase para el nombre, valores en mayúsculas (e.g., Status.ACTIVE)
+
+#### Diseño del Código:
+
+- Indentación de 4 espacios
+- Llaves con estilo egipcio (K&R)
+- Longitud de línea: 80–120 caracteres
+- Comentarios claros sobre el "por qué", no sobre el "qué"
+- Docstrings en Python y JSDoc en frontend
+
+#### Estructura de Archivos:
+
+- Una clase por archivo
+- Carpetas organizadas por módulos o funcionalidades (no por tipo)
+
+#### Prácticas Recomendadas:
+
+- Uso de patrones de diseño cuando sea apropiado
+- No realizar optimización prematura sin evidencia de cuellos de botella
+
+---
+
+### 7.1.4. Software Deployment Configuration
+
+El despliegue de SafeVision se ejecuta de forma automatizada en entornos en la nube, utilizando herramientas modernas de integración continua (CI) y entrega continua (CD).
+
+#### Herramientas de despliegue utilizadas:
+
+- **Azure App Services**: Hospedaje del backend
+
+- **Vercel**: Despliegue de frontend con CDN global
+
+- **AWS RDS PostgreSQL**: Base de datos escalable
+
+- **GitHub Actions**: CI/CD para pruebas y despliegue
+
+#### Pasos de despliegue:
+
+1. Cambios se suben a rama `release/*`
+2. GitHub Actions ejecuta pruebas y linter
+3. Backend se despliega en Azure, frontend en Vercel
+4. Dispositivos IoT son conectados para monitoreo
+5. Validación final en entorno productivo
+
+## 7.2. Solution Implementation
+
+### 7.2.1. Sprint 1
+
+#### 7.2.1.1. Sprint Planning 1
+
+#### 7.2.1.2. Sprint Backlog 1
+
+#### 7.2.1.3. Development Evidence for Sprint Review
+
+
+#### 7.2.1.4. Testing Suite Evidence for Sprint Review
+
+## IAM Bounded Context
+
+```gherkin
+Feature: Gestión de usuarios y acceso en SafeVision
+
+  Scenario: Registrar una cuenta de gerente de flota
+    Given El gerente accede al formulario de registro de SafeVision
+    When Ingresa sus datos personales y los de su organización
+    Then El sistema debe crear la cuenta y asignarle permisos de gerente
+
+  Scenario: Registrar un nuevo conductor
+    Given El gerente accede a la sección de conductores
+    When Completa el formulario con los datos del conductor
+    Then El sistema debe crear la cuenta y enviarle las credenciales de acceso
+
+  Scenario: Revocar acceso de un conductor
+    Given El gerente visualiza la lista de conductores
+    When Selecciona uno para desactivar su cuenta
+    Then El conductor debe perder acceso al sistema y su estado debe reflejarse como inactivo
+```
+
+## Notifications Bounded Context
+
+```gherkin
+Feature: Notificaciones de seguridad y eventos críticos
+
+  Scenario: Enviar alerta de comportamiento riesgoso al gerente
+    Given El sistema detecta un evento de alta gravedad (p.ej., somnolencia)
+    When Se genera una alerta en tiempo real
+    Then El gerente debe recibir una notificación inmediata en el dashboard y por correo
+
+  Scenario: Notificar al conductor sobre una infracción detectada
+    Given El sistema registra una infracción como uso del celular o distracción
+    When La IA clasifica el evento
+    Then El conductor debe recibir una notificación en su aplicación móvil
+
+  Scenario: Ver historial de notificaciones
+    Given El gerente accede al módulo de notificaciones
+    When Filtra por fecha o conductor
+    Then El sistema debe mostrar todas las alertas generadas con su respectiva categoría y hora
+```
+
+## Driver Bounded Context
+
+```gherkin
+Feature: Gestión de información de conductores
+
+  Scenario: Registrar información personal del conductor
+    Given El gerente inicia el registro de un nuevo conductor
+    When Ingresa datos como nombre, licencia y foto
+    Then El sistema debe guardar la información y asociarla a su organización
+
+  Scenario: Ver perfil del conductor
+    Given El gerente accede a la lista de conductores
+    When Selecciona el perfil de un conductor
+    Then El sistema debe mostrar su información, historial de alertas y estado actual
+
+  Scenario: Actualizar estado de aptitud del conductor
+    Given El sistema recibe múltiples alertas de riesgo de un conductor
+    When Supera el umbral de riesgo configurado
+    Then El estado del conductor debe cambiar automáticamente a "En observación"
+```
+
+
+## Trip Bounded Context
+
+```gherkin
+Feature: Gestión de viajes y seguimiento de rutas
+
+  Scenario: Iniciar un viaje
+    Given El conductor inicia sesión en su aplicación móvil
+    When Selecciona la opción "Iniciar viaje"
+    Then El sistema debe registrar el inicio y comenzar a capturar datos del trayecto
+
+  Scenario: Finalizar un viaje
+    Given El conductor tiene un viaje activo
+    When Selecciona "Finalizar viaje"
+    Then El sistema debe cerrar el registro, almacenar estadísticas y generar un reporte del viaje
+
+  Scenario: Registrar evento durante el viaje
+    Given El sistema de IA detecta un evento como distracción o microsueño
+    When El evento se clasifica
+    Then Debe asociarse al viaje en curso con marca de tiempo y ubicación
+```
+
+
+## Monitoring Bounded Context
+
+```gherkin
+Feature: Monitoreo en tiempo real de vehículos y conductores
+
+  Scenario: Detectar comportamiento riesgoso
+    Given El sistema recibe streaming del dispositivo IoT
+    When La IA detecta un patrón como parpadeo excesivo o desviación del carril
+    Then El evento debe registrarse y mostrarse en el panel del gerente
+
+  Scenario: Generar alerta en tiempo real
+    Given Un evento supera un umbral crítico
+    When Se clasifica como alta gravedad
+    Then El sistema debe generar una alerta inmediata y notificar al gerente y al conductor
+```
+
+## Management Bounded Context
+
+```gherkin
+Feature: Gestión administrativa de la organización
+
+  Scenario: Registrar una nueva organización
+    Given Un gerente accede al formulario de creación de organización
+    When Ingresa datos como nombre, RUC, rubro y tamaño de flota
+    Then El sistema debe crear la organización y asociarla al gerente
+
+  Scenario: Ver reporte global de seguridad
+    Given El gerente accede al dashboard principal
+    When Selecciona la vista de análisis mensual
+    Then El sistema muestra métricas agregadas como viajes, alertas y nivel de riesgo por conductor
+
+  Scenario: Configurar parámetros de seguridad
+    Given El gerente accede al módulo de configuración
+    When Modifica umbrales de gravedad para alertas
+    Then El sistema debe aplicar los nuevos parámetros a todos los conductores de la organización
+```
+
+
+
+
+#### 7.2.1.5. Execution Evidence for Sprint Review
+
+En este sprint se logró desarrollar las funcionalidades principales del sistema SafeVision, enfocándonos en la creación de cuentas para gerentes y conductores, el inicio de sesión, y la visualización del panel principal con estadísticas básicas. A continuación, se detallan las tareas completadas durante este sprint:
+
+
+- **Inicio de Sesión**: Se desarrolló la funcionalidad de inicio de sesión, permitiendo a los usuarios autenticarse y acceder a sus respectivas cuentas de manera segura.
+
+<img src="./assets/execution-evidence/inicio.png" >
+
+- **Panel Principal**: Se creó el panel principal para los gerentes, donde pueden visualizar estadísticas básicas de sus conductores, incluyendo el número de alertas generadas y el estado general de la flota.
+
+<img src="./assets/execution-evidence/panel-general.png" >
+
+- **Reporte General**: Se implementó una vista de reporte general que muestra un resumen de las actividades de los conductores, incluyendo el número total de viajes y alertas.
+
+<img src="./assets/execution-evidence/reporte.png" >
+
+
+#### 7.2.1.6. Services Documentation Evidence for Sprint Review
+
+En esta entrega se culminó con la parte del front end de la aplicación web y móvil de SafeVision, por lo que no se cuenta con servicios documentados en esta etapa del proyecto. Sin embargo, se ha planificado que en los próximos sprints se desarrollarán e implementarán los servicios necesarios para la comunicación entre el front y el backend.
+
+
+#### 7.2.1.7. Software Deployment Evidence for Sprint Review
+
+En esta se detalla el proceso para realizar el despliegue de la Landing Page de SafeVision, haciendo uso de Github Pages como plataforma de hosting gratuita. A continuación, se describen los pasos seguidos para llevar a cabo este proceso:
+
+1. **Preparación del Repositorio**: Se creó un repositorio en GitHub llamado "SafeVision-LandingPage" donde se alojaron todos los archivos estáticos de la landing page, incluyendo HTML, CSS, JavaScript e imágenes.
+
+2. **Configuración de GitHub Pages**: En la configuración del repositorio, se habilitó la opción de GitHub Pages seleccionando la rama "main" como fuente y la carpeta raíz (root) para publicar el sitio.
+
+3. **Despliegue del Sitio**: Una vez configurado, GitHub Pages generó automáticamente una URL pública donde la landing page quedó accesible para cualquier usuario.
+
+4. **Verificación del Despliegue**: Se accedió a la URL proporcionada por GitHub Pages para verificar que la landing page se visualizara correctamente y que todas las funcionalidades estuvieran operativas.
+
+
+<img src="./assets/app-design/landing.png" >
+
+
+#### 7.2.1.8. Team Collaboration Insights during Sprint
+
+En los siguientes gráficos, se muestran las métricas de colaboración del equipo durante el Sprint 1, obtenidas a través de la herramienta proporcionada por Github para visualizar la cantidad de commits de cada miembro del equipo. Estos gráficos reflejan la distribución de tareas, el progreso del sprint y la participación de cada miembro del equipo en las actividades asignadas.
+
+<img src="./assets/collab-insights/graph1.png" >
+<img src="./assets/collab-insights/graph2.png" >
+
+
+## 7.3. Validation Interviews
+
+Este apartado describe el proceso de entrevistas de validación realizado con los actores clave del sistema SafeVision. Su finalidad fue obtener comentarios directos que permitan confirmar la propuesta desde una perspectiva práctica, garantizando que las funcionalidades planteadas realmente respondan a las necesidades de los usuarios.
+
+### 7.3.1. Diseño de Entrevistas
+
+El diseño de las entrevistas se organizó considerando dos segmentos principales. Las preguntas se elaboraron con un enfoque exploratorio y de validación, con el propósito de identificar los desafíos actuales, analizar el valor que los usuarios perciben en nuestra solución tecnológica y recoger sugerencias que permitan mejorarla.
+
+**Primer Segmento: Conductores Profesionales**
+
+Preguntas Generales:
+
+- ¿Cuál es su nombre y edad?
+
+- ¿Cuántos años de experiencia tiene como conductor profesional?
+
+- ¿Qué tipo de vehículo conduce actualmente?
+
+- ¿Cuál es la duración promedio de sus rutas?
+
+- ¿En qué horarios suele trabajar con mayor frecuencia?
+
+Preguntas Principales:
+
+- ¿Qué tan útil considera recibir alertas en tiempo real cuando se detecte somnolencia o distracción?
+
+- ¿Le resultaría conveniente que la app registre su nivel de alerta durante el viaje?
+
+- ¿Le incomodaría que la cámara monitoree su rostro mientras conduce?
+
+- ¿Qué tipo de alertas (sonoras, visuales, vibración) le resultarían más efectivas?
+
+**Segundo Segmento: Gerentes o Supervisores de Flota**
+
+Preguntas Generales:
+
+- ¿Cuál es su nombre, cargo y edad?
+
+- ¿Cuánto tiempo lleva gestionando flotas de transporte?
+
+- ¿Cuántos conductores administra actualmente?
+
+- ¿Qué herramientas utiliza para supervisar la seguridad de la flota?
+
+Preguntas Principales:
+
+- ¿Qué tan útil sería contar con reportes en tiempo real sobre el estado del conductor?
+
+- ¿Qué información le gustaría visualizar en el panel de monitoreo?
+
+- ¿Le sería valioso recibir alertas cuando un conductor muestre señales de fatiga?
+
+- ¿Qué funcionalidades adicionales considera importantes para mejorar la gestión de la flota?
+
+### 7.3.2. Registro de Entrevistas
+
+**Primer Segmento: Conductores Profesionales**
+
+Entrevistado Número 1: Omar Morales Andrew Montalvo
+ 
+Sexo: Masculino
+
+Edad: 27
+
+Distrito donde Reside: San Juan de Lurigancho
+
+Imagen: <img src="./assets/omar-entrevista.png" >
+
+Omar Morales, conductor de camiones de carga pesada en una empresa nacional, identifica la somnolencia al volante como su principal riesgo. Ve de forma positiva el desarrollo de la aplicación, especialmente el monitoreo en tiempo real y el registro de niveles de alerta, ya que le ayudarían a detectar patrones de fatiga y justificar paradas. Aunque muestra desconfianza hacia el uso de cámara, la aceptaría si se garantiza por escrito que no se graban ni almacenan imágenes y que solo su gerente accede a los datos. Considera que las alertas sonoras combinadas con vibración son las más efectivas para evitar la somnolencia.
+
+Entrevistado Número 2: Manuel Chávez
+
+Sexo: Masculino
+
+Edad: 28 
+
+Distrito donde Reside: San Borja, Lima, Perú
+
+Imagen: <img src="./assets/manuel-entrevista.png" >
+
+Resumen de la Entrevista: El entrevistado es un conductor profesional de buses interprovinciales con 6 años de experiencia, especializado en rutas largas de 8 a 14 horas en turnos nocturnos. Considera que el monitoreo en tiempo real sería muy útil ya que muchas veces no se da cuenta del cansancio hasta que es tarde, y valora tener un supervisor que lo alerte objetivamente para detenerse a tiempo. Aprecia que la aplicación registre niveles de alerta durante el viaje porque le permite identificar patrones de fatiga, justificar paradas de descanso y contar con evidencia objetiva que lo protege legalmente. Sobre la cámara, expresa desconfianza inicial por temor a vigilancia constante, pero acepta el sistema si se garantiza transparencia total: que solo analiza fatiga sin grabar video ni guardar imágenes, y que solo su gerente directo tiene acceso, requiriendo estas garantías por escrito. Finalmente, considera que la combinación de alerta sonora y vibración es la más efectiva, ya que necesita estímulos físicos intensos que lo saquen del estado de somnolencia de forma imposible de ignorar.
+
+Entrevistado Número 3: Maricarmen Tejada
+
+Sexo: Femenino
+
+Edad: 60 
+
+Distrito donde Reside: Bellavista, Callao – Perú
+
+Imagen: <img src="./assets/Maricarmen-entrevistaVal.png" >
+
+Resumen de la Entrevista: La entrevistada es una conductora interprovincial con más de 25 años de experiencia manejando buses de dos pisos en rutas largas que suelen durar entre 8 y 14 horas, especialmente en horarios nocturnos. Reporta haber experimentado somnolencia en múltiples ocasiones durante viajes de madrugada, manifestada principalmente mediante párpados pesados, bostezos frecuentes y pérdida de concentración. Considera que las alertas en tiempo real serían altamente útiles para evitar accidentes, ya que muchas veces el cansancio avanza sin que el conductor sea plenamente consciente. Aprecia que la aplicación registre niveles de alerta durante el viaje siempre que exista transparencia en el uso de los datos. Sobre la cámara, indica que podría ser incómoda si almacena su rostro, pero no tendría problema si el análisis es solo en tiempo real. Menciona que las alertas sonoras son las más efectivas para ella, complementadas con señales visuales. También resalta que los tramos largos, rectos y nocturnos incrementan el riesgo de somnolencia, y que un sistema como SafeVision podría ayudarla a reaccionar antes, mejorar sus hábitos de descanso y aumentar la seguridad tanto para ella como para sus pasajeros.
+
+---
+
+**Segundo Segmento: Gerentes**
+
+Entrevistado Número 1: Andre La Torre
+
+Sexo: Masculino
+
+Edad: 27
+
+Distrito donde Reside: Lima, Perú
+
+Imagen: <img src="./assets/Andre_Entrevista.png" >
+
+Resumen de la Entrevista: El supervisor de flota entrevistado, con 10 años de experiencia, administra actualmente a 35 conductores y utiliza herramientas básicas como GPS y reportes manuales para supervisar la operación. Considera que contar con reportes en tiempo real sobre el estado de alerta del conductor sería muy útil para prevenir riesgos y mejorar la seguridad. Señala que le gustaría visualizar indicadores como nivel de fatiga, historial de alertas, horas de conducción y ubicación. Además, afirma que recibir notificaciones inmediatas ante señales de somnolencia sería valioso para tomar decisiones preventivas. Finalmente, sugiere funciones adicionales como reportes automáticos, estadísticas de rendimiento e integración con sistemas GPS existentes para optimizar la gestión de la flota.
+
+Entrevistado Número 2: Ernesto Miguel Vilca Lopez
+
+Sexo: Masculino
+
+Edad: 29
+
+Distrito donde Reside: Breña
+
+Imagen: <img src="./assets/entrevistas/miguel.png" >
+
+
+Resumen de la Entrevista:
+Miguel nos comenta que para monitorear a su flota actualmente utiliza medios de comunicación tradicionales como llamadas telefónicas y mensajes de texto, lo que le dificulta obtener información en tiempo real sobre el estado de sus conductores. Considera que contar con reportes en tiempo real sobre el estado del conductor sería extremadamente útil para mejorar la seguridad y eficiencia de su flota. Le gustaría visualizar en el panel de monitoreo indicadores clave como el nivel de fatiga, alertas de distracción, historial de viajes y ubicación en tiempo real. Además, cree que recibir alertas inmediatas cuando un conductor muestre señales de fatiga sería crucial para prevenir accidentes y tomar medidas correctivas oportunas. Finalmente, sugiere que funcionalidades adicionales como análisis de rendimiento, integración con sistemas GPS y reportes automáticos podrían mejorar significativamente la gestión de su flota.
+
+Entrevistado Número 3: Rhaí Vargas
+
+Sexo: Masculino 
+
+Edad: 32
+
+Distrito donde Reside: Surco, Lima, Perú
+
+Imagen: <img src="./assets/rhai-entrevista.png" >
+
+Resumen de la Entrevista: El entrevistado es gerente de operaciones con 8 años de experiencia en transporte interprovincial, administrando 50 conductores activos y 35 unidades. Utiliza métodos básicos como descansos obligatorios cada 4 horas y reportes manuales que reconoce son poco confiables. Considera que los reportes en tiempo real serían súper útiles porque actualmente solo se enteran de problemas después de que ocurren, y con SafeVision podrían prevenir accidentes antes de que pasen, especialmente en viajes nocturnos. Sugiere integrar información del estado del vehículo (mantenimiento, revisiones técnicas), comparar conductores entre sí, y dejar notas internas sobre cada conductor. Afirma que recibir alertas en tiempo real sería un cambio radical porque les permitiría anticiparse a problemas, contactar al conductor inmediatamente, mandar relevos si es necesario, y protegerse legalmente al documentar medidas preventivas. Como funcionalidades adicionales menciona un chat o llamada rápida integrada y estadísticas comparativas entre conductores para identificar quiénes necesitan apoyo y reconocer a los que lo hacen bien.
+
+
+### 7.3.3. Evaluaciones según heurísticas
+
+En este capítulo se detalla la evaluación de usabilidad de SafeVision mediante la técnica de Evaluaciones según Heurísticas de Nielsen, identificando fortalezas y áreas de mejora para optimizar la experiencia.
+
+| Heurística | Descripción | Hallazgo principal | Severidad |
+|-----------|-------------|--------------------|-----------|
+| Visibilidad del estado del sistema | El sistema debe mantener informado al usuario sobre lo que ocurre. | No se muestran mensajes claros durante la carga de datos ni confirmaciones después de ciertas acciones. | Media |
+| Correspondencia con el mundo real | La interfaz debe usar lenguaje familiar para el usuario. | Algunos términos técnicos generan confusión en usuarios no expertos. | Baja |
+| Control y libertad del usuario | El usuario debe poder deshacer o rehacer acciones fácilmente. | No existe opción de deshacer en acciones críticas como eliminar o confirmar. | Alta |
+| Consistencia y estándares | El sistema debe mantener patrones comunes. | Botones similares con acciones diferentes generan confusión. | Media |
+| Prevención de errores | El diseño debe evitar que ocurran errores. | Faltan validaciones en formularios, permitiendo enviar datos incompletos. | Alta |
+| Reconocer antes que recordar | La interfaz debe reducir la carga de memoria del usuario. | Opciones relevantes están ocultas dentro de menús, obligando al usuario a recordar rutas. | Media |
+| Flexibilidad y eficiencia de uso | El sistema debe permitir atajos para usuarios expertos. | No existen accesos rápidos ni personalización. | Baja |
+| Diseño estético y minimalista | La interfaz debe evitar información irrelevante. | Algunas pantallas tienen elementos redundantes que distraen. | Baja |
+| Ayuda para reconocer, diagnosticar y recuperarse de errores | Los mensajes de error deben ser claros. | Los mensajes no explican cómo resolver el problema. | Alta |
+| Ayuda y documentación | El sistema debe ofrecer soporte accesible. | No hay manual ni sección de ayuda dentro de la plataforma. | Media |
+
+A partir de la evaluación realizada, pudimos obtener las siguientes áreas de mejora:
+
+- **Validación de parámetros:**  
+  Se detectó que algunos formularios permiten enviar datos incompletos o incorrectos. Esto incrementa la posibilidad de errores y afecta la precisión del sistema.
+
+- **Mensajes de retroalimentación insuficientes:**  
+  Varias acciones no muestran confirmaciones ni alertas claras, lo que genera incertidumbre en el usuario sobre si la tarea se completó correctamente.
+
+- **Inconsistencia en elementos de la interfaz:**  
+  Se observan variaciones en el diseño y comportamiento de botones y menús, lo cual puede provocar confusión.
+
+- **Falta de prevención de errores:**  
+  No se implementan advertencias previas en acciones críticas, como eliminar datos o confirmar operaciones importantes.
+
+- **Navegación poco intuitiva:**  
+  Algunas opciones relevantes están ocultas o requieren pasos adicionales para acceder a ellas.
+
+- **Carga cognitiva elevada:**  
+  El usuario debe recordar pasos o rutas dentro del sistema debido a la falta de indicadores y señales visuales claras.
+
+- **Ausencia de ayuda contextual:**  
+  El sistema no presenta guías, tutoriales o documentación interna que facilite la comprensión de las funcionalidades.
+
+- **Velocidad de respuesta inconsistente:**  
+  En ciertos módulos, la carga de información es lenta y no se muestran indicadores de progreso.
+
+- **Diseño visual con elementos redundantes:**  
+  Existen pantallas con exceso de información o componentes repetidos que distraen al usuario.
+
+- **Falta de accesibilidad:**  
+  Algunos textos tienen bajo contraste y ciertos elementos no son completamente accesibles para personas con limitaciones visuales.
+
+## 7.4. Video About-the-Product
+
+En este video sobre el producto presentaremos SafeVision, un sistema que integra tecnologías de Internet de las Cosas (IoT) junto con algoritmos avanzados para mejorar sus funcionalidades. El objetivo del video es mostrar cómo SafeVision está transformando la forma en que se gestionan y supervisan estas operaciones.
+
+Enlace: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213423_upc_edu_pe/IQDZxCHV9vYyQok-PGldJ1xGASKQhYG6w2eKFLr_LWs7W6Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=tiTCdK
+
+
+
+
+
 
 # Conclusiones
 
