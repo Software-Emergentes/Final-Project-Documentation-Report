@@ -2878,6 +2878,108 @@ El despliegue de SafeVision se ejecuta de forma automatizada en entornos en la n
 
 #### 7.2.1.3. Development Evidence for Sprint Review
 
+<table border="1">
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Committed on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="10">Safe-Vision-Mobile</td>
+      <td rowspan="10">develop</td>
+      <td>a6d7e3b</td>
+      <td>fix: connecting login page with home view</td>
+      <td></td>
+      <td>2025-11-10T10:12:00Z</td>
+    </tr>
+    <tr>
+      <td>aaa21f8</td>
+      <td>Merge pull request #1 from Software-Emergentes/fabia-development</td>
+      <td></td>
+      <td>2025-11-10T10:05:00Z</td>
+    </tr>
+    <tr>
+      <td>3ea6303</td>
+      <td>Merge branch 'main' into fabia-development</td>
+      <td></td>
+      <td>2025-11-10T09:50:00Z</td>
+    </tr>
+    <tr>
+      <td>76db4a5</td>
+      <td>update: navigating to notifications panel</td>
+      <td></td>
+      <td>2025-11-10T09:30:00Z</td>
+    </tr>
+    <tr>
+      <td>5f42d24</td>
+      <td>update: custom app bar for get notifications</td>
+      <td></td>
+      <td>2025-11-10T09:10:00Z</td>
+    </tr>
+    <tr>
+      <td>4433226</td>
+      <td>feat: notifications view added</td>
+      <td></td>
+      <td>2025-11-10T08:45:00Z</td>
+    </tr>
+    <tr>
+      <td>0af2500</td>
+      <td>feat: add sign up and related onboarding screens</td>
+      <td></td>
+      <td>2025-11-10T08:30:00Z</td>
+    </tr>
+    <tr>
+      <td>883c0e1</td>
+      <td>add: navigating to camera</td>
+      <td></td>
+      <td>2025-11-10T08:10:00Z</td>
+    </tr>
+    <tr>
+      <td>3b9e241</td>
+      <td>add: troubleshooting for camera view</td>
+      <td></td>
+      <td>2025-11-10T07:55:00Z</td>
+    </tr>
+  </tbody>
+</table>
+
+<br/>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Committed on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">safevision-web-app</td>
+      <td rowspan="2">main</td>
+      <td>602a4a4</td>
+      <td>Initial Vue project setup</td>
+      <td></td>
+      <td>2025-11-09T14:20:00Z</td>
+    </tr>
+    <tr>
+      <td>74ce682</td>
+      <td>Initial commit</td>
+      <td></td>
+      <td>2025-11-09T13:55:00Z</td>
+    </tr>
+  </tbody>
+</table>
+
 
 #### 7.2.1.4. Testing Suite Evidence for Sprint Review
 
