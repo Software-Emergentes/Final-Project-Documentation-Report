@@ -3112,17 +3112,17 @@ Preguntas Principales:
 
 **Primer Segmento: Conductores Profesionales**
 
-Entrevistado Número 1:
+Entrevistado Número 1: Omar Morales Andrew Montalvo
+ 
+Sexo: Masculino
 
-Sexo:
+Edad: 27
 
-Edad:
+Distrito donde Reside: San Juan de Lurigancho
 
-Distrito donde Reside:
+Imagen: <img src="./assets/omar-entrevista.png" >
 
-Imagen:
-
-Resumen de la Entrevista:
+Omar Morales, conductor de camiones de carga pesada en una empresa nacional, identifica la somnolencia al volante como su principal riesgo. Ve de forma positiva el desarrollo de la aplicación, especialmente el monitoreo en tiempo real y el registro de niveles de alerta, ya que le ayudarían a detectar patrones de fatiga y justificar paradas. Aunque muestra desconfianza hacia el uso de cámara, la aceptaría si se garantiza por escrito que no se graban ni almacenan imágenes y que solo su gerente accede a los datos. Considera que las alertas sonoras combinadas con vibración son las más efectivas para evitar la somnolencia.
 
 Entrevistado Número 2: Manuel Chávez
 
